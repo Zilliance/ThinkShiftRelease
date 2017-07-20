@@ -1,0 +1,924 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35C7AE65B8AB068CEC5BFFCE /* Pods_Think_Shift_ReleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */; };
+		72CE78E077D90DF673D3D441 /* Pods_Think_Shift_Release.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13850956A261A6EF243CC82C /* Pods_Think_Shift_Release.framework */; };
+		E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosTableViewController.swift */; };
+		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
+		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
+		E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */; };
+		E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */; };
+		E37828501F198177005E91A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378284F1F198177005E91A8 /* HomeViewController.swift */; };
+		E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E386089A1F158D2800816DF4 /* AppDelegate.swift */; };
+		E38608A01F158D2800816DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E386089E1F158D2800816DF4 /* Main.storyboard */; };
+		E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E38608A11F158D2800816DF4 /* Assets.xcassets */; };
+		E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */; };
+		E38608B01F158D2800816DF4 /* Think_Shift_ReleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608AF1F158D2800816DF4 /* Think_Shift_ReleaseTests.swift */; };
+		E38608BB1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608BA1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift */; };
+		E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608CD1F15904B00816DF4 /* UIMockCollectionViewCell.swift */; };
+		E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */; };
+		E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608D11F1592F000816DF4 /* UIMockButton.swift */; };
+		E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608D51F15958400816DF4 /* UIMockImageView.swift */; };
+		E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608D71F1596AC00816DF4 /* UIMockLabel.swift */; };
+		E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608D91F159D6F00816DF4 /* UIMockTextField.swift */; };
+		E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608DB1F159DA800816DF4 /* UIMockConstants.swift */; };
+		E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608DD1F16908400816DF4 /* StressorViewController.swift */; };
+		E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608DF1F169AC600816DF4 /* ReleaseViewController.swift */; };
+		E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */; };
+		E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E31F16BB1500816DF4 /* ThinkConstructivelyViewController.swift */; };
+		E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E51F16BB2D00816DF4 /* ThinkPositivelyViewController.swift */; };
+		E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E71F16BBBF00816DF4 /* ThinkViewController.swift */; };
+		E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E91F16C96400816DF4 /* ShiftSetBoundariesViewController.swift */; };
+		E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608EB1F16C97E00816DF4 /* ShiftViewController.swift */; };
+		E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */; };
+		E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */; };
+		E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */; };
+		F01442EDF7C45AB3C75F508A /* Pods_Think_Shift_ReleaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E38608AC1F158D2800816DF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E386088F1F158D2800816DF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E38608961F158D2800816DF4;
+			remoteInfo = "Think Shift Release";
+		};
+		E38608B71F158D2800816DF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E386088F1F158D2800816DF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E38608961F158D2800816DF4;
+			remoteInfo = "Think Shift Release";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13850956A261A6EF243CC82C /* Pods_Think_Shift_Release.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_Release.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14469AF0D4AFA0C4FBA43ECF /* Pods-Think Shift ReleaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2423C36AB9FB6727030CE496 /* Pods-Think Shift Release.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift Release.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release.release.xcconfig"; sourceTree = "<group>"; };
+		3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		DEA1E44CD9DB5285787C0A71 /* Pods-Think Shift Release.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift Release.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release.debug.xcconfig"; sourceTree = "<group>"; };
+		E37828411F195FE7005E91A8 /* VideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
+		E37828431F195FED005E91A8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
+		E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
+		E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		E378284F1F198177005E91A8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E38608971F158D2800816DF4 /* Think Shift Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Think Shift Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E386089A1F158D2800816DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E386089F1F158D2800816DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E38608A11F158D2800816DF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E38608A41F158D2800816DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E38608A61F158D2800816DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38608AB1F158D2800816DF4 /* Think Shift ReleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Think Shift ReleaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38608AF1F158D2800816DF4 /* Think_Shift_ReleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Think_Shift_ReleaseTests.swift; sourceTree = "<group>"; };
+		E38608B11F158D2800816DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38608B61F158D2800816DF4 /* Think Shift ReleaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Think Shift ReleaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38608BA1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Think_Shift_ReleaseUITests.swift; sourceTree = "<group>"; };
+		E38608BC1F158D2800816DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38608CD1F15904B00816DF4 /* UIMockCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockCollectionViewCell.swift; sourceTree = "<group>"; };
+		E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockCollectionViewController.swift; sourceTree = "<group>"; };
+		E38608D11F1592F000816DF4 /* UIMockButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockButton.swift; sourceTree = "<group>"; };
+		E38608D51F15958400816DF4 /* UIMockImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockImageView.swift; sourceTree = "<group>"; };
+		E38608D71F1596AC00816DF4 /* UIMockLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockLabel.swift; sourceTree = "<group>"; };
+		E38608D91F159D6F00816DF4 /* UIMockTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockTextField.swift; sourceTree = "<group>"; };
+		E38608DB1F159DA800816DF4 /* UIMockConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockConstants.swift; sourceTree = "<group>"; };
+		E38608DD1F16908400816DF4 /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressorViewController.swift; sourceTree = "<group>"; };
+		E38608DF1F169AC600816DF4 /* ReleaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
+		E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HairlineLayoutConstraint.swift; sourceTree = "<group>"; };
+		E38608E31F16BB1500816DF4 /* ThinkConstructivelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinkConstructivelyViewController.swift; sourceTree = "<group>"; };
+		E38608E51F16BB2D00816DF4 /* ThinkPositivelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinkPositivelyViewController.swift; sourceTree = "<group>"; };
+		E38608E71F16BBBF00816DF4 /* ThinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinkViewController.swift; sourceTree = "<group>"; };
+		E38608E91F16C96400816DF4 /* ShiftSetBoundariesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftSetBoundariesViewController.swift; sourceTree = "<group>"; };
+		E38608EB1F16C97E00816DF4 /* ShiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftViewController.swift; sourceTree = "<group>"; };
+		E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftMoodShiftViewController.swift; sourceTree = "<group>"; };
+		E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockTableViewController.swift; sourceTree = "<group>"; };
+		E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E38608941F158D2800816DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CE78E077D90DF673D3D441 /* Pods_Think_Shift_Release.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38608A81F158D2800816DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C7AE65B8AB068CEC5BFFCE /* Pods_Think_Shift_ReleaseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38608B31F158D2800816DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01442EDF7C45AB3C75F508A /* Pods_Think_Shift_ReleaseUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85C8AE4CAE3D4871426CDD21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13850956A261A6EF243CC82C /* Pods_Think_Shift_Release.framework */,
+				3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */,
+				814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A29239BB968C43122B7827A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEA1E44CD9DB5285787C0A71 /* Pods-Think Shift Release.debug.xcconfig */,
+				2423C36AB9FB6727030CE496 /* Pods-Think Shift Release.release.xcconfig */,
+				14469AF0D4AFA0C4FBA43ECF /* Pods-Think Shift ReleaseTests.debug.xcconfig */,
+				BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */,
+				B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */,
+				8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E378283C1F195C65005E91A8 /* Think */ = {
+			isa = PBXGroup;
+			children = (
+				E38608E71F16BBBF00816DF4 /* ThinkViewController.swift */,
+				E38608E31F16BB1500816DF4 /* ThinkConstructivelyViewController.swift */,
+				E38608E51F16BB2D00816DF4 /* ThinkPositivelyViewController.swift */,
+			);
+			name = Think;
+			sourceTree = "<group>";
+		};
+		E378283D1F195C69005E91A8 /* Shift */ = {
+			isa = PBXGroup;
+			children = (
+				E38608EB1F16C97E00816DF4 /* ShiftViewController.swift */,
+				E38608E91F16C96400816DF4 /* ShiftSetBoundariesViewController.swift */,
+				E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */,
+			);
+			name = Shift;
+			sourceTree = "<group>";
+		};
+		E378283E1F195C6F005E91A8 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				E38608DF1F169AC600816DF4 /* ReleaseViewController.swift */,
+			);
+			name = Release;
+			sourceTree = "<group>";
+		};
+		E378283F1F195C74005E91A8 /* Stressor */ = {
+			isa = PBXGroup;
+			children = (
+				E38608DD1F16908400816DF4 /* StressorViewController.swift */,
+			);
+			name = Stressor;
+			sourceTree = "<group>";
+		};
+		E37828401F195FD3005E91A8 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				E37828411F195FE7005E91A8 /* VideosTableViewController.swift */,
+				E37828431F195FED005E91A8 /* MusicTableViewController.swift */,
+				E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */,
+				E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		E37828491F1964F7005E91A8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E378284A1F196506005E91A8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E37828521F19835E005E91A8 /* Sidebar */,
+				E37828511F19817D005E91A8 /* Home */,
+				E378283F1F195C74005E91A8 /* Stressor */,
+				E378283C1F195C65005E91A8 /* Think */,
+				E378283D1F195C69005E91A8 /* Shift */,
+				E378283E1F195C6F005E91A8 /* Release */,
+				E37828401F195FD3005E91A8 /* Media */,
+				E378284C1F196DA2005E91A8 /* Summary */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		E378284B1F19650E005E91A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E378284C1F196DA2005E91A8 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */,
+			);
+			name = Summary;
+			sourceTree = "<group>";
+		};
+		E37828511F19817D005E91A8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E378284F1F198177005E91A8 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		E37828521F19835E005E91A8 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
+		E386088E1F158D2800816DF4 = {
+			isa = PBXGroup;
+			children = (
+				E38608991F158D2800816DF4 /* Think Shift Release */,
+				E38608AE1F158D2800816DF4 /* Think Shift ReleaseTests */,
+				E38608B91F158D2800816DF4 /* Think Shift ReleaseUITests */,
+				E38608981F158D2800816DF4 /* Products */,
+				A29239BB968C43122B7827A9 /* Pods */,
+				85C8AE4CAE3D4871426CDD21 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E38608981F158D2800816DF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E38608971F158D2800816DF4 /* Think Shift Release.app */,
+				E38608AB1F158D2800816DF4 /* Think Shift ReleaseTests.xctest */,
+				E38608B61F158D2800816DF4 /* Think Shift ReleaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E38608991F158D2800816DF4 /* Think Shift Release */ = {
+			isa = PBXGroup;
+			children = (
+				E386089E1F158D2800816DF4 /* Main.storyboard */,
+				E386089A1F158D2800816DF4 /* AppDelegate.swift */,
+				E378284B1F19650E005E91A8 /* Model */,
+				E378284A1F196506005E91A8 /* Scenes */,
+				E38608C81F158FDE00816DF4 /* UIMock */,
+				E37828491F1964F7005E91A8 /* Utilities */,
+				E38608A11F158D2800816DF4 /* Assets.xcassets */,
+				E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */,
+				E38608A61F158D2800816DF4 /* Info.plist */,
+			);
+			path = "Think Shift Release";
+			sourceTree = "<group>";
+		};
+		E38608AE1F158D2800816DF4 /* Think Shift ReleaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				E38608AF1F158D2800816DF4 /* Think_Shift_ReleaseTests.swift */,
+				E38608B11F158D2800816DF4 /* Info.plist */,
+			);
+			path = "Think Shift ReleaseTests";
+			sourceTree = "<group>";
+		};
+		E38608B91F158D2800816DF4 /* Think Shift ReleaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E38608BA1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift */,
+				E38608BC1F158D2800816DF4 /* Info.plist */,
+			);
+			path = "Think Shift ReleaseUITests";
+			sourceTree = "<group>";
+		};
+		E38608C81F158FDE00816DF4 /* UIMock */ = {
+			isa = PBXGroup;
+			children = (
+				E38608DB1F159DA800816DF4 /* UIMockConstants.swift */,
+				E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */,
+				E38608CD1F15904B00816DF4 /* UIMockCollectionViewCell.swift */,
+				E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */,
+				E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */,
+				E38608D11F1592F000816DF4 /* UIMockButton.swift */,
+				E38608D51F15958400816DF4 /* UIMockImageView.swift */,
+				E38608D71F1596AC00816DF4 /* UIMockLabel.swift */,
+				E38608D91F159D6F00816DF4 /* UIMockTextField.swift */,
+			);
+			name = UIMock;
+			path = Mock;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E38608961F158D2800816DF4 /* Think Shift Release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38608BF1F158D2800816DF4 /* Build configuration list for PBXNativeTarget "Think Shift Release" */;
+			buildPhases = (
+				CB68C113F07F9399ED0B72A2 /* [CP] Check Pods Manifest.lock */,
+				E38608931F158D2800816DF4 /* Sources */,
+				E38608941F158D2800816DF4 /* Frameworks */,
+				E38608951F158D2800816DF4 /* Resources */,
+				7C30CFC3529AF5531CD577EA /* [CP] Embed Pods Frameworks */,
+				FA7FBE88DA3B2133ACD71ECA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Think Shift Release";
+			productName = "Think Shift Release";
+			productReference = E38608971F158D2800816DF4 /* Think Shift Release.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E38608AA1F158D2800816DF4 /* Think Shift ReleaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38608C21F158D2800816DF4 /* Build configuration list for PBXNativeTarget "Think Shift ReleaseTests" */;
+			buildPhases = (
+				9212F09B884F78BFBD0FB420 /* [CP] Check Pods Manifest.lock */,
+				E38608A71F158D2800816DF4 /* Sources */,
+				E38608A81F158D2800816DF4 /* Frameworks */,
+				E38608A91F158D2800816DF4 /* Resources */,
+				9C30A72B7FBF1BED72AFD2F2 /* [CP] Embed Pods Frameworks */,
+				A96151723DD9CE517157D372 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E38608AD1F158D2800816DF4 /* PBXTargetDependency */,
+			);
+			name = "Think Shift ReleaseTests";
+			productName = "Think Shift ReleaseTests";
+			productReference = E38608AB1F158D2800816DF4 /* Think Shift ReleaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E38608B51F158D2800816DF4 /* Think Shift ReleaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38608C51F158D2800816DF4 /* Build configuration list for PBXNativeTarget "Think Shift ReleaseUITests" */;
+			buildPhases = (
+				4F5E67B481BD8323247B61B7 /* [CP] Check Pods Manifest.lock */,
+				E38608B21F158D2800816DF4 /* Sources */,
+				E38608B31F158D2800816DF4 /* Frameworks */,
+				E38608B41F158D2800816DF4 /* Resources */,
+				17E6BC0FA0FBFEA4309D62D7 /* [CP] Embed Pods Frameworks */,
+				0A7DBC09E8A06A4AEFAF2BD5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E38608B81F158D2800816DF4 /* PBXTargetDependency */,
+			);
+			name = "Think Shift ReleaseUITests";
+			productName = "Think Shift ReleaseUITests";
+			productReference = E38608B61F158D2800816DF4 /* Think Shift ReleaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E386088F1F158D2800816DF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Zilliance;
+				TargetAttributes = {
+					E38608961F158D2800816DF4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GFYH5G57YM;
+						ProvisioningStyle = Automatic;
+					};
+					E38608AA1F158D2800816DF4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GFYH5G57YM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E38608961F158D2800816DF4;
+					};
+					E38608B51F158D2800816DF4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GFYH5G57YM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E38608961F158D2800816DF4;
+					};
+				};
+			};
+			buildConfigurationList = E38608921F158D2800816DF4 /* Build configuration list for PBXProject "Think Shift Release" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E386088E1F158D2800816DF4;
+			productRefGroup = E38608981F158D2800816DF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E38608961F158D2800816DF4 /* Think Shift Release */,
+				E38608AA1F158D2800816DF4 /* Think Shift ReleaseTests */,
+				E38608B51F158D2800816DF4 /* Think Shift ReleaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E38608951F158D2800816DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
+				E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */,
+				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38608A91F158D2800816DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38608B41F158D2800816DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A7DBC09E8A06A4AEFAF2BD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17E6BC0FA0FBFEA4309D62D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F5E67B481BD8323247B61B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C30CFC3529AF5531CD577EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9212F09B884F78BFBD0FB420 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C30A72B7FBF1BED72AFD2F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A96151723DD9CE517157D372 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB68C113F07F9399ED0B72A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA7FBE88DA3B2133ACD71ECA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E38608931F158D2800816DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */,
+				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
+				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,
+				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
+				E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */,
+				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,
+				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
+				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
+				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
+				E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */,
+				E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */,
+				E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */,
+				E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */,
+				E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */,
+				E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */,
+				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
+				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
+				E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */,
+				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
+				E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */,
+				E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */,
+				E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */,
+				E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */,
+				E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */,
+				E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38608A71F158D2800816DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38608B01F158D2800816DF4 /* Think_Shift_ReleaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38608B21F158D2800816DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38608BB1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E38608AD1F158D2800816DF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E38608961F158D2800816DF4 /* Think Shift Release */;
+			targetProxy = E38608AC1F158D2800816DF4 /* PBXContainerItemProxy */;
+		};
+		E38608B81F158D2800816DF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E38608961F158D2800816DF4 /* Think Shift Release */;
+			targetProxy = E38608B71F158D2800816DF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E386089E1F158D2800816DF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E386089F1F158D2800816DF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E38608A41F158D2800816DF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E38608BD1F158D2800816DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E38608BE1F158D2800816DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E38608C01F158D2800816DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEA1E44CD9DB5285787C0A71 /* Pods-Think Shift Release.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = "Think Shift Release/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.think-shift-release";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E38608C11F158D2800816DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2423C36AB9FB6727030CE496 /* Pods-Think Shift Release.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = "Think Shift Release/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.think-shift-release";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E38608C31F158D2800816DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14469AF0D4AFA0C4FBA43ECF /* Pods-Think Shift ReleaseTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = "Think Shift ReleaseTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.Think-Shift-ReleaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Think Shift Release.app/Think Shift Release";
+			};
+			name = Debug;
+		};
+		E38608C41F158D2800816DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = "Think Shift ReleaseTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.Think-Shift-ReleaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Think Shift Release.app/Think Shift Release";
+			};
+			name = Release;
+		};
+		E38608C61F158D2800816DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = "Think Shift ReleaseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.Think-Shift-ReleaseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Think Shift Release";
+			};
+			name = Debug;
+		};
+		E38608C71F158D2800816DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = "Think Shift ReleaseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.Think-Shift-ReleaseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Think Shift Release";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E38608921F158D2800816DF4 /* Build configuration list for PBXProject "Think Shift Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38608BD1F158D2800816DF4 /* Debug */,
+				E38608BE1F158D2800816DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E38608BF1F158D2800816DF4 /* Build configuration list for PBXNativeTarget "Think Shift Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38608C01F158D2800816DF4 /* Debug */,
+				E38608C11F158D2800816DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E38608C21F158D2800816DF4 /* Build configuration list for PBXNativeTarget "Think Shift ReleaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38608C31F158D2800816DF4 /* Debug */,
+				E38608C41F158D2800816DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E38608C51F158D2800816DF4 /* Build configuration list for PBXNativeTarget "Think Shift ReleaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38608C61F158D2800816DF4 /* Debug */,
+				E38608C71F158D2800816DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E386088F1F158D2800816DF4 /* Project object */;
+}
