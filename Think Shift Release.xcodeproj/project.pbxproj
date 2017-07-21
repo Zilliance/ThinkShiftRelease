@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		35C7AE65B8AB068CEC5BFFCE /* Pods_Think_Shift_ReleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */; };
 		72CE78E077D90DF673D3D441 /* Pods_Think_Shift_Release.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13850956A261A6EF243CC82C /* Pods_Think_Shift_Release.framework */; };
+		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
+		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
+		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
+		8C631F771F228E5500B2CA4C /* AboutCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F731F228E5500B2CA4C /* AboutCompanyViewController.swift */; };
+		8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F741F228E5500B2CA4C /* LeftMenuViewController.swift */; };
+		8C631F791F228E5500B2CA4C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F751F228E5500B2CA4C /* WebViewController.swift */; };
+		8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F7B1F228F7300B2CA4C /* String+Extensions.swift */; };
+		8C631F821F228F7300B2CA4C /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F7C1F228F7300B2CA4C /* UIColor+CustomColors.swift */; };
+		8C631F831F228F7300B2CA4C /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F7D1F228F7300B2CA4C /* UIDevice+Extensions.swift */; };
+		8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F7E1F228F7300B2CA4C /* UIFont+CustomFonts.swift */; };
+		8C631F851F228F7300B2CA4C /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F7F1F228F7300B2CA4C /* UITableViewCell+Extensions.swift */; };
+		8C631F861F228F7300B2CA4C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F801F228F7300B2CA4C /* UIViewController+Extensions.swift */; };
 		E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosTableViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
@@ -70,6 +82,18 @@
 		2423C36AB9FB6727030CE496 /* Pods-Think Shift Release.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift Release.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release.release.xcconfig"; sourceTree = "<group>"; };
 		3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
+		8C631F731F228E5500B2CA4C /* AboutCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCompanyViewController.swift; sourceTree = "<group>"; };
+		8C631F741F228E5500B2CA4C /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		8C631F751F228E5500B2CA4C /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		8C631F7B1F228F7300B2CA4C /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		8C631F7C1F228F7300B2CA4C /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+CustomColors.swift"; path = "Extensions/UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		8C631F7D1F228F7300B2CA4C /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "Extensions/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		8C631F7E1F228F7300B2CA4C /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+CustomFonts.swift"; path = "Extensions/UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
+		8C631F7F1F228F7300B2CA4C /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extensions.swift"; path = "Extensions/UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		8C631F801F228F7300B2CA4C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +177,19 @@
 				814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C631F7A1F228F6500B2CA4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8C631F7B1F228F7300B2CA4C /* String+Extensions.swift */,
+				8C631F7C1F228F7300B2CA4C /* UIColor+CustomColors.swift */,
+				8C631F7D1F228F7300B2CA4C /* UIDevice+Extensions.swift */,
+				8C631F7E1F228F7300B2CA4C /* UIFont+CustomFonts.swift */,
+				8C631F7F1F228F7300B2CA4C /* UITableViewCell+Extensions.swift */,
+				8C631F801F228F7300B2CA4C /* UIViewController+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		A29239BB968C43122B7827A9 /* Pods */ = {
@@ -269,6 +306,12 @@
 		E37828521F19835E005E91A8 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
+				8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */,
+				8C631F701F228E0900B2CA4C /* WebView.storyboard */,
+				8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */,
+				8C631F731F228E5500B2CA4C /* AboutCompanyViewController.swift */,
+				8C631F741F228E5500B2CA4C /* LeftMenuViewController.swift */,
+				8C631F751F228E5500B2CA4C /* WebViewController.swift */,
 			);
 			name = Sidebar;
 			sourceTree = "<group>";
@@ -304,8 +347,9 @@
 				E378284A1F196506005E91A8 /* Scenes */,
 				E38608C81F158FDE00816DF4 /* UIMock */,
 				E37828491F1964F7005E91A8 /* Utilities */,
-				E38608A11F158D2800816DF4 /* Assets.xcassets */,
+				8C631F7A1F228F6500B2CA4C /* Extensions */,
 				E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */,
+				E38608A11F158D2800816DF4 /* Assets.xcassets */,
 				E38608A61F158D2800816DF4 /* Info.plist */,
 			);
 			path = "Think Shift Release";
@@ -465,8 +509,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */,
 				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
+				8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */,
 				E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
@@ -632,19 +678,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C631F821F228F7300B2CA4C /* UIColor+CustomColors.swift in Sources */,
 				E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */,
+				8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */,
 				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
+				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
 				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,
+				8C631F861F228F7300B2CA4C /* UIViewController+Extensions.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
 				E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */,
 				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,
 				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
+				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
 				E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */,
+				8C631F831F228F7300B2CA4C /* UIDevice+Extensions.swift in Sources */,
 				E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */,
 				E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */,
+				8C631F771F228E5500B2CA4C /* AboutCompanyViewController.swift in Sources */,
 				E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */,
+				8C631F791F228E5500B2CA4C /* WebViewController.swift in Sources */,
+				8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */,
 				E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */,
 				E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */,
 				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
@@ -654,6 +709,7 @@
 				E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */,
 				E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */,
 				E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */,
+				8C631F851F228F7300B2CA4C /* UITableViewCell+Extensions.swift in Sources */,
 				E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */,
 				E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */,
 				E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */,
