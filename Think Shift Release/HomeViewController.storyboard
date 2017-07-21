@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cdv-4b-ZyW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5n-hP-LNa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Dib-sW-uLk">
+            <objects>
+                <navigationController id="X5n-hP-LNa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qsO-4a-1eY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cdv-4b-ZyW" kind="relationship" relationship="rootViewController" id="epv-td-gRI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUw-tH-blx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="311"/>
+        </scene>
         <!--Think Shift Release-->
         <scene sceneID="UJA-yv-iYF">
             <objects>
@@ -22,13 +38,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goS-Ag-fdt">
-                                <rect key="frame" x="0.0" y="156" width="375" height="511"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
                                 <connections>
                                     <segue destination="Eq8-kj-Z7Q" kind="embed" id="veH-d8-AaI"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FY-WM-2Js" customClass="UIMockButton" customModule="Think_Shift_Release" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="36" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="80" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="AO5-gb-ztz"/>
                                     <constraint firstAttribute="height" constant="100" id="ZOd-3J-8q0"/>
@@ -49,7 +65,13 @@
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="9FY-WM-2Js" secondAttribute="bottom" constant="20" id="xl5-Qr-kEV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YGl-oE-bJc"/>
+                    <navigationItem key="navigationItem" id="YGl-oE-bJc">
+                        <barButtonItem key="leftBarButtonItem" image="menu-icon" id="uKG-nZ-Hi5">
+                            <connections>
+                                <action selector="menuAction:" destination="cdv-4b-ZyW" id="8wK-j2-V2E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WF6-jw-npF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,7 +90,7 @@
             <objects>
                 <collectionViewController id="Eq8-kj-Z7Q" customClass="UIMockCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="y4e-fD-8Vb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="511"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TVr-KP-Zy6">
@@ -111,4 +133,7 @@
             <point key="canvasLocation" x="713" y="311"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-icon" width="20" height="17"/>
+    </resources>
 </document>

@@ -17,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let sideMenuViewController = CustomSideViewController()
+        sideMenuViewController.setupHome()
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateInitialViewController()
+        window?.rootViewController = sideMenuViewController
         window?.makeKeyAndVisible()
         
         return true

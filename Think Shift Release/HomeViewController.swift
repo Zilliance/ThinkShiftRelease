@@ -39,6 +39,10 @@ class HomeViewController: UIViewController {
 
     // MARK: - User Action
     
+    @IBAction func menuAction(_ sender: UIBarButtonItem) {
+        self.sideMenuController?.toggle()
+    }
+    
     @IBAction func edit(_ sender: Any?) {
         print("addItem")
     }
