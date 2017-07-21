@@ -42,6 +42,8 @@
 		E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B761F21BB670060FED4 /* Stressor.swift */; };
 		E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B781F21BB9A0060FED4 /* Database.swift */; };
 		E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B7A1F21BBBC0060FED4 /* User.swift */; };
+		E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */; };
+		E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */; };
 		F01442EDF7C45AB3C75F508A /* Pods_Think_Shift_ReleaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		E3A30B761F21BB670060FED4 /* Stressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stressor.swift; sourceTree = "<group>"; };
 		E3A30B781F21BB9A0060FED4 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		E3A30B7A1F21BBBC0060FED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StressorViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 		E378283F1F195C74005E91A8 /* Stressor */ = {
 			isa = PBXGroup;
 			children = (
+				E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */,
 				E38608DD1F16908400816DF4 /* StressorViewController.swift */,
 			);
 			name = Stressor;
@@ -255,6 +260,7 @@
 		E37828511F19817D005E91A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */,
 				E378284F1F198177005E91A8 /* HomeViewController.swift */,
 			);
 			name = Home;
@@ -459,9 +465,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
 				E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
+				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

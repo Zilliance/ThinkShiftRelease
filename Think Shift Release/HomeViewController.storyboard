@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cdv-4b-ZyW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Think Shift Release-->
+        <scene sceneID="UJA-yv-iYF">
+            <objects>
+                <viewController title="Think Shift Release" id="cdv-4b-ZyW" customClass="HomeViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9aO-vh-xOt"/>
+                        <viewControllerLayoutGuide type="bottom" id="BvU-DG-5dC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o8h-uV-lNY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goS-Ag-fdt">
+                                <rect key="frame" x="0.0" y="156" width="375" height="511"/>
+                                <connections>
+                                    <segue destination="Eq8-kj-Z7Q" kind="embed" id="veH-d8-AaI"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FY-WM-2Js" customClass="UIMockButton" customModule="Think_Shift_Release" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="36" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AO5-gb-ztz"/>
+                                    <constraint firstAttribute="height" constant="100" id="ZOd-3J-8q0"/>
+                                </constraints>
+                                <state key="normal" title="New TSR"/>
+                                <connections>
+                                    <segue destination="cft-iu-FF2" kind="show" id="Ecg-Xa-pOh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BvU-DG-5dC" firstAttribute="top" secondItem="goS-Ag-fdt" secondAttribute="bottom" id="Cqu-Dt-n0c"/>
+                            <constraint firstItem="goS-Ag-fdt" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="K5H-8J-aza"/>
+                            <constraint firstItem="9FY-WM-2Js" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="XBJ-Ss-5XM"/>
+                            <constraint firstItem="9FY-WM-2Js" firstAttribute="top" secondItem="9aO-vh-xOt" secondAttribute="bottom" constant="16" id="fUi-kI-IWZ"/>
+                            <constraint firstAttribute="trailing" secondItem="goS-Ag-fdt" secondAttribute="trailing" id="uji-TI-dBl"/>
+                            <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="9FY-WM-2Js" secondAttribute="bottom" constant="20" id="xl5-Qr-kEV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YGl-oE-bJc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WF6-jw-npF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="311"/>
+        </scene>
+        <!--StressorViewController-->
+        <scene sceneID="u9i-kN-acI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StressorViewController" id="cft-iu-FF2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9t4-nP-Zzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="710"/>
+        </scene>
+        <!--Mock Collection View Controller-->
+        <scene sceneID="Ead-4J-0wB">
+            <objects>
+                <collectionViewController id="Eq8-kj-Z7Q" customClass="UIMockCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="y4e-fD-8Vb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="511"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TVr-KP-Zy6">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MockCell" id="dbH-kv-U5y" customClass="UIMockCollectionViewCell" customModule="Think_Shift_Release" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved TSR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-Jq-EOA">
+                                            <rect key="frame" x="13" y="41" width="74.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="TsG-Jq-EOA" firstAttribute="centerX" secondItem="dbH-kv-U5y" secondAttribute="centerX" id="ZhS-fe-3rw"/>
+                                    <constraint firstItem="TsG-Jq-EOA" firstAttribute="centerY" secondItem="dbH-kv-U5y" secondAttribute="centerY" id="s1W-wa-8bp"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Eq8-kj-Z7Q" id="BR8-aA-IlP"/>
+                            <outlet property="delegate" destination="Eq8-kj-Z7Q" id="sX6-eP-P90"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="tfl-xR-ojT"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbY-v8-P2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="311"/>
+        </scene>
+    </scenes>
+</document>
