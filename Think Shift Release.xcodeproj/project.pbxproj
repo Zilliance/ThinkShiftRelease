@@ -39,6 +39,9 @@
 		E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */; };
 		E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */; };
 		E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */; };
+		E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B761F21BB670060FED4 /* Stressor.swift */; };
+		E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B781F21BB9A0060FED4 /* Database.swift */; };
+		E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B7A1F21BBBC0060FED4 /* User.swift */; };
 		F01442EDF7C45AB3C75F508A /* Pods_Think_Shift_ReleaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +108,9 @@
 		E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftMoodShiftViewController.swift; sourceTree = "<group>"; };
 		E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockTableViewController.swift; sourceTree = "<group>"; };
 		E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockTableViewCell.swift; sourceTree = "<group>"; };
+		E3A30B761F21BB670060FED4 /* Stressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stressor.swift; sourceTree = "<group>"; };
+		E3A30B781F21BB9A0060FED4 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		E3A30B7A1F21BBBC0060FED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +237,9 @@
 		E378284B1F19650E005E91A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3A30B781F21BB9A0060FED4 /* Database.swift */,
+				E3A30B761F21BB670060FED4 /* Stressor.swift */,
+				E3A30B7A1F21BBBC0060FED4 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -635,10 +644,13 @@
 				E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
 				E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */,
+				E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */,
 				E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */,
 				E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */,
 				E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */,
 				E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */,
+				E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */,
+				E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */,
 				E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

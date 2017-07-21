@@ -110,8 +110,15 @@ class SummaryTableViewController: UIMockTableViewController {
     
     // MARK: - User Actions
     
+    /// The summary table may appear in a navigation controller when presented from a stressor in progress
+    /// or it may be embedded in the primary navigation stack when a stressor collection view cell is tapped
+    
     @IBAction func close(_ sender: Any?) {
-        self.dismiss(animated: true, completion: nil)
+        if let _ = self.presentingViewController {
+            self.dismiss(animated: true, completion: nil)
+        } else if let navigationController = self.navigationController {
+            navigationController.popViewController(animated: true)
+        }
     }
 
 }
