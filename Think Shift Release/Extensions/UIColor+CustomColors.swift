@@ -19,7 +19,7 @@ extension UIColor {
 
     static let battleshipGrey = UIColor.color(forRed: 117, green: 119, blue: 124, alpha: 1)
 
-    static let paleGrey = UIColor.color(forRed: 237.0, green: 237.0, blue: 239.0, alpha: 1)
+    static let paleGrey = UIColor.color(forRed: 237, green: 237, blue: 239, alpha: 1)
     
     static let aquaBlue = UIColor.color(forRed: 0, green: 184, blue: 231, alpha: 1)
     

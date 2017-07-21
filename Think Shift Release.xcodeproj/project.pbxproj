@@ -47,8 +47,8 @@
 		E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */; };
 		E38608B01F158D2800816DF4 /* Think_Shift_ReleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608AF1F158D2800816DF4 /* Think_Shift_ReleaseTests.swift */; };
 		E38608BB1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608BA1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift */; };
-		E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608CD1F15904B00816DF4 /* UIMockCollectionViewCell.swift */; };
-		E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */; };
+		E38608CF1F15904B00816DF4 /* UIHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608CD1F15904B00816DF4 /* UIHomeCollectionViewCell.swift */; };
+		E38608D01F15904B00816DF4 /* UIHomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608CE1F15904B00816DF4 /* UIHomeCollectionViewController.swift */; };
 		E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608D11F1592F000816DF4 /* UIMockButton.swift */; };
 		E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608D51F15958400816DF4 /* UIMockImageView.swift */; };
 		E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608D71F1596AC00816DF4 /* UIMockLabel.swift */; };
@@ -145,8 +145,8 @@
 		E38608B61F158D2800816DF4 /* Think Shift ReleaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Think Shift ReleaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38608BA1F158D2800816DF4 /* Think_Shift_ReleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Think_Shift_ReleaseUITests.swift; sourceTree = "<group>"; };
 		E38608BC1F158D2800816DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E38608CD1F15904B00816DF4 /* UIMockCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockCollectionViewCell.swift; sourceTree = "<group>"; };
-		E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockCollectionViewController.swift; sourceTree = "<group>"; };
+		E38608CD1F15904B00816DF4 /* UIHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIHomeCollectionViewCell.swift; path = Mock/UIHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E38608CE1F15904B00816DF4 /* UIHomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIHomeCollectionViewController.swift; path = Mock/UIHomeCollectionViewController.swift; sourceTree = "<group>"; };
 		E38608D11F1592F000816DF4 /* UIMockButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockButton.swift; sourceTree = "<group>"; };
 		E38608D51F15958400816DF4 /* UIMockImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockImageView.swift; sourceTree = "<group>"; };
 		E38608D71F1596AC00816DF4 /* UIMockLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockLabel.swift; sourceTree = "<group>"; };
@@ -351,6 +351,8 @@
 			children = (
 				E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */,
 				E378284F1F198177005E91A8 /* HomeViewController.swift */,
+				E38608CE1F15904B00816DF4 /* UIHomeCollectionViewController.swift */,
+				E38608CD1F15904B00816DF4 /* UIHomeCollectionViewCell.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -430,8 +432,6 @@
 			isa = PBXGroup;
 			children = (
 				E38608DB1F159DA800816DF4 /* UIMockConstants.swift */,
-				E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */,
-				E38608CD1F15904B00816DF4 /* UIMockCollectionViewCell.swift */,
 				E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */,
 				E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */,
 				E38608D11F1592F000816DF4 /* UIMockButton.swift */,
@@ -755,7 +755,7 @@
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
 				E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */,
 				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,
-				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
+				E38608CF1F15904B00816DF4 /* UIHomeCollectionViewCell.swift in Sources */,
 				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
 				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
@@ -765,7 +765,7 @@
 				E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */,
 				E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */,
 				8C631F771F228E5500B2CA4C /* AboutCompanyViewController.swift in Sources */,
-				E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */,
+				E38608D01F15904B00816DF4 /* UIHomeCollectionViewController.swift in Sources */,
 				8C631F791F228E5500B2CA4C /* WebViewController.swift in Sources */,
 				8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */,
 				E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */,
