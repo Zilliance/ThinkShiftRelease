@@ -258,6 +258,7 @@
 		E37828491F1964F7005E91A8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */,
 				E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */,
 			);
 			name = Utilities;
@@ -347,11 +348,9 @@
 				E386089A1F158D2800816DF4 /* AppDelegate.swift */,
 				E378284B1F19650E005E91A8 /* Model */,
 				E378284A1F196506005E91A8 /* Scenes */,
-				E3A30B811F25CD7B0060FED4 /* Extensions */,
 				E37828491F1964F7005E91A8 /* Utilities */,
 				8C631F7A1F228F6500B2CA4C /* Extensions */,
 				E38608C81F158FDE00816DF4 /* UIMock */,
-				E38608A11F158D2800816DF4 /* Assets.xcassets */,
 				E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */,
 				E38608A11F158D2800816DF4 /* Assets.xcassets */,
 				E38608A61F158D2800816DF4 /* Info.plist */,
@@ -392,14 +391,6 @@
 			);
 			name = UIMock;
 			path = Mock;
-			sourceTree = "<group>";
-		};
-		E3A30B811F25CD7B0060FED4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
