@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIHomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class UIMockCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private struct MockCollectionViewContent {
         let index: Int
     }
@@ -37,7 +37,7 @@ class UIHomeCollectionViewController: UICollectionViewController, UICollectionVi
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UIHomeCollectionViewCell.reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UIMockCollectionViewCell.reuseIdentifier, for: indexPath)
     
         // Configure the cell
     

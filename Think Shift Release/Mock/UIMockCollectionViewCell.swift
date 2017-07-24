@@ -8,8 +8,8 @@
 
 import UIKit
 
-class UIHomeCollectionViewCell: UICollectionViewCell {
-    static let reuseIdentifier = "MockCell"
+class UIMockCollectionViewCell: UICollectionViewCell {
+    static let reuseIdentifier = "TSRCell"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
