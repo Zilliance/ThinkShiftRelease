@@ -56,6 +56,7 @@
 		E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B7A1F21BBBC0060FED4 /* User.swift */; };
 		E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */; };
 		E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */; };
+		E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */; };
 		F01442EDF7C45AB3C75F508A /* Pods_Think_Shift_ReleaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,7 @@
 		E3A30B7A1F21BBBC0060FED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StressorViewController.storyboard; sourceTree = "<group>"; };
+		E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientableNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 		E37828491F1964F7005E91A8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */,
 				E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */,
 			);
 			name = Utilities;
@@ -345,9 +348,9 @@
 				E386089A1F158D2800816DF4 /* AppDelegate.swift */,
 				E378284B1F19650E005E91A8 /* Model */,
 				E378284A1F196506005E91A8 /* Scenes */,
-				E38608C81F158FDE00816DF4 /* UIMock */,
 				E37828491F1964F7005E91A8 /* Utilities */,
 				8C631F7A1F228F6500B2CA4C /* Extensions */,
+				E38608C81F158FDE00816DF4 /* UIMock */,
 				E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */,
 				E38608A11F158D2800816DF4 /* Assets.xcassets */,
 				E38608A61F158D2800816DF4 /* Info.plist */,
@@ -691,6 +694,7 @@
 				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
 				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
+				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
 				E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */,
 				8C631F831F228F7300B2CA4C /* UIDevice+Extensions.swift in Sources */,
