@@ -21,6 +21,21 @@
 		8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F7E1F228F7300B2CA4C /* UIFont+CustomFonts.swift */; };
 		8C631F851F228F7300B2CA4C /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F7F1F228F7300B2CA4C /* UITableViewCell+Extensions.swift */; };
 		8C631F861F228F7300B2CA4C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F801F228F7300B2CA4C /* UIViewController+Extensions.swift */; };
+		8C631F971F22991E00B2CA4C /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F891F22991E00B2CA4C /* Muli-Black.ttf */; };
+		8C631F981F22991E00B2CA4C /* Muli-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F8A1F22991E00B2CA4C /* Muli-BlackItalic.ttf */; };
+		8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F8B1F22991E00B2CA4C /* Muli-Bold.ttf */; };
+		8C631F9A1F22991E00B2CA4C /* Muli-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F8C1F22991E00B2CA4C /* Muli-BoldItalic.ttf */; };
+		8C631F9B1F22991E00B2CA4C /* Muli-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F8D1F22991E00B2CA4C /* Muli-ExtraBold.ttf */; };
+		8C631F9C1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F8E1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf */; };
+		8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F8F1F22991E00B2CA4C /* Muli-ExtraLight.ttf */; };
+		8C631F9E1F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F901F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf */; };
+		8C631F9F1F22991E00B2CA4C /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F911F22991E00B2CA4C /* Muli-Italic.ttf */; };
+		8C631FA01F22991E00B2CA4C /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F921F22991E00B2CA4C /* Muli-Light.ttf */; };
+		8C631FA11F22991E00B2CA4C /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F931F22991E00B2CA4C /* Muli-LightItalic.ttf */; };
+		8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F941F22991E00B2CA4C /* Muli-Regular.ttf */; };
+		8C631FA31F22991E00B2CA4C /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F951F22991E00B2CA4C /* Muli-SemiBold.ttf */; };
+		8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F961F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf */; };
+		8CD328FE1F267E9B00844C5F /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD328FD1F267E9B00844C5F /* HomeCollectionViewController.swift */; };
 		E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosTableViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
@@ -95,6 +110,21 @@
 		8C631F7E1F228F7300B2CA4C /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+CustomFonts.swift"; path = "Extensions/UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
 		8C631F7F1F228F7300B2CA4C /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extensions.swift"; path = "Extensions/UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		8C631F801F228F7300B2CA4C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		8C631F891F22991E00B2CA4C /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Black.ttf"; path = "Fonts/Muli-Black.ttf"; sourceTree = "<group>"; };
+		8C631F8A1F22991E00B2CA4C /* Muli-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-BlackItalic.ttf"; path = "Fonts/Muli-BlackItalic.ttf"; sourceTree = "<group>"; };
+		8C631F8B1F22991E00B2CA4C /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Bold.ttf"; path = "Fonts/Muli-Bold.ttf"; sourceTree = "<group>"; };
+		8C631F8C1F22991E00B2CA4C /* Muli-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-BoldItalic.ttf"; path = "Fonts/Muli-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8C631F8D1F22991E00B2CA4C /* Muli-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraBold.ttf"; path = "Fonts/Muli-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8C631F8E1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraBoldItalic.ttf"; path = "Fonts/Muli-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		8C631F8F1F22991E00B2CA4C /* Muli-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraLight.ttf"; path = "Fonts/Muli-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8C631F901F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraLightItalic.ttf"; path = "Fonts/Muli-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		8C631F911F22991E00B2CA4C /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Italic.ttf"; path = "Fonts/Muli-Italic.ttf"; sourceTree = "<group>"; };
+		8C631F921F22991E00B2CA4C /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Light.ttf"; path = "Fonts/Muli-Light.ttf"; sourceTree = "<group>"; };
+		8C631F931F22991E00B2CA4C /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-LightItalic.ttf"; path = "Fonts/Muli-LightItalic.ttf"; sourceTree = "<group>"; };
+		8C631F941F22991E00B2CA4C /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Regular.ttf"; path = "Fonts/Muli-Regular.ttf"; sourceTree = "<group>"; };
+		8C631F951F22991E00B2CA4C /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBold.ttf"; path = "Fonts/Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		8C631F961F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBoldItalic.ttf"; path = "Fonts/Muli-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8CD328FD1F267E9B00844C5F /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +222,27 @@
 				8C631F801F228F7300B2CA4C /* UIViewController+Extensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8C631F881F22990E00B2CA4C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8C631F891F22991E00B2CA4C /* Muli-Black.ttf */,
+				8C631F8A1F22991E00B2CA4C /* Muli-BlackItalic.ttf */,
+				8C631F8B1F22991E00B2CA4C /* Muli-Bold.ttf */,
+				8C631F8C1F22991E00B2CA4C /* Muli-BoldItalic.ttf */,
+				8C631F8D1F22991E00B2CA4C /* Muli-ExtraBold.ttf */,
+				8C631F8E1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf */,
+				8C631F8F1F22991E00B2CA4C /* Muli-ExtraLight.ttf */,
+				8C631F901F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf */,
+				8C631F911F22991E00B2CA4C /* Muli-Italic.ttf */,
+				8C631F921F22991E00B2CA4C /* Muli-Light.ttf */,
+				8C631F931F22991E00B2CA4C /* Muli-LightItalic.ttf */,
+				8C631F941F22991E00B2CA4C /* Muli-Regular.ttf */,
+				8C631F951F22991E00B2CA4C /* Muli-SemiBold.ttf */,
+				8C631F961F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		A29239BB968C43122B7827A9 /* Pods */ = {
@@ -302,6 +353,7 @@
 			children = (
 				E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */,
 				E378284F1F198177005E91A8 /* HomeViewController.swift */,
+				8CD328FD1F267E9B00844C5F /* HomeCollectionViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -346,6 +398,7 @@
 			children = (
 				E386089E1F158D2800816DF4 /* Main.storyboard */,
 				E386089A1F158D2800816DF4 /* AppDelegate.swift */,
+				8C631F881F22990E00B2CA4C /* Fonts */,
 				E378284B1F19650E005E91A8 /* Model */,
 				E378284A1F196506005E91A8 /* Scenes */,
 				E37828491F1964F7005E91A8 /* Utilities */,
@@ -379,9 +432,9 @@
 		E38608C81F158FDE00816DF4 /* UIMock */ = {
 			isa = PBXGroup;
 			children = (
-				E38608DB1F159DA800816DF4 /* UIMockConstants.swift */,
-				E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */,
 				E38608CD1F15904B00816DF4 /* UIMockCollectionViewCell.swift */,
+				E38608CE1F15904B00816DF4 /* UIMockCollectionViewController.swift */,
+				E38608DB1F159DA800816DF4 /* UIMockConstants.swift */,
 				E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */,
 				E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */,
 				E38608D11F1592F000816DF4 /* UIMockButton.swift */,
@@ -512,13 +565,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C631F981F22991E00B2CA4C /* Muli-BlackItalic.ttf in Resources */,
 				8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */,
+				8C631FA11F22991E00B2CA4C /* Muli-LightItalic.ttf in Resources */,
+				8C631F9E1F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf in Resources */,
+				8C631FA31F22991E00B2CA4C /* Muli-SemiBold.ttf in Resources */,
 				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
+				8C631F9F1F22991E00B2CA4C /* Muli-Italic.ttf in Resources */,
+				8C631F971F22991E00B2CA4C /* Muli-Black.ttf in Resources */,
 				8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */,
+				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
+				8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */,
+				8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */,
+				8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */,
+				8C631F9A1F22991E00B2CA4C /* Muli-BoldItalic.ttf in Resources */,
 				E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */,
+				8C631F9C1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf in Resources */,
+				8C631FA01F22991E00B2CA4C /* Muli-Light.ttf in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
+				8C631F9B1F22991E00B2CA4C /* Muli-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +767,7 @@
 				8C631F831F228F7300B2CA4C /* UIDevice+Extensions.swift in Sources */,
 				E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */,
 				E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */,
+				8CD328FE1F267E9B00844C5F /* HomeCollectionViewController.swift in Sources */,
 				8C631F771F228E5500B2CA4C /* AboutCompanyViewController.swift in Sources */,
 				E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */,
 				8C631F791F228E5500B2CA4C /* WebViewController.swift in Sources */,
