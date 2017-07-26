@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35C7AE65B8AB068CEC5BFFCE /* Pods_Think_Shift_ReleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */; };
+		4F15A5191F277A5C004210B4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F15A5181F277A5C004210B4 /* Quote.swift */; };
 		72CE78E077D90DF673D3D441 /* Pods_Think_Shift_Release.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13850956A261A6EF243CC82C /* Pods_Think_Shift_Release.framework */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
@@ -82,6 +83,7 @@
 		14469AF0D4AFA0C4FBA43ECF /* Pods-Think Shift ReleaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2423C36AB9FB6727030CE496 /* Pods-Think Shift Release.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift Release.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release.release.xcconfig"; sourceTree = "<group>"; };
 		3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F15A5181F277A5C004210B4 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = Model/Quote.swift; sourceTree = "<group>"; };
 		814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				E3A30B781F21BB9A0060FED4 /* Database.swift */,
 				E3A30B761F21BB670060FED4 /* Stressor.swift */,
 				E3A30B7A1F21BBBC0060FED4 /* User.swift */,
+				4F15A5181F277A5C004210B4 /* Quote.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
 				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
 				E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */,
+				4F15A5191F277A5C004210B4 /* Quote.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
 				E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */,
 				E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */,
