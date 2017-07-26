@@ -64,9 +64,6 @@
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                                 <color key="textColor" red="0.38431372549019605" green="0.44313725490196076" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bold" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHIFT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjK-fQ-YsE">
                                                 <rect key="frame" x="70" y="184" width="66" height="21"/>
@@ -77,9 +74,6 @@
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                                 <color key="textColor" red="0.38431372549999998" green="0.4431372549" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bold" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RELEASE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-iq-DYk">
                                                 <rect key="frame" x="70" y="238" width="66" height="21"/>
@@ -90,9 +84,6 @@
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                                 <color key="textColor" red="0.38431372549999998" green="0.4431372549" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bold" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="release" translatesAutoresizingMaskIntoConstraints="NO" id="Zsk-85-7RJ">
                                                 <rect key="frame" x="28" y="233" width="32" height="32"/>

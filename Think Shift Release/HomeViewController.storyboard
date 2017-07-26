@@ -50,7 +50,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START A NEW TSR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICc-zx-7Hj">
-                                <rect key="frame" x="106.5" y="117" width="162" height="23"/>
+                                <rect key="frame" x="107" y="117" width="162" height="23"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +95,7 @@
                             <constraint firstItem="YRp-ow-Axg" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="H5S-cA-NYN"/>
                             <constraint firstAttribute="trailing" secondItem="goS-Ag-fdt" secondAttribute="trailing" id="QXK-z9-g48"/>
                             <constraint firstItem="BvU-DG-5dC" firstAttribute="top" secondItem="goS-Ag-fdt" secondAttribute="bottom" id="VYP-CR-HiP"/>
-                            <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="vVm-dQ-7d5" secondAttribute="bottom" id="Z9E-mG-6Js"/>
+                            <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="vVm-dQ-7d5" secondAttribute="bottom" id="ddr-vQ-QbG"/>
                             <constraint firstItem="ICc-zx-7Hj" firstAttribute="top" secondItem="YRp-ow-Axg" secondAttribute="bottom" constant="17" id="jzZ-5m-zBU"/>
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" constant="240" id="ukI-bD-XlQ"/>
                         </constraints>
@@ -239,6 +239,6 @@
     <resources>
         <image name="iconDark" width="50" height="50"/>
         <image name="menu-icon" width="20" height="17"/>
-        <image name="select-checkmark" width="16" height="16"/>
+        <image name="select-checkmark" width="20" height="20"/>
     </resources>
 </document>
