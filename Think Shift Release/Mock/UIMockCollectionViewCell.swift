@@ -9,7 +9,7 @@
 import UIKit
 
 class UIMockCollectionViewCell: UICollectionViewCell {
-    static let reuseIdentifier = "MockCell"
+    static let reuseIdentifier = "TSRCell"
     
     override init(frame: CGRect) {
         super.init(frame: frame)

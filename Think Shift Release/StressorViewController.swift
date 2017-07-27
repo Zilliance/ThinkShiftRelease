@@ -10,13 +10,23 @@ import UIKit
 
 class StressorViewController: UIViewController {
 
+    @IBOutlet weak var thinkButton: UIButton!
+    @IBOutlet weak var shiftButton: UIButton!
+    @IBOutlet weak var releaseButton: UIButton!
+    
+    @IBOutlet weak var stressorTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setupView() {
+        self.title = "New Stressor"
+        
+        for view in [self.thinkButton, self.shiftButton, self.releaseButton] as [UIView] {
+            view.layer.cornerRadius = UIMock.Appearance.cornerRadius
+        }
     }
     
     // MARK: -
@@ -41,5 +51,12 @@ class StressorViewController: UIViewController {
     
     @IBAction func didTapRelease(_ sender: Any) {
         self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
+    }
+}
+
+extension StressorViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
