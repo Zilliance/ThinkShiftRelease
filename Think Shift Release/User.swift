@@ -9,13 +9,35 @@
 import Foundation
 import RealmSwift
 
-final class StringObject: Object {
-
+final class Audio: Object {
+    
     dynamic var value: String?
     
-    convenience init(internalValue: String) {
+    convenience init(path: String) {
         self.init()
-        self.value = internalValue
+        self.value = path
+    }
+    
+}
+
+final class Video: Object {
+    
+    dynamic var value: String?
+    
+    convenience init(path: String) {
+        self.init()
+        self.value = path
+    }
+    
+}
+
+final class Image: Object {
+    
+    dynamic var value: String?
+    
+    convenience init(path: String) {
+        self.init()
+        self.value = path
     }
     
 }
@@ -28,29 +50,30 @@ final class User: Object {
         return Array( self.stressors.filter("completed = false") )
     }
     
-    let audioPaths = List<StringObject>()
-    let imagesPaths = List<StringObject>()
-    let videoPaths = List<StringObject>()
+    let audioPaths = List<Audio>()
+    let imagesPaths = List<Image>()
+    let videoPaths = List<Video>()
     let quotes = List<Quote>()
     
-    private func addMedia(list: List<StringObject>, value: String) {
+    
+    func addAudio(audioPath: String) {
         Database.shared.save {
-            list.append(StringObject(internalValue: value))
+            audioPaths.append(Audio(path: audioPath))
         }
     }
-
-    func addAudio(audioPath: String) {
-        self.addMedia(list: self.audioPaths, value: audioPath)
-    }
-
+    
     func addVideo(videoPath: String) {
-        self.addMedia(list: self.videoPaths, value: videoPath)
+        Database.shared.save {
+            videoPaths.append(Video(path: videoPath))
+        }
     }
-
+    
     func addImage(imagePath: String) {
-        self.addMedia(list: self.imagesPaths, value: imagePath)
+        Database.shared.save {
+            imagesPaths.append(Image(path: imagePath))
+        }
     }
-
+    
     func addQuote(quote: Quote) {
         Database.shared.save {
             self.quotes.append(quote)
