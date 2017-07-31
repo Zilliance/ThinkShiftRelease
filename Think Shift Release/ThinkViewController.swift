@@ -78,14 +78,15 @@ class ThinkViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension ThinkViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
-    */
-
 }
