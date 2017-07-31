@@ -38,6 +38,7 @@
 		8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F961F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf */; };
 		8CD328FE1F267E9B00844C5F /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD328FD1F267E9B00844C5F /* HomeCollectionViewController.swift */; };
 		8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329001F292CA900844C5F /* ThinkViewController.storyboard */; };
+		8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */; };
 		E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosTableViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
@@ -129,6 +130,7 @@
 		8C631F961F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBoldItalic.ttf"; path = "Fonts/Muli-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8CD328FD1F267E9B00844C5F /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		8CD329001F292CA900844C5F /* ThinkViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThinkViewController.storyboard; sourceTree = "<group>"; };
+		8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReleaseViewController.storyboard; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		E378283E1F195C6F005E91A8 /* Release */ = {
 			isa = PBXGroup;
 			children = (
+				8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */,
 				E38608DF1F169AC600816DF4 /* ReleaseViewController.swift */,
 			);
 			name = Release;
@@ -573,6 +576,7 @@
 			files = (
 				8C631F981F22991E00B2CA4C /* Muli-BlackItalic.ttf in Resources */,
 				8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */,
+				8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */,
 				8C631FA11F22991E00B2CA4C /* Muli-LightItalic.ttf in Resources */,
 				8C631F9E1F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf in Resources */,
 				8C631FA31F22991E00B2CA4C /* Muli-SemiBold.ttf in Resources */,
