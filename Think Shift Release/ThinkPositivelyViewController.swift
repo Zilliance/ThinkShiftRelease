@@ -7,28 +7,20 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class ThinkPositivelyViewController: UIViewController {
 
+    @IBOutlet weak var textView: KMPlaceholderTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupViews()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setupViews() {
+        self.textView.layer.cornerRadius = UIMock.Appearance.cornerRadius
+        self.textView.layer.borderWidth = 1
+        self.textView.layer.borderColor = UIColor.silverColor.cgColor
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

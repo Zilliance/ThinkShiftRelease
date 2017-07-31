@@ -254,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="-183.19999999999999" y="1364.1679160419792"/>
         </scene>
-        <!--Think-->
+        <!--ThinkViewController-->
         <scene sceneID="Xt9-DA-ma7">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ThinkSegue" storyboardName="Main" referencedIdentifier="Think" id="e5v-W7-GVj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ThinkSegue" storyboardName="ThinkViewController" id="e5v-W7-GVj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ji-Q4-Vdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-529" y="1806"/>

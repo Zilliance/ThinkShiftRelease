@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mJs-FP-iIT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Think-->
+        <scene sceneID="BLp-eo-xD3">
+            <objects>
+                <viewController storyboardIdentifier="Think" title="Think" id="mJs-FP-iIT" customClass="ThinkViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N17-ax-I1i"/>
+                        <viewControllerLayoutGuide type="bottom" id="9SI-3X-QDc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RBF-cI-OT6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-fq-rs0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-KA-VYV" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="XCl-No-0gp">
+                                                <rect key="frame" x="20" y="26" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Did-DF-SKB"/>
+                                                    <constraint firstAttribute="width" constant="50" id="RYp-RJ-bZd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am upset about ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HK3-Je-l0w">
+                                                <rect key="frame" x="80" y="56" width="275" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.2901960784" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLt-F0-hRq">
+                                                <rect key="frame" x="0.0" y="292.5" width="375" height="374.5"/>
+                                            </containerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STRESSOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQy-Ru-REL">
+                                                <rect key="frame" x="82" y="26" width="73.5" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="DWY-Af-Hxy"/>
+                                                    <constraint firstAttribute="width" constant="73.5" id="y47-lS-Ik1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKC-y9-Yg0">
+                                                <rect key="frame" x="0.0" y="246.5" width="375" height="46"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zRk-VW-ka4">
+                                                        <rect key="frame" x="30" y="16" width="315" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="NBc-Jt-q1p"/>
+                                                        </constraints>
+                                                        <segments>
+                                                            <segment title="Think Constructively"/>
+                                                            <segment title="Think Positively"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="didMakeThinkSelection:" destination="mJs-FP-iIT" eventType="valueChanged" id="GMc-jT-OQk"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="Hrc-HR-Ce7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zRk-VW-ka4" secondAttribute="trailing" constant="30" id="hQr-mg-kxF"/>
+                                                    <constraint firstItem="zRk-VW-ka4" firstAttribute="leading" secondItem="hKC-y9-Yg0" secondAttribute="leading" constant="30" id="xgB-rK-Wsu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zRk-VW-ka4" secondAttribute="bottom" id="yc4-L9-fCm"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am upset because..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocM-w5-5KM">
+                                                <rect key="frame" x="20" y="131" width="335" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="rTh-oD-WJ4">
+                                                <rect key="frame" x="20" y="93" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="46C-q3-ThP"/>
+                                                    <constraint firstAttribute="width" constant="30" id="YS0-Wb-Hs6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THOUGHTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StW-Mt-lMd">
+                                                <rect key="frame" x="62" y="100" width="79" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="17" id="MZD-du-kkm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
+                                                <color key="textColor" red="0.33333333333333331" green="0.37254901960784315" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-Oj-gSG">
+                                                <rect key="frame" x="20" y="80" width="335" height="2"/>
+                                                <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="8i0-nG-XwC"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Ch-KV-VtX" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                                <rect key="frame" x="20" y="154.5" width="335" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="lar-MJ-PZH"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="I am upset because input"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="hKC-y9-Yg0" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" id="0Ip-b6-dA2"/>
+                                            <constraint firstAttribute="trailing" secondItem="qLt-F0-hRq" secondAttribute="trailing" id="1eN-bR-Ljf"/>
+                                            <constraint firstItem="rTh-oD-WJ4" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" constant="20" id="4O4-YQ-Uv9"/>
+                                            <constraint firstItem="rTh-oD-WJ4" firstAttribute="top" secondItem="dUT-Oj-gSG" secondAttribute="bottom" constant="11" id="61Q-S8-UCq"/>
+                                            <constraint firstItem="9Ch-KV-VtX" firstAttribute="top" secondItem="ocM-w5-5KM" secondAttribute="bottom" constant="8" id="6d2-wz-nge"/>
+                                            <constraint firstItem="HK3-Je-l0w" firstAttribute="leading" secondItem="XCl-No-0gp" secondAttribute="trailing" constant="10" id="9mY-Ad-Eyb"/>
+                                            <constraint firstAttribute="trailing" secondItem="dUT-Oj-gSG" secondAttribute="trailing" constant="20" id="BGl-XJ-1Y3"/>
+                                            <constraint firstItem="vQy-Ru-REL" firstAttribute="leading" secondItem="XCl-No-0gp" secondAttribute="trailing" constant="12" id="BZO-Wa-BBd"/>
+                                            <constraint firstAttribute="height" constant="667" id="DBP-lG-JJs"/>
+                                            <constraint firstItem="HK3-Je-l0w" firstAttribute="top" secondItem="vQy-Ru-REL" secondAttribute="bottom" constant="4" id="EDi-42-4oy"/>
+                                            <constraint firstItem="XCl-No-0gp" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" constant="20" id="Hmk-bN-eqi"/>
+                                            <constraint firstItem="vQy-Ru-REL" firstAttribute="top" secondItem="Rm9-KA-VYV" secondAttribute="top" constant="26" id="LsF-CR-bwh"/>
+                                            <constraint firstItem="qLt-F0-hRq" firstAttribute="top" secondItem="hKC-y9-Yg0" secondAttribute="bottom" id="MCw-aO-c5l"/>
+                                            <constraint firstItem="qLt-F0-hRq" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" id="MQS-FZ-sDo"/>
+                                            <constraint firstItem="dUT-Oj-gSG" firstAttribute="top" secondItem="HK3-Je-l0w" secondAttribute="bottom" constant="8.5" id="MUM-5F-Ld8"/>
+                                            <constraint firstAttribute="bottom" secondItem="qLt-F0-hRq" secondAttribute="bottom" id="P2Q-Uk-jLG"/>
+                                            <constraint firstAttribute="trailing" secondItem="ocM-w5-5KM" secondAttribute="trailing" constant="20" id="PbQ-D0-J4x"/>
+                                            <constraint firstItem="XCl-No-0gp" firstAttribute="top" secondItem="Rm9-KA-VYV" secondAttribute="top" constant="26" id="Q8E-aN-PyI"/>
+                                            <constraint firstAttribute="trailing" secondItem="hKC-y9-Yg0" secondAttribute="trailing" id="Sff-4M-AMg"/>
+                                            <constraint firstItem="StW-Mt-lMd" firstAttribute="leading" secondItem="rTh-oD-WJ4" secondAttribute="trailing" constant="12" id="VcV-sa-Lw5"/>
+                                            <constraint firstItem="StW-Mt-lMd" firstAttribute="top" secondItem="dUT-Oj-gSG" secondAttribute="bottom" constant="18" id="WIi-43-AbM"/>
+                                            <constraint firstItem="hKC-y9-Yg0" firstAttribute="top" secondItem="9Ch-KV-VtX" secondAttribute="bottom" constant="12" id="hUe-8F-6xW"/>
+                                            <constraint firstItem="dUT-Oj-gSG" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" constant="20" id="iVg-IX-8e9"/>
+                                            <constraint firstItem="ocM-w5-5KM" firstAttribute="top" secondItem="rTh-oD-WJ4" secondAttribute="bottom" constant="8" id="jTJ-Go-c5L"/>
+                                            <constraint firstItem="9Ch-KV-VtX" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" constant="20" id="lEV-ph-SJB"/>
+                                            <constraint firstItem="ocM-w5-5KM" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" constant="20" id="pxb-1J-gWd"/>
+                                            <constraint firstAttribute="trailing" secondItem="HK3-Je-l0w" secondAttribute="trailing" constant="20" id="zLE-Od-eeI"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Ch-KV-VtX" secondAttribute="trailing" constant="20" id="zhd-cR-IgO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Rm9-KA-VYV" secondAttribute="bottom" id="6XN-OM-OjG"/>
+                                    <constraint firstItem="Rm9-KA-VYV" firstAttribute="top" secondItem="WgD-fq-rs0" secondAttribute="top" id="Brt-Z2-Mo5"/>
+                                    <constraint firstItem="Rm9-KA-VYV" firstAttribute="leading" secondItem="WgD-fq-rs0" secondAttribute="leading" id="U3P-NV-pMa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rm9-KA-VYV" secondAttribute="trailing" id="iF9-KT-SPS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WgD-fq-rs0" firstAttribute="leading" secondItem="RBF-cI-OT6" secondAttribute="leading" id="CRV-JP-5sO"/>
+                            <constraint firstAttribute="trailing" secondItem="WgD-fq-rs0" secondAttribute="trailing" id="DXk-uD-cgU"/>
+                            <constraint firstAttribute="bottom" secondItem="WgD-fq-rs0" secondAttribute="bottom" id="IQi-fp-Yzt"/>
+                            <constraint firstItem="WgD-fq-rs0" firstAttribute="top" secondItem="RBF-cI-OT6" secondAttribute="top" id="QI4-Oj-QbS"/>
+                            <constraint firstItem="Rm9-KA-VYV" firstAttribute="width" secondItem="RBF-cI-OT6" secondAttribute="width" id="waD-L0-sYH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="zRk-VW-ka4" id="6nJ-xm-eSU"/>
+                        <outlet property="subviewContainer" destination="qLt-F0-hRq" id="bms-WU-h3L"/>
+                        <outlet property="textView" destination="9Ch-KV-VtX" id="2NG-qb-qgt"/>
+                        <segue destination="0ra-RT-KAi" kind="custom" id="8vd-PH-Z5r"/>
+                        <segue destination="RtH-cB-bzt" kind="custom" id="C16-E2-x2C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kz-lL-Krr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1652" y="2120.6896551724139"/>
+        </scene>
+        <!--Think Constructively View Controller-->
+        <scene sceneID="B45-Zj-gPu">
+            <objects>
+                <viewController storyboardIdentifier="ThinkConstructively" id="0ra-RT-KAi" customClass="ThinkConstructivelyViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4zV-Ke-hq5"/>
+                        <viewControllerLayoutGuide type="bottom" id="TMo-UO-baa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QNe-VW-Ew0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do I need to feel better?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-uh-Se0">
+                                <rect key="frame" x="20" y="65" width="335" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-EW-XnA">
+                                <rect key="frame" x="20" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="32d-1j-3A2"/>
+                                    <constraint firstAttribute="height" constant="30" id="ISq-s2-a8f"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is one action step I could take to get this need met?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-04-F9F">
+                                <rect key="frame" x="20" y="211" width="335" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                <color key="textColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="1aU-FT-mnP">
+                                <rect key="frame" x="20" y="176" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S5t-cP-Lyd"/>
+                                    <constraint firstAttribute="width" constant="30" id="wNd-7g-gCK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INNER WISDOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhE-ui-M6C">
+                                <rect key="frame" x="60" y="36" width="108.5" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108.5" id="LUf-8s-DhO"/>
+                                    <constraint firstAttribute="height" constant="18" id="cZz-bg-9AM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.37254901959999998" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gFi-oK-q5X" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                <rect key="frame" x="20" y="88" width="335" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Lru-Kf-0DI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Inner wisdom input"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vFc-O6-LMr" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                <rect key="frame" x="20" y="236.5" width="335" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4F5-jY-i01"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Action step input"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTION STEP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KF-kD-4TU">
+                                <rect key="frame" x="60" y="181" width="92" height="18"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.37254901959999998" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vFc-O6-LMr" secondAttribute="trailing" constant="20" id="0aE-k7-pat"/>
+                            <constraint firstItem="HhE-ui-M6C" firstAttribute="leading" secondItem="MhI-EW-XnA" secondAttribute="trailing" constant="10" id="28j-IE-KOe"/>
+                            <constraint firstAttribute="trailing" secondItem="vDL-04-F9F" secondAttribute="trailing" constant="20" id="4n8-Rc-Urx"/>
+                            <constraint firstItem="gFi-oK-q5X" firstAttribute="leading" secondItem="QNe-VW-Ew0" secondAttribute="leading" constant="20" id="5fe-df-zTj"/>
+                            <constraint firstItem="vDL-04-F9F" firstAttribute="leading" secondItem="QNe-VW-Ew0" secondAttribute="leading" constant="20" id="9bu-Qx-qZb"/>
+                            <constraint firstItem="vFc-O6-LMr" firstAttribute="leading" secondItem="QNe-VW-Ew0" secondAttribute="leading" constant="20" id="BPt-dz-kaP"/>
+                            <constraint firstAttribute="trailing" secondItem="gFi-oK-q5X" secondAttribute="trailing" constant="20" id="C1M-Qi-xHU"/>
+                            <constraint firstItem="vDL-04-F9F" firstAttribute="top" secondItem="1aU-FT-mnP" secondAttribute="bottom" constant="5" id="EaY-m1-hne"/>
+                            <constraint firstItem="3KF-kD-4TU" firstAttribute="leading" secondItem="1aU-FT-mnP" secondAttribute="trailing" constant="10" id="JNt-ia-1e5"/>
+                            <constraint firstItem="1aU-FT-mnP" firstAttribute="top" secondItem="gFi-oK-q5X" secondAttribute="bottom" constant="8" id="JV4-pP-qxH"/>
+                            <constraint firstItem="MhI-EW-XnA" firstAttribute="leading" secondItem="QNe-VW-Ew0" secondAttribute="leading" constant="20" id="KNk-7M-Ttz"/>
+                            <constraint firstItem="HhE-ui-M6C" firstAttribute="top" secondItem="4zV-Ke-hq5" secondAttribute="bottom" constant="16" id="Krm-K3-UuQ"/>
+                            <constraint firstItem="vFc-O6-LMr" firstAttribute="top" secondItem="vDL-04-F9F" secondAttribute="bottom" constant="10" id="RhS-Z0-nyB"/>
+                            <constraint firstItem="3KF-kD-4TU" firstAttribute="top" secondItem="gFi-oK-q5X" secondAttribute="bottom" constant="13" id="URm-ef-iVy"/>
+                            <constraint firstItem="PaV-uh-Se0" firstAttribute="top" secondItem="MhI-EW-XnA" secondAttribute="bottom" constant="5" id="VbX-N4-H9U"/>
+                            <constraint firstItem="PaV-uh-Se0" firstAttribute="leading" secondItem="QNe-VW-Ew0" secondAttribute="leading" constant="20" id="ZnK-fA-zR5"/>
+                            <constraint firstItem="1aU-FT-mnP" firstAttribute="leading" secondItem="QNe-VW-Ew0" secondAttribute="leading" constant="20" id="b8K-Nk-E1L"/>
+                            <constraint firstAttribute="trailing" secondItem="PaV-uh-Se0" secondAttribute="trailing" constant="20" id="fev-2Q-9oz"/>
+                            <constraint firstItem="gFi-oK-q5X" firstAttribute="top" secondItem="PaV-uh-Se0" secondAttribute="bottom" constant="8" id="hAa-z6-5T0"/>
+                            <constraint firstItem="MhI-EW-XnA" firstAttribute="top" secondItem="4zV-Ke-hq5" secondAttribute="bottom" constant="10" id="sk5-Za-1FL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionStepTextVIew" destination="vFc-O6-LMr" id="sMh-zB-jCH"/>
+                        <outlet property="wisdomTextView" destination="gFi-oK-q5X" id="eWn-XD-IKN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJ3-eY-Lkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2055.1999999999998" y="2923.9880059970019"/>
+        </scene>
+        <!--Think Positively View Controller-->
+        <scene sceneID="Suv-ak-N9N">
+            <objects>
+                <viewController storyboardIdentifier="ThinkPositively" id="RtH-cB-bzt" customClass="ThinkPositivelyViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AYz-IL-bhJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZkE-hc-k0f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gUK-fV-AgE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BETTER FEELING THOUGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9Y-JL-YQN">
+                                <rect key="frame" x="60" y="36" width="187.5" height="18"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.37254901959999998" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's a better feeling thought about this situation?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRl-AQ-DeI">
+                                <rect key="frame" x="20" y="65" width="335" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="SIK-Jw-Fnb">
+                                <rect key="frame" x="20" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8s8-eY-Zrg"/>
+                                    <constraint firstAttribute="width" constant="30" id="dqT-33-4t8"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="21V-hz-Hgi" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                <rect key="frame" x="20" y="90.5" width="335" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LoX-cb-gBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Better feeling thought input"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="21V-hz-Hgi" firstAttribute="top" secondItem="HRl-AQ-DeI" secondAttribute="bottom" constant="10" id="5K6-oa-ZIV"/>
+                            <constraint firstAttribute="trailing" secondItem="HRl-AQ-DeI" secondAttribute="trailing" constant="20" id="7ZO-eR-Xyf"/>
+                            <constraint firstItem="SIK-Jw-Fnb" firstAttribute="leading" secondItem="gUK-fV-AgE" secondAttribute="leading" constant="20" id="DKk-Qk-aVE"/>
+                            <constraint firstItem="SIK-Jw-Fnb" firstAttribute="top" secondItem="AYz-IL-bhJ" secondAttribute="bottom" constant="10" id="NRs-rN-ufP"/>
+                            <constraint firstItem="n9Y-JL-YQN" firstAttribute="top" secondItem="AYz-IL-bhJ" secondAttribute="bottom" constant="16" id="QRA-T0-DqC"/>
+                            <constraint firstItem="21V-hz-Hgi" firstAttribute="leading" secondItem="gUK-fV-AgE" secondAttribute="leading" constant="20" id="QwU-BT-L9q"/>
+                            <constraint firstItem="HRl-AQ-DeI" firstAttribute="top" secondItem="SIK-Jw-Fnb" secondAttribute="bottom" constant="5" id="adG-9I-Wsv"/>
+                            <constraint firstAttribute="trailing" secondItem="21V-hz-Hgi" secondAttribute="trailing" constant="20" id="erZ-Hy-9IH"/>
+                            <constraint firstItem="n9Y-JL-YQN" firstAttribute="leading" secondItem="SIK-Jw-Fnb" secondAttribute="trailing" constant="10" id="oQd-Hm-WYY"/>
+                            <constraint firstItem="HRl-AQ-DeI" firstAttribute="leading" secondItem="gUK-fV-AgE" secondAttribute="leading" constant="20" id="uUF-BA-2CU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="21V-hz-Hgi" id="6o0-v3-8kH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8L-vr-Z5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1298" y="2893"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconLight" width="50" height="50"/>
+    </resources>
+</document>
