@@ -237,6 +237,7 @@ and instead experience _______ .</string>
                     </view>
                     <connections>
                         <outlet property="affirmationTextView" destination="IZd-bq-fi4" id="pae-Cg-Cjd"/>
+                        <outlet property="containerView" destination="udn-OG-Sw0" id="Edr-FV-Ouv"/>
                         <outlet property="intentionTextView" destination="b7c-jd-IHN" id="kLd-fs-sqi"/>
                     </connections>
                 </viewController>

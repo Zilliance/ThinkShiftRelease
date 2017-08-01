@@ -13,6 +13,7 @@ class ReleaseViewController: UIViewController {
 
     @IBOutlet weak var affirmationTextView: KMPlaceholderTextView!
     @IBOutlet weak var intentionTextView: KMPlaceholderTextView!
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class ReleaseViewController: UIViewController {
     
     private func setupView() {
         
-        for view in [self.affirmationTextView, intentionTextView] as [UIView] {
+        for view in [self.affirmationTextView, intentionTextView, self.containerView] as [UIView] {
             view.layer.cornerRadius = UIMock.Appearance.cornerRadius
             view.layer.borderColor = UIColor.silverColor.cgColor
             view.layer.borderWidth = 1
