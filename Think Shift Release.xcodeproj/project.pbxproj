@@ -13,7 +13,6 @@
 		4F65CF031F3205F500C4A5B9 /* QuotesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */; };
 		4F65CF051F32070600C4A5B9 /* ImagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */; };
 		4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65CF061F321ED700C4A5B9 /* TimeInterval+Extensions.swift */; };
-		4FE59AF71F2A35A400AAE778 /* MediaPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE59AF61F2A35A400AAE778 /* MediaPickerViewController.swift */; };
 		4FE59AF91F2A3D0800AAE778 /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */; };
 		4FE59B001F2B7A5E00AAE778 /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */; };
 		4FE59B041F2B820200AAE778 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE59B031F2B820200AAE778 /* MediaCell.swift */; };
@@ -114,7 +113,6 @@
 		4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuotesViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagesViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF061F321ED700C4A5B9 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Extensions.swift"; path = "Extensions/TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
-		4FE59AF61F2A35A400AAE778 /* MediaPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerViewController.swift; sourceTree = "<group>"; };
 		4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
 		4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
 		4FE59B031F2B820200AAE778 /* MediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
@@ -339,7 +337,6 @@
 				E37828431F195FED005E91A8 /* MusicTableViewController.swift */,
 				E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */,
 				E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */,
-				4FE59AF61F2A35A400AAE778 /* MediaPickerViewController.swift */,
 				4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */,
 				4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */,
 				4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */,
@@ -830,7 +827,6 @@
 				E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */,
 				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
 				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
-				4FE59AF71F2A35A400AAE778 /* MediaPickerViewController.swift in Sources */,
 				E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */,
 				4F15A5191F277A5C004210B4 /* Quote.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,

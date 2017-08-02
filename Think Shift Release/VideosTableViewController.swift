@@ -120,9 +120,9 @@ extension VideosTableViewController: UIImagePickerControllerDelegate, UINavigati
             return URL(string: videoPath.value)
         }
         
-        self.fetchImages(for: self.urls) {  [unowned self] images in
+        self.fetchImages(for: self.urls) {  [weak self] images in
             
-            self.tableView.reloadData()
+            self?.tableView.reloadData()
             
         }
     }

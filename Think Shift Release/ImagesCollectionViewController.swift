@@ -83,10 +83,10 @@ class ImagesCollectionViewController: UICollectionViewController {
             return URL(string: imagePath.value)
         }
         
-        self.fetchImages(for: urls) {  [unowned self] images in
+        self.fetchImages(for: urls) {  [weak self] images in
             
-            self.images = images
-            self.collectionView?.reloadData()
+            self?.images = images
+            self?.collectionView?.reloadData()
             
         }
         
