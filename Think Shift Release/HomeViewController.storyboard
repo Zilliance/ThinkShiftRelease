@@ -18,7 +18,7 @@
         <scene sceneID="Dib-sW-uLk">
             <objects>
                 <navigationController id="X5n-hP-LNa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qsO-4a-1eY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qsO-4a-1eY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -50,7 +50,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START A NEW TSR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICc-zx-7Hj">
-                                <rect key="frame" x="107.5" y="117" width="162" height="23"/>
+                                <rect key="frame" x="106.5" y="117" width="162" height="23"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

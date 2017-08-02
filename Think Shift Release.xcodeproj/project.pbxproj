@@ -37,6 +37,7 @@
 		8C631FA31F22991E00B2CA4C /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F951F22991E00B2CA4C /* Muli-SemiBold.ttf */; };
 		8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F961F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf */; };
 		8CD328FE1F267E9B00844C5F /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD328FD1F267E9B00844C5F /* HomeCollectionViewController.swift */; };
+		8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329001F292CA900844C5F /* ThinkViewController.storyboard */; };
 		E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosTableViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
@@ -127,6 +128,7 @@
 		8C631F951F22991E00B2CA4C /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBold.ttf"; path = "Fonts/Muli-SemiBold.ttf"; sourceTree = "<group>"; };
 		8C631F961F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBoldItalic.ttf"; path = "Fonts/Muli-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8CD328FD1F267E9B00844C5F /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		8CD329001F292CA900844C5F /* ThinkViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThinkViewController.storyboard; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		E378283C1F195C65005E91A8 /* Think */ = {
 			isa = PBXGroup;
 			children = (
+				8CD329001F292CA900844C5F /* ThinkViewController.storyboard */,
 				E38608E71F16BBBF00816DF4 /* ThinkViewController.swift */,
 				E38608E31F16BB1500816DF4 /* ThinkConstructivelyViewController.swift */,
 				E38608E51F16BB2D00816DF4 /* ThinkPositivelyViewController.swift */,
@@ -586,6 +589,7 @@
 				E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */,
 				8C631F9C1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf in Resources */,
 				8C631FA01F22991E00B2CA4C /* Muli-Light.ttf in Resources */,
+				8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
 				8C631F9B1F22991E00B2CA4C /* Muli-ExtraBold.ttf in Resources */,

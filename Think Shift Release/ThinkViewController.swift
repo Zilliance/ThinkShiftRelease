@@ -7,33 +7,43 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class ThinkViewController: UIViewController {
+    
     @IBOutlet weak var subviewContainer: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var textView: KMPlaceholderTextView!
     private var embeddedViewController: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Summary", style: .plain, target: self, action: #selector(viewSummary(_:)))
-        
-        self.embed(viewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively"))
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.setupView()
+        self.embed(viewController: UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively"))
     }
     
+    private func setupView() {
+        
+        self.textView.layer.cornerRadius = UIMock.Appearance.cornerRadius
+        self.textView.layer.borderWidth = 1
+        self.textView.layer.borderColor = UIColor.silverColor.cgColor
+        
+        self.segmentedControl.tintColor = UIColor.purple
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.purple] , for: .normal)
+    }
+
     // MARK: -
     
     @IBAction func didMakeThinkSelection(_ sender: UISegmentedControl) {
         guard let vc: UIViewController = {
             switch sender.selectedSegmentIndex {
             case 0:
-                return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively")
+                return UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively")
             case 1:
-                return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ThinkPositively")
+                return UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkPositively")
             default:
                 return nil
             }
@@ -68,14 +78,15 @@ class ThinkViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension ThinkViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
-    */
-
 }
