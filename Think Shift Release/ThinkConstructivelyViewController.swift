@@ -7,28 +7,37 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class ThinkConstructivelyViewController: UIViewController {
 
+    @IBOutlet weak var wisdomTextView: KMPlaceholderTextView!
+    @IBOutlet weak var actionStepTextVIew: KMPlaceholderTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupViews()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func setupViews() {
+        
+        for view in [self.wisdomTextView, self.actionStepTextVIew] as [UIView] {
+            view.layer.cornerRadius = UIMock.Appearance.cornerRadius
+            view.layer.borderWidth = 1
+            view.layer.borderColor = UIColor.silverColor.cgColor
+        }
     }
-    */
 
+}
+
+extension ThinkConstructivelyViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 }

@@ -14,6 +14,7 @@ class MusicTableViewController: UITableViewController {
     var assets: [MPMediaItem] = []
     var images: [MPMediaItem: UIImage] = [:]
     fileprivate lazy var mediaPicker = MPMediaPickerController()
+    fileprivate var audioPlayer: MPMusicPlayerController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,35 +68,38 @@ class MusicTableViewController: UITableViewController {
             title = "Unknown title"
         }
         
+        cell.titleLabel.text = title
+        
         cell.subtitleLabel.text = "Length " + mediaItem.playbackDuration.stringFormat
         
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // play music.
+        let item = self.assets[indexPath.row]
         
+        self.playPauseSong(song: item)
+        
+    }
+    
+    private func playPauseSong(song: MPMediaItem) {
+        
+        if let audioPlayer = self.audioPlayer, song == audioPlayer.nowPlayingItem {
+            
+            if (audioPlayer.currentPlaybackRate > 0) {
+                audioPlayer.pause()
+            } else {
+                audioPlayer.play()
+            }
+            
+        } else {
+            
+            self.audioPlayer = MPMusicPlayerController()
+            self.audioPlayer?.setQueue(with: MPMediaItemCollection(items: [song]))
+            self.audioPlayer?.play()
+        }
     }
 
     // MARK: - User Action
@@ -110,16 +114,21 @@ class MusicTableViewController: UITableViewController {
     
     fileprivate func loadItems() {
         
-        let mediaItems = Array(Database.shared.user.audioPaths).flatMap { (audio) -> MPMediaItem? in
+        self.assets = Array(Database.shared.user.audioPaths).flatMap { (audio) -> MPMediaItem? in
+            
+            guard let audioId = audio.value else {
+                assertionFailure()
+                return nil
+            }
             
             let query = MPMediaQuery.songs()
-            let urlQuery = MPMediaPropertyPredicate(value:audio.internalValue.value,forProperty: MPMediaItemPropertyPersistentID,comparisonType: .equalTo)
+            let urlQuery = MPMediaPropertyPredicate(value:audioId,forProperty: MPMediaItemPropertyPersistentID,comparisonType: .equalTo)
             query.addFilterPredicate(urlQuery)
             
             return query.items?.first
         }
         
-        mediaItems.forEach {
+        self.assets.forEach {
             if let image = $0.artwork?.image(at: CGSize(width: 50.0, height: 50.0)) {
                 self.images[$0] = image
             }
@@ -127,6 +136,10 @@ class MusicTableViewController: UITableViewController {
         
         self.tableView.reloadData()
         
+    }
+    
+    deinit {
+        self.audioPlayer?.stop()
     }
 }
 

@@ -30,6 +30,7 @@ final class Audio: Object {
         }
         
         return ivalue
+    }
 }
 
 final class Video: Object {
@@ -70,7 +71,7 @@ final class User: Object {
     
     func addAudio(audioID: UInt64) {
         Database.shared.save {
-            audioPaths.append(Audio(id: Int64(audioID)))
+            audioPaths.append(Audio(id: audioID))
         }
     }
     
