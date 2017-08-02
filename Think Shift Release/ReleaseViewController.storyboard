@@ -53,7 +53,7 @@
                                                 <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-Rv-4km">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-Rv-4km">
                                                 <rect key="frame" x="20" y="286" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="6hx-gD-Z3j"/>
@@ -78,7 +78,7 @@
                                                 <color key="textColor" red="0.0" green="0.72156862749999995" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aks-6i-EMv">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="aks-6i-EMv">
                                                 <rect key="frame" x="20" y="130" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="jzp-c6-qtS"/>
@@ -140,7 +140,7 @@ and instead experience _______ .</string>
                                                         <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BBb-Nx-OMv">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="BBb-Nx-OMv">
                                                         <rect key="frame" x="20" y="20" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="BWH-HV-Qbs"/>
@@ -249,7 +249,7 @@ and instead experience _______ .</string>
         <scene sceneID="Y8T-Sn-Tzn">
             <objects>
                 <tableViewController id="aOh-pM-Y7g" customClass="BreatheTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Og-JB-OSd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Og-JB-OSd">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="86"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,4 +315,7 @@ and instead experience _______ .</string>
             <point key="canvasLocation" x="2432.8000000000002" y="2119.3403298350827"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconLight" width="50" height="50"/>
+    </resources>
 </document>
