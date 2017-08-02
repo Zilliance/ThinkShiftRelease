@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicTableViewController: UIMockTableViewController {
+class MusicTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

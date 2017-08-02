@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImagesCollectionViewController: UIMockCollectionViewController {
+class ImagesCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

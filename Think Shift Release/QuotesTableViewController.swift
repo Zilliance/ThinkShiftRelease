@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuotesTableViewController: UIMockTableViewController {
+class QuotesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
