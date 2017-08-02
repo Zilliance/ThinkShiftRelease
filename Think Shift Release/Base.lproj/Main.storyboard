@@ -14,7 +14,7 @@
         <scene sceneID="mf2-6Z-igP">
             <objects>
                 <navigationController id="XgG-w6-1Bj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQW-Dr-KYC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sQW-Dr-KYC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -30,7 +30,7 @@
         <scene sceneID="6ZK-tW-F80">
             <objects>
                 <collectionViewController id="70R-5v-lEV" customClass="UIMockCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tYS-Va-fNZ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="tYS-Va-fNZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,7 +80,7 @@
         <scene sceneID="7Kz-RB-Cqf">
             <objects>
                 <navigationController storyboardIdentifier="SummaryNavigation" title="Summary" id="YbO-sw-6Y0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yl6-oa-19x">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Yl6-oa-19x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -105,7 +105,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TqY-ZI-xRC" id="cGx-kn-l97">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -741,7 +741,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Videos"/>
                                                 <connections>
-                                                    <segue destination="BsU-4N-MLY" kind="show" id="9sE-FQ-cqw"/>
+                                                    <segue destination="gsS-0k-pQM" kind="show" id="Zad-23-hRp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1g-xx-VrC" customClass="UIMockButton" customModule="Think_Shift_Release" customModuleProvider="target">
@@ -796,33 +796,13 @@
             </objects>
             <point key="canvasLocation" x="153" y="2893"/>
         </scene>
-        <!--Videos-->
-        <scene sceneID="OYA-5x-9k4">
+        <!--videoStoryboard-->
+        <scene sceneID="E7G-rs-jER">
             <objects>
-                <tableViewController title="Videos" id="BsU-4N-MLY" customClass="VideosTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZPt-O2-idS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MockCell" id="jZf-zR-3ta" customClass="UIMockTableViewCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jZf-zR-3ta" id="gCw-r2-g9S">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="BsU-4N-MLY" id="K0J-22-kdq"/>
-                            <outlet property="delegate" destination="BsU-4N-MLY" id="ykc-1l-dq7"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FGm-Kq-RHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="videoStoryboard" storyboardName="VideoViewController" referencedIdentifier="videoStoryboard" id="gsS-0k-pQM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdS-7U-2Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-858" y="3680"/>
+            <point key="canvasLocation" x="-601" y="3310"/>
         </scene>
         <!--Music-->
         <scene sceneID="vLO-Nf-0BR">
@@ -837,7 +817,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IAC-9i-vst" id="JDs-dm-vHv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -865,7 +845,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cXh-uD-8A8" id="e0c-iI-ZKB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -884,7 +864,7 @@
         <scene sceneID="gqA-Jk-o0K">
             <objects>
                 <collectionViewController title="Images" id="3qK-Mw-Jbi" customClass="ImagesCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="AJy-Ip-Hc2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="AJy-Ip-Hc2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

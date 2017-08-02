@@ -33,9 +33,9 @@ class Database {
             
             Realm.Configuration.defaultConfiguration = config
             
-            stressors = self.realm.objects(Stressor.self)
-            
             self.realm = try Realm()
+
+            stressors = self.realm.objects(Stressor.self)
             
             if let user = self.realm.objects(User.self).first
             {

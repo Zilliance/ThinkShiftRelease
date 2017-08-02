@@ -11,7 +11,7 @@ import RealmSwift
 
 final class Audio: Object {
     
-    dynamic var value: String?
+    dynamic var value: String!
     
     convenience init(path: String) {
         self.init()
@@ -22,7 +22,7 @@ final class Audio: Object {
 
 final class Video: Object {
     
-    dynamic var value: String?
+    dynamic var value: String!
     
     convenience init(path: String) {
         self.init()
@@ -33,7 +33,7 @@ final class Video: Object {
 
 final class Image: Object {
     
-    dynamic var value: String?
+    dynamic var value: String!
     
     convenience init(path: String) {
         self.init()
