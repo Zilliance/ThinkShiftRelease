@@ -13,7 +13,7 @@ import AVKit
 
 class VideosTableViewController: UITableViewController {
 
-    fileprivate let videoPicker = UIImagePickerController()
+    fileprivate lazy var videoPicker = UIImagePickerController()
     var urls: [URL] = []
     var images: [URL: UIImage] = [:]
 

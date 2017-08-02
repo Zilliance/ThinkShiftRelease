@@ -45,5 +45,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Add your favorite videos and photos</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Add your favorite songs</string>
 </dict>
 </plist>

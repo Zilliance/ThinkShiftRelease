@@ -14,7 +14,7 @@
         <scene sceneID="mf2-6Z-igP">
             <objects>
                 <navigationController id="XgG-w6-1Bj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sQW-Dr-KYC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQW-Dr-KYC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -30,7 +30,7 @@
         <scene sceneID="6ZK-tW-F80">
             <objects>
                 <collectionViewController id="70R-5v-lEV" customClass="UIMockCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="tYS-Va-fNZ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tYS-Va-fNZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,7 +80,7 @@
         <scene sceneID="7Kz-RB-Cqf">
             <objects>
                 <navigationController storyboardIdentifier="SummaryNavigation" title="Summary" id="YbO-sw-6Y0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Yl6-oa-19x">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yl6-oa-19x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

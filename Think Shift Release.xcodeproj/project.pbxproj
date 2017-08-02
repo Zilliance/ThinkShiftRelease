@@ -12,6 +12,7 @@
 		4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */; };
 		4F65CF031F3205F500C4A5B9 /* QuotesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */; };
 		4F65CF051F32070600C4A5B9 /* ImagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */; };
+		4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65CF061F321ED700C4A5B9 /* TimeInterval+Extensions.swift */; };
 		4FE59AF71F2A35A400AAE778 /* MediaPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE59AF61F2A35A400AAE778 /* MediaPickerViewController.swift */; };
 		4FE59AF91F2A3D0800AAE778 /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */; };
 		4FE59B001F2B7A5E00AAE778 /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */; };
@@ -109,6 +110,7 @@
 		4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MusicViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuotesViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagesViewController.storyboard; sourceTree = "<group>"; };
+		4F65CF061F321ED700C4A5B9 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Extensions.swift"; path = "Extensions/TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		4FE59AF61F2A35A400AAE778 /* MediaPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerViewController.swift; sourceTree = "<group>"; };
 		4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
 		4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				8C631F7E1F228F7300B2CA4C /* UIFont+CustomFonts.swift */,
 				8C631F7F1F228F7300B2CA4C /* UITableViewCell+Extensions.swift */,
 				8C631F801F228F7300B2CA4C /* UIViewController+Extensions.swift */,
+				4F65CF061F321ED700C4A5B9 /* TimeInterval+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
 				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,
 				8C631F861F228F7300B2CA4C /* UIViewController+Extensions.swift in Sources */,
+				4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
 				E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */,
 				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,

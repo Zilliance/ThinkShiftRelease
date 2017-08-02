@@ -11,13 +11,25 @@ import RealmSwift
 
 final class Audio: Object {
     
-    dynamic var value: String!
+    dynamic var internalValue: Data?
     
-    convenience init(path: String) {
+    convenience init(id: UInt64) {
+        var id = id
         self.init()
-        self.value = path
+        self.internalValue = Data(bytes: &id, count: MemoryLayout<UInt64>.size)
     }
     
+    var value: UInt64? {
+        
+        guard let internalValue = internalValue else {
+            return nil
+        }
+        
+        let ivalue = internalValue.withUnsafeBytes { (ptr: UnsafePointer<UInt64>) -> UInt64 in
+            return ptr.pointee
+        }
+        
+        return ivalue
 }
 
 final class Video: Object {
@@ -56,9 +68,9 @@ final class User: Object {
     let quotes = List<Quote>()
     
     
-    func addAudio(audioPath: String) {
+    func addAudio(audioID: UInt64) {
         Database.shared.save {
-            audioPaths.append(Audio(path: audioPath))
+            audioPaths.append(Audio(id: Int64(audioID)))
         }
     }
     

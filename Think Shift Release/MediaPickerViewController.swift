@@ -11,11 +11,6 @@ import Photos
 import MobileCoreServices
 import MediaPlayer
 
-class ImageCell: UICollectionViewCell {
-    
-    @IBOutlet weak var image: UIImageView!
-}
-
 class MediaPickerViewController: UIViewController {
     
     fileprivate let picker = UIImagePickerController()
@@ -63,9 +58,7 @@ class MediaPickerViewController: UIViewController {
                 }
             })
         })
-        
     }
-    
 }
 
 extension MediaPickerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -80,10 +73,7 @@ extension MediaPickerViewController: UIImagePickerControllerDelegate, UINavigati
         
         self.fetchImages(for: self.imageUrls) {  [unowned self] images in
             self.images = images
-            
             self.collectionView.reloadData()
-            
-            
         }
     }
     
@@ -97,7 +87,7 @@ extension MediaPickerViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
-        cell.image.image = self.images[indexPath.row]
+        cell.imageView.image = self.images[indexPath.row]
         return cell
     }
 }
