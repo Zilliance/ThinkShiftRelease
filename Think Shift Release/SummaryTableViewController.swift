@@ -30,13 +30,6 @@ class SummaryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
-        
-        self.needLabel.text = "dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfs fgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg"
-
-        self.actionStepLabel.text = "dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfs fgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg"
-
-        self.betterFeelingLabel.text = "dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfs fgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg"
-                self.boundariesLabel.text = "dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfs fgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfgdsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg dsgfsdgfsfg"
     }
     
     private func setupView() {
