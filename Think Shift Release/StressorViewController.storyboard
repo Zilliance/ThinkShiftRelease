@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="-183" y="1806"/>
         </scene>
-        <!--Release-->
+        <!--ReleaseViewController-->
         <scene sceneID="VE8-ke-Bab">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ReleaseSegue" storyboardName="Main" referencedIdentifier="Release" id="gJH-CA-UF4" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ReleaseSegue" storyboardName="ReleaseViewController" id="gJH-CA-UF4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKE-Ns-Haf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="146" y="1806"/>
