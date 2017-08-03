@@ -57,7 +57,7 @@ class TSRCollectionViewCell: UICollectionViewCell {
     func setup(for stressor: Stressor) {
         
         self.contentView.layer.borderWidth = 0
-        // self.titleLabel.text = compass.stressor
+         self.titleLabel.text = stressor.title
         
         if stressor.completed {
             self.completedLabel.backgroundColor = .navBar
@@ -79,22 +79,22 @@ class TSRCollectionViewCell: UICollectionViewCell {
 }
 
 class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
-    private struct MockCollectionViewContent {
-        let index: Int
+    
+    fileprivate var stressors: [Stressor] {
+        return Array(Database.shared.user.stressors)
     }
     
-    private lazy var items: [MockCollectionViewContent] = {
-        return (0..<9).map { MockCollectionViewContent(index: $0) }
-    }()
-    
-    var editable = true
     
     // MARK: -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = .paleGrey
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.collectionView?.reloadData()
     }
     
     // MARK: UICollectionViewDataSource
@@ -104,13 +104,15 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return self.stressors.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TSRCollectionViewCell
         
         // Configure the cell
+        let stressor = self.stressors[indexPath.row]
+        cell.setup(for: stressor)
         
         return cell
     }

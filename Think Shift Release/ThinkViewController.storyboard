@@ -310,7 +310,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actionStepTextVIew" destination="vFc-O6-LMr" id="sMh-zB-jCH"/>
+                        <outlet property="actionStepTextView" destination="vFc-O6-LMr" id="rDU-VM-lyn"/>
                         <outlet property="wisdomTextView" destination="gFi-oK-q5X" id="eWn-XD-IKN"/>
                     </connections>
                 </viewController>

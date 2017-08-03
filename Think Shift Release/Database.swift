@@ -37,6 +37,8 @@ class Database {
 
             stressors = self.realm.objects(Stressor.self)
             
+            stressors = self.realm.objects(Stressor.self)
+            
             if let user = self.realm.objects(User.self).first
             {
                 self.user = user

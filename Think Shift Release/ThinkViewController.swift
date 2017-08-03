@@ -16,15 +16,23 @@ class ThinkViewController: UIViewController {
     @IBOutlet weak var textView: KMPlaceholderTextView!
     private var embeddedViewController: UIViewController?
     
+    var stressor: Stressor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Summary", style: .plain, target: self, action: #selector(viewSummary(_:)))
         self.setupView()
-        self.embed(viewController: UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively"))
+        let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively") as! ThinkConstructivelyViewController
+        viewController.stressor = self.stressor
+        self.embed(viewController: viewController)
     }
-    
+
     private func setupView() {
+        
+        if let thoughts = self.stressor.thinkThoughts {
+            self.textView.text = thoughts
+        }
         
         self.textView.layer.cornerRadius = UIMock.Appearance.cornerRadius
         self.textView.layer.borderWidth = 1
@@ -37,15 +45,20 @@ class ThinkViewController: UIViewController {
         self.view.layer.contents = UIImage(named: "think-bg")?.cgImage
     }
 
+
     // MARK: -
     
     @IBAction func didMakeThinkSelection(_ sender: UISegmentedControl) {
         guard let vc: UIViewController = {
             switch sender.selectedSegmentIndex {
             case 0:
-                return UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively")
+                let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively") as! ThinkConstructivelyViewController
+                viewController.stressor = self.stressor
+                return viewController
             case 1:
-                return UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkPositively")
+                let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkPositively") as! ThinkPositivelyViewController
+                viewController.stressor = self.stressor
+                return viewController
             default:
                 return nil
             }
