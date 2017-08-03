@@ -98,8 +98,12 @@ class ImagesCollectionViewController: UICollectionViewController {
         
         var tempImages: [UIImage] = []
         
+        let options = PHImageRequestOptions()
+        options.resizeMode = .exact
+        options.deliveryMode = .highQualityFormat
+        
         fetchResults.enumerateObjects(using: { asset, index, _ in
-            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 50.0, height: 50.0) , contentMode: .aspectFit, options: nil, resultHandler: {(image, info) in
+            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 300.0, height: 300.0) , contentMode: .aspectFill, options: options, resultHandler: {(image, info) in
                 if let im = image {
                     tempImages.append(im)
                     if index == fetchResults.count-1 {

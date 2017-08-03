@@ -42,11 +42,6 @@ class VideosTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func showVideos(_ sender: UIButton) {
-        self.videoPicker.mediaTypes = [kUTTypeMovie, kUTTypeAVIMovie, kUTTypeVideo, kUTTypeMPEG4] as [String]
-        self.present(self.videoPicker, animated: true, completion: nil)
-    }
-    
     @IBAction func addItem(_ sender: Any?) {
         self.videoPicker.mediaTypes = [kUTTypeMovie, kUTTypeAVIMovie, kUTTypeVideo, kUTTypeMPEG4] as [String]
         self.present(self.videoPicker, animated: true, completion: nil)
@@ -98,7 +93,7 @@ extension VideosTableViewController: UIImagePickerControllerDelegate, UINavigati
         var tempImages: [UIImage] = []
         
         fetchResults.enumerateObjects(using: { asset, index, _ in
-            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 50.0, height: 50.0) , contentMode: .aspectFit, options: nil, resultHandler: {[weak self] (image, info) in
+            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 100.0, height: 100.0) , contentMode: .aspectFit, options: nil, resultHandler: {[weak self] (image, info) in
                 if let im = image {
                     
                     let url = urls[index]
