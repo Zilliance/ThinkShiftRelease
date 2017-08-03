@@ -43,7 +43,9 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        self.collectionViewController = segue.destination as! HomeCollectionViewController
+        if let collectionViewController = segue.destination as? HomeCollectionViewController {
+            self.collectionViewController = collectionViewController
+        }
     }
     
     // MARK: - User Action
