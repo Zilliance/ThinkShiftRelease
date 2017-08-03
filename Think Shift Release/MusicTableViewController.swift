@@ -97,8 +97,20 @@ class MusicTableViewController: UITableViewController {
         } else {
             
             self.audioPlayer = MPMusicPlayerController()
-            self.audioPlayer?.setQueue(with: MPMediaItemCollection(items: [song]))
-            self.audioPlayer?.play()
+            
+            MPMediaLibrary.requestAuthorization({ (status) in
+                
+                guard status == .authorized else {
+                    //show error?
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self.audioPlayer?.setQueue(with: MPMediaItemCollection(items: [song]))
+                    self.audioPlayer?.play()
+                }
+            })
+            
         }
     }
 
