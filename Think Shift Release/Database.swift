@@ -34,8 +34,6 @@ class Database {
             Realm.Configuration.defaultConfiguration = config
             
             self.realm = try Realm()
-
-            stressors = self.realm.objects(Stressor.self)
             
             stressors = self.realm.objects(Stressor.self)
             
