@@ -19,6 +19,11 @@ class ThinkPositivelyViewController: UIViewController {
         super.viewDidLoad()
         self.setupViews()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
 
     private func setupViews() {
         
@@ -29,6 +34,12 @@ class ThinkPositivelyViewController: UIViewController {
         self.textView.layer.cornerRadius = UIMock.Appearance.cornerRadius
         self.textView.layer.borderWidth = 1
         self.textView.layer.borderColor = UIColor.silverColor.cgColor
+    }
+}
+
+extension ThinkPositivelyViewController: StressorEditor {
+    func save() {
+        self.stressor.thinkBetterFeeling = textView.text
     }
 }
 

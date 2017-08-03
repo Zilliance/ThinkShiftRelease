@@ -22,6 +22,11 @@ class ThinkConstructivelyViewController: UIViewController {
 
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
+    
     private func setupViews() {
         
         if let wisdom = self.stressor.thinkInnerWisdom {
@@ -39,6 +44,13 @@ class ThinkConstructivelyViewController: UIViewController {
         }
     }
 
+}
+
+extension ThinkConstructivelyViewController: StressorEditor {
+    func save() {
+        self.stressor.thinkInnerWisdom = self.wisdomTextView.text
+        self.stressor.thinkActionStep = self.actionStepTextView.text
+    }
 }
 
 extension ThinkConstructivelyViewController: UITextViewDelegate {

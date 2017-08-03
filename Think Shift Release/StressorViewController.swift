@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol StressorEditor {
+    func save()
+}
+
 class StressorViewController: UIViewController {
 
     @IBOutlet weak var thinkButton: UIButton!
@@ -23,6 +27,14 @@ class StressorViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+        if (self.isMovingFromParentViewController) {
+            self.updateDatabase()
+        }
+    }
+    
     private func setupView() {
         self.title = "New Stressor"
         
@@ -33,10 +45,7 @@ class StressorViewController: UIViewController {
         self.view.layer.contents = UIImage(named: "stressor-intro-bg")?.cgImage
     }
     
-    
-    private func save () {
-        
-        self.stressor.title = self.stressorTextField.text
+    private func updateDatabase() {
         
         let update = Database.shared.user.stressors.filter { $0.id == self.stressor.id }.count > 0
         
@@ -61,7 +70,6 @@ class StressorViewController: UIViewController {
             return
         }
         
-        self.save()
         
         let alert = UIAlertController(title: "Do you feel calm enough to think well?", message: "Additional message content. We could have a custom style alert here.", preferredStyle: .alert)
         
@@ -81,7 +89,6 @@ class StressorViewController: UIViewController {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
-        self.save()
         self.performSegue(withIdentifier: "ShiftSegue", sender: nil)
     }
     
@@ -90,19 +97,28 @@ class StressorViewController: UIViewController {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
-        self.save()
         self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.stressor = Stressor(value: self.stressor)
         if segue.identifier == "ThinkSegue" {
             let vc = segue.destination as! ThinkViewController
+            vc.stressor = self.stressor
+        }
+        else if segue.identifier == "ReleaseSegue" {
+            let vc = segue.destination as! ReleaseViewController
             vc.stressor = self.stressor
         }
         
     }
 }
 
+extension StressorViewController: StressorEditor {
+    func save() {
+        self.stressor.title = self.stressorTextField.text
+    }
+}
 
 extension StressorViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

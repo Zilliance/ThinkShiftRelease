@@ -27,6 +27,11 @@ class ThinkViewController: UIViewController {
         viewController.stressor = self.stressor
         self.embed(viewController: viewController)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
 
     private func setupView() {
         
@@ -100,6 +105,12 @@ class ThinkViewController: UIViewController {
         
     }
     
+}
+
+extension ThinkViewController: StressorEditor {
+    func save() {
+        self.stressor.thinkThoughts = self.textView.text
+    }
 }
 
 extension ThinkViewController: UITextViewDelegate {

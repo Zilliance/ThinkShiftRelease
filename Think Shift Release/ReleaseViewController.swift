@@ -15,12 +15,27 @@ class ReleaseViewController: UIViewController {
     @IBOutlet weak var intentionTextView: KMPlaceholderTextView!
     @IBOutlet weak var containerView: UIView!
     
+    var stressor: Stressor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
+    
     private func setupView() {
+        
+        if let affirmation = self.stressor.releaseAffirmation {
+            self.affirmationTextView.text = affirmation
+        }
+        
+        if let intention = self.stressor.releaseIntention {
+            self.intentionTextView.text = intention
+        }
         
         for view in [self.affirmationTextView, intentionTextView, self.containerView] as [UIView] {
             view.layer.cornerRadius = UIMock.Appearance.cornerRadius
@@ -43,6 +58,13 @@ class ReleaseViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+}
+
+extension ReleaseViewController: StressorEditor {
+    func save() {
+        self.stressor.releaseIntention = self.intentionTextView.text
+        self.stressor.releaseAffirmation = self.affirmationTextView.text
+    }
 }
 
 extension ReleaseViewController: UITextViewDelegate {

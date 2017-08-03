@@ -37,9 +37,7 @@ class HomeViewController: UIViewController {
             self.topOverlay.alpha = self.isDeleting ? 0.6 : 0
             self.deleteButton.alpha = self.isDeleting ? 1 : 0
             self.selectLabel.alpha = self.isDeleting ? 1 : 0
-        }) { (complete) in
-            
-        }
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
