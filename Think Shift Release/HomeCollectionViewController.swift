@@ -143,10 +143,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     
     // MARK: UICollectionViewDataSource
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.stressors.count
     }
@@ -165,6 +161,17 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard !self.isDeleting else { return }
+        
+        let stressor = self.stressors[indexPath.row]
+        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
+            assertionFailure()
+            return
+        }
+        vc.stressor = stressor
+        let nc = UINavigationController(rootViewController: vc)
+        self.present(nc, animated: true, completion: nil)
         
     }
     

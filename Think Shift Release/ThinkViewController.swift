@@ -27,11 +27,6 @@ class ThinkViewController: UIViewController {
         viewController.stressor = self.stressor
         self.embed(viewController: viewController)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.save()
-    }
 
     private func setupView() {
         
@@ -96,12 +91,13 @@ class ThinkViewController: UIViewController {
     // MARK: -
     
     @IBAction func viewSummary(_ sender: Any?) {
-        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() else {
+        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
             assertionFailure()
             return
         }
-        
-        self.present(vc, animated: true, completion: nil)
+        vc.stressor = self.stressor
+        let nc = UINavigationController(rootViewController: vc)
+        self.present(nc, animated: true, completion: nil)
         
     }
     
@@ -117,6 +113,7 @@ extension ThinkViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
+            self.save()
             textView.resignFirstResponder()
             return false
         }

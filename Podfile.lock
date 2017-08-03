@@ -10,6 +10,7 @@ PODS:
     - Realm (= 2.8.1)
   - SideMenuController (0.2.4)
   - SVProgressHUD (2.1.2)
+  - TPKeyboardAvoiding (1.3.1)
 
 DEPENDENCIES:
   - KMPlaceholderTextView (~> 1.3.0)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - RealmSwift
   - SideMenuController
   - SVProgressHUD
+  - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
@@ -27,7 +29,8 @@ SPEC CHECKSUMS:
   RealmSwift: 4764ca7657f2193c256fb032c0b123926f70dbcd
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TPKeyboardAvoiding: 0d6af20e95e2850f4c621841225b59ec7d8dd852
 
-PODFILE CHECKSUM: 2342f6c9d6ddd6e176a50ed3a4fb49d59df5c415
+PODFILE CHECKSUM: 9dc19db47c148b61cd9e49ff87115f71be106b55
 
 COCOAPODS: 1.2.1

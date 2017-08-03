@@ -13,6 +13,7 @@ target 'Think Shift Release' do
   pod 'SVProgressHUD'
   pod 'MZFormSheetPresentationController'
   pod 'KMPlaceholderTextView', '~> 1.3.0'
+  pod 'TPKeyboardAvoiding'
 
   target 'Think Shift ReleaseTests' do
     inherit! :search_paths

@@ -27,12 +27,39 @@ class SummaryTableViewController: UITableViewController {
     @IBOutlet weak var affirmationLabel: UILabel!
     @IBOutlet weak var reminderButton: UIButton!
     
+    var stressor: Stressor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
     }
     
+    
     private func setupView() {
+        
+        if let need = self.stressor.thinkThoughts {
+            self.needLabel.text = need
+        }
+        
+        if let action = self.stressor.thinkActionStep {
+            self.actionStepLabel.text = action
+        }
+        
+        if let betterFeeling = self.stressor.thinkBetterFeeling {
+            self.betterFeelingLabel.text = betterFeeling
+        }
+        
+        if let boundaries = self.stressor.shiftBoundariesDoTalkWith {
+            self.boundariesLabel.text = boundaries
+        }
+        
+        if let intention = self.stressor.releaseIntention {
+            self.intentionLabel.text = intention
+        }
+        
+        if let affirmation = self.stressor.releaseAffirmation {
+            self.affirmationLabel.text = affirmation
+        }
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 286
