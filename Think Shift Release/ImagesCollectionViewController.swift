@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import Photos
 
-class ImagesCollectionViewController: UIMockCollectionViewController {
+final class ImageCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageView: UIImageView!
+}
+
+
+class ImagesCollectionViewController: UICollectionViewController {
+    
+    private var images: [UIImage] = []
+    fileprivate lazy var picker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +30,9 @@ class ImagesCollectionViewController: UIMockCollectionViewController {
         // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
+        self.picker.delegate = self
+
+        loadImages()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,65 +52,83 @@ class ImagesCollectionViewController: UIMockCollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    /*
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return self.images.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
     
         // Configure the cell
+        let image = self.images[indexPath.row]
+        cell.imageView.image = image
     
         return cell
     }
-    */
  
     // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
 
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-    
     // MARK: - User Action
     
     @IBAction func addItem(_ sender: Any?) {
-        print("addItem")
+        self.present(self.picker, animated: true, completion: nil)
     }
     
-    @IBAction func edit(_ sender: Any?) {
-        print("edit")
+    
+    fileprivate func loadImages() {
+        
+        let urls = Array(Database.shared.user.imagesPaths).flatMap { (imagePath) -> URL? in
+            return URL(string: imagePath.value)
+        }
+        
+        self.fetchImages(for: urls) {  [weak self] images in
+            
+            self?.images = images
+            self?.collectionView?.reloadData()
+            
+        }
+        
     }
+    
+    fileprivate func fetchImages(for urls:[URL], completion: @escaping ([UIImage]) -> () ) {
+        
+        let fetchResults = PHAsset.fetchAssets(withALAssetURLs: urls, options: nil)
+        
+        var tempImages: [UIImage] = []
+        
+        let options = PHImageRequestOptions()
+        options.resizeMode = .exact
+        options.deliveryMode = .highQualityFormat
+        
+        fetchResults.enumerateObjects(using: { asset, index, _ in
+            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 300.0, height: 300.0) , contentMode: .aspectFill, options: options, resultHandler: {(image, info) in
+                if let im = image {
+                    tempImages.append(im)
+                    if index == fetchResults.count-1 {
+                        completion(tempImages)
+                    }
+                }
+            })
+        })
+        
+    }
+    
+}
 
+extension ImagesCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        guard let url = info[UIImagePickerControllerReferenceURL] as? URL else {
+            return
+        }
+        
+        Database.shared.user.addImage(imagePath: url.absoluteString)
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+        self.loadImages()
+    }
 }

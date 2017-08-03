@@ -105,7 +105,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TqY-ZI-xRC" id="cGx-kn-l97">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -741,7 +741,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Videos"/>
                                                 <connections>
-                                                    <segue destination="BsU-4N-MLY" kind="show" id="9sE-FQ-cqw"/>
+                                                    <segue destination="gsS-0k-pQM" kind="show" id="Zad-23-hRp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1g-xx-VrC" customClass="UIMockButton" customModule="Think_Shift_Release" customModuleProvider="target">
@@ -751,7 +751,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Music"/>
                                                 <connections>
-                                                    <segue destination="yFv-Fo-nrw" kind="show" id="jbG-Nw-c6A"/>
+                                                    <segue destination="ofD-Qe-IbL" kind="show" id="hhS-pg-Veh"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -766,7 +766,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Quotes"/>
                                                 <connections>
-                                                    <segue destination="FVW-Cu-834" kind="show" id="0h2-J7-YUg"/>
+                                                    <segue destination="BnA-xk-YdB" kind="show" id="cTB-cd-cng"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHK-CX-bQA" customClass="UIMockButton" customModule="Think_Shift_Release" customModuleProvider="target">
@@ -776,7 +776,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Images"/>
                                                 <connections>
-                                                    <segue destination="3qK-Mw-Jbi" kind="show" id="fdi-XQ-Uzn"/>
+                                                    <segue destination="J7G-UB-zkJ" kind="show" id="PIq-qV-IU1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -796,123 +796,37 @@
             </objects>
             <point key="canvasLocation" x="153" y="2893"/>
         </scene>
-        <!--Videos-->
-        <scene sceneID="OYA-5x-9k4">
+        <!--videoStoryboard-->
+        <scene sceneID="E7G-rs-jER">
             <objects>
-                <tableViewController title="Videos" id="BsU-4N-MLY" customClass="VideosTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZPt-O2-idS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MockCell" id="jZf-zR-3ta" customClass="UIMockTableViewCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jZf-zR-3ta" id="gCw-r2-g9S">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="BsU-4N-MLY" id="K0J-22-kdq"/>
-                            <outlet property="delegate" destination="BsU-4N-MLY" id="ykc-1l-dq7"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FGm-Kq-RHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="videoStoryboard" storyboardName="VideoViewController" referencedIdentifier="videoStoryboard" id="gsS-0k-pQM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdS-7U-2Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-858" y="3680"/>
+            <point key="canvasLocation" x="-601" y="3310"/>
         </scene>
-        <!--Music-->
-        <scene sceneID="vLO-Nf-0BR">
+        <!--musicStoryboard-->
+        <scene sceneID="gwA-JF-MEl">
             <objects>
-                <tableViewController title="Music" id="yFv-Fo-nrw" customClass="MusicTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QMZ-TO-Uw3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MockCell" id="IAC-9i-vst" customClass="UIMockTableViewCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IAC-9i-vst" id="JDs-dm-vHv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yFv-Fo-nrw" id="0YS-24-Ubf"/>
-                            <outlet property="delegate" destination="yFv-Fo-nrw" id="pHX-O1-DIo"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NaH-Aa-fli" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MusicViewController" referencedIdentifier="musicStoryboard" id="ofD-Qe-IbL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8H-lp-AO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="3680"/>
+            <point key="canvasLocation" x="-318" y="3376"/>
         </scene>
-        <!--Quotes-->
-        <scene sceneID="2Z0-eC-9uo">
+        <!--imagesStoryboard-->
+        <scene sceneID="2Y6-Ih-tWW">
             <objects>
-                <tableViewController title="Quotes" id="FVW-Cu-834" customClass="QuotesTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="by3-9q-wnK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MockCell" id="cXh-uD-8A8" customClass="UIMockTableViewCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cXh-uD-8A8" id="e0c-iI-ZKB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FVW-Cu-834" id="Ta7-Q1-qPI"/>
-                            <outlet property="delegate" destination="FVW-Cu-834" id="OJL-jg-8SN"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kqm-AX-pZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="imagesStoryboard" storyboardName="ImagesViewController" referencedIdentifier="imagesStoryboard" id="J7G-UB-zkJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QLa-g2-Ada" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="3680"/>
+            <point key="canvasLocation" x="765" y="3316"/>
         </scene>
-        <!--Images-->
-        <scene sceneID="gqA-Jk-o0K">
+        <!--quotesStoryboard-->
+        <scene sceneID="i3d-US-0Mm">
             <objects>
-                <collectionViewController title="Images" id="3qK-Mw-Jbi" customClass="ImagesCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="AJy-Ip-Hc2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FbC-kM-5xP">
-                            <size key="itemSize" width="100" height="100"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MockCell" id="fP4-2E-Cp9" customClass="UIMockCollectionViewCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="3qK-Mw-Jbi" id="tnP-8s-Mlq"/>
-                            <outlet property="delegate" destination="3qK-Mw-Jbi" id="naf-Yp-ZsY"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wv0-MP-lFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="QuotesViewController" referencedIdentifier="quotesStoryboard" id="BnA-xk-YdB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mo-Vk-F4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="3680"/>
+            <point key="canvasLocation" x="177" y="3401"/>
         </scene>
         <!--Think-->
         <scene sceneID="zBr-jV-tHF">
