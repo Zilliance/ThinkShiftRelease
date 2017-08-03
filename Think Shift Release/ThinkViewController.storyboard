@@ -41,7 +41,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-KA-VYV" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="XCl-No-0gp">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stressor-icon" translatesAutoresizingMaskIntoConstraints="NO" id="XCl-No-0gp">
                                                 <rect key="frame" x="20" y="26" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Did-DF-SKB"/>
@@ -84,7 +84,6 @@
                                                         </connections>
                                                     </segmentedControl>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="Hrc-HR-Ce7"/>
                                                     <constraint firstAttribute="trailing" secondItem="zRk-VW-ka4" secondAttribute="trailing" constant="30" id="hQr-mg-kxF"/>
@@ -98,7 +97,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLight" translatesAutoresizingMaskIntoConstraints="NO" id="rTh-oD-WJ4">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="think-icon" translatesAutoresizingMaskIntoConstraints="NO" id="rTh-oD-WJ4">
                                                 <rect key="frame" x="20" y="93" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="46C-q3-ThP"/>
@@ -141,7 +140,6 @@
                                                 </connections>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="hKC-y9-Yg0" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" id="0Ip-b6-dA2"/>
                                             <constraint firstAttribute="trailing" secondItem="qLt-F0-hRq" secondAttribute="trailing" id="1eN-bR-Ljf"/>
@@ -288,7 +286,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vFc-O6-LMr" secondAttribute="trailing" constant="20" id="0aE-k7-pat"/>
                             <constraint firstItem="HhE-ui-M6C" firstAttribute="leading" secondItem="MhI-EW-XnA" secondAttribute="trailing" constant="10" id="28j-IE-KOe"/>
@@ -319,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJ3-eY-Lkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2055.1999999999998" y="2923.9880059970019"/>
+            <point key="canvasLocation" x="-2055" y="2893"/>
         </scene>
         <!--Think Positively View Controller-->
         <scene sceneID="Suv-ak-N9N">
@@ -368,7 +365,6 @@
                                 </connections>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="21V-hz-Hgi" firstAttribute="top" secondItem="HRl-AQ-DeI" secondAttribute="bottom" constant="10" id="5K6-oa-ZIV"/>
                             <constraint firstAttribute="trailing" secondItem="HRl-AQ-DeI" secondAttribute="trailing" constant="20" id="7ZO-eR-Xyf"/>
@@ -393,5 +389,7 @@
     </scenes>
     <resources>
         <image name="iconLight" width="50" height="50"/>
+        <image name="stressor-icon" width="52" height="60"/>
+        <image name="think-icon" width="60" height="60"/>
     </resources>
 </document>

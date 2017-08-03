@@ -27,6 +27,8 @@ class StressorViewController: UIViewController {
         for view in [self.thinkButton, self.shiftButton, self.releaseButton] as [UIView] {
             view.layer.cornerRadius = UIMock.Appearance.cornerRadius
         }
+        
+        self.view.layer.contents = UIImage(named: "stressor-intro-bg")?.cgImage
     }
     
     // MARK: -
