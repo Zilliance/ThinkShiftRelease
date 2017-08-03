@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var selectLabel: UILabel!
     
+    private var collectionViewController: HomeCollectionViewController!
+    
     fileprivate var isDeleting = false
     
     override func viewDidLoad() {
@@ -27,7 +29,8 @@ class HomeViewController: UIViewController {
     private func toogleDeleteMode() {
         
         self.isDeleting = !self.isDeleting
-       // self.collectionView.reloadData()
+        self.collectionViewController.isDeleting = self.isDeleting
+        self.collectionViewController.collectionView?.reloadData()
         self.editButton.title = self.isDeleting ? "Done" : "Edit"
         
         UIView.animate(withDuration: 0.3, animations: {
@@ -38,9 +41,11 @@ class HomeViewController: UIViewController {
             
         }
     }
-
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.collectionViewController = segue.destination as! HomeCollectionViewController
+    }
+    
     // MARK: - User Action
     
     @IBAction func menuAction(_ sender: UIBarButtonItem) {
@@ -52,5 +57,6 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func deleteAction(_ sender: Any) {
+        self.collectionViewController.delete()
     }
 }

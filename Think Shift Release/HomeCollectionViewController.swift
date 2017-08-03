@@ -80,6 +80,8 @@ class TSRCollectionViewCell: UICollectionViewCell {
 
 class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    var isDeleting = false
+    
     fileprivate var stressors: [Stressor] {
         return Array(Database.shared.user.stressors)
     }
@@ -90,12 +92,54 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = .paleGrey
+        self.collectionView?.allowsMultipleSelection = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.collectionView?.reloadData()
     }
+    
+    func delete() {
+        
+        guard self.stressors.count > 0 else {
+            return
+        }
+        
+        if let indexes = self.collectionView?.indexPathsForSelectedItems, indexes.count > 0 {
+            
+            let alertController = UIAlertController(title: "Are you sure you want to delete the selected stressors?", message: "Deleting them will permanently remove them.", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Delete", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                
+                self.collectionView?.performBatchUpdates({
+                    
+                    let stressors = indexes.map { [unowned self] index in
+                        
+                        return self.stressors[index.row]
+                    }
+                    
+                    for stressor in stressors {
+                        Database.shared.delete(stressor)
+                    }
+                    
+                    self.collectionView?.deleteItems(at: indexes)
+                }, completion: nil)
+                
+            })
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            self.showAlert(title: "Please select the stressors you would like to delete", message: nil)
+        }
+    }
+
     
     // MARK: UICollectionViewDataSource
     
@@ -112,6 +156,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         
         // Configure the cell
         let stressor = self.stressors[indexPath.row]
+        cell.isDeleting = self.isDeleting
         cell.setup(for: stressor)
         
         return cell
@@ -120,7 +165,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
+        
     }
     
     // MARK: UICollectionViewDelegateFlowLayout
