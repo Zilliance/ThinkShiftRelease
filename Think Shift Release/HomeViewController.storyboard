@@ -12,6 +12,9 @@
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -82,19 +85,56 @@
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlX-nn-VPD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjo-QT-fvy">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.2901960784" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="XRW-in-dQ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAction:" destination="cdv-4b-ZyW" eventType="touchUpInside" id="GeH-GC-YaD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to select" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT8-Y5-rql">
+                                <rect key="frame" x="255" y="210" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ekl-eF-1wH"/>
+                                    <constraint firstAttribute="height" constant="21" id="Jjl-fA-IyJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.72156862749999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NlX-nn-VPD" secondAttribute="trailing" id="0qv-k1-s08"/>
                             <constraint firstAttribute="trailing" secondItem="vVm-dQ-7d5" secondAttribute="trailing" id="3OO-PY-HhW"/>
                             <constraint firstItem="9FY-WM-2Js" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" constant="50" id="4b4-aF-87S"/>
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="669-fP-3mK"/>
+                            <constraint firstItem="BvU-DG-5dC" firstAttribute="top" secondItem="Xjo-QT-fvy" secondAttribute="bottom" id="8Go-90-WTf"/>
                             <constraint firstItem="9FY-WM-2Js" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="9sm-0e-4T5"/>
+                            <constraint firstAttribute="trailing" secondItem="aT8-Y5-rql" secondAttribute="trailing" constant="20" id="AWh-SZ-fnO"/>
                             <constraint firstItem="YRp-ow-Axg" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" constant="50" id="C7f-hJ-Rcw"/>
+                            <constraint firstItem="Xjo-QT-fvy" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="Clm-hb-pVX"/>
                             <constraint firstItem="vVm-dQ-7d5" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="DbW-YZ-IP8"/>
+                            <constraint firstItem="aT8-Y5-rql" firstAttribute="top" secondItem="NlX-nn-VPD" secondAttribute="bottom" constant="10" id="ERY-Hf-tf9"/>
                             <constraint firstItem="ICc-zx-7Hj" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="Fs3-D7-gYs"/>
                             <constraint firstItem="YRp-ow-Axg" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="H5S-cA-NYN"/>
+                            <constraint firstAttribute="trailing" secondItem="Xjo-QT-fvy" secondAttribute="trailing" id="J1R-je-HV6"/>
                             <constraint firstAttribute="trailing" secondItem="goS-Ag-fdt" secondAttribute="trailing" id="QXK-z9-g48"/>
+                            <constraint firstItem="vVm-dQ-7d5" firstAttribute="top" secondItem="NlX-nn-VPD" secondAttribute="bottom" id="Spe-4b-edz"/>
                             <constraint firstItem="BvU-DG-5dC" firstAttribute="top" secondItem="goS-Ag-fdt" secondAttribute="bottom" id="VYP-CR-HiP"/>
+                            <constraint firstItem="NlX-nn-VPD" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="Y93-zu-rR8"/>
+                            <constraint firstItem="NlX-nn-VPD" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" id="ch2-Ra-Ddl"/>
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="vVm-dQ-7d5" secondAttribute="bottom" id="ddr-vQ-QbG"/>
                             <constraint firstItem="ICc-zx-7Hj" firstAttribute="top" secondItem="YRp-ow-Axg" secondAttribute="bottom" constant="17" id="jzZ-5m-zBU"/>
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" constant="240" id="ukI-bD-XlQ"/>
@@ -106,7 +146,18 @@
                                 <action selector="menuAction:" destination="cdv-4b-ZyW" id="8wK-j2-V2E"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="qiq-iy-IjU">
+                            <connections>
+                                <action selector="edit:" destination="cdv-4b-ZyW" id="aQm-t6-P15"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="deleteButton" destination="Xjo-QT-fvy" id="Kzu-G8-Hqs"/>
+                        <outlet property="editButton" destination="qiq-iy-IjU" id="ayW-wF-UYo"/>
+                        <outlet property="selectLabel" destination="aT8-Y5-rql" id="db6-zg-87o"/>
+                        <outlet property="topOverlay" destination="NlX-nn-VPD" id="xNS-zn-WFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WF6-jw-npF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
