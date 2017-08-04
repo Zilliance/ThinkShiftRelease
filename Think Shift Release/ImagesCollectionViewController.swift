@@ -93,7 +93,7 @@ class ImagesCollectionViewController: UICollectionViewController {
             return URL(string: imagePath.value)
         }
         
-        self.fetchImages(for: imageUrls) {  [weak self] images in
+        PhotoUtils.fetchImages(for: imageUrls) {  [weak self] images in
             
             self?.images = images
             self?.collectionView?.reloadData()
@@ -101,45 +101,7 @@ class ImagesCollectionViewController: UICollectionViewController {
         }
         
     }
-    
-    fileprivate func fetchImages(for urls:[URL], completion: @escaping ([URL: UIImage]) -> () ) {
-        
-        var tempImages: [URL: UIImage] = [:]
-        
-        let options = PHImageRequestOptions()
-        options.resizeMode = .exact
-        options.deliveryMode = .highQualityFormat
-        
-        let dispatchGroup = DispatchGroup()
-        
-        for url in urls {
-            
-            dispatchGroup.enter()
-            
-            let fetchResults = PHAsset.fetchAssets(withALAssetURLs: [url], options: nil)
-            
-            if let asset = fetchResults.firstObject {
-                PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 300.0, height: 300.0) , contentMode: .aspectFill, options: options, resultHandler: {(image, info) in
-                    if let image = image {
-                        tempImages[url] = image
-                        dispatchGroup.leave()
-                    }
-                })
-            }
-            else {
-                dispatchGroup.leave()
-            }
 
-        }
-        
-        dispatchGroup.notify(queue: DispatchQueue.main) { 
-
-            completion(tempImages)
-
-        }
-        
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let imageUrls = Array(Database.shared.user.imagesPaths.sorted(byKeyPath: "dateAdded")).flatMap { (imagePath) -> URL? in

@@ -75,51 +75,13 @@ extension VideosCollectionViewController {
 
 extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    fileprivate func fetchImages(for urls:[URL], completion: @escaping ([URL: UIImage]) -> () ) {
-        
-        var tempImages: [URL: UIImage] = [:]
-        
-        let options = PHImageRequestOptions()
-        options.resizeMode = .exact
-        options.deliveryMode = .highQualityFormat
-        
-        let dispatchGroup = DispatchGroup()
-        
-        for url in urls {
-            
-            dispatchGroup.enter()
-            
-            let fetchResults = PHAsset.fetchAssets(withALAssetURLs: [url], options: nil)
-            
-            if let asset = fetchResults.firstObject {
-                PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 300.0, height: 300.0) , contentMode: .aspectFill, options: options, resultHandler: {(image, info) in
-                    if let image = image {
-                        tempImages[url] = image
-                        dispatchGroup.leave()
-                    }
-                })
-            }
-            else {
-                dispatchGroup.leave()
-            }
-            
-        }
-        
-        dispatchGroup.notify(queue: DispatchQueue.main) {
-            
-            completion(tempImages)
-            
-        }
-        
-    }
-    
     func loadVideos(){
     
         self.urls = Array(Database.shared.user.videoPaths).flatMap { (videoPath) -> URL? in
             return URL(string: videoPath.value)
         }
         
-        self.fetchImages(for: self.urls) {  [weak self] images in
+        PhotoUtils.fetchImages(for: self.urls) {  [weak self] images in
             
             self?.images = images
             self?.collectionView?.reloadData()
