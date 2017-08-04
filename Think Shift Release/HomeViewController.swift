@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var selectLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
     private var collectionViewController: HomeCollectionViewController!
     
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Think, Shift, Release"
         self.editButton.title = "Edit"
+        self.startButton.layer.cornerRadius = UIMock.Appearance.cornerRadius
     }
 
     
