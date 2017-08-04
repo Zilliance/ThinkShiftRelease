@@ -180,7 +180,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     // MARK: UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width - 40, height: 105)
+        return CGSize(width: collectionView.bounds.width - 40, height: 90)
     }
 
 }
