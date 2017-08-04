@@ -7,32 +7,52 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class ShiftSetBoundariesViewController: UIViewController {
+    
+    @IBOutlet weak var talkAboutTextView: KMPlaceholderTextView!
+    @IBOutlet weak var notTalkAboutTextView: KMPlaceholderTextView!
+    
+    var stressor: Stressor!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setupView() {
+        
+        for view in [self.talkAboutTextView, self.notTalkAboutTextView] as [UIView] {
+            view.layer.borderColor = UIColor.silverColor.cgColor
+            view.layer.borderWidth = UIMock.Appearance.borderWidth
+            view.layer.cornerRadius = UIMock.Appearance.cornerRadius
+        }
     }
+
     
     @IBAction func didTapTryInstantMoodShift(_ sender: Any) {
         
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+}
+
+extension ShiftSetBoundariesViewController: StressorEditor {
+    func save() {
+        self.stressor.shiftBoundariesDoTalkWith = self.talkAboutTextView.text
+        self.stressor.shiftBoundariesNotTalkWith = self.notTalkAboutTextView.text
     }
-    */
+}
 
+extension ShiftSetBoundariesViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            self.save()
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 }

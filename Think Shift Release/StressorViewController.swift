@@ -111,6 +111,10 @@ class StressorViewController: UIViewController {
             let vc = segue.destination as! ReleaseViewController
             vc.stressor = self.stressor
         }
+        else if segue.identifier == "ShiftSegue" {
+            let vc = segue.destination as! ShiftViewController
+            vc.stressor = self.stressor
+        }
         
     }
 }

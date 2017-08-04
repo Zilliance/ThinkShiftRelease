@@ -10,13 +10,17 @@ import UIKit
 
 class ShiftViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var subviewContainer: UIView!
+    @IBOutlet weak var stressorLabel: UILabel!
     private var embeddedViewController: UIViewController?
     
-    // NOTE: UNUSED
     var stressor: Stressor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let title = self.stressor.title {
+            self.stressorLabel.text = title
+        }
 
         self.setupSummaryButton()
         
@@ -36,7 +40,9 @@ class ShiftViewController: UIViewController, ShowsSummary {
             case 0:
                 return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood")
             case 1:
-                return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShiftBoundaries")
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShiftBoundaries") as! ShiftSetBoundariesViewController
+                vc.stressor = self.stressor
+                return vc
             default:
                 return nil
             }
