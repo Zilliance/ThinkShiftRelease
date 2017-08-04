@@ -196,5 +196,9 @@ extension MusicTableViewController: MPMediaPickerControllerDelegate {
         
     }
     
+    func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
+        mediaPicker.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
