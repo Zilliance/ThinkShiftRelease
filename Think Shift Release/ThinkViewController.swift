@@ -9,7 +9,7 @@
 import UIKit
 import KMPlaceholderTextView
 
-class ThinkViewController: UIViewController {
+class ThinkViewController: UIViewController, ShowsSummary {
     
     @IBOutlet weak var subviewContainer: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -21,8 +21,9 @@ class ThinkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Summary", style: .plain, target: self, action: #selector(viewSummary(_:)))
+        self.setupSummaryButton()
         self.setupView()
+        
         let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively") as! ThinkConstructivelyViewController
         viewController.stressor = self.stressor
         self.embed(viewController: viewController)
@@ -87,20 +88,6 @@ class ThinkViewController: UIViewController {
         viewController.removeFromParentViewController()
         self.embeddedViewController = nil
     }
-    
-    // MARK: -
-    
-    @IBAction func viewSummary(_ sender: Any?) {
-        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
-            assertionFailure()
-            return
-        }
-        vc.stressor = self.stressor
-        let nc = UINavigationController(rootViewController: vc)
-        self.present(nc, animated: true, completion: nil)
-        
-    }
-    
 }
 
 extension ThinkViewController: StressorEditor {

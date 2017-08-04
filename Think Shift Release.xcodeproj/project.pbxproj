@@ -50,9 +50,8 @@
 		8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329001F292CA900844C5F /* ThinkViewController.storyboard */; };
 		8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */; };
 		8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */; };
-		E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */; };
 		8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */; };
-		E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosTableViewController.swift */; };
+		E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
 		E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */; };
@@ -88,6 +87,8 @@
 		E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */; };
 		E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */; };
 		E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */; };
+		E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */; };
+		E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */; };
 		F01442EDF7C45AB3C75F508A /* Pods_Think_Shift_ReleaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +203,8 @@
 		E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StressorViewController.storyboard; sourceTree = "<group>"; };
 		E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientableNavigationController.swift; sourceTree = "<group>"; };
+		E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSummary.swift; sourceTree = "<group>"; };
+		E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIClosureBarButtonItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +316,7 @@
 		E378283D1F195C69005E91A8 /* Shift */ = {
 			isa = PBXGroup;
 			children = (
+				E38608EB1F16C97E00816DF4 /* ShiftViewController.swift */,
 				E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */,
 				E37828431F195FED005E91A8 /* MusicTableViewController.swift */,
 				E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */,
@@ -321,7 +325,6 @@
 				4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */,
 				4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */,
 				4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */,
-				E38608EB1F16C97E00816DF4 /* ShiftViewController.swift */,
 				E38608E91F16C96400816DF4 /* ShiftSetBoundariesViewController.swift */,
 				E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */,
 				4F65CF101F34A14F00C4A5B9 /* ImageViewController.storyboard */,
@@ -355,6 +358,7 @@
 				E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */,
 				E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */,
 				4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */,
+				E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -362,6 +366,7 @@
 		E378284A1F196506005E91A8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */,
 				E37828521F19835E005E91A8 /* Sidebar */,
 				E37828511F19817D005E91A8 /* Home */,
 				E378283F1F195C74005E91A8 /* Stressor */,
@@ -806,6 +811,7 @@
 				8C631F821F228F7300B2CA4C /* UIColor+CustomColors.swift in Sources */,
 				E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */,
 				8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */,
+				E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */,
 				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
 				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
 				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,
@@ -836,6 +842,7 @@
 				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
 				E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */,
 				4F15A5191F277A5C004210B4 /* Quote.swift in Sources */,
+				E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
 				E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */,
 				E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */,

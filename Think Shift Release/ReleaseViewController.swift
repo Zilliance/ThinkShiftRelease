@@ -9,7 +9,7 @@
 import UIKit
 import KMPlaceholderTextView
 
-class ReleaseViewController: UIViewController {
+class ReleaseViewController: UIViewController, ShowsSummary {
 
     @IBOutlet weak var affirmationTextView: KMPlaceholderTextView!
     @IBOutlet weak var intentionTextView: KMPlaceholderTextView!
@@ -38,22 +38,8 @@ class ReleaseViewController: UIViewController {
             view.layer.borderWidth = 1
         }
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Summary", style: .plain, target: self, action: #selector(viewSummary(_:)))
+        self.setupSummaryButton()
     }
-    
-    // MARK: -
-    
-    @IBAction func viewSummary(_ sender: Any?) {
-        
-        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
-            assertionFailure()
-            return
-        }
-        vc.stressor = self.stressor
-        let nc = UINavigationController(rootViewController: vc)
-        self.present(nc, animated: true, completion: nil)
-    }
-    
 }
 
 extension ReleaseViewController: StressorEditor {
