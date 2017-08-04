@@ -24,7 +24,7 @@ class Database {
                 schemaVersion: 5,
                 
                 migrationBlock: { migration, oldSchemaVersion in
-                    if (oldSchemaVersion < 2) {
+                    if (oldSchemaVersion < 4) {
                         // Nothing to do!
                         // Realm will automatically detect new properties and removed properties
                         // And will update the schema on disk automatically
