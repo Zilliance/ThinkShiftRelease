@@ -57,7 +57,7 @@ class TSRCollectionViewCell: UICollectionViewCell {
     func setup(for stressor: Stressor) {
         
         self.contentView.layer.borderWidth = 0
-        // self.titleLabel.text = compass.stressor
+         self.titleLabel.text = stressor.title
         
         if stressor.completed {
             self.completedLabel.backgroundColor = .navBar
@@ -79,38 +79,81 @@ class TSRCollectionViewCell: UICollectionViewCell {
 }
 
 class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
-    private struct MockCollectionViewContent {
-        let index: Int
+    
+    var isDeleting = false
+    
+    fileprivate var stressors: [Stressor] {
+        return Array(Database.shared.user.stressors)
     }
     
-    private lazy var items: [MockCollectionViewContent] = {
-        return (0..<9).map { MockCollectionViewContent(index: $0) }
-    }()
-    
-    var editable = true
     
     // MARK: -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = .paleGrey
+        self.collectionView?.allowsMultipleSelection = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.collectionView?.reloadData()
+    }
+    
+    func delete() {
+        
+        guard self.stressors.count > 0 else {
+            return
+        }
+        
+        if let indexes = self.collectionView?.indexPathsForSelectedItems, indexes.count > 0 {
+            
+            let alertController = UIAlertController(title: "Are you sure you want to delete the selected stressors?", message: "Deleting them will permanently remove them.", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Delete", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                
+                self.collectionView?.performBatchUpdates({
+                    
+                    let stressors = indexes.map { [unowned self] index in
+                        
+                        return self.stressors[index.row]
+                    }
+                    
+                    for stressor in stressors {
+                        Database.shared.delete(stressor)
+                    }
+                    
+                    self.collectionView?.deleteItems(at: indexes)
+                }, completion: nil)
+                
+            })
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            self.showAlert(title: "Please select the stressors you would like to delete", message: nil)
+        }
+    }
+
     
     // MARK: UICollectionViewDataSource
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return self.stressors.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TSRCollectionViewCell
         
         // Configure the cell
+        let stressor = self.stressors[indexPath.row]
+        cell.isDeleting = self.isDeleting
+        cell.setup(for: stressor)
         
         return cell
     }
@@ -118,7 +161,18 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        guard !self.isDeleting else { return }
+        
+        let stressor = self.stressors[indexPath.row]
+        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
+            assertionFailure()
+            return
+        }
+        vc.stressor = stressor
+        let nc = UINavigationController(rootViewController: vc)
+        self.present(nc, animated: true, completion: nil)
+        
     }
     
     // MARK: UICollectionViewDelegateFlowLayout

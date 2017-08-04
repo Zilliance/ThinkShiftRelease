@@ -15,12 +15,22 @@ class ReleaseViewController: UIViewController {
     @IBOutlet weak var intentionTextView: KMPlaceholderTextView!
     @IBOutlet weak var containerView: UIView!
     
+    var stressor: Stressor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
     }
     
     private func setupView() {
+        
+        if let affirmation = self.stressor.releaseAffirmation {
+            self.affirmationTextView.text = affirmation
+        }
+        
+        if let intention = self.stressor.releaseIntention {
+            self.intentionTextView.text = intention
+        }
         
         for view in [self.affirmationTextView, intentionTextView, self.containerView] as [UIView] {
             view.layer.cornerRadius = UIMock.Appearance.cornerRadius
@@ -35,20 +45,29 @@ class ReleaseViewController: UIViewController {
     
     @IBAction func viewSummary(_ sender: Any?) {
         
-        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() else {
+        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
             assertionFailure()
             return
         }
-        
-        self.present(vc, animated: true, completion: nil)
+        vc.stressor = self.stressor
+        let nc = UINavigationController(rootViewController: vc)
+        self.present(nc, animated: true, completion: nil)
     }
     
+}
+
+extension ReleaseViewController: StressorEditor {
+    func save() {
+        self.stressor.releaseIntention = self.intentionTextView.text
+        self.stressor.releaseAffirmation = self.affirmationTextView.text
+    }
 }
 
 extension ReleaseViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
+            self.save()
             textView.resignFirstResponder()
             return false
         }

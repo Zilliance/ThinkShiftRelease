@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-fq-rs0">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-fq-rs0" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-KA-VYV" userLabel="ContentView">
@@ -255,6 +255,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Lru-Kf-0DI"/>
                                 </constraints>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
@@ -270,6 +271,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="4F5-jY-i01"/>
                                 </constraints>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
@@ -310,7 +312,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actionStepTextVIew" destination="vFc-O6-LMr" id="sMh-zB-jCH"/>
+                        <outlet property="actionStepTextView" destination="vFc-O6-LMr" id="rDU-VM-lyn"/>
                         <outlet property="wisdomTextView" destination="gFi-oK-q5X" id="eWn-XD-IKN"/>
                     </connections>
                 </viewController>
@@ -355,6 +357,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="LoX-cb-gBT"/>
                                 </constraints>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>

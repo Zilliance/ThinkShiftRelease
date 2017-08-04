@@ -21,7 +21,7 @@ class Database {
         do {
             
             let config = Realm.Configuration(
-                schemaVersion: 4,
+                schemaVersion: 5,
                 
                 migrationBlock: { migration, oldSchemaVersion in
                     if (oldSchemaVersion < 4) {
@@ -34,7 +34,7 @@ class Database {
             Realm.Configuration.defaultConfiguration = config
             
             self.realm = try Realm()
-
+            
             stressors = self.realm.objects(Stressor.self)
             
             if let user = self.realm.objects(User.self).first
@@ -49,7 +49,7 @@ class Database {
             
             
         } catch {
-            print("realm initialization failed, aborting")
+            print("realm initialization failed, aborting", error)
         }
     }
     
