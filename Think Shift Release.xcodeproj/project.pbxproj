@@ -51,6 +51,8 @@
 		8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */; };
 		8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */; };
 		E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */; };
+		8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */; };
+		E37828421F195FE7005E91A8 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosTableViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
 		E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */; };
@@ -153,6 +155,7 @@
 		8CD329001F292CA900844C5F /* ThinkViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThinkViewController.storyboard; sourceTree = "<group>"; };
 		8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReleaseViewController.storyboard; sourceTree = "<group>"; };
 		8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheTableViewController.swift; sourceTree = "<group>"; };
+		8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SummaryTableViewController.storyboard; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -384,6 +387,7 @@
 		E378284C1F196DA2005E91A8 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */,
 				E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */,
 			);
 			name = Summary;
@@ -634,6 +638,7 @@
 				8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */,
+				8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */,
 				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
 				8C631F9B1F22991E00B2CA4C /* Muli-ExtraBold.ttf in Resources */,
 			);

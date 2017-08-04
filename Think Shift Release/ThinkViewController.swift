@@ -33,6 +33,8 @@ class ThinkViewController: UIViewController {
         self.segmentedControl.tintColor = UIColor.purple
         self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
         self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.purple] , for: .normal)
+        
+        self.view.layer.contents = UIImage(named: "think-bg")?.cgImage
     }
 
     // MARK: -
@@ -63,21 +65,28 @@ class ThinkViewController: UIViewController {
         viewController.view.frame = self.subviewContainer.bounds
         self.subviewContainer.addSubview(viewController.view)
         viewController.didMove(toParentViewController: self)
+        self.embeddedViewController = viewController
     }
     
     private func unembed(viewController: UIViewController) {
         viewController.willMove(toParentViewController: nil)
         viewController.view.removeFromSuperview()
         viewController.removeFromParentViewController()
+        self.embeddedViewController = nil
     }
     
     // MARK: -
     
     @IBAction func viewSummary(_ sender: Any?) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SummaryNavigation")
+        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() else {
+            assertionFailure()
+            return
+        }
+        
         self.present(vc, animated: true, completion: nil)
+        
     }
-
+    
 }
 
 extension ThinkViewController: UITextViewDelegate {
