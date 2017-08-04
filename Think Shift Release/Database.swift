@@ -15,8 +15,6 @@ class Database {
     private(set) var realm: Realm!
     fileprivate(set) var user: User!
     
-    private(set) var stressors: Results<Stressor>!
-    
     init() {
         do {
             
@@ -32,17 +30,12 @@ class Database {
             })
             
             Realm.Configuration.defaultConfiguration = config
-            
             self.realm = try Realm()
             
-            stressors = self.realm.objects(Stressor.self)
-            
-            if let user = self.realm.objects(User.self).first
-            {
+            if let user = self.realm.objects(User.self).first {
                 self.user = user
             }
-            else
-            {
+            else {
                 //first time launch, let's prepare the DB
                 self.bootstrap()
             }
