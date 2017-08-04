@@ -75,6 +75,17 @@ final class User: Object {
         }
     }
     
+    func removeAudio(audioID: UInt64) {
+        
+        if let object = (Database.shared.realm.objects(Audio.self).filter {
+            $0.value == audioID
+        }).first {
+            
+            Database.shared.delete(object)
+            
+        }
+    }
+    
     func addVideo(videoPath: String) {
         Database.shared.save {
             videoPaths.append(Video(path: videoPath))
