@@ -31,6 +31,7 @@ class StressorViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.save()
         if (self.isMovingFromParentViewController) {
+            guard let count = self.stressorTextField.text?.characters.count, count > 0 else { return }
             self.updateDatabase()
         }
     }

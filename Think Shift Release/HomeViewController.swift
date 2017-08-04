@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Think, Shift, Release"
         self.editButton.title = "Edit"
-        self.startButton.layer.cornerRadius = UIMock.Appearance.cornerRadius
+        self.startButton.imageView?.contentMode = .scaleAspectFit
     }
 
     
