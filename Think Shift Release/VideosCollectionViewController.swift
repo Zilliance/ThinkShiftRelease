@@ -75,26 +75,41 @@ extension VideosCollectionViewController {
 
 extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    fileprivate func fetchImages(for urls:[URL], completion: @escaping ([UIImage]) -> () ) {
+    fileprivate func fetchImages(for urls:[URL], completion: @escaping ([URL: UIImage]) -> () ) {
         
-        let fetchResults = PHAsset.fetchAssets(withALAssetURLs: urls, options: nil)
+        var tempImages: [URL: UIImage] = [:]
         
-        var tempImages: [UIImage] = []
+        let options = PHImageRequestOptions()
+        options.resizeMode = .exact
+        options.deliveryMode = .highQualityFormat
         
-        fetchResults.enumerateObjects(using: { asset, index, _ in
-            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 200.0, height: 200.0) , contentMode: .aspectFill, options: nil, resultHandler: {[weak self] (image, info) in
-                if let im = image {
-                    
-                    let url = urls[index]
-                    self?.images[url] = image
-                    
-                    tempImages.append(im)
-                    if index == fetchResults.count-1 {
-                        completion(tempImages)
+        let dispatchGroup = DispatchGroup()
+        
+        for url in urls {
+            
+            dispatchGroup.enter()
+            
+            let fetchResults = PHAsset.fetchAssets(withALAssetURLs: [url], options: nil)
+            
+            if let asset = fetchResults.firstObject {
+                PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 300.0, height: 300.0) , contentMode: .aspectFill, options: options, resultHandler: {(image, info) in
+                    if let image = image {
+                        tempImages[url] = image
+                        dispatchGroup.leave()
                     }
-                }
-            })
-        })
+                })
+            }
+            else {
+                dispatchGroup.leave()
+            }
+            
+        }
+        
+        dispatchGroup.notify(queue: DispatchQueue.main) {
+            
+            completion(tempImages)
+            
+        }
         
     }
     
@@ -106,6 +121,7 @@ extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINav
         
         self.fetchImages(for: self.urls) {  [weak self] images in
             
+            self?.images = images
             self?.collectionView?.reloadData()
             
         }

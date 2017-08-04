@@ -47,6 +47,7 @@ final class Video: Object {
 final class Image: Object {
     
     dynamic var value: String!
+    dynamic var dateAdded = Date()
     
     convenience init(path: String) {
         self.init()
