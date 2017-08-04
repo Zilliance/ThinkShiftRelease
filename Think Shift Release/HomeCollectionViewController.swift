@@ -14,7 +14,6 @@ class TSRCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
-    @IBOutlet weak var greyLineView: UIView!
     @IBOutlet weak var checkmarkView: UIImageView!
     
     var isDeleting = false
@@ -61,17 +60,21 @@ class TSRCollectionViewCell: UICollectionViewCell {
         
         if stressor.completed {
             self.completedLabel.backgroundColor = .navBar
-            self.completedLabel.textColor = .contentBackground
-            self.greyLineView.isHidden = true
+            self.completedLabel.textColor = .white
             self.completedLabel.text = TSRCollectionViewCell.dateFormatter.string(from: stressor.dateCreated)
+            self.completedLabel.layer.borderWidth = 0
+            self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
+            self.completedLabel.layer.cornerRadius = UIMock.Appearance.cornerRadius
             
         }
             
         else {
             self.completedLabel.backgroundColor = .contentBackground
-            self.completedLabel.textColor = .black
-            self.greyLineView.isHidden = false
+            self.completedLabel.textColor = .darkBlue
             self.completedLabel.text = "In progress"
+            self.completedLabel.layer.borderWidth = UIMock.Appearance.borderWidth
+            self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
+            self.completedLabel.layer.cornerRadius = UIMock.Appearance.cornerRadius
             
         }
     }
