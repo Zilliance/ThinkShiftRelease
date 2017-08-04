@@ -164,8 +164,9 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        guard !self.isDeleting else { return }
+        guard !self.isDeleting else {
+            return
+        }
         
         let stressor = self.stressors[indexPath.row]
         guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
@@ -173,9 +174,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             return
         }
         vc.stressor = stressor
-        let nc = UINavigationController(rootViewController: vc)
-        self.present(nc, animated: true, completion: nil)
-        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: UICollectionViewDelegateFlowLayout

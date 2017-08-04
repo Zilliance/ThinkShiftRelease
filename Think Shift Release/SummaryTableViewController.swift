@@ -66,7 +66,11 @@ class SummaryTableViewController: UITableViewController {
         
         self.title = "Summary"
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(close(_:)))
+        if let _ = self.presentingViewController {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(close(_:)))
+        }
+        
+        // TODO: change back button title to back
         
     }
     

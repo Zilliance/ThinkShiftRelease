@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ShiftViewController: UIViewController {
+class ShiftViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var subviewContainer: UIView!
     private var embeddedViewController: UIViewController?
+    
+    // NOTE: UNUSED
+    var stressor: Stressor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Summary", style: .plain, target: self, action: #selector(viewSummary(_:)))
+        self.setupSummaryButton()
         
         self.embed(viewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood"))
     }
@@ -59,13 +62,6 @@ class ShiftViewController: UIViewController {
         viewController.willMove(toParentViewController: nil)
         viewController.view.removeFromSuperview()
         viewController.removeFromParentViewController()
-    }
-    
-    // MARK: -
-    
-    @IBAction func viewSummary(_ sender: Any?) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SummaryNavigation")
-        self.present(vc, animated: true, completion: nil)
     }
     
     /*
