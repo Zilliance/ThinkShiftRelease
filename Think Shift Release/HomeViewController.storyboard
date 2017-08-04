@@ -21,7 +21,7 @@
         <scene sceneID="Dib-sW-uLk">
             <objects>
                 <navigationController id="X5n-hP-LNa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qsO-4a-1eY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qsO-4a-1eY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -52,25 +52,15 @@
                                     <segue destination="Eq8-kj-Z7Q" kind="embed" id="veH-d8-AaI"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START A NEW TSR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICc-zx-7Hj">
-                                <rect key="frame" x="106.5" y="117" width="162" height="23"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FY-WM-2Js">
+                                <rect key="frame" x="20" y="57" width="335" height="77"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="cP1-Le-7zs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconDark" translatesAutoresizingMaskIntoConstraints="NO" id="YRp-ow-Axg">
-                                <rect key="frame" x="162.5" y="50" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Pkw-sE-PK9"/>
-                                    <constraint firstAttribute="height" constant="50" id="hci-7P-5Kr"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FY-WM-2Js">
-                                <rect key="frame" x="93" y="50" width="188" height="92"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="BO0-an-IJo"/>
-                                    <constraint firstAttribute="height" constant="92" id="gcg-BN-Ycp"/>
-                                </constraints>
+                                <inset key="imageEdgeInsets" minX="-51" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="START A NEW TSR" image="logo-round"/>
                                 <connections>
                                     <segue destination="cft-iu-FF2" kind="show" id="Ecg-Xa-pOh"/>
                                 </connections>
@@ -118,25 +108,22 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NlX-nn-VPD" secondAttribute="trailing" id="0qv-k1-s08"/>
                             <constraint firstAttribute="trailing" secondItem="vVm-dQ-7d5" secondAttribute="trailing" id="3OO-PY-HhW"/>
-                            <constraint firstItem="9FY-WM-2Js" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" constant="50" id="4b4-aF-87S"/>
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="669-fP-3mK"/>
                             <constraint firstItem="BvU-DG-5dC" firstAttribute="top" secondItem="Xjo-QT-fvy" secondAttribute="bottom" id="8Go-90-WTf"/>
-                            <constraint firstItem="9FY-WM-2Js" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="9sm-0e-4T5"/>
                             <constraint firstAttribute="trailing" secondItem="aT8-Y5-rql" secondAttribute="trailing" constant="20" id="AWh-SZ-fnO"/>
-                            <constraint firstItem="YRp-ow-Axg" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" constant="50" id="C7f-hJ-Rcw"/>
                             <constraint firstItem="Xjo-QT-fvy" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="Clm-hb-pVX"/>
                             <constraint firstItem="vVm-dQ-7d5" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="DbW-YZ-IP8"/>
                             <constraint firstItem="aT8-Y5-rql" firstAttribute="top" secondItem="NlX-nn-VPD" secondAttribute="bottom" constant="10" id="ERY-Hf-tf9"/>
-                            <constraint firstItem="ICc-zx-7Hj" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="Fs3-D7-gYs"/>
-                            <constraint firstItem="YRp-ow-Axg" firstAttribute="centerX" secondItem="o8h-uV-lNY" secondAttribute="centerX" id="H5S-cA-NYN"/>
                             <constraint firstAttribute="trailing" secondItem="Xjo-QT-fvy" secondAttribute="trailing" id="J1R-je-HV6"/>
                             <constraint firstAttribute="trailing" secondItem="goS-Ag-fdt" secondAttribute="trailing" id="QXK-z9-g48"/>
                             <constraint firstItem="vVm-dQ-7d5" firstAttribute="top" secondItem="NlX-nn-VPD" secondAttribute="bottom" id="Spe-4b-edz"/>
                             <constraint firstItem="BvU-DG-5dC" firstAttribute="top" secondItem="goS-Ag-fdt" secondAttribute="bottom" id="VYP-CR-HiP"/>
                             <constraint firstItem="NlX-nn-VPD" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" id="Y93-zu-rR8"/>
+                            <constraint firstItem="vVm-dQ-7d5" firstAttribute="top" secondItem="9FY-WM-2Js" secondAttribute="bottom" constant="66" id="Zal-WM-wwS"/>
+                            <constraint firstAttribute="trailing" secondItem="9FY-WM-2Js" secondAttribute="trailing" constant="20" id="c6f-W2-Ba0"/>
                             <constraint firstItem="NlX-nn-VPD" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" id="ch2-Ra-Ddl"/>
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="vVm-dQ-7d5" secondAttribute="bottom" id="ddr-vQ-QbG"/>
-                            <constraint firstItem="ICc-zx-7Hj" firstAttribute="top" secondItem="YRp-ow-Axg" secondAttribute="bottom" constant="17" id="jzZ-5m-zBU"/>
+                            <constraint firstItem="9FY-WM-2Js" firstAttribute="leading" secondItem="o8h-uV-lNY" secondAttribute="leading" constant="20" id="fqb-df-DEG"/>
                             <constraint firstItem="goS-Ag-fdt" firstAttribute="top" secondItem="o8h-uV-lNY" secondAttribute="top" constant="240" id="ukI-bD-XlQ"/>
                         </constraints>
                     </view>
@@ -285,6 +272,7 @@
     </scenes>
     <resources>
         <image name="iconDark" width="50" height="50"/>
+        <image name="logo-round" width="70" height="70"/>
         <image name="menu-icon" width="20" height="17"/>
         <image name="select-checkmark" width="20" height="20"/>
     </resources>
