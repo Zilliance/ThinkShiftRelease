@@ -65,7 +65,7 @@
                                     <segue destination="cft-iu-FF2" kind="show" id="Ecg-Xa-pOh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     Saved T, S, R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVm-dQ-7d5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     Saved T, S, R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVm-dQ-7d5" userLabel="Saved T, S, R">
                                 <rect key="frame" x="0.0" y="200" width="375" height="40"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -143,6 +143,7 @@
                         <outlet property="deleteButton" destination="Xjo-QT-fvy" id="Kzu-G8-Hqs"/>
                         <outlet property="editButton" destination="qiq-iy-IjU" id="ayW-wF-UYo"/>
                         <outlet property="selectLabel" destination="aT8-Y5-rql" id="db6-zg-87o"/>
+                        <outlet property="startButton" destination="9FY-WM-2Js" id="Iut-rG-rJi"/>
                         <outlet property="topOverlay" destination="NlX-nn-VPD" id="xNS-zn-WFp"/>
                     </connections>
                 </viewController>
