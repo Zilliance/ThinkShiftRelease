@@ -101,7 +101,6 @@ class MusicTableViewController: UITableViewController {
             MPMediaLibrary.requestAuthorization({ (status) in
                 
                 guard status == .authorized else {
-                    //show error?
                     return
                 }
                 
@@ -141,13 +140,33 @@ class MusicTableViewController: UITableViewController {
         }
         
         self.assets.forEach {
-            if let image = $0.artwork?.image(at: CGSize(width: 50.0, height: 50.0)) {
+            if let image = $0.artwork?.image(at: CGSize(width: 100.0, height: 100.0)) {
                 self.images[$0] = image
             }
         }
         
         self.tableView.reloadData()
         
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+     }
+    
+    
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let mediaItem = self.assets[indexPath.row]
+            Database.shared.user.removeAudio(audioID: mediaItem.persistentID)
+            self.assets.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
     }
     
     deinit {

@@ -47,6 +47,7 @@ final class Video: Object {
 final class Image: Object {
     
     dynamic var value: String!
+    dynamic var dateAdded = Date()
     
     convenience init(path: String) {
         self.init()
@@ -72,6 +73,17 @@ final class User: Object {
     func addAudio(audioID: UInt64) {
         Database.shared.save {
             audioPaths.append(Audio(id: audioID))
+        }
+    }
+    
+    func removeAudio(audioID: UInt64) {
+        
+        if let object = (Database.shared.realm.objects(Audio.self).filter {
+            $0.value == audioID
+        }).first {
+            
+            Database.shared.delete(object)
+            
         }
     }
     

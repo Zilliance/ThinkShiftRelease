@@ -17,7 +17,7 @@ final class ImageCell: UICollectionViewCell {
 
 class ImagesCollectionViewController: UICollectionViewController {
     
-    private var images: [UIImage] = []
+    private var images: [URL: UIImage] = [:]
     fileprivate lazy var picker = UIImagePickerController()
 
     override func viewDidLoad() {
@@ -61,7 +61,17 @@ class ImagesCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
     
         // Configure the cell
-        let image = self.images[indexPath.row]
+        let imageUrls = Array(Database.shared.user.imagesPaths.sorted(byKeyPath: "dateAdded")).flatMap { (imagePath) -> URL? in
+            return URL(string: imagePath.value)
+        }
+        let url = imageUrls[indexPath.row]
+        
+//        if let image = PhotoUtils.getPhoto(assetURL: url) {
+//            
+//            cell.imageView.image = image
+//        }
+        
+        let image = self.images[url]
         cell.imageView.image = image
     
         return cell
@@ -79,11 +89,11 @@ class ImagesCollectionViewController: UICollectionViewController {
     
     fileprivate func loadImages() {
         
-        let urls = Array(Database.shared.user.imagesPaths).flatMap { (imagePath) -> URL? in
+        let imageUrls = Array(Database.shared.user.imagesPaths).flatMap { (imagePath) -> URL? in
             return URL(string: imagePath.value)
         }
         
-        self.fetchImages(for: urls) {  [weak self] images in
+        PhotoUtils.fetchImages(for: imageUrls) {  [weak self] images in
             
             self?.images = images
             self?.collectionView?.reloadData()
@@ -91,28 +101,22 @@ class ImagesCollectionViewController: UICollectionViewController {
         }
         
     }
-    
-    fileprivate func fetchImages(for urls:[URL], completion: @escaping ([UIImage]) -> () ) {
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let fetchResults = PHAsset.fetchAssets(withALAssetURLs: urls, options: nil)
+        let imageUrls = Array(Database.shared.user.imagesPaths.sorted(byKeyPath: "dateAdded")).flatMap { (imagePath) -> URL? in
+            return URL(string: imagePath.value)
+        }
+        let url = imageUrls[indexPath.row]
         
-        var tempImages: [UIImage] = []
-        
-        let options = PHImageRequestOptions()
-        options.resizeMode = .exact
-        options.deliveryMode = .highQualityFormat
-        
-        fetchResults.enumerateObjects(using: { asset, index, _ in
-            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 300.0, height: 300.0) , contentMode: .aspectFill, options: options, resultHandler: {(image, info) in
-                if let im = image {
-                    tempImages.append(im)
-                    if index == fetchResults.count-1 {
-                        completion(tempImages)
-                    }
-                }
-            })
-        })
-        
+        if let image = PhotoUtils.getPhoto(assetURL: url) {
+            
+            let imageViewController = UIStoryboard(name: "ImageViewController", bundle: nil).instantiateInitialViewController() as! ImageViewController
+            
+            imageViewController.image = image
+            
+            self.navigationController?.pushViewController(imageViewController, animated: true)
+        }
     }
     
 }
