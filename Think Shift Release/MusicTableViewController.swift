@@ -101,7 +101,6 @@ class MusicTableViewController: UITableViewController {
             MPMediaLibrary.requestAuthorization({ (status) in
                 
                 guard status == .authorized else {
-                    //show error?
                     return
                 }
                 
@@ -141,7 +140,7 @@ class MusicTableViewController: UITableViewController {
         }
         
         self.assets.forEach {
-            if let image = $0.artwork?.image(at: CGSize(width: 50.0, height: 50.0)) {
+            if let image = $0.artwork?.image(at: CGSize(width: 100.0, height: 100.0)) {
                 self.images[$0] = image
             }
         }

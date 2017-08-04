@@ -1,5 +1,5 @@
 //
-//  VideosTableViewController.swift
+//  VideosCollectionViewController.swift
 //  Think Shift Release
 //
 //  Created by Philip Dow on 7/14/17.
@@ -11,7 +11,7 @@ import Photos
 import MobileCoreServices
 import AVKit
 
-class VideosTableViewController: UITableViewController {
+class VideosCollectionViewController: UICollectionViewController {
 
     fileprivate lazy var videoPicker = UIImagePickerController()
     var urls: [URL] = []
@@ -20,18 +20,8 @@ class VideosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
         self.videoPicker.delegate = self
-        
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 80
-
-        //register nibs:
-        let nibName = UINib(nibName: "MediaCell", bundle:nil)
-        self.tableView.register(nibName, forCellReuseIdentifier: "MediaCell")
         
         self.loadVideos()
 
@@ -47,8 +37,7 @@ class VideosTableViewController: UITableViewController {
         self.present(self.videoPicker, animated: true, completion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let videoURL = self.urls[indexPath.row]
         
         let playerViewController = AVPlayerViewController()
@@ -57,34 +46,34 @@ class VideosTableViewController: UITableViewController {
         
         playerViewController.player = player
         
-        present(playerViewController, animated: true) { 
+        present(playerViewController, animated: true) {
             player.play()
         }
-        
     }
 
 }
 
-extension VideosTableViewController {
+extension VideosCollectionViewController {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.urls.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MediaCell", for: indexPath) as! MediaCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
         
         let videoURL = self.urls[indexPath.row]
         let image = images[videoURL]
         
-        cell.mediaView.image = image
+        cell.imageView.image = image
         
         return cell
     }
     
 }
 
-extension VideosTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     fileprivate func fetchImages(for urls:[URL], completion: @escaping ([UIImage]) -> () ) {
         
@@ -93,7 +82,7 @@ extension VideosTableViewController: UIImagePickerControllerDelegate, UINavigati
         var tempImages: [UIImage] = []
         
         fetchResults.enumerateObjects(using: { asset, index, _ in
-            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 100.0, height: 100.0) , contentMode: .aspectFit, options: nil, resultHandler: {[weak self] (image, info) in
+            PHImageManager.default().requestImage(for: asset, targetSize:  CGSize(width: 200.0, height: 200.0) , contentMode: .aspectFill, options: nil, resultHandler: {[weak self] (image, info) in
                 if let im = image {
                     
                     let url = urls[index]
@@ -117,7 +106,7 @@ extension VideosTableViewController: UIImagePickerControllerDelegate, UINavigati
         
         self.fetchImages(for: self.urls) {  [weak self] images in
             
-            self?.tableView.reloadData()
+            self?.collectionView?.reloadData()
             
         }
     }
