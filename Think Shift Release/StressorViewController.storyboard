@@ -105,7 +105,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="5hf-Zo-Oc3" id="ar1-M9-P12"/>
                                                 </connections>
