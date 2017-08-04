@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VXj-JC-Dv4" firstAttribute="leading" secondItem="e51-5h-Nsk" secondAttribute="leading" id="H5t-fB-El4"/>
                             <constraint firstItem="mub-aL-v2W" firstAttribute="top" secondItem="VXj-JC-Dv4" secondAttribute="bottom" id="PQn-N3-6PX"/>
