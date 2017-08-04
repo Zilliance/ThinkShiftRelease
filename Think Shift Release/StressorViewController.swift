@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 protocol StressorEditor {
     func save()
@@ -18,7 +19,7 @@ class StressorViewController: UIViewController {
     @IBOutlet weak var shiftButton: UIButton!
     @IBOutlet weak var releaseButton: UIButton!
     
-    @IBOutlet weak var stressorTextField: UITextField!
+    @IBOutlet weak var stressorTextView: KMPlaceholderTextView!
     
     var stressor: Stressor = Stressor()
     
@@ -31,7 +32,7 @@ class StressorViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.save()
         if (self.isMovingFromParentViewController) {
-            guard let count = self.stressorTextField.text?.characters.count, count > 0 else { return }
+            guard let count = self.stressorTextView.text?.characters.count, count > 0 else { return }
             self.updateDatabase()
         }
     }
@@ -39,8 +40,8 @@ class StressorViewController: UIViewController {
     private func setupView() {
         self.title = "New Stressor"
         
-        for view in [self.thinkButton, self.shiftButton, self.releaseButton] as [UIView] {
-            view.layer.cornerRadius = UIMock.Appearance.cornerRadius
+        for button in [self.thinkButton, self.shiftButton, self.releaseButton] as [UIButton] {
+            button.imageView?.contentMode = .scaleAspectFit
         }
         
         self.view.layer.contents = UIImage(named: "stressor-intro-bg")?.cgImage
@@ -66,7 +67,7 @@ class StressorViewController: UIViewController {
 
     @IBAction func didTapThink(_ sender: Any) {
         
-        guard let count = self.stressorTextField.text?.characters.count, count > 0 else {
+        guard let count = self.stressorTextView.text?.characters.count, count > 0 else {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
@@ -86,7 +87,7 @@ class StressorViewController: UIViewController {
     }
     
     @IBAction func didTapShift(_ sender: Any) {
-        guard let count = self.stressorTextField.text?.characters.count, count > 0 else {
+        guard let count = self.stressorTextView.text?.characters.count, count > 0 else {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
@@ -94,7 +95,7 @@ class StressorViewController: UIViewController {
     }
     
     @IBAction func didTapRelease(_ sender: Any) {
-        guard let count = self.stressorTextField.text?.characters.count, count > 0 else {
+        guard let count = self.stressorTextView.text?.characters.count, count > 0 else {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
@@ -117,13 +118,19 @@ class StressorViewController: UIViewController {
 
 extension StressorViewController: StressorEditor {
     func save() {
-        self.stressor.title = self.stressorTextField.text
+        self.stressor.title = self.stressorTextView.text
     }
 }
 
-extension StressorViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+extension StressorViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            self.save()
+            textView.resignFirstResponder()
+            return false
+        }
         return true
     }
 }
+

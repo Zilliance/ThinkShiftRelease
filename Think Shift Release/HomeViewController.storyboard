@@ -59,7 +59,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="-51" minY="13" maxX="0.0" maxY="13"/>
-                                <state key="normal" title="START A NEW TSR" image="logo-round" backgroundImage="rectangle7"/>
+                                <state key="normal" title="START A NEW TSR" image="logo-round" backgroundImage="tsr-button-background"/>
                                 <connections>
                                     <segue destination="cft-iu-FF2" kind="show" id="Ecg-Xa-pOh"/>
                                 </connections>
@@ -248,7 +248,7 @@
         <image name="logo-hex" width="60" height="60"/>
         <image name="logo-round" width="70" height="70"/>
         <image name="menu-icon" width="20" height="17"/>
-        <image name="rectangle7" width="335" height="77"/>
         <image name="select-checkmark" width="20" height="20"/>
+        <image name="tsr-button-background" width="335" height="77"/>
     </resources>
 </document>

@@ -51,6 +51,7 @@
 		8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */; };
 		8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */; };
 		8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */; };
+		8CF0E7521F35171400416251 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E7511F35171400416251 /* CardView.swift */; };
 		E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
@@ -157,6 +158,7 @@
 		8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReleaseViewController.storyboard; sourceTree = "<group>"; };
 		8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheTableViewController.swift; sourceTree = "<group>"; };
 		8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SummaryTableViewController.storyboard; sourceTree = "<group>"; };
+		8CF0E7511F35171400416251 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */,
+				8CF0E7511F35171400416251 /* CardView.swift */,
 				E37828521F19835E005E91A8 /* Sidebar */,
 				E37828511F19817D005E91A8 /* Home */,
 				E378283F1F195C74005E91A8 /* Stressor */,
@@ -836,6 +839,7 @@
 				E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */,
 				8C631F791F228E5500B2CA4C /* WebViewController.swift in Sources */,
 				8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */,
+				8CF0E7521F35171400416251 /* CardView.swift in Sources */,
 				E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */,
 				E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */,
 				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
