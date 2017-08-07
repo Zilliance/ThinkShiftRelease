@@ -19,7 +19,9 @@ class ShiftViewController: UIViewController, ShowsSummary {
         super.viewDidLoad()
         
         if let title = self.stressor.title {
-            self.stressorLabel.text = title
+            self.stressorLabel.text = "I am stressed out about \(title)"
+        } else {
+            self.stressorLabel.text = nil
         }
 
         self.setupSummaryButton()

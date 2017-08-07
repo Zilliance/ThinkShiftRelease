@@ -191,6 +191,7 @@
                     </view>
                     <connections>
                         <outlet property="segmentedControl" destination="zRk-VW-ka4" id="6nJ-xm-eSU"/>
+                        <outlet property="stressorLabel" destination="HK3-Je-l0w" id="vd6-DK-JVF"/>
                         <outlet property="subviewContainer" destination="qLt-F0-hRq" id="bms-WU-h3L"/>
                         <outlet property="textView" destination="9Ch-KV-VtX" id="2NG-qb-qgt"/>
                         <segue destination="0ra-RT-KAi" kind="custom" id="8vd-PH-Z5r"/>

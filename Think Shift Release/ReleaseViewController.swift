@@ -13,6 +13,7 @@ class ReleaseViewController: UIViewController, ShowsSummary {
 
     @IBOutlet weak var affirmationTextView: KMPlaceholderTextView!
     @IBOutlet weak var intentionTextView: KMPlaceholderTextView!
+    @IBOutlet weak var stressorLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
     var stressor: Stressor!
@@ -30,6 +31,12 @@ class ReleaseViewController: UIViewController, ShowsSummary {
         
         if let intention = self.stressor.releaseIntention {
             self.intentionTextView.text = intention
+        }
+        
+        if let title = self.stressor.title {
+            self.stressorLabel.text = "I am stressed out about \(title)"
+        } else {
+            self.stressorLabel.text = nil
         }
         
         for view in [self.affirmationTextView, intentionTextView, self.containerView] as [UIView] {
