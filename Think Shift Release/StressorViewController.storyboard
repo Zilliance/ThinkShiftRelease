@@ -228,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="-529" y="1806"/>
         </scene>
-        <!--Shift-->
+        <!--ShiftViewController-->
         <scene sceneID="sy1-Sl-c1l">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ShiftSegue" storyboardName="Main" referencedIdentifier="Shift" id="tMz-Ne-2rQ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ShiftSegue" storyboardName="ShiftViewController" id="tMz-Ne-2rQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSN-1v-lcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-183" y="1806"/>
