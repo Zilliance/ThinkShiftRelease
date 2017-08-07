@@ -35,8 +35,14 @@ class BreatheTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath)
 
         // Configure the cell...
-
+        cell.extendSeparatorInsets()
         return cell
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 62
     }
 
 
