@@ -76,9 +76,9 @@ final class LeftMenuViewController: UIViewController {
             return
         }
         
-        let pieNavController = UIStoryboard(name: "StartCompass", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let home = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateInitialViewController() as! UINavigationController
         
-        sideMenu.embed(centerViewController: pieNavController, cacheIdentifier: "StartCompassViewController")
+        sideMenu.embed(centerViewController: home, cacheIdentifier: "HomeViewController")
     }
     
     @IBAction func pieButtonTapped() {

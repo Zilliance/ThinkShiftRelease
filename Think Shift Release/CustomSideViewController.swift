@@ -34,12 +34,12 @@ final class CustomSideViewController: SideMenuController
     }
     
     func setupHome() {
-        guard let startCompassViewController = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateInitialViewController(), let sideController = UIStoryboard(name: "SideMenu", bundle: nil).instantiateInitialViewController() else {
+        guard let home = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateInitialViewController(), let sideController = UIStoryboard(name: "SideMenu", bundle: nil).instantiateInitialViewController() else {
             assertionFailure()
             return
         }
 
-        self.embed(centerViewController: startCompassViewController)
+        self.embed(centerViewController: home)
         self.embed(sideViewController: sideController)
         
     }

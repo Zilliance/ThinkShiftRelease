@@ -90,6 +90,9 @@
 		E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */; };
 		E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */; };
 		E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */; };
+		E3BE78E01F3534C30063A6A4 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE78DD1F3534C30063A6A4 /* faq.html */; };
+		E3BE78E11F3534C30063A6A4 /* zilliance privacy policy.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE78DE1F3534C30063A6A4 /* zilliance privacy policy.html */; };
+		E3BE78E21F3534C30063A6A4 /* zilliance terms of service.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE78DF1F3534C30063A6A4 /* zilliance terms of service.html */; };
 		F01442EDF7C45AB3C75F508A /* Pods_Think_Shift_ReleaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -207,6 +210,9 @@
 		E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientableNavigationController.swift; sourceTree = "<group>"; };
 		E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSummary.swift; sourceTree = "<group>"; };
 		E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIClosureBarButtonItem.swift; sourceTree = "<group>"; };
+		E3BE78DD1F3534C30063A6A4 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
+		E3BE78DE1F3534C30063A6A4 /* zilliance privacy policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance privacy policy.html"; sourceTree = "<group>"; };
+		E3BE78DF1F3534C30063A6A4 /* zilliance terms of service.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance terms of service.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +464,7 @@
 				E37828491F1964F7005E91A8 /* Utilities */,
 				8C631F7A1F228F6500B2CA4C /* Extensions */,
 				E38608C81F158FDE00816DF4 /* UIMock */,
+				E3BE78E31F3534C60063A6A4 /* Resources */,
 				E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */,
 				E38608A11F158D2800816DF4 /* Assets.xcassets */,
 				E38608A61F158D2800816DF4 /* Info.plist */,
@@ -498,6 +505,16 @@
 			);
 			name = UIMock;
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		E3BE78E31F3534C60063A6A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE78DD1F3534C30063A6A4 /* faq.html */,
+				E3BE78DE1F3534C30063A6A4 /* zilliance privacy policy.html */,
+				E3BE78DF1F3534C30063A6A4 /* zilliance terms of service.html */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,11 +645,14 @@
 				4FE59AF91F2A3D0800AAE778 /* VideoViewController.storyboard in Resources */,
 				8C631F9E1F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf in Resources */,
 				8C631FA31F22991E00B2CA4C /* Muli-SemiBold.ttf in Resources */,
+				E3BE78E11F3534C30063A6A4 /* zilliance privacy policy.html in Resources */,
 				4F65CF111F34A14F00C4A5B9 /* ImageViewController.storyboard in Resources */,
 				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
 				8C631F9F1F22991E00B2CA4C /* Muli-Italic.ttf in Resources */,
+				E3BE78E01F3534C30063A6A4 /* faq.html in Resources */,
 				8C631F971F22991E00B2CA4C /* Muli-Black.ttf in Resources */,
+				E3BE78E21F3534C30063A6A4 /* zilliance terms of service.html in Resources */,
 				4F65CF031F3205F500C4A5B9 /* QuotesViewController.storyboard in Resources */,
 				8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
