@@ -52,6 +52,7 @@
 		8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */; };
 		8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */; };
 		8CF0E7521F35171400416251 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E7511F35171400416251 /* CardView.swift */; };
+		8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */; };
 		E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
@@ -162,6 +163,7 @@
 		8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheTableViewController.swift; sourceTree = "<group>"; };
 		8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SummaryTableViewController.storyboard; sourceTree = "<group>"; };
 		8CF0E7511F35171400416251 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShiftViewController.storyboard; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		E378283D1F195C69005E91A8 /* Shift */ = {
 			isa = PBXGroup;
 			children = (
+				8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */,
 				E38608EB1F16C97E00816DF4 /* ShiftViewController.swift */,
 				E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */,
 				E37828431F195FED005E91A8 /* MusicTableViewController.swift */,
@@ -646,6 +649,7 @@
 				8C631F9E1F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf in Resources */,
 				8C631FA31F22991E00B2CA4C /* Muli-SemiBold.ttf in Resources */,
 				E3BE78E11F3534C30063A6A4 /* zilliance privacy policy.html in Resources */,
+				8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */,
 				4F65CF111F34A14F00C4A5B9 /* ImageViewController.storyboard in Resources */,
 				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
