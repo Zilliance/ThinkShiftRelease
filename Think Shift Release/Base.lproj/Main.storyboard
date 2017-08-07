@@ -423,7 +423,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="stressorLabel" destination="QWk-ta-JsE" id="7kd-Kd-AjX"/>
+                        <outlet property="stressorLabel" destination="QWk-ta-JsE" id="QfQ-m4-9fw"/>
                         <outlet property="subviewContainer" destination="uGJ-g3-H2l" id="w8a-7S-Hmp"/>
                         <segue destination="ieW-o6-qlh" kind="custom" id="2dI-gu-o2W"/>
                         <segue destination="m4t-K9-xfi" kind="custom" id="2Pv-fo-LFM"/>

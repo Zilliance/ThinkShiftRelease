@@ -239,6 +239,7 @@ and instead experience _______ .</string>
                         <outlet property="affirmationTextView" destination="IZd-bq-fi4" id="pae-Cg-Cjd"/>
                         <outlet property="containerView" destination="udn-OG-Sw0" id="Edr-FV-Ouv"/>
                         <outlet property="intentionTextView" destination="b7c-jd-IHN" id="kLd-fs-sqi"/>
+                        <outlet property="stressorLabel" destination="vLI-Zs-a3r" id="TS7-Iy-zKQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6B-ng-hTr" userLabel="First Responder" sceneMemberID="firstResponder"/>

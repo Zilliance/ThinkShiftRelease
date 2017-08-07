@@ -14,6 +14,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var subviewContainer: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var textView: KMPlaceholderTextView!
+    @IBOutlet weak var stressorLabel: UILabel!
     private var embeddedViewController: UIViewController?
     
     var stressor: Stressor!
@@ -33,6 +34,12 @@ class ThinkViewController: UIViewController, ShowsSummary {
         
         if let thoughts = self.stressor.thinkThoughts {
             self.textView.text = thoughts
+        }
+
+        if let title = self.stressor.title {
+            self.stressorLabel.text = "I am stressed out about \(title)"
+        } else {
+            self.stressorLabel.text = nil
         }
         
         self.textView.layer.cornerRadius = UIMock.Appearance.cornerRadius
