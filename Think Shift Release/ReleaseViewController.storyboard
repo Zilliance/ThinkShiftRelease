@@ -44,6 +44,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-D3-cIK">
                                                 <rect key="frame" x="0.0" y="110" width="375" height="590"/>
                                                 <subviews>
+                                                    <view alpha="0.44999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-2o-8Ul" userLabel="WhiteOverlay">
+                                                        <rect key="frame" x="0.0" y="30" width="375" height="560"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9e-U9-dp7" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="200" width="335" height="155"/>
                                                         <subviews>
@@ -191,7 +195,7 @@ and instead experience _______ .</string>
                                                                 </connections>
                                                             </containerView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use your breath for..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-BV-gfn">
-                                                                <rect key="frame" x="75" y="39" width="250" height="16"/>
+                                                                <rect key="frame" x="75" y="39" width="250" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -223,13 +227,17 @@ and instead experience _______ .</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="0TO-2o-8Ul" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" id="A7z-v6-GvF"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ucb-hN-uyM" secondAttribute="trailing" constant="20" id="GgJ-Q0-JBa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0TO-2o-8Ul" secondAttribute="trailing" id="L6T-HO-E84"/>
+                                                    <constraint firstItem="0TO-2o-8Ul" firstAttribute="top" secondItem="RKp-D3-cIK" secondAttribute="top" constant="30" id="Ori-Mk-dfi"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ocs-J4-2lk" secondAttribute="trailing" constant="20" id="Rjq-0B-ZM1"/>
                                                     <constraint firstItem="j9e-U9-dp7" firstAttribute="top" secondItem="Ucb-hN-uyM" secondAttribute="bottom" constant="5" id="T8S-8U-mYe"/>
                                                     <constraint firstItem="Ucb-hN-uyM" firstAttribute="top" secondItem="RKp-D3-cIK" secondAttribute="top" constant="40" id="W7a-Vl-lMk"/>
                                                     <constraint firstItem="j9e-U9-dp7" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" constant="20" id="WRO-q5-7GN"/>
                                                     <constraint firstItem="Ucb-hN-uyM" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" constant="20" id="bNQ-17-yhi"/>
                                                     <constraint firstItem="Ocs-J4-2lk" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" constant="20" id="fdd-gw-viE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0TO-2o-8Ul" secondAttribute="bottom" id="nAP-yn-a6b"/>
                                                     <constraint firstAttribute="trailing" secondItem="j9e-U9-dp7" secondAttribute="trailing" constant="20" id="oij-Tx-ZV1"/>
                                                     <constraint firstItem="Ocs-J4-2lk" firstAttribute="top" secondItem="j9e-U9-dp7" secondAttribute="bottom" constant="5" id="qif-2G-lOB"/>
                                                 </constraints>
@@ -238,7 +246,7 @@ and instead experience _______ .</string>
                                                 <rect key="frame" x="20" y="10" width="335" height="90"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="STRESSOR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bh-eo-C1b">
-                                                        <rect key="frame" x="75" y="18" width="74.5" height="18"/>
+                                                        <rect key="frame" x="75" y="18" width="74" height="18"/>
                                                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                                         <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
