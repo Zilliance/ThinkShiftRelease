@@ -16,6 +16,8 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var stressorLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var bottomView: UIView!
+    
     var stressor: Stressor!
     
     override func viewDidLoad() {
@@ -24,6 +26,8 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     }
     
     private func setupView() {
+        
+        self.bottomView.layer.contents = UIImage(named: "release-bg")?.cgImage
         
         if let affirmation = self.stressor.releaseAffirmation {
             self.affirmationTextView.text = affirmation
@@ -37,12 +41,6 @@ class ReleaseViewController: UIViewController, ShowsSummary {
             self.stressorLabel.text = "I am stressed out about \(title)"
         } else {
             self.stressorLabel.text = nil
-        }
-        
-        for view in [self.affirmationTextView, intentionTextView, self.containerView] as [UIView] {
-            view.layer.cornerRadius = UIMock.Appearance.cornerRadius
-            view.layer.borderColor = UIColor.silverColor.cgColor
-            view.layer.borderWidth = 1
         }
         
         self.setupSummaryButton()
