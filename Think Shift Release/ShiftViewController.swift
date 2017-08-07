@@ -11,12 +11,20 @@ import UIKit
 class ShiftViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var subviewContainer: UIView!
     @IBOutlet weak var stressorLabel: UILabel!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     private var embeddedViewController: UIViewController?
     
     var stressor: Stressor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.segmentedControl.tintColor = UIColor.navBar
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.navBar] , for: .normal)
+        
+        self.bottomView.layer.contents = UIImage(named: "shift-bg")?.cgImage
         
         if let title = self.stressor.title {
             self.stressorLabel.text = "I am stressed out about \(title)"
@@ -26,23 +34,23 @@ class ShiftViewController: UIViewController, ShowsSummary {
 
         self.setupSummaryButton()
         
-        self.embed(viewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood"))
+        self.embed(viewController: UIStoryboard(name: "ShiftViewController", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood"))
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // MARK: -
     
     @IBAction func didMakeShiftSelection(_ sender: UISegmentedControl) {
+        
+        if let embeddedViewController = self.embeddedViewController {
+            self.unembed(viewController: embeddedViewController)
+        }
+        
         guard let vc: UIViewController = {
             switch sender.selectedSegmentIndex {
             case 0:
-                return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood")
+                return UIStoryboard(name: "ShiftViewController", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood")
             case 1:
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShiftBoundaries") as! ShiftSetBoundariesViewController
+                let vc = UIStoryboard(name: "ShiftViewController", bundle: nil).instantiateViewController(withIdentifier: "ShiftBoundaries") as! ShiftSetBoundariesViewController
                 vc.stressor = self.stressor
                 return vc
             default:
@@ -53,13 +61,11 @@ class ShiftViewController: UIViewController, ShowsSummary {
                 return
         }
         
-        if let embeddedViewController = self.embeddedViewController {
-            self.unembed(viewController: embeddedViewController)
-        }
         self.embed(viewController: vc)
     }
     
     private func embed(viewController: UIViewController) {
+        self.embeddedViewController = viewController
         self.addChildViewController(viewController)
         viewController.view.frame = self.subviewContainer.bounds
         self.subviewContainer.addSubview(viewController.view)

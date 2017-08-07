@@ -22,15 +22,9 @@ class ShiftSetBoundariesViewController: UIViewController {
     }
 
     private func setupView() {
-        
-        for view in [self.talkAboutTextView, self.notTalkAboutTextView] as [UIView] {
-            view.layer.borderColor = UIColor.silverColor.cgColor
-            view.layer.borderWidth = UIMock.Appearance.borderWidth
-            view.layer.cornerRadius = UIMock.Appearance.cornerRadius
-        }
+        self.view.backgroundColor = .clear
     }
 
-    
     @IBAction func didTapTryInstantMoodShift(_ sender: Any) {
         
     }
