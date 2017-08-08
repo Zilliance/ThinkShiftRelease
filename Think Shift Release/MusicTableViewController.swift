@@ -82,7 +82,12 @@ class MusicTableViewController: UITableViewController {
         //configure cell
         
         let cell = tableView.cellForRow(at: indexPath) as! MediaCell
-        cell.setViewForPlay()
+        if cell.isPlaying {
+            cell.setViewForPlay()
+        }
+        else {
+            cell.setViewForPause()
+        }
         
     }
     

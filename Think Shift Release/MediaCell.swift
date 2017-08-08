@@ -28,13 +28,18 @@ final class MediaCell: UITableViewCell {
         
     }
     
+    func setViewForPause() {
+        self.isPlaying = true
+        self.playButton.backgroundColor = UIColor.pauseButtonColor
+        self.playButton.setTitleColor(UIColor.battleshipGrey, for: .normal)
+        self.playButton.setTitle("PAUSE", for: .normal)
+    }
+    
     func setViewForPlay() {
-        self.isPlaying = !self.isPlaying
-        self.playButton.backgroundColor = self.isPlaying ? UIColor.pauseButtonColor : UIColor.musicOrange
-        let color = self.isPlaying ? UIColor.battleshipGrey : UIColor.white
-        self.playButton.setTitleColor(color, for: .normal)
-        let title = self.isPlaying ? "PAUSE" : "PLAY"
-        self.playButton.setTitle(title, for: .normal)
+        self.isPlaying = false
+        self.playButton.backgroundColor = UIColor.musicOrange
+        self.playButton.setTitleColor(UIColor.white, for: .normal)
+        self.playButton.setTitle("PLAY", for: .normal)
     }
     
 }
