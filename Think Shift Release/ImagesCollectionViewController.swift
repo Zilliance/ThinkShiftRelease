@@ -22,6 +22,8 @@ class ImagesCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.collectionView?.layer.contents = UIImage(named: "shift-bg")?.cgImage
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

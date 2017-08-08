@@ -20,6 +20,8 @@
 		4FE59B001F2B7A5E00AAE778 /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */; };
 		4FE59B041F2B820200AAE778 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE59B031F2B820200AAE778 /* MediaCell.swift */; };
 		72CE78E077D90DF673D3D441 /* Pods_Think_Shift_Release.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13850956A261A6EF243CC82C /* Pods_Think_Shift_Release.framework */; };
+		8C166DCB1F3A6BE00071A98C /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C166DCA1F3A6BE00071A98C /* QuoteCell.xib */; };
+		8C166DCD1F3A6BFA0071A98C /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DCC1F3A6BFA0071A98C /* QuoteTableViewCell.swift */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -133,6 +135,8 @@
 		4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
 		4FE59B031F2B820200AAE778 /* MediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C166DCA1F3A6BE00071A98C /* QuoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
+		8C166DCC1F3A6BFA0071A98C /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 			children = (
 				4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */,
 				4FE59B031F2B820200AAE778 /* MediaCell.swift */,
+				8C166DCA1F3A6BE00071A98C /* QuoteCell.xib */,
+				8C166DCC1F3A6BFA0071A98C /* QuoteTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -680,6 +686,7 @@
 				4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */,
 				8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */,
 				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
+				8C166DCB1F3A6BE00071A98C /* QuoteCell.xib in Resources */,
 				8C631F9B1F22991E00B2CA4C /* Muli-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -847,6 +854,7 @@
 				E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */,
 				8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */,
 				E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */,
+				8C166DCD1F3A6BFA0071A98C /* QuoteTableViewCell.swift in Sources */,
 				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
 				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
 				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,

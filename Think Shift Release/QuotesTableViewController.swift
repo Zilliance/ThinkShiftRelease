@@ -15,6 +15,7 @@ class QuotesTableViewController: UITableViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        self.view.layer.contents = UIImage(named: "shift-bg")?.cgImage
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
     }
