@@ -23,6 +23,8 @@ class VideosCollectionViewController: UICollectionViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
         self.videoPicker.delegate = self
         
+        self.collectionView?.layer.contents = UIImage(named: "shift-bg")?.cgImage
+        
         self.loadVideos()
 
     }
