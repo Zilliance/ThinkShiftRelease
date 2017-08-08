@@ -89,6 +89,8 @@
 		E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */; };
 		E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */; };
 		E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */; };
+		E3B83AE91F3A48F900F8C370 /* release-meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B83AE81F3A48F900F8C370 /* release-meditation.mp3 */; };
+		E3B83AEB1F3A490400F8C370 /* release-meditation-instrumental.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B83AEA1F3A490400F8C370 /* release-meditation-instrumental.mp3 */; };
 		E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */; };
 		E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */; };
 		E3BE78E01F3534C30063A6A4 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE78DD1F3534C30063A6A4 /* faq.html */; };
@@ -210,6 +212,8 @@
 		E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StressorViewController.storyboard; sourceTree = "<group>"; };
 		E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientableNavigationController.swift; sourceTree = "<group>"; };
+		E3B83AE81F3A48F900F8C370 /* release-meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "release-meditation.mp3"; sourceTree = "<group>"; };
+		E3B83AEA1F3A490400F8C370 /* release-meditation-instrumental.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "release-meditation-instrumental.mp3"; sourceTree = "<group>"; };
 		E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSummary.swift; sourceTree = "<group>"; };
 		E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIClosureBarButtonItem.swift; sourceTree = "<group>"; };
 		E3BE78DD1F3534C30063A6A4 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
@@ -516,6 +520,8 @@
 				E3BE78DD1F3534C30063A6A4 /* faq.html */,
 				E3BE78DE1F3534C30063A6A4 /* zilliance privacy policy.html */,
 				E3BE78DF1F3534C30063A6A4 /* zilliance terms of service.html */,
+				E3B83AE81F3A48F900F8C370 /* release-meditation.mp3 */,
+				E3B83AEA1F3A490400F8C370 /* release-meditation-instrumental.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -639,6 +645,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B83AEB1F3A490400F8C370 /* release-meditation-instrumental.mp3 in Resources */,
 				8C631F981F22991E00B2CA4C /* Muli-BlackItalic.ttf in Resources */,
 				8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */,
 				8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */,
@@ -651,6 +658,7 @@
 				E3BE78E11F3534C30063A6A4 /* zilliance privacy policy.html in Resources */,
 				8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */,
 				4F65CF111F34A14F00C4A5B9 /* ImageViewController.storyboard in Resources */,
+				E3B83AE91F3A48F900F8C370 /* release-meditation.mp3 in Resources */,
 				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
 				8C631F9F1F22991E00B2CA4C /* Muli-Italic.ttf in Resources */,
