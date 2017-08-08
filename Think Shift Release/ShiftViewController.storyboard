@@ -315,9 +315,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.44999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PsT-Bd-9wi" userLabel="WhiteOverlay">
+                            <view alpha="0.44999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsT-Bd-9wi" userLabel="WhiteOverlay">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yRG-aM-rDZ">
@@ -523,8 +522,12 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yRG-aM-rDZ" secondAttribute="trailing" constant="20" id="3vM-va-JUy"/>
                             <constraint firstAttribute="trailing" secondItem="AQ0-12-2hH" secondAttribute="trailing" constant="20" id="4yo-rG-bcD"/>
+                            <constraint firstAttribute="trailing" secondItem="PsT-Bd-9wi" secondAttribute="trailing" id="AZB-a1-0wf"/>
+                            <constraint firstItem="PsT-Bd-9wi" firstAttribute="leading" secondItem="T1L-VH-w9l" secondAttribute="leading" id="I4k-FL-ExT"/>
                             <constraint firstItem="AQ0-12-2hH" firstAttribute="leading" secondItem="T1L-VH-w9l" secondAttribute="leading" constant="20" id="Jyq-MN-Q4J"/>
+                            <constraint firstItem="GlC-GB-GMK" firstAttribute="top" secondItem="PsT-Bd-9wi" secondAttribute="bottom" id="RTc-iO-ud8"/>
                             <constraint firstItem="AQ0-12-2hH" firstAttribute="top" secondItem="yRG-aM-rDZ" secondAttribute="bottom" constant="16" id="iqU-NO-hLx"/>
+                            <constraint firstItem="PsT-Bd-9wi" firstAttribute="top" secondItem="T1L-VH-w9l" secondAttribute="top" id="usT-VI-QuL"/>
                             <constraint firstItem="yRG-aM-rDZ" firstAttribute="top" secondItem="Ovh-WE-IiB" secondAttribute="bottom" constant="46" id="viX-FC-N32"/>
                             <constraint firstItem="yRG-aM-rDZ" firstAttribute="leading" secondItem="T1L-VH-w9l" secondAttribute="leading" constant="20" id="xxp-VW-JME"/>
                         </constraints>
