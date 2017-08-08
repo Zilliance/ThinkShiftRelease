@@ -14,11 +14,13 @@ final class MediaCell: UITableViewCell {
     @IBOutlet var mediaView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.selectionStyle = .none
+        self.backgroundColor = .clear
     }
     
 }

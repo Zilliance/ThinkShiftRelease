@@ -18,13 +18,13 @@ class MusicTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 80
+        
+        self.view.layer.contents = UIImage(named: "shift-bg")?.cgImage
         
         //register nibs:
         let nibName = UINib(nibName: "MediaCell", bundle:nil)
         self.tableView.register(nibName, forCellReuseIdentifier: "MediaCell")
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
         self.mediaPicker.delegate = self
@@ -33,13 +33,7 @@ class MusicTableViewController: UITableViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -73,6 +67,10 @@ class MusicTableViewController: UITableViewController {
         cell.subtitleLabel.text = "Length " + mediaItem.playbackDuration.stringFormat
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 66
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
