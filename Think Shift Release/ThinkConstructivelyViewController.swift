@@ -32,11 +32,7 @@ class ThinkConstructivelyViewController: UIViewController {
             self.actionStepTextView.text = actionStep
         }
         
-        for view in [self.wisdomTextView, self.actionStepTextView] as [UIView] {
-            view.layer.cornerRadius = UIMock.Appearance.cornerRadius
-            view.layer.borderWidth = 1
-            view.layer.borderColor = UIColor.silverColor.cgColor
-        }
+        self.view.backgroundColor = .clear
     }
 
 }

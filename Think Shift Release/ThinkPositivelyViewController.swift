@@ -26,9 +26,7 @@ class ThinkPositivelyViewController: UIViewController {
             self.textView.text = feeling
         }
         
-        self.textView.layer.cornerRadius = UIMock.Appearance.cornerRadius
-        self.textView.layer.borderWidth = 1
-        self.textView.layer.borderColor = UIColor.silverColor.cgColor
+        self.view.backgroundColor = .clear
     }
 }
 
