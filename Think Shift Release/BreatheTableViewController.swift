@@ -16,7 +16,40 @@ class BreatheTableViewCell: UITableViewCell {
 
 class BreatheTableViewController: UITableViewController {
     
+    fileprivate var audioPlayer: MPMusicPlayerController?
+    
+    enum Song {
+        case meditation
+        case instrumental
+        
+        var title: String {
+            switch self {
+            case .instrumental:
+                return "Meditation Instrumental"
+            case .meditation:
+                return "Meditation"
+            }
+        }
+        
+        var url: URL {
+            switch self {
+            case .instrumental:
+                return URL.init(fileURLWithPath: Bundle.main.path(
+                    forResource: "release-meditation-instrumental",
+                    ofType: "mp3")!)
+            case .meditation:
+                return URL.init(fileURLWithPath: Bundle.main.path(
+                    forResource: "release-meditation",
+                    ofType: "mp3")!)
+            
+            }
+        }
+        
+    }
+    
     private let reuseIdentifier = "BreatheTableViewCell"
+    
+    private let songs: [Song] = [.meditation, .instrumental]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +60,17 @@ class BreatheTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return songs.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath) as! BreatheTableViewCell
+        
+        let song = songs[indexPath.row]
         // Configure the cell...
         cell.extendSeparatorInsets()
+        cell.titleLabel.text = song.title
         return cell
     }
     
