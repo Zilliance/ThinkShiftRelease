@@ -17,9 +17,24 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Add your favorite songs</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Add your favorite videos and photos</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Muli-Black.ttf</string>
+		<string>Muli-Bold.ttf</string>
+		<string>Muli-Italic.ttf</string>
+		<string>Muli-Light.ttf</string>
+		<string>Muli-Medium.ttf</string>
+		<string>Muli-Regular.ttf</string>
+		<string>Muli-Thin.ttf</string>
+		<string>Muli-LightItalic.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -32,20 +47,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Muli-Black.ttf</string>
-		<string>Muli-Bold.ttf</string>
-		<string>Muli-Italic.ttf</string>
-		<string>Muli-Light.ttf</string>
-		<string>Muli-Medium.ttf</string>
-		<string>Muli-Regular.ttf</string>
-		<string>Muli-Thin.ttf</string>
-		<string>Muli-LightItalic.ttf</string>
-	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Add your favorite videos and photos</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>Add your favorite songs</string>
 </dict>
 </plist>
