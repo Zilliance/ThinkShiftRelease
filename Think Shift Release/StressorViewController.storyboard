@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5hf-Zo-Oc3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5hf-Zo-Oc3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,10 +36,10 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-fU-3Mz" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                                         <subviews>
                                             <view alpha="0.44999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uo-l9-Pet" userLabel="WhiteOverlay">
-                                                <rect key="frame" x="0.0" y="163" width="375" height="497"/>
+                                                <rect key="frame" x="0.0" y="163" width="375" height="398"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to do?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8l-tZ-C82">
@@ -72,6 +72,12 @@
                                                     <action selector="didTapThink:" destination="5hf-Zo-Oc3" eventType="touchUpInside" id="eIt-kE-8Jv"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think positively, think constructively" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u3-zZ-TZL">
+                                                <rect key="frame" x="101" y="400" width="194" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you have three choices for responding with a little less crazy." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70Y-8n-GXu">
                                                 <rect key="frame" x="20" y="53" width="252" height="37"/>
                                                 <constraints>
@@ -99,7 +105,7 @@
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="I am upset because input"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="I'm upset about ________"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="5hf-Zo-Oc3" id="Lcu-pt-4jr"/>
@@ -134,22 +140,6 @@
                                                     <constraint firstItem="AiB-ib-Iem" firstAttribute="top" secondItem="BPr-BX-HdS" secondAttribute="top" constant="10" id="zwi-96-M1c"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-zQ-ms1">
-                                                <rect key="frame" x="20" y="501" width="335" height="60"/>
-                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="duu-D4-MRG"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="13"/>
-                                                <inset key="titleEdgeInsets" minX="20" minY="-15" maxX="0.0" maxY="0.0"/>
-                                                <inset key="imageEdgeInsets" minX="15" minY="5" maxX="0.0" maxY="5"/>
-                                                <state key="normal" title="RELEASE" image="release-icon">
-                                                    <color key="titleColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="didTapRelease:" destination="5hf-Zo-Oc3" eventType="touchUpInside" id="Lvo-t0-7iq"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jz-4k-d8V">
                                                 <rect key="frame" x="20" y="434" width="335" height="60"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,9 +156,38 @@
                                                     <action selector="didTapShift:" destination="5hf-Zo-Oc3" eventType="touchUpInside" id="9PI-sZ-Wrn"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant mood shift, set boundaries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuJ-CF-Ow7">
+                                                <rect key="frame" x="101" y="467" width="185" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-zQ-ms1">
+                                                <rect key="frame" x="20" y="501" width="335" height="60"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="duu-D4-MRG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="13"/>
+                                                <inset key="titleEdgeInsets" minX="20" minY="-15" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="15" minY="5" maxX="0.0" maxY="5"/>
+                                                <state key="normal" title="RELEASE" image="release-icon">
+                                                    <color key="titleColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapRelease:" destination="5hf-Zo-Oc3" eventType="touchUpInside" id="Lvo-t0-7iq"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe and let go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-Qg-NcB">
+                                                <rect key="frame" x="101" y="534" width="101" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="ODz-Qg-NcB" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="101" id="1Ib-bg-sqY"/>
                                             <constraint firstItem="e8l-tZ-C82" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="1xV-ao-EtU"/>
                                             <constraint firstItem="BPr-BX-HdS" firstAttribute="top" secondItem="70Y-8n-GXu" secondAttribute="bottom" constant="78" id="24X-se-jhl"/>
                                             <constraint firstAttribute="trailing" secondItem="3Uo-l9-Pet" secondAttribute="trailing" id="3gi-3y-zjI"/>
@@ -177,22 +196,27 @@
                                             <constraint firstAttribute="trailing" secondItem="jxl-an-Hyx" secondAttribute="trailing" constant="20" id="8aa-Qb-gAb"/>
                                             <constraint firstItem="jxl-an-Hyx" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="DH2-ee-NIP"/>
                                             <constraint firstItem="ew5-5r-B0H" firstAttribute="top" secondItem="0tF-fU-3Mz" secondAttribute="top" constant="22" id="DIp-Qd-H4z"/>
+                                            <constraint firstAttribute="bottom" secondItem="UEM-zQ-ms1" secondAttribute="bottom" id="FFd-g0-RmQ"/>
                                             <constraint firstItem="3Jz-4k-d8V" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="K4R-lX-hXE"/>
                                             <constraint firstAttribute="trailing" secondItem="3Jz-4k-d8V" secondAttribute="trailing" constant="20" id="MV5-Ji-YkQ"/>
                                             <constraint firstItem="ew5-5r-B0H" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="RGl-0Z-3Rs"/>
+                                            <constraint firstItem="5u3-zZ-TZL" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="101" id="Um7-L7-M5g"/>
                                             <constraint firstItem="3Uo-l9-Pet" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" id="VYe-o7-pT7"/>
                                             <constraint firstItem="UEM-zQ-ms1" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="czl-4c-hnC"/>
+                                            <constraint firstItem="DuJ-CF-Ow7" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="101" id="d8X-O8-yoZ"/>
                                             <constraint firstAttribute="trailing" secondItem="UEM-zQ-ms1" secondAttribute="trailing" constant="20" id="doo-Wl-u6C"/>
                                             <constraint firstItem="70Y-8n-GXu" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="fXy-04-kvm"/>
+                                            <constraint firstItem="ODz-Qg-NcB" firstAttribute="top" secondItem="3Jz-4k-d8V" secondAttribute="bottom" constant="40" id="fvO-yo-khW"/>
                                             <constraint firstItem="jxl-an-Hyx" firstAttribute="top" secondItem="e8l-tZ-C82" secondAttribute="bottom" constant="17" id="gWl-qX-GT1"/>
                                             <constraint firstItem="3Uo-l9-Pet" firstAttribute="top" secondItem="0tF-fU-3Mz" secondAttribute="top" constant="163" id="gx6-I3-fxN"/>
-                                            <constraint firstAttribute="height" constant="660" id="hcM-mk-AHC"/>
+                                            <constraint firstItem="5u3-zZ-TZL" firstAttribute="top" secondItem="e8l-tZ-C82" secondAttribute="bottom" constant="50" id="i27-eT-RYy"/>
                                             <constraint firstItem="70Y-8n-GXu" firstAttribute="top" secondItem="ew5-5r-B0H" secondAttribute="bottom" constant="8" id="p4f-uZ-ajB"/>
                                             <constraint firstItem="3Jz-4k-d8V" firstAttribute="top" secondItem="jxl-an-Hyx" secondAttribute="bottom" constant="7" id="tTX-Su-KZe"/>
                                             <constraint firstItem="BPr-BX-HdS" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="tYR-qq-W3N"/>
                                             <constraint firstItem="e8l-tZ-C82" firstAttribute="top" secondItem="BPr-BX-HdS" secondAttribute="bottom" constant="14" id="uSc-99-hl1"/>
                                             <constraint firstAttribute="trailing" secondItem="BPr-BX-HdS" secondAttribute="trailing" constant="20" id="wpd-Oj-VKi"/>
                                             <constraint firstAttribute="trailing" secondItem="e8l-tZ-C82" secondAttribute="trailing" constant="20" id="ymu-gH-FHp"/>
+                                            <constraint firstItem="DuJ-CF-Ow7" firstAttribute="top" secondItem="jxl-an-Hyx" secondAttribute="bottom" constant="40" id="zhw-Qe-fn3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
