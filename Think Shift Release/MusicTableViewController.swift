@@ -79,6 +79,16 @@ class MusicTableViewController: UITableViewController {
         let item = self.assets[indexPath.row]
         
         self.playPauseSong(song: item)
+        //configure cell
+        
+        let cell = tableView.cellForRow(at: indexPath) as! MediaCell
+        cell.setViewForPlay()
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! MediaCell
+        cell.setViewForPlay()
         
     }
     

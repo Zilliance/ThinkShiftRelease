@@ -19,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="hJv-kG-vdb" customClass="MediaCell" customModule="Think_Shift_Release" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MediaCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaCell" rowHeight="80" id="hJv-kG-vdb" customClass="MediaCell" customModule="Think_Shift_Release" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="443" height="79"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hJv-kG-vdb" id="ous-Ks-ISM">
