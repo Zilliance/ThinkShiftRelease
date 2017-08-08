@@ -15,6 +15,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var textView: KMPlaceholderTextView!
     @IBOutlet weak var stressorLabel: UILabel!
+    @IBOutlet weak var bottomView: UIView!
     private var embeddedViewController: UIViewController?
     
     var stressor: Stressor!
@@ -32,6 +33,8 @@ class ThinkViewController: UIViewController, ShowsSummary {
 
     private func setupView() {
         
+        self.bottomView.layer.contents = UIImage(named: "think-bg")?.cgImage
+        
         if let thoughts = self.stressor.thinkThoughts {
             self.textView.text = thoughts
         }
@@ -42,15 +45,10 @@ class ThinkViewController: UIViewController, ShowsSummary {
             self.stressorLabel.text = nil
         }
         
-        self.textView.layer.cornerRadius = UIMock.Appearance.cornerRadius
-        self.textView.layer.borderWidth = 1
-        self.textView.layer.borderColor = UIColor.silverColor.cgColor
-        
-        self.segmentedControl.tintColor = UIColor.purple
+        self.segmentedControl.tintColor = UIColor.navBar
         self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
-        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.purple] , for: .normal)
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.navBar] , for: .normal)
         
-        self.view.layer.contents = UIImage(named: "think-bg")?.cgImage
     }
 
 
