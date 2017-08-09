@@ -7,16 +7,38 @@
 //
 
 import UIKit
+import AVFoundation
 
 class BreatheTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lenghtLabel: UILabel!
+    @IBOutlet weak var playLabel: UILabel!
     
+    var isPlaying = false
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.selectionStyle = .none
+        self.playLabel.layer.cornerRadius = UIMock.Appearance.cornerRadius
+    }
+    
+    func setViewForPause() {
+        self.isPlaying = true
+        self.playLabel.backgroundColor = UIColor.pauseButtonColor
+        self.playLabel.textColor = UIColor.battleshipGrey
+        self.playLabel.text = "PAUSE"
+    }
+    
+    func setViewForPlay() {
+        self.isPlaying = false
+        self.playLabel.backgroundColor = UIColor.playButtonBlue
+        self.playLabel.textColor = .white
+        self.playLabel.text = "PLAY"
+    }
+
 }
 
 class BreatheTableViewController: UITableViewController {
-    
-    fileprivate var audioPlayer: MPMusicPlayerController?
     
     enum Song {
         case meditation
@@ -45,15 +67,82 @@ class BreatheTableViewController: UITableViewController {
             }
         }
         
+        var lenght: String {
+            switch self {
+            case .meditation:
+                return "03:42"
+            case .instrumental:
+                return "03:42"
+            }
+        }
+        
     }
     
     private let reuseIdentifier = "BreatheTableViewCell"
     
     private let songs: [Song] = [.meditation, .instrumental]
+    private var currentSong: Song?
+    private var audioPlayer: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupAudio()
     }
+    
+    private func loadSong(song: Song) {
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: song.url)
+            audioPlayer?.prepareToPlay()
+            
+        } catch let error as NSError {
+            print("audioPlayer error \(error.localizedDescription)")
+        }
+        audioPlayer?.play()
+        self.currentSong = song
+        
+    }
+    
+    private func playPauseSong(song: Song) {
+        
+        if let player = self.audioPlayer  {
+            if song == self.currentSong {
+                if player.isPlaying {
+                    player.stop()
+                } else {
+                    player.play()
+                }
+            } else {
+                loadSong(song: song)
+            }
+        } else {
+            
+            loadSong(song: song)
+        }
+        
+    }
+    
+    func stopAudio() {
+        self.audioPlayer?.stop()
+        self.audioPlayer?.currentTime = 0
+    }
+    
+    private func setupAudio() {
+        
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+            try session.setActive(true)
+        } catch let error as NSError {
+            print("audio session error \(error.localizedDescription)")
+        }
+    }
+    
+    deinit {
+        self.stopAudio()
+    }
+
+
 
     // MARK: - Table view data source
 
@@ -71,10 +160,34 @@ class BreatheTableViewController: UITableViewController {
         // Configure the cell...
         cell.extendSeparatorInsets()
         cell.titleLabel.text = song.title
+        cell.lenghtLabel.text = song.lenght
         return cell
     }
     
     // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // play music.
+        let song = self.songs[indexPath.row]
+        self.playPauseSong(song: song)
+        //configure cell
+        
+        let cell = tableView.cellForRow(at: indexPath) as! BreatheTableViewCell
+        if cell.isPlaying {
+            cell.setViewForPlay()
+        }
+        else {
+            cell.setViewForPause()
+        }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! BreatheTableViewCell
+        cell.setViewForPlay()
+        
+    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 62
