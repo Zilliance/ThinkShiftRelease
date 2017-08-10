@@ -334,7 +334,7 @@ and instead experience _______ .</string>
                                 <rect key="frame" x="0.0" y="28" width="305" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Ff-5z-Asn" id="ddu-1j-Idm">
-                                    <rect key="frame" x="0.0" y="0.0" width="305" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="305" height="50.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="track-icon" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-Kg-Gep">

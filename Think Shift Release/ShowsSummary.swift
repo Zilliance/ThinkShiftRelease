@@ -22,7 +22,7 @@ extension ShowsSummary where Self: UIViewController {
     }
     
     func viewSummary(_ sender: Any?) {
-        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
+        guard let vc = UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateInitialViewController() as? SummaryViewController else {
             assertionFailure()
             return
         }
