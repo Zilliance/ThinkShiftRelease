@@ -169,7 +169,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         }
         
         let stressor = self.stressors[indexPath.row]
-        guard let vc = UIStoryboard(name: "SummaryTableViewController", bundle: nil).instantiateInitialViewController() as? SummaryTableViewController else {
+        guard let vc = UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateInitialViewController() as? SummaryViewController else {
             assertionFailure()
             return
         }

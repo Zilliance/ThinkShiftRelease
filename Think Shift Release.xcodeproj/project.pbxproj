@@ -22,6 +22,11 @@
 		72CE78E077D90DF673D3D441 /* Pods_Think_Shift_Release.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13850956A261A6EF243CC82C /* Pods_Think_Shift_Release.framework */; };
 		8C166DCB1F3A6BE00071A98C /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C166DCA1F3A6BE00071A98C /* QuoteCell.xib */; };
 		8C166DCD1F3A6BFA0071A98C /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DCC1F3A6BFA0071A98C /* QuoteTableViewCell.swift */; };
+		8C166DCF1F3CDAE50071A98C /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DCE1F3CDAE50071A98C /* SummaryViewController.swift */; };
+		8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C166DD01F3CDAF30071A98C /* SummaryViewController.storyboard */; };
+		8C166DD31F3CE9930071A98C /* SummaryThinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DD21F3CE9930071A98C /* SummaryThinkViewController.swift */; };
+		8C166DD51F3CE9B50071A98C /* SummaryShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DD41F3CE9B50071A98C /* SummaryShiftViewController.swift */; };
+		8C166DD71F3CE9D80071A98C /* SummaryReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DD61F3CE9D80071A98C /* SummaryReleaseViewController.swift */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -52,7 +57,6 @@
 		8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329001F292CA900844C5F /* ThinkViewController.storyboard */; };
 		8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */; };
 		8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */; };
-		8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */; };
 		8CF0E7521F35171400416251 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E7511F35171400416251 /* CardView.swift */; };
 		8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */; };
 		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
@@ -65,7 +69,6 @@
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
 		E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */; };
-		E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */; };
 		E37828501F198177005E91A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378284F1F198177005E91A8 /* HomeViewController.swift */; };
 		E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E386089A1F158D2800816DF4 /* AppDelegate.swift */; };
 		E38608A01F158D2800816DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E386089E1F158D2800816DF4 /* Main.storyboard */; };
@@ -143,6 +146,11 @@
 		814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C166DCA1F3A6BE00071A98C /* QuoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
 		8C166DCC1F3A6BFA0071A98C /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		8C166DCE1F3CDAE50071A98C /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		8C166DD01F3CDAF30071A98C /* SummaryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SummaryViewController.storyboard; sourceTree = "<group>"; };
+		8C166DD21F3CE9930071A98C /* SummaryThinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryThinkViewController.swift; sourceTree = "<group>"; };
+		8C166DD41F3CE9B50071A98C /* SummaryShiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryShiftViewController.swift; sourceTree = "<group>"; };
+		8C166DD61F3CE9D80071A98C /* SummaryReleaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryReleaseViewController.swift; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +181,6 @@
 		8CD329001F292CA900844C5F /* ThinkViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThinkViewController.storyboard; sourceTree = "<group>"; };
 		8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReleaseViewController.storyboard; sourceTree = "<group>"; };
 		8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheTableViewController.swift; sourceTree = "<group>"; };
-		8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SummaryTableViewController.storyboard; sourceTree = "<group>"; };
 		8CF0E7511F35171400416251 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShiftViewController.storyboard; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,7 +197,6 @@
 		E37828431F195FED005E91A8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
 		E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
-		E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		E378284F1F198177005E91A8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E38608971F158D2800816DF4 /* Think Shift Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Think Shift Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E386089A1F158D2800816DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -446,8 +452,11 @@
 		E378284C1F196DA2005E91A8 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */,
-				E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */,
+				8C166DD01F3CDAF30071A98C /* SummaryViewController.storyboard */,
+				8C166DCE1F3CDAE50071A98C /* SummaryViewController.swift */,
+				8C166DD21F3CE9930071A98C /* SummaryThinkViewController.swift */,
+				8C166DD41F3CE9B50071A98C /* SummaryShiftViewController.swift */,
+				8C166DD61F3CE9D80071A98C /* SummaryReleaseViewController.swift */,
 			);
 			name = Summary;
 			sourceTree = "<group>";
@@ -709,6 +718,7 @@
 				E3BE78E21F3534C30063A6A4 /* zilliance terms of service.html in Resources */,
 				4F65CF031F3205F500C4A5B9 /* QuotesViewController.storyboard in Resources */,
 				8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */,
+				8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
 				8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */,
 				8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */,
@@ -721,7 +731,6 @@
 				8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */,
-				8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */,
 				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
 				8C166DCB1F3A6BE00071A98C /* QuoteCell.xib in Resources */,
 				8C631F9B1F22991E00B2CA4C /* Muli-ExtraBold.ttf in Resources */,
@@ -892,6 +901,7 @@
 				8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */,
 				E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */,
 				8C166DCD1F3A6BFA0071A98C /* QuoteTableViewCell.swift in Sources */,
+				8C166DD71F3CE9D80071A98C /* SummaryReleaseViewController.swift in Sources */,
 				E347EA581F3CCABD002920D0 /* TourPageViewController.swift in Sources */,
 				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
 				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
@@ -899,6 +909,7 @@
 				8C631F861F228F7300B2CA4C /* UIViewController+Extensions.swift in Sources */,
 				4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
+				8C166DD51F3CE9B50071A98C /* SummaryShiftViewController.swift in Sources */,
 				E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */,
 				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,
 				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
@@ -912,6 +923,7 @@
 				8C631F831F228F7300B2CA4C /* UIDevice+Extensions.swift in Sources */,
 				E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */,
 				E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */,
+				8C166DD31F3CE9930071A98C /* SummaryThinkViewController.swift in Sources */,
 				E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */,
 				8CD328FE1F267E9B00844C5F /* HomeCollectionViewController.swift in Sources */,
 				8C631F771F228E5500B2CA4C /* AboutCompanyViewController.swift in Sources */,
@@ -923,7 +935,6 @@
 				E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */,
 				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
 				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
-				E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */,
 				4F15A5191F277A5C004210B4 /* Quote.swift in Sources */,
 				E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
@@ -940,6 +951,7 @@
 				E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */,
 				4F65CF151F34A1FE00C4A5B9 /* PhotoUtils.swift in Sources */,
 				E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */,
+				8C166DCF1F3CDAE50071A98C /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
