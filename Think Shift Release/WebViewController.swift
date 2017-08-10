@@ -28,15 +28,15 @@ final class WebViewController: UIViewController, UIWebViewDelegate
     }
     
     private func showTour() {
-//        guard let tourViewController = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
-//            assertionFailure()
-//            return
-//        }
-//        
-//        tourViewController.presentationType = .fromFaq
-//        
-//        let navigationController = UINavigationController(rootViewController: tourViewController)
-//        self.present(navigationController, animated: true, completion: nil)
+        guard let tourViewController = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
+            assertionFailure()
+            return
+        }
+        
+        tourViewController.presentationType = .fromFaq
+        
+        let navigationController = UINavigationController(rootViewController: tourViewController)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
@@ -44,7 +44,7 @@ final class WebViewController: UIViewController, UIWebViewDelegate
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if request.url?.absoluteString == "zilliance://personalcompass/tour" {
+        if request.url?.absoluteString == "zilliance://thinkshiftrelease/tour" {
             self.showTour()
             return false
         }

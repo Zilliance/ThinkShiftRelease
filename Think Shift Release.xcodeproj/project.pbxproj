@@ -55,6 +55,12 @@
 		8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */; };
 		8CF0E7521F35171400416251 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E7511F35171400416251 /* CardView.swift */; };
 		8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */; };
+		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
+		E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA521F3CCAB5002920D0 /* IntroViewController.swift */; };
+		E347EA571F3CCABD002920D0 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA551F3CCABD002920D0 /* Tour.storyboard */; };
+		E347EA581F3CCABD002920D0 /* TourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA561F3CCABD002920D0 /* TourPageViewController.swift */; };
+		E347EA5B1F3CCAF7002920D0 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA591F3CCAF7002920D0 /* VideoPlayerViewController.swift */; };
+		E347EA5C1F3CCAF7002920D0 /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA5A1F3CCAF7002920D0 /* VideoPlayer.storyboard */; };
 		E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */; };
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
@@ -174,6 +180,12 @@
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		DEA1E44CD9DB5285787C0A71 /* Pods-Think Shift Release.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift Release.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release.debug.xcconfig"; sourceTree = "<group>"; };
+		E347EA511F3CCAB5002920D0 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		E347EA521F3CCAB5002920D0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		E347EA551F3CCABD002920D0 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
+		E347EA561F3CCABD002920D0 /* TourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourPageViewController.swift; sourceTree = "<group>"; };
+		E347EA591F3CCAF7002920D0 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		E347EA5A1F3CCAF7002920D0 /* VideoPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
 		E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosCollectionViewController.swift; sourceTree = "<group>"; };
 		E37828431F195FED005E91A8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +334,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E347EA4F1F3CCA7A002920D0 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				E347EA511F3CCAB5002920D0 /* Intro.storyboard */,
+				E347EA521F3CCAB5002920D0 /* IntroViewController.swift */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		E347EA501F3CCAA4002920D0 /* Tour */ = {
+			isa = PBXGroup;
+			children = (
+				E347EA551F3CCABD002920D0 /* Tour.storyboard */,
+				E347EA561F3CCABD002920D0 /* TourPageViewController.swift */,
+			);
+			name = Tour;
+			sourceTree = "<group>";
+		};
 		E378283C1F195C65005E91A8 /* Think */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +420,8 @@
 				E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */,
 				8CF0E7511F35171400416251 /* CardView.swift */,
 				E37828521F19835E005E91A8 /* Sidebar */,
+				E347EA4F1F3CCA7A002920D0 /* Intro */,
+				E347EA501F3CCAA4002920D0 /* Tour */,
 				E37828511F19817D005E91A8 /* Home */,
 				E378283F1F195C74005E91A8 /* Stressor */,
 				E378283C1F195C65005E91A8 /* Think */,
@@ -434,11 +466,13 @@
 			isa = PBXGroup;
 			children = (
 				8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */,
-				8C631F701F228E0900B2CA4C /* WebView.storyboard */,
 				8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */,
-				8C631F731F228E5500B2CA4C /* AboutCompanyViewController.swift */,
 				8C631F741F228E5500B2CA4C /* LeftMenuViewController.swift */,
+				8C631F731F228E5500B2CA4C /* AboutCompanyViewController.swift */,
+				8C631F701F228E0900B2CA4C /* WebView.storyboard */,
 				8C631F751F228E5500B2CA4C /* WebViewController.swift */,
+				E347EA5A1F3CCAF7002920D0 /* VideoPlayer.storyboard */,
+				E347EA591F3CCAF7002920D0 /* VideoPlayerViewController.swift */,
 			);
 			name = Sidebar;
 			sourceTree = "<group>";
@@ -660,6 +694,7 @@
 				4FE59B001F2B7A5E00AAE778 /* MediaCell.xib in Resources */,
 				4FE59AF91F2A3D0800AAE778 /* VideoViewController.storyboard in Resources */,
 				8C631F9E1F22991E00B2CA4C /* Muli-ExtraLightItalic.ttf in Resources */,
+				E347EA5C1F3CCAF7002920D0 /* VideoPlayer.storyboard in Resources */,
 				8C631FA31F22991E00B2CA4C /* Muli-SemiBold.ttf in Resources */,
 				E3BE78E11F3534C30063A6A4 /* zilliance privacy policy.html in Resources */,
 				8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */,
@@ -668,6 +703,7 @@
 				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
 				8C631F9F1F22991E00B2CA4C /* Muli-Italic.ttf in Resources */,
+				E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */,
 				E3BE78E01F3534C30063A6A4 /* faq.html in Resources */,
 				8C631F971F22991E00B2CA4C /* Muli-Black.ttf in Resources */,
 				E3BE78E21F3534C30063A6A4 /* zilliance terms of service.html in Resources */,
@@ -679,6 +715,7 @@
 				8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */,
 				8C631F9A1F22991E00B2CA4C /* Muli-BoldItalic.ttf in Resources */,
 				E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */,
+				E347EA571F3CCABD002920D0 /* Tour.storyboard in Resources */,
 				8C631F9C1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf in Resources */,
 				8C631FA01F22991E00B2CA4C /* Muli-Light.ttf in Resources */,
 				8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */,
@@ -855,6 +892,7 @@
 				8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */,
 				E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */,
 				8C166DCD1F3A6BFA0071A98C /* QuoteTableViewCell.swift in Sources */,
+				E347EA581F3CCABD002920D0 /* TourPageViewController.swift in Sources */,
 				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
 				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
 				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,
@@ -874,6 +912,7 @@
 				8C631F831F228F7300B2CA4C /* UIDevice+Extensions.swift in Sources */,
 				E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */,
 				E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */,
+				E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */,
 				8CD328FE1F267E9B00844C5F /* HomeCollectionViewController.swift in Sources */,
 				8C631F771F228E5500B2CA4C /* AboutCompanyViewController.swift in Sources */,
 				E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */,
@@ -893,6 +932,7 @@
 				E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */,
 				4F65CF131F34A16400C4A5B9 /* ImageViewController.swift in Sources */,
 				8C631F851F228F7300B2CA4C /* UITableViewCell+Extensions.swift in Sources */,
+				E347EA5B1F3CCAF7002920D0 /* VideoPlayerViewController.swift in Sources */,
 				E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */,
 				E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */,
 				E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */,
