@@ -67,7 +67,7 @@ class BreatheTableViewController: UITableViewController {
             }
         }
         
-        var lenght: String {
+        var length: String {
             switch self {
             case .meditation:
                 return "03:42"
@@ -160,7 +160,7 @@ class BreatheTableViewController: UITableViewController {
         // Configure the cell...
         cell.extendSeparatorInsets()
         cell.titleLabel.text = song.title
-        cell.lenghtLabel.text = song.lenght
+        cell.lenghtLabel.text = song.length
         return cell
     }
     
