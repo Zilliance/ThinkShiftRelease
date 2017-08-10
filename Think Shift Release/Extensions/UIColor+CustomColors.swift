@@ -36,6 +36,12 @@ extension UIColor {
     static let playButtonBlue = UIColor.color(forRed: 41, green: 123, blue: 247, alpha: 1)
     static let musicOrange = UIColor.color(forRed: 243, green: 135, blue: 32, alpha: 1)
     
+    static let thinkGreen = UIColor.color(forRed: 3, green: 198, blue: 151, alpha: 1)
+    static let releaseBlue = UIColor.color(forRed: 0, green: 184, blue: 231, alpha: 1)
+    static let shiftPurple = UIColor.color(forRed: 85, green: 95, blue: 193, alpha: 1)
+    
+    static let itemCellText = UIColor.color(forRed: 81, green: 66, blue: 57, alpha: 1)
+    
     class func color(forRed red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
     }

@@ -90,6 +90,7 @@
                                             <constraint firstItem="hVv-SN-qkT" firstAttribute="top" secondItem="fkt-zv-m9s" secondAttribute="top" id="hrB-yp-idN"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="cardView" destination="hVv-SN-qkT" id="taz-4p-nOg"/>
                                             <outlet property="iconImage" destination="0JH-iz-NMz" id="0RY-RI-WbN"/>
                                             <outlet property="titleLabel" destination="QHu-T4-Nso" id="WbD-ew-hOA"/>
                                         </connections>

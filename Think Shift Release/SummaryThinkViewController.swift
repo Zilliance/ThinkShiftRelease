@@ -17,19 +17,12 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
     
     var stressor: Stressor? = nil {
         didSet {
-            if let thought = stressor?.thinkThoughts {
-                self.thoughtsLabel.text = thought
-            }
-            
-            if let action = stressor?.thinkActionStep {
-                self.actionStepLabel.text = action
-            }
-            
-            if let innerWisdom = stressor?.thinkInnerWisdom {
-                self.innerWisdomLabel.text = innerWisdom
-            }
-
+            self.thoughtsLabel.text = stressor?.thinkThoughts
+            self.actionStepLabel.text = stressor?.thinkActionStep
+            self.innerWisdomLabel.text = stressor?.thinkInnerWisdom
         }
+        
+        
     }
     
     override func viewDidLoad() {

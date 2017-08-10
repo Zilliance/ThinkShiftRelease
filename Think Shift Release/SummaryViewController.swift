@@ -16,6 +16,37 @@ class SummaryCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var cardView: CardView!
+    
+    var item: SummaryItem? = nil {
+        didSet {
+            self.titleLabel.text = item?.title
+            self.setupView()
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            self.setupView()
+        }
+    }
+    
+    private func setupView () {
+        self.titleLabel.textColor = isSelected ? .itemCellText : .white
+        self.cardView.backgroundColor = isSelected ? .white : item?.unselectedColor
+        self.iconImage.image = isSelected ? item?.imageActive : item?.imageInactive
+        
+    }
+    
+    
+}
+
+struct SummaryItem {
+    let title: String
+    let imageActive: UIImage
+    let imageInactive: UIImage
+    let unselectedColor: UIColor
+    let viewController: UIViewController
     
 }
 
@@ -24,19 +55,14 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var vcContainerView: UIView!
     
-    fileprivate struct SummaryItem {
-        let title: String
-        let image: UIImage
-        let viewController: UIViewController
-    }
-    
     var stressor: Stressor!
     
     fileprivate var currentViewController: UIViewController?
     
     fileprivate var currentIndex = 0
     
-    fileprivate let items: [SummaryItem] = [SummaryItem(title: "Think", image: #imageLiteral(resourceName: "thinkActive"), viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "think")), SummaryItem(title: "Shift", image: #imageLiteral(resourceName: "thinkActive"), viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "shift")), SummaryItem(title: "Release", image: #imageLiteral(resourceName: "thinkActive"), viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "release"))]
+    
+    fileprivate let items: [SummaryItem] = [SummaryItem(title: "Think", imageActive: #imageLiteral(resourceName: "thinkActive"), imageInactive: #imageLiteral(resourceName: "thinkInactive"), unselectedColor: UIColor.thinkGreen, viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "think")), SummaryItem(title: "Shift", imageActive: #imageLiteral(resourceName: "shiftActive"), imageInactive: #imageLiteral(resourceName: "shiftInactive"), unselectedColor: UIColor.shiftPurple , viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "shift")), SummaryItem(title: "Release", imageActive: #imageLiteral(resourceName: "releaseActive"), imageInactive: #imageLiteral(resourceName: "releaseInactive"), unselectedColor: UIColor.releaseBlue, viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "release"))]
     
 
     override func viewDidLoad() {
@@ -95,8 +121,7 @@ extension SummaryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SummaryCell", for: indexPath) as! SummaryCell
         let item = self.items[indexPath.row]
-        cell.titleLabel.text = item.title
-        cell.iconImage.image = item.image
+        cell.item = item
         
         return cell
         
@@ -124,7 +149,7 @@ extension SummaryViewController: UICollectionViewDelegate
 extension SummaryViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width / 4 , height: 77)
+        return CGSize(width: collectionView.bounds.size.width / CGFloat(self.items.count) , height: 77)
     }
     
 }
