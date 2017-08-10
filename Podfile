@@ -14,6 +14,7 @@ target 'Think Shift Release' do
   pod 'MZFormSheetPresentationController'
   pod 'KMPlaceholderTextView', '~> 1.3.0'
   pod 'TPKeyboardAvoiding'
+  pod 'YouTubePlayer'
 
   target 'Think Shift ReleaseTests' do
     inherit! :search_paths

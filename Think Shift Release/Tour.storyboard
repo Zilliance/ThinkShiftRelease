@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxh-Zc-UNt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tour-->
+        <scene sceneID="VD6-v7-AQB">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zxh-Zc-UNt" customClass="TourPageViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Tour" id="UbR-iq-zVi"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ahg-Kb-FeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="-686"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mfr-Rn-Vbf">
+            <objects>
+                <viewController storyboardIdentifier="second" id="ZmV-vI-JM0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MAO-IY-aQX"/>
+                        <viewControllerLayoutGuide type="bottom" id="YSd-0G-HW3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9pH-L4-YYv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-2" translatesAutoresizingMaskIntoConstraints="NO" id="bvy-Th-MLk">
+                                <rect key="frame" x="40" y="60" width="295" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="j8B-r3-RAm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think constructively and positively" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08U-2u-3QT">
+                                <rect key="frame" x="40" y="401" width="295" height="48"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="19"/>
+                                <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="08U-2u-3QT" firstAttribute="top" secondItem="bvy-Th-MLk" secondAttribute="bottom" constant="40" id="8Vn-9h-DTl"/>
+                            <constraint firstItem="08U-2u-3QT" firstAttribute="leading" secondItem="9pH-L4-YYv" secondAttribute="leading" constant="40" id="Ign-mG-jrk"/>
+                            <constraint firstAttribute="trailing" secondItem="08U-2u-3QT" secondAttribute="trailing" constant="40" id="cw9-Tp-zSI"/>
+                            <constraint firstItem="bvy-Th-MLk" firstAttribute="top" secondItem="MAO-IY-aQX" secondAttribute="bottom" constant="40" id="f2f-tM-FZX"/>
+                            <constraint firstItem="bvy-Th-MLk" firstAttribute="leading" secondItem="9pH-L4-YYv" secondAttribute="leading" constant="40" id="pGr-Zd-Tif"/>
+                            <constraint firstAttribute="trailing" secondItem="bvy-Th-MLk" secondAttribute="trailing" constant="40" id="vsf-CJ-45Y"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGr-jv-tei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fMn-kZ-IHY">
+            <objects>
+                <viewController storyboardIdentifier="third" id="4Dl-7M-VzH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lga-sn-C2o"/>
+                        <viewControllerLayoutGuide type="bottom" id="hHt-cG-jAQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ik-7X-QVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5V-wb-rEM">
+                                <rect key="frame" x="187.5" y="527.5" width="0.0" height="21.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="22"/>
+                                <color key="textColor" white="0.95810850790000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift your mood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zF-3C-sCa">
+                                <rect key="frame" x="40" y="401" width="295" height="24"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="19"/>
+                                <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-3" translatesAutoresizingMaskIntoConstraints="NO" id="Hph-VL-yhS">
+                                <rect key="frame" x="40" y="60" width="295" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="6CS-CU-LQc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4zF-3C-sCa" secondAttribute="trailing" constant="40" id="P2P-nE-fjj"/>
+                            <constraint firstItem="4zF-3C-sCa" firstAttribute="leading" secondItem="9ik-7X-QVQ" secondAttribute="leading" constant="40" id="RIo-Cu-a7K"/>
+                            <constraint firstItem="4zF-3C-sCa" firstAttribute="top" secondItem="Hph-VL-yhS" secondAttribute="bottom" constant="40" id="clr-Zo-ABR"/>
+                            <constraint firstItem="Hph-VL-yhS" firstAttribute="leading" secondItem="9ik-7X-QVQ" secondAttribute="leading" constant="40" id="ntt-Cy-fqB"/>
+                            <constraint firstItem="Hph-VL-yhS" firstAttribute="top" secondItem="lga-sn-C2o" secondAttribute="bottom" constant="40" id="pbd-CK-Ltb"/>
+                            <constraint firstAttribute="trailing" secondItem="Hph-VL-yhS" secondAttribute="trailing" constant="40" id="yNb-ly-HHh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XnO-On-1rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.60000000000002" y="130.88455772113943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LEp-FR-bv0">
+            <objects>
+                <viewController storyboardIdentifier="fourth" id="YRL-mp-Lmt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JkC-if-VhW"/>
+                        <viewControllerLayoutGuide type="bottom" id="qYo-n0-WYB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eZu-H3-R4G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-4" translatesAutoresizingMaskIntoConstraints="NO" id="fY8-JW-vhe">
+                                <rect key="frame" x="40" y="60" width="295" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="wgT-zh-jOJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release your stress" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfN-tE-593">
+                                <rect key="frame" x="40" y="401" width="295" height="24"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="19"/>
+                                <color key="textColor" red="0.1215686275" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fY8-JW-vhe" firstAttribute="leading" secondItem="eZu-H3-R4G" secondAttribute="leading" constant="40" id="HYI-ZB-uVM"/>
+                            <constraint firstAttribute="trailing" secondItem="dfN-tE-593" secondAttribute="trailing" constant="40" id="JWQ-bw-1Ih"/>
+                            <constraint firstItem="fY8-JW-vhe" firstAttribute="top" secondItem="JkC-if-VhW" secondAttribute="bottom" constant="40" id="YoR-d6-3aS"/>
+                            <constraint firstItem="dfN-tE-593" firstAttribute="leading" secondItem="eZu-H3-R4G" secondAttribute="leading" constant="40" id="h9n-86-Bn7"/>
+                            <constraint firstAttribute="trailing" secondItem="fY8-JW-vhe" secondAttribute="trailing" constant="40" id="qgH-W9-Ydw"/>
+                            <constraint firstItem="dfN-tE-593" firstAttribute="top" secondItem="fY8-JW-vhe" secondAttribute="bottom" constant="40" id="xZp-4X-tgO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ph6-e4-HKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qKc-rN-G4j">
+            <objects>
+                <viewController storyboardIdentifier="fifth" id="1ON-Lv-ZZJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTz-Tl-RSd"/>
+                        <viewControllerLayoutGuide type="bottom" id="7EW-Dd-Q3f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FBa-gP-8kb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-6" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-6i-jj8">
+                                <rect key="frame" x="40" y="60" width="295" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="K3a-Rc-kuj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save, print, and share your insights" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhH-AB-InI">
+                                <rect key="frame" x="40" y="401" width="295" height="48"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="19"/>
+                                <color key="textColor" red="0.1215686275" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dhH-AB-InI" secondAttribute="trailing" constant="40" id="0z4-cT-35K"/>
+                            <constraint firstAttribute="trailing" secondItem="TSn-6i-jj8" secondAttribute="trailing" constant="40" id="9ix-gd-Uk9"/>
+                            <constraint firstItem="TSn-6i-jj8" firstAttribute="top" secondItem="JTz-Tl-RSd" secondAttribute="bottom" constant="40" id="DLJ-c5-1Qr"/>
+                            <constraint firstItem="dhH-AB-InI" firstAttribute="top" secondItem="TSn-6i-jj8" secondAttribute="bottom" constant="40" id="hiF-Hn-f9j"/>
+                            <constraint firstItem="dhH-AB-InI" firstAttribute="leading" secondItem="FBa-gP-8kb" secondAttribute="leading" constant="40" id="m4T-l5-DZd"/>
+                            <constraint firstItem="TSn-6i-jj8" firstAttribute="leading" secondItem="FBa-gP-8kb" secondAttribute="leading" constant="40" id="qZs-gS-zMI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWx-q7-kY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mXD-pd-P3E">
+            <objects>
+                <viewController storyboardIdentifier="first" id="CPG-zU-Pva" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="16S-E6-YEN"/>
+                        <viewControllerLayoutGuide type="bottom" id="f1u-rh-e0C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ppd-Cg-ypL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rlt-Hv-Bj2">
+                                <rect key="frame" x="40" y="60" width="295" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="ymm-3a-YMF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View and edit your saved stressors." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkW-kT-v6C">
+                                <rect key="frame" x="40" y="401" width="295" height="48"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="19"/>
+                                <color key="textColor" red="0.1215686275" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jkW-kT-v6C" firstAttribute="top" secondItem="Rlt-Hv-Bj2" secondAttribute="bottom" constant="40" id="1lR-jh-B2T"/>
+                            <constraint firstItem="Rlt-Hv-Bj2" firstAttribute="leading" secondItem="ppd-Cg-ypL" secondAttribute="leading" constant="40" id="2yh-Lh-0tV"/>
+                            <constraint firstItem="Rlt-Hv-Bj2" firstAttribute="top" secondItem="16S-E6-YEN" secondAttribute="bottom" constant="40" id="GxP-XS-YFF"/>
+                            <constraint firstItem="jkW-kT-v6C" firstAttribute="leading" secondItem="ppd-Cg-ypL" secondAttribute="leading" constant="40" id="O4f-Yd-j7w"/>
+                            <constraint firstAttribute="trailing" secondItem="jkW-kT-v6C" secondAttribute="trailing" constant="40" id="VeT-wQ-2MH"/>
+                            <constraint firstAttribute="trailing" secondItem="Rlt-Hv-Bj2" secondAttribute="trailing" constant="40" id="tPr-kT-64n"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8S-LT-2aD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871.20000000000005" y="130.88455772113943"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tour-1" width="1181" height="951"/>
+        <image name="tour-2" width="1181" height="951"/>
+        <image name="tour-3" width="1181" height="951"/>
+        <image name="tour-4" width="1181" height="951"/>
+        <image name="tour-6" width="1181" height="951"/>
+    </resources>
+</document>

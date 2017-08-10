@@ -11,6 +11,7 @@ PODS:
   - SideMenuController (0.2.4)
   - SVProgressHUD (2.1.2)
   - TPKeyboardAvoiding (1.3.1)
+  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - KMPlaceholderTextView (~> 1.3.0)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - SideMenuController
   - SVProgressHUD
   - TPKeyboardAvoiding
+  - YouTubePlayer
 
 SPEC CHECKSUMS:
   KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
@@ -30,7 +32,8 @@ SPEC CHECKSUMS:
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TPKeyboardAvoiding: 0d6af20e95e2850f4c621841225b59ec7d8dd852
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 9dc19db47c148b61cd9e49ff87115f71be106b55
+PODFILE CHECKSUM: 7c2647e78ebfffa95ae37a1e665bcbb00cb980ad
 
 COCOAPODS: 1.2.1
