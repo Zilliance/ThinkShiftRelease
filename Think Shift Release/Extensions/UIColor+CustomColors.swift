@@ -33,6 +33,7 @@ extension UIColor {
     static let pause = UIColor.color(forRed: 155, green: 155, blue: 155, alpha: 1)
     
     static let pauseButtonColor = UIColor.color(forRed: 216, green: 216, blue: 216, alpha: 1)
+    static let playButtonBlue = UIColor.color(forRed: 41, green: 123, blue: 247, alpha: 1)
     static let musicOrange = UIColor.color(forRed: 243, green: 135, blue: 32, alpha: 1)
     
     class func color(forRed red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
