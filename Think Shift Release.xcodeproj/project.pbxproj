@@ -57,7 +57,6 @@
 		8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329001F292CA900844C5F /* ThinkViewController.storyboard */; };
 		8CD329091F2FC68D00844C5F /* ReleaseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */; };
 		8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */; };
-		8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */; };
 		8CF0E7521F35171400416251 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E7511F35171400416251 /* CardView.swift */; };
 		8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */; };
 		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
@@ -70,7 +69,6 @@
 		E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828431F195FED005E91A8 /* MusicTableViewController.swift */; };
 		E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */; };
 		E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */; };
-		E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */; };
 		E37828501F198177005E91A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378284F1F198177005E91A8 /* HomeViewController.swift */; };
 		E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E386089A1F158D2800816DF4 /* AppDelegate.swift */; };
 		E38608A01F158D2800816DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E386089E1F158D2800816DF4 /* Main.storyboard */; };
@@ -183,7 +181,6 @@
 		8CD329001F292CA900844C5F /* ThinkViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThinkViewController.storyboard; sourceTree = "<group>"; };
 		8CD329081F2FC68D00844C5F /* ReleaseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReleaseViewController.storyboard; sourceTree = "<group>"; };
 		8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheTableViewController.swift; sourceTree = "<group>"; };
-		8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SummaryTableViewController.storyboard; sourceTree = "<group>"; };
 		8CF0E7511F35171400416251 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShiftViewController.storyboard; sourceTree = "<group>"; };
 		8F94FE001573B96566022F2C /* Pods-Think Shift ReleaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,7 +197,6 @@
 		E37828431F195FED005E91A8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
 		E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
-		E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		E378284F1F198177005E91A8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E38608971F158D2800816DF4 /* Think Shift Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Think Shift Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E386089A1F158D2800816DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -456,8 +452,6 @@
 		E378284C1F196DA2005E91A8 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				8CD3290C1F3111F900844C5F /* SummaryTableViewController.storyboard */,
-				E378284D1F196DAF005E91A8 /* SummaryTableViewController.swift */,
 				8C166DD01F3CDAF30071A98C /* SummaryViewController.storyboard */,
 				8C166DCE1F3CDAE50071A98C /* SummaryViewController.swift */,
 				8C166DD21F3CE9930071A98C /* SummaryThinkViewController.swift */,
@@ -737,7 +731,6 @@
 				8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */,
-				8CD3290D1F3111F900844C5F /* SummaryTableViewController.storyboard in Resources */,
 				E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */,
 				8C166DCB1F3A6BE00071A98C /* QuoteCell.xib in Resources */,
 				8C631F9B1F22991E00B2CA4C /* Muli-ExtraBold.ttf in Resources */,
@@ -942,7 +935,6 @@
 				E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */,
 				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
 				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
-				E378284E1F196DAF005E91A8 /* SummaryTableViewController.swift in Sources */,
 				4F15A5191F277A5C004210B4 /* Quote.swift in Sources */,
 				E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
