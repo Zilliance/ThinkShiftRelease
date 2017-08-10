@@ -55,6 +55,14 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var vcContainerView: UIView!
     
+    enum ItemSection: Int {
+        case think = 0
+        case shift
+        case release
+    }
+
+    var itemSection: ItemSection = .think
+    
     var stressor: Stressor!
     
     fileprivate var currentViewController: UIViewController?
@@ -67,12 +75,17 @@ class SummaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let _ = self.presentingViewController {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(close(_:)))
+        }
+        
         self.collectionView.contentInset = UIEdgeInsetsMake(0, 2, 0, 2)
         
         self.showViewController(controller: items[0].viewController)
         
         // pre select first position
-        self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        self.collectionView.selectItem(at: IndexPath(item: self.itemSection.rawValue, section: 0), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     fileprivate func showViewController(controller: UIViewController) {
@@ -110,6 +123,14 @@ class SummaryViewController: UIViewController {
     //MARK -- User Actions
     
     @IBAction func reminderAction(_ sender: Any) {
+    }
+    
+    @IBAction func close(_ sender: Any?) {
+        if let _ = self.presentingViewController {
+            self.dismiss(animated: true, completion: nil)
+        } else if let navigationController = self.navigationController {
+            navigationController.popViewController(animated: true)
+        }
     }
 }
 
@@ -149,7 +170,7 @@ extension SummaryViewController: UICollectionViewDelegate
 extension SummaryViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width / CGFloat(self.items.count) , height: 77)
+        return CGSize(width: UIScreen.main.bounds.width / CGFloat(self.items.count) - 8, height: 77)
     }
     
 }
