@@ -20,10 +20,6 @@ class ShiftViewController: UIViewController, ShowsSummary {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.segmentedControl.tintColor = UIColor.navBar
-        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
-        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.navBar] , for: .normal)
-        
         self.bottomView.layer.contents = UIImage(named: "shift-bg")?.cgImage
         
         if let title = self.stressor.title {
@@ -34,7 +30,15 @@ class ShiftViewController: UIViewController, ShowsSummary {
 
         self.setupSummaryButton()
         
-        self.embed(viewController: UIStoryboard(name: "ShiftViewController", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood"))
+        // Segmented Control
+        
+        self.segmentedControl.tintColor = UIColor.navBar
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.navBar] , for: .normal)
+        
+        // Embed Shift Mood
+        
+//        self.embed(viewController: UIStoryboard(name: "ShiftViewController", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood"))
     }
 
     // MARK: -
