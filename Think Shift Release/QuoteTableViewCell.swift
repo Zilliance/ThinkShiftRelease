@@ -23,7 +23,10 @@ class QuoteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setQuote(label: String, author: String) {
+    func setQuote(label: String?, author: String?) {
+        
+        guard let label = label, let author = author else { return }
+        
         let quote = label + "- \(author)"
         let attributedString = NSMutableAttributedString(string: quote)
         let authorRange = (quote as NSString).range(of: author)
