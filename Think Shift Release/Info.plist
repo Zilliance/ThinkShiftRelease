@@ -17,13 +17,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>NSCalendarsUsageDescription</key>
-    <string>Think, Shift, Release would like to add a reminder to your calendar</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Add your favorite songs</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Think, Shift, Release would like to add a reminder to your calendar</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Add your favorite videos and photos</string>
 	<key>UIAppFonts</key>
