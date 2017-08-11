@@ -27,6 +27,8 @@
 		8C166DD31F3CE9930071A98C /* SummaryThinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DD21F3CE9930071A98C /* SummaryThinkViewController.swift */; };
 		8C166DD51F3CE9B50071A98C /* SummaryShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DD41F3CE9B50071A98C /* SummaryShiftViewController.swift */; };
 		8C166DD71F3CE9D80071A98C /* SummaryReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DD61F3CE9D80071A98C /* SummaryReleaseViewController.swift */; };
+		8C166DDA1F3E0AFB0071A98C /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C166DD91F3E0AFB0071A98C /* Popup.storyboard */; };
+		8C166DDC1F3E10080071A98C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DDB1F3E10080071A98C /* PopupViewController.swift */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -152,6 +154,8 @@
 		8C166DD21F3CE9930071A98C /* SummaryThinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryThinkViewController.swift; sourceTree = "<group>"; };
 		8C166DD41F3CE9B50071A98C /* SummaryShiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryShiftViewController.swift; sourceTree = "<group>"; };
 		8C166DD61F3CE9D80071A98C /* SummaryReleaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryReleaseViewController.swift; sourceTree = "<group>"; };
+		8C166DD91F3E0AFB0071A98C /* Popup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
+		8C166DDB1F3E10080071A98C /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +296,15 @@
 				814913D028C67A345EDE5CB0 /* Pods_Think_Shift_ReleaseUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C166DD81F3E0AE30071A98C /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				8C166DD91F3E0AFB0071A98C /* Popup.storyboard */,
+				8C166DDB1F3E10080071A98C /* PopupViewController.swift */,
+			);
+			name = Popup;
 			sourceTree = "<group>";
 		};
 		8C631F7A1F228F6500B2CA4C /* Extensions */ = {
@@ -460,6 +473,7 @@
 			children = (
 				E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */,
 				8CF0E7511F35171400416251 /* CardView.swift */,
+				8C166DD81F3E0AE30071A98C /* Popup */,
 				E37828521F19835E005E91A8 /* Sidebar */,
 				E347EA4F1F3CCA7A002920D0 /* Intro */,
 				E347EA501F3CCAA4002920D0 /* Tour */,
@@ -747,6 +761,7 @@
 				E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */,
 				E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */,
 				8C631F9F1F22991E00B2CA4C /* Muli-Italic.ttf in Resources */,
+				8C166DDA1F3E0AFB0071A98C /* Popup.storyboard in Resources */,
 				E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */,
 				E3BE78E01F3534C30063A6A4 /* faq.html in Resources */,
 				8C631F971F22991E00B2CA4C /* Muli-Black.ttf in Resources */,
@@ -952,6 +967,7 @@
 				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
 				4FE59B041F2B820200AAE778 /* MediaCell.swift in Sources */,
 				8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */,
+				8C166DDC1F3E10080071A98C /* PopupViewController.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
 				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
