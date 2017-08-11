@@ -18,7 +18,7 @@ class ActionPlanViewController: UIViewController {
     
     fileprivate var audioPlayer: AVAudioPlayer?
     
-    var showMeditationCell = true
+    var showMeditationCell = false // disabled in TSR
 
     deinit {
         self.stopAudio()
