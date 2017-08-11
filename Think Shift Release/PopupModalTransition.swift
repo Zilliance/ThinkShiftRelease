@@ -12,6 +12,8 @@ import UIKit
 
 final class PopupModalTransition: NSObject {
     
+    fileprivate var overlay = UIVisualEffectView()
+    
     enum TransitionType {
         case presenting
         case dismissing
@@ -52,13 +54,15 @@ extension PopupModalTransition: UIViewControllerAnimatedTransitioning {
         }
         
         let finalFrame = transitionContext.finalFrame(for: toViewController)
-        
+
         toViewController.view.frame = CGRect(x: (containerView.frame.width - finalFrame.width) / 2 , y: containerView.frame.size.height + finalFrame.size.height, width: finalFrame.size.width, height: finalFrame.size.height)
         containerView.addSubview(toViewController.view)
-        
+    
+        self.overlay.frame = fromViewController.view.frame
+        fromViewController.view.addSubview(overlay)
         UIView.animate(withDuration: self.transitionDuration, animations: {
             toViewController.view.frame = finalFrame
-            fromViewController.view.alpha = 0.5
+            self.overlay.effect = UIBlurEffect(style: .dark)
         }) { (completed) in
             transitionContext.completeTransition(completed)
         }
@@ -71,11 +75,20 @@ extension PopupModalTransition: UIViewControllerAnimatedTransitioning {
         let toViewController = transitionContext.viewController(forKey: .to)
         
         guard let frame = toViewController?.view.frame else { return }
+    
+        let subviews = toViewController?.view.subviews
+        
+        for view in subviews! {
+            if let overlay = view as? UIVisualEffectView {
+                self.overlay = overlay
+            }
+        }
         
         UIView.animate(withDuration: self.transitionDuration, animations: {
-            toViewController?.view.alpha = 1.0
             fromViewController?.view.transform = CGAffineTransform(translationX: 0, y: frame.height)
+            self.overlay.effect = nil
         }) { (completed) in
+            self.overlay.removeFromSuperview()
             transitionContext.completeTransition(completed)
         }
         
