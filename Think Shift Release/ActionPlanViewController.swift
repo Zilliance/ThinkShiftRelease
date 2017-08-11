@@ -194,8 +194,8 @@ class ActionPlanViewController: UIViewController {
     private func setupAudioPlayer() {
         
         let url = URL.init(fileURLWithPath: Bundle.main.path(
-            forResource: "The Raft",
-            ofType: "m4a")!)
+            forResource: "release-meditation",
+            ofType: "mp3")!)
         
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: url)
