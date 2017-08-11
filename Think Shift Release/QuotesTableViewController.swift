@@ -27,17 +27,16 @@ class QuotesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    /*
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        print("number of quotes:", Database.shared.user.quotes.count)
         return 0
     }
-     */
+ 
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,6 +96,8 @@ class QuotesTableViewController: UITableViewController {
     // MARK: - User Action
     
     @IBAction func addItem(_ sender: Any?) {
-        print("addItem")
+        let vc = UIStoryboard(name: "QuotesViewController", bundle: nil).instantiateViewController(withIdentifier: "NewQuoteNav")
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }
