@@ -99,7 +99,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iwg-37-gQY" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                                        <rect key="frame" x="15" y="70.5" width="305" height="59.5"/>
+                                                        <rect key="frame" x="15" y="72.5" width="305" height="57.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
@@ -136,7 +136,7 @@
                                                     <constraint firstItem="sKL-sT-Aie" firstAttribute="leading" secondItem="BPr-BX-HdS" secondAttribute="leading" constant="15" id="W7l-Yv-mOn"/>
                                                     <constraint firstItem="60f-gM-Cgl" firstAttribute="top" secondItem="AiB-ib-Iem" secondAttribute="bottom" constant="4" id="YrF-NP-Cm9"/>
                                                     <constraint firstAttribute="trailing" secondItem="60f-gM-Cgl" secondAttribute="trailing" constant="10" id="l5G-a5-OXg"/>
-                                                    <constraint firstItem="Iwg-37-gQY" firstAttribute="top" secondItem="60f-gM-Cgl" secondAttribute="bottom" constant="8" id="ufZ-Hq-JJt"/>
+                                                    <constraint firstItem="Iwg-37-gQY" firstAttribute="top" secondItem="60f-gM-Cgl" secondAttribute="bottom" constant="10" id="ufZ-Hq-JJt"/>
                                                     <constraint firstItem="AiB-ib-Iem" firstAttribute="top" secondItem="BPr-BX-HdS" secondAttribute="top" constant="10" id="zwi-96-M1c"/>
                                                 </constraints>
                                             </view>
