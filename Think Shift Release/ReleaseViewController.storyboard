@@ -65,7 +65,7 @@
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value=" I am __________________ ."/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, I am at peace. I am loved. All is well."/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </userDefinedRuntimeAttribute>
@@ -84,11 +84,8 @@
                                                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prompt goes here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDS-LK-fOO">
-                                                                <rect key="frame" x="75" y="39" width="252" height="16"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="16" id="c0y-Wa-qNt"/>
-                                                                </constraints>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a simple affirmation ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDS-LK-fOO">
+                                                                <rect key="frame" x="75" y="39" width="252" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -130,11 +127,8 @@
                                                                     <constraint firstAttribute="height" constant="50" id="rWB-Wt-gja"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prompt goes here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
-                                                                <rect key="frame" x="75" y="39" width="244" height="16"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="16" id="NCp-vg-azj"/>
-                                                                </constraints>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I can use the power of my intention ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
+                                                                <rect key="frame" x="75" y="39" width="244" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -194,7 +188,7 @@ and instead experience _______ .</string>
                                                                     <segue destination="aOh-pM-Y7g" kind="embed" id="7A3-dg-1cQ"/>
                                                                 </connections>
                                                             </containerView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use your breath for..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-BV-gfn">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use your breath to experience the emotion ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-BV-gfn">
                                                                 <rect key="frame" x="75" y="39" width="250" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
