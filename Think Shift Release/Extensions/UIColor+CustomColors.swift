@@ -48,6 +48,10 @@ extension UIColor {
 
     static let textInputColor = UIColor(white: 0.47, alpha: 1.0)
     static let textPlaceholderColor = UIColor.lightGray
+    
+    static let recurrenceColor = UIColor.color(forRed: 0, green: 184, blue: 231, alpha: 1)
+    static let switchBlueColor = UIColor.color(forRed: 0, green: 184, blue: 231, alpha: 1)
+    static let scheduleTextColor = UIColor.color(forRed: 66, green: 93, blue: 114, alpha: 1)
 
 }
 

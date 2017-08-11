@@ -31,6 +31,23 @@
 		8C166DDC1F3E10080071A98C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DDB1F3E10080071A98C /* PopupViewController.swift */; };
 		8C166DDE1F3E215E0071A98C /* PopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DDD1F3E215E0071A98C /* PopupPresentationController.swift */; };
 		8C166DE01F3E234F0071A98C /* PopupModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C166DDF1F3E234F0071A98C /* PopupModalTransition.swift */; };
+		8C2B13CF1F3E56BF002C0353 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13CE1F3E56BF002C0353 /* Schedule.storyboard */; };
+		8C2B13D41F3E5796002C0353 /* CustomDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13D01F3E5796002C0353 /* CustomDatePickerViewController.swift */; };
+		8C2B13D51F3E5796002C0353 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13D11F3E5796002C0353 /* ScheduleViewController.swift */; };
+		8C2B13D61F3E5796002C0353 /* ScheduleNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13D21F3E5796002C0353 /* ScheduleNotificationTableViewController.swift */; };
+		8C2B13D71F3E5796002C0353 /* ZillianceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13D31F3E5796002C0353 /* ZillianceTextViewController.swift */; };
+		8C2B13D91F3E5B9A002C0353 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13D81F3E5B9A002C0353 /* Notification.swift */; };
+		8C2B13DB1F3E5C7D002C0353 /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13DA1F3E5C7D002C0353 /* DetachableObject.swift */; };
+		8C2B13DD1F3E5D37002C0353 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13DC1F3E5D37002C0353 /* Date+Extensions.swift */; };
+		8C2B13DF1F3E5D9C002C0353 /* AddToCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13DE1F3E5D9C002C0353 /* AddToCalendarViewController.swift */; };
+		8C2B13E11F3E5E73002C0353 /* LocalNotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E01F3E5E73002C0353 /* LocalNotificationsHelper.swift */; };
+		8C2B13E31F3E5ED6002C0353 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E21F3E5ED6002C0353 /* NotificationsManager.swift */; };
+		8C2B13E51F3E5F08002C0353 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E41F3E5F08002C0353 /* CalendarHelper.swift */; };
+		8C2B13EC1F3E60E9002C0353 /* ActionPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */; };
+		8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */; };
+		8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */; };
+		8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */; };
+		8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F11F3E690E002C0353 /* Plan.storyboard */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -160,6 +177,23 @@
 		8C166DDB1F3E10080071A98C /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		8C166DDD1F3E215E0071A98C /* PopupPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPresentationController.swift; sourceTree = "<group>"; };
 		8C166DDF1F3E234F0071A98C /* PopupModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupModalTransition.swift; sourceTree = "<group>"; };
+		8C2B13CE1F3E56BF002C0353 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
+		8C2B13D01F3E5796002C0353 /* CustomDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePickerViewController.swift; sourceTree = "<group>"; };
+		8C2B13D11F3E5796002C0353 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		8C2B13D21F3E5796002C0353 /* ScheduleNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationTableViewController.swift; sourceTree = "<group>"; };
+		8C2B13D31F3E5796002C0353 /* ZillianceTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZillianceTextViewController.swift; sourceTree = "<group>"; };
+		8C2B13D81F3E5B9A002C0353 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8C2B13DA1F3E5C7D002C0353 /* DetachableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
+		8C2B13DC1F3E5D37002C0353 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "Extensions/Date+Extensions.swift"; sourceTree = "<group>"; };
+		8C2B13DE1F3E5D9C002C0353 /* AddToCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCalendarViewController.swift; sourceTree = "<group>"; };
+		8C2B13E01F3E5E73002C0353 /* LocalNotificationsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationsHelper.swift; sourceTree = "<group>"; };
+		8C2B13E21F3E5ED6002C0353 /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		8C2B13E41F3E5F08002C0353 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanCell.swift; sourceTree = "<group>"; };
+		8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
+		8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationPlanCell.swift; sourceTree = "<group>"; };
+		8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationsManager+ViewModel.swift"; sourceTree = "<group>"; };
+		8C2B13F11F3E690E002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -311,9 +345,35 @@
 			name = Popup;
 			sourceTree = "<group>";
 		};
+		8C2B13CD1F3E56AE002C0353 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B13CE1F3E56BF002C0353 /* Schedule.storyboard */,
+				8C2B13DE1F3E5D9C002C0353 /* AddToCalendarViewController.swift */,
+				8C2B13D01F3E5796002C0353 /* CustomDatePickerViewController.swift */,
+				8C2B13D11F3E5796002C0353 /* ScheduleViewController.swift */,
+				8C2B13D21F3E5796002C0353 /* ScheduleNotificationTableViewController.swift */,
+				8C2B13D31F3E5796002C0353 /* ZillianceTextViewController.swift */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		8C2B13E61F3E6050002C0353 /* ActionPlan */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B13F11F3E690E002C0353 /* Plan.storyboard */,
+				8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */,
+				8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */,
+				8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */,
+				8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */,
+			);
+			name = ActionPlan;
+			sourceTree = "<group>";
+		};
 		8C631F7A1F228F6500B2CA4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B13DC1F3E5D37002C0353 /* Date+Extensions.swift */,
 				8C631F7B1F228F7300B2CA4C /* String+Extensions.swift */,
 				8C631F7C1F228F7300B2CA4C /* UIColor+CustomColors.swift */,
 				8C631F7D1F228F7300B2CA4C /* UIDevice+Extensions.swift */,
@@ -464,6 +524,9 @@
 		E37828491F1964F7005E91A8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B13E41F3E5F08002C0353 /* CalendarHelper.swift */,
+				8C2B13E21F3E5ED6002C0353 /* NotificationsManager.swift */,
+				8C2B13E01F3E5E73002C0353 /* LocalNotificationsHelper.swift */,
 				E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */,
 				E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */,
 				4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */,
@@ -479,6 +542,8 @@
 				8C166DDD1F3E215E0071A98C /* PopupPresentationController.swift */,
 				8C166DDF1F3E234F0071A98C /* PopupModalTransition.swift */,
 				8CF0E7511F35171400416251 /* CardView.swift */,
+				8C2B13E61F3E6050002C0353 /* ActionPlan */,
+				8C2B13CD1F3E56AE002C0353 /* Schedule */,
 				8C166DD81F3E0AE30071A98C /* Popup */,
 				E37828521F19835E005E91A8 /* Sidebar */,
 				E347EA4F1F3CCA7A002920D0 /* Intro */,
@@ -496,6 +561,8 @@
 		E378284B1F19650E005E91A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B13DA1F3E5C7D002C0353 /* DetachableObject.swift */,
+				8C2B13D81F3E5B9A002C0353 /* Notification.swift */,
 				E3A30B781F21BB9A0060FED4 /* Database.swift */,
 				E3A30B761F21BB670060FED4 /* Stressor.swift */,
 				E3A30B7A1F21BBBC0060FED4 /* User.swift */,
@@ -777,6 +844,7 @@
 				8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
 				8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */,
+				8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */,
 				8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */,
 				8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */,
 				8C631F9A1F22991E00B2CA4C /* Muli-BoldItalic.ttf in Resources */,
@@ -784,6 +852,7 @@
 				E347EA571F3CCABD002920D0 /* Tour.storyboard in Resources */,
 				8C631F9C1F22991E00B2CA4C /* Muli-ExtraBoldItalic.ttf in Resources */,
 				8C631FA01F22991E00B2CA4C /* Muli-Light.ttf in Resources */,
+				8C2B13CF1F3E56BF002C0353 /* Schedule.storyboard in Resources */,
 				8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */,
 				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */,
@@ -960,21 +1029,29 @@
 				8C166DD71F3CE9D80071A98C /* SummaryReleaseViewController.swift in Sources */,
 				E347EA581F3CCABD002920D0 /* TourPageViewController.swift in Sources */,
 				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
+				8C2B13E31F3E5ED6002C0353 /* NotificationsManager.swift in Sources */,
 				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
 				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,
 				8C631F861F228F7300B2CA4C /* UIViewController+Extensions.swift in Sources */,
 				E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */,
 				4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */,
+				8C2B13D61F3E5796002C0353 /* ScheduleNotificationTableViewController.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
+				8C2B13E51F3E5F08002C0353 /* CalendarHelper.swift in Sources */,
 				8C166DD51F3CE9B50071A98C /* SummaryShiftViewController.swift in Sources */,
 				E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */,
 				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,
 				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
 				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
+				8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */,
 				4FE59B041F2B820200AAE778 /* MediaCell.swift in Sources */,
 				8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */,
+				8C2B13EC1F3E60E9002C0353 /* ActionPlanCell.swift in Sources */,
 				8C166DDC1F3E10080071A98C /* PopupViewController.swift in Sources */,
+				8C2B13DB1F3E5C7D002C0353 /* DetachableObject.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
+				8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */,
+				8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */,
 				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
 				E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */,
@@ -989,6 +1066,7 @@
 				8C631F771F228E5500B2CA4C /* AboutCompanyViewController.swift in Sources */,
 				E38608D01F15904B00816DF4 /* UIMockCollectionViewController.swift in Sources */,
 				8C631F791F228E5500B2CA4C /* WebViewController.swift in Sources */,
+				8C2B13D51F3E5796002C0353 /* ScheduleViewController.swift in Sources */,
 				8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */,
 				8CF0E7521F35171400416251 /* CardView.swift in Sources */,
 				E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */,
@@ -996,19 +1074,25 @@
 				E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */,
 				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
 				4F15A5191F277A5C004210B4 /* Quote.swift in Sources */,
+				8C2B13D91F3E5B9A002C0353 /* Notification.swift in Sources */,
 				E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
 				E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */,
+				8C2B13D71F3E5796002C0353 /* ZillianceTextViewController.swift in Sources */,
 				E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */,
 				E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */,
 				4F65CF131F34A16400C4A5B9 /* ImageViewController.swift in Sources */,
+				8C2B13DF1F3E5D9C002C0353 /* AddToCalendarViewController.swift in Sources */,
 				8C631F851F228F7300B2CA4C /* UITableViewCell+Extensions.swift in Sources */,
 				E347EA5B1F3CCAF7002920D0 /* VideoPlayerViewController.swift in Sources */,
 				E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */,
 				E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */,
 				E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */,
 				E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */,
+				8C2B13E11F3E5E73002C0353 /* LocalNotificationsHelper.swift in Sources */,
+				8C2B13D41F3E5796002C0353 /* CustomDatePickerViewController.swift in Sources */,
 				E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */,
+				8C2B13DD1F3E5D37002C0353 /* Date+Extensions.swift in Sources */,
 				4F65CF151F34A1FE00C4A5B9 /* PhotoUtils.swift in Sources */,
 				E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */,
 				8C166DCF1F3CDAE50071A98C /* SummaryViewController.swift in Sources */,

@@ -19,7 +19,7 @@ class Database {
         do {
             
             let config = Realm.Configuration(
-                schemaVersion: 5,
+                schemaVersion: 6,
                 
                 migrationBlock: { migration, oldSchemaVersion in
                     if (oldSchemaVersion < 4) {

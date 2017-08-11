@@ -44,6 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         
+        NotificationsManager.sharedInstance.realmDB = Database.shared.realm
+        
         return true
     }
 

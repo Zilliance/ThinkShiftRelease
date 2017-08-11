@@ -14,7 +14,10 @@ target 'Think Shift Release' do
   pod 'MZFormSheetPresentationController'
   pod 'KMPlaceholderTextView', '~> 1.3.0'
   pod 'TPKeyboardAvoiding'
+  pod 'MultiSelectSegmentedControl'
+  pod 'MZFormSheetController'
   pod 'YouTubePlayer'
+  pod 'PDFGenerator', '~> 2.0.1'
 
   target 'Think Shift ReleaseTests' do
     inherit! :search_paths
