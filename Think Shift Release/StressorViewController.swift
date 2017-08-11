@@ -13,7 +13,7 @@ protocol StressorEditor {
     func save()
 }
 
-class StressorViewController: UIViewController {
+class StressorViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var thinkButton: UIButton!
     @IBOutlet weak var shiftButton: UIButton!
@@ -59,31 +59,51 @@ class StressorViewController: UIViewController {
                 Database.shared.user.stressors.append(self.stressor)
             }
         }
-
+        
     }
     
+    func presentationController(forPresented presented: UIViewController,
+                                presenting: UIViewController?,
+                                source: UIViewController) -> UIPresentationController? {
+        let presentationController = PopupPresentationController(presentedViewController: presented,
+                                                                 presenting: presenting)
+        return presentationController
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PopupModalTransition(withType: .dismissing)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PopupModalTransition(withType: .presenting)
+
+    }
     
     // MARK: -
 
     @IBAction func didTapThink(_ sender: Any) {
+        
         
         guard let count = self.stressorTextView.text?.characters.count, count > 0 else {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
         
+        guard let popupViewController = UIStoryboard(name: "Popup", bundle: nil).instantiateInitialViewController() as? PopupViewController
+            else {
+                assertionFailure()
+                return
+        }
         
-        let alert = UIAlertController(title: "Do you feel calm enough to think well?", message: "Additional message content. We could have a custom style alert here.", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { _ in
-            // noop
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+        popupViewController.yesAction = {
             self.performSegue(withIdentifier: "ThinkSegue", sender: nil)
-        }))
+        }
         
-        self.present(alert, animated: true, completion: nil)
+        popupViewController.transitioningDelegate = self
+        popupViewController.modalPresentationStyle = .custom
+        
+        self.present(popupViewController, animated: true, completion: nil)
+        
     }
     
     @IBAction func didTapShift(_ sender: Any) {

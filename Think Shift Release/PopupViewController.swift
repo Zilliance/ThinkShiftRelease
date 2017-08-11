@@ -26,5 +26,6 @@ class PopupViewController: UIViewController {
     @IBAction func yesAction(_ sender: Any) {
         
         self.yesAction?()
+        self.dismiss(animated: true, completion: nil)
     }
 }
