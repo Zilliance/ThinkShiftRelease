@@ -43,6 +43,11 @@
 		8C2B13E11F3E5E73002C0353 /* LocalNotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E01F3E5E73002C0353 /* LocalNotificationsHelper.swift */; };
 		8C2B13E31F3E5ED6002C0353 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E21F3E5ED6002C0353 /* NotificationsManager.swift */; };
 		8C2B13E51F3E5F08002C0353 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E41F3E5F08002C0353 /* CalendarHelper.swift */; };
+		8C2B13EC1F3E60E9002C0353 /* ActionPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */; };
+		8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */; };
+		8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */; };
+		8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */; };
+		8C2B13F01F3E60E9002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13EB1F3E60E9002C0353 /* Plan.storyboard */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -184,6 +189,11 @@
 		8C2B13E01F3E5E73002C0353 /* LocalNotificationsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationsHelper.swift; sourceTree = "<group>"; };
 		8C2B13E21F3E5ED6002C0353 /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		8C2B13E41F3E5F08002C0353 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanCell.swift; sourceTree = "<group>"; };
+		8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
+		8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationPlanCell.swift; sourceTree = "<group>"; };
+		8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationsManager+ViewModel.swift"; sourceTree = "<group>"; };
+		8C2B13EB1F3E60E9002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +356,18 @@
 				8C2B13D31F3E5796002C0353 /* ZillianceTextViewController.swift */,
 			);
 			name = Schedule;
+			sourceTree = "<group>";
+		};
+		8C2B13E61F3E6050002C0353 /* ActionPlan */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B13EB1F3E60E9002C0353 /* Plan.storyboard */,
+				8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */,
+				8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */,
+				8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */,
+				8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */,
+			);
+			name = ActionPlan;
 			sourceTree = "<group>";
 		};
 		8C631F7A1F228F6500B2CA4C /* Extensions */ = {
@@ -516,6 +538,7 @@
 		E378284A1F196506005E91A8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B13E61F3E6050002C0353 /* ActionPlan */,
 				8C2B13CD1F3E56AE002C0353 /* Schedule */,
 				E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */,
 				8C166DDD1F3E215E0071A98C /* PopupPresentationController.swift */,
@@ -821,6 +844,7 @@
 				8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
 				8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */,
+				8C2B13F01F3E60E9002C0353 /* Plan.storyboard in Resources */,
 				8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */,
 				8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */,
 				8C631F9A1F22991E00B2CA4C /* Muli-BoldItalic.ttf in Resources */,
@@ -1019,11 +1043,15 @@
 				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,
 				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
 				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
+				8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */,
 				4FE59B041F2B820200AAE778 /* MediaCell.swift in Sources */,
 				8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */,
+				8C2B13EC1F3E60E9002C0353 /* ActionPlanCell.swift in Sources */,
 				8C166DDC1F3E10080071A98C /* PopupViewController.swift in Sources */,
 				8C2B13DB1F3E5C7D002C0353 /* DetachableObject.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
+				8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */,
+				8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */,
 				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
 				E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */,
