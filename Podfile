@@ -14,6 +14,8 @@ target 'Think Shift Release' do
   pod 'MZFormSheetPresentationController'
   pod 'KMPlaceholderTextView', '~> 1.3.0'
   pod 'TPKeyboardAvoiding'
+  pod 'MultiSelectSegmentedControl'
+  pod 'MZFormSheetController'
   pod 'YouTubePlayer'
 
   target 'Think Shift ReleaseTests' do
