@@ -76,12 +76,14 @@ extension PopupModalTransition: UIViewControllerAnimatedTransitioning {
         
         guard let frame = toViewController?.view.frame else { return }
     
-        let subviews = toViewController?.view.subviews
-        
-        for view in subviews! {
-            if let overlay = view as? UIVisualEffectView {
-                self.overlay = overlay
+        if let subviews = toViewController?.view.subviews {
+            
+            for view in subviews {
+                if let overlay = view as? UIVisualEffectView {
+                    self.overlay = overlay
+                }
             }
+            
         }
         
         UIView.animate(withDuration: self.transitionDuration, animations: {
