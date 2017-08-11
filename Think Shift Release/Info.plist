@@ -20,6 +20,8 @@
 	<string>4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Think, Shift, Release would like to add a reminder to your calendar</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Add your favorite songs</string>
 	<key>NSPhotoLibraryUsageDescription</key>
