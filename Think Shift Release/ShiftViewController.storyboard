@@ -38,7 +38,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3w-IO-RY4">
                                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                                 <subviews>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vvr-WU-pCg">
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Vvr-WU-pCg">
                                                         <rect key="frame" x="30" y="20" width="315" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="GYU-aq-gLe"/>

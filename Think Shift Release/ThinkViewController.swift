@@ -26,9 +26,11 @@ class ThinkViewController: UIViewController, ShowsSummary {
         self.setupSummaryButton()
         self.setupView()
         
-        let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively") as! ThinkConstructivelyViewController
-        viewController.stressor = self.stressor
-        self.embed(viewController: viewController)
+        // Embed Think Constructively
+        
+//        let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively") as! ThinkConstructivelyViewController
+//        viewController.stressor = self.stressor
+//        self.embed(viewController: viewController)
     }
 
     private func setupView() {
@@ -44,6 +46,8 @@ class ThinkViewController: UIViewController, ShowsSummary {
         } else {
             self.stressorLabel.text = nil
         }
+        
+        // Segmented Control
         
         self.segmentedControl.tintColor = UIColor.navBar
         self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)

@@ -40,10 +40,10 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-fU-3Mz" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to do?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8l-tZ-C82">
-                                                <rect key="frame" x="20" y="331" width="335" height="23"/>
+                                                <rect key="frame" x="20" y="351" width="335" height="23"/>
                                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                                 <color key="textColor" red="0.31764705882352939" green="0.25882352941176467" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxl-an-Hyx">
-                                                <rect key="frame" x="20" y="371" width="335" height="60"/>
+                                                <rect key="frame" x="20" y="391" width="335" height="60"/>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="6Rg-0m-eL2"/>
@@ -73,7 +73,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think positively, think constructively" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u3-zZ-TZL">
-                                                <rect key="frame" x="101" y="404" width="194" height="15.5"/>
+                                                <rect key="frame" x="101" y="424" width="194" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPr-BX-HdS" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="172" width="335" height="145"/>
+                                                <rect key="frame" x="20" y="172" width="335" height="165"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stressor-icon" translatesAutoresizingMaskIntoConstraints="NO" id="sKL-sT-Aie">
                                                         <rect key="frame" x="15" y="10" width="50" height="50"/>
@@ -99,13 +99,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iwg-37-gQY" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                                        <rect key="frame" x="15" y="72.5" width="305" height="57.5"/>
+                                                        <rect key="frame" x="15" y="88" width="305" height="62"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="I'm upset about ________"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, work or relationships"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="delegate" destination="5hf-Zo-Oc3" id="Lcu-pt-4jr"/>
@@ -117,31 +117,40 @@
                                                         <color key="textColor" red="0.31764705882352939" green="0.25882352941176467" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start by identifying what you're upset about:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60f-gM-Cgl">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's start by identifying what you're upset about" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60f-gM-Cgl">
                                                         <rect key="frame" x="75" y="32" width="250" height="30.5"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am upset about:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-7I-C7c">
+                                                        <rect key="frame" x="15" y="68" width="305" height="16"/>
+                                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
+                                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="145" id="0Hd-R9-HPW"/>
+                                                    <constraint firstAttribute="height" constant="165" id="0Hd-R9-HPW"/>
                                                     <constraint firstItem="AiB-ib-Iem" firstAttribute="leading" secondItem="sKL-sT-Aie" secondAttribute="trailing" constant="10" id="97V-kj-Axl"/>
+                                                    <constraint firstItem="RYU-7I-C7c" firstAttribute="top" secondItem="sKL-sT-Aie" secondAttribute="bottom" constant="8" id="ERc-zF-4IW"/>
                                                     <constraint firstItem="Iwg-37-gQY" firstAttribute="leading" secondItem="BPr-BX-HdS" secondAttribute="leading" constant="15" id="K5H-4Y-mVH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="RYU-7I-C7c" secondAttribute="trailing" constant="15" id="L44-7h-85i"/>
                                                     <constraint firstAttribute="bottom" secondItem="Iwg-37-gQY" secondAttribute="bottom" constant="15" id="Lyy-Vz-quN"/>
+                                                    <constraint firstItem="Iwg-37-gQY" firstAttribute="top" secondItem="RYU-7I-C7c" secondAttribute="bottom" constant="4" id="RQf-Nt-ZDP"/>
+                                                    <constraint firstItem="RYU-7I-C7c" firstAttribute="leading" secondItem="BPr-BX-HdS" secondAttribute="leading" constant="15" id="UT9-oj-Yag"/>
                                                     <constraint firstAttribute="trailing" secondItem="Iwg-37-gQY" secondAttribute="trailing" constant="15" id="UcA-qv-ab0"/>
                                                     <constraint firstItem="60f-gM-Cgl" firstAttribute="leading" secondItem="sKL-sT-Aie" secondAttribute="trailing" constant="10" id="VBF-Ja-V2G"/>
                                                     <constraint firstItem="sKL-sT-Aie" firstAttribute="top" secondItem="BPr-BX-HdS" secondAttribute="top" constant="10" id="VDn-yU-FOP"/>
                                                     <constraint firstItem="sKL-sT-Aie" firstAttribute="leading" secondItem="BPr-BX-HdS" secondAttribute="leading" constant="15" id="W7l-Yv-mOn"/>
                                                     <constraint firstItem="60f-gM-Cgl" firstAttribute="top" secondItem="AiB-ib-Iem" secondAttribute="bottom" constant="4" id="YrF-NP-Cm9"/>
                                                     <constraint firstAttribute="trailing" secondItem="60f-gM-Cgl" secondAttribute="trailing" constant="10" id="l5G-a5-OXg"/>
-                                                    <constraint firstItem="Iwg-37-gQY" firstAttribute="top" secondItem="60f-gM-Cgl" secondAttribute="bottom" constant="10" id="ufZ-Hq-JJt"/>
                                                     <constraint firstItem="AiB-ib-Iem" firstAttribute="top" secondItem="BPr-BX-HdS" secondAttribute="top" constant="10" id="zwi-96-M1c"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jz-4k-d8V">
-                                                <rect key="frame" x="20" y="438" width="335" height="60"/>
+                                                <rect key="frame" x="20" y="458" width="335" height="60"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="lYg-3A-kDx"/>
@@ -157,13 +166,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant mood shift, set boundaries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuJ-CF-Ow7">
-                                                <rect key="frame" x="101" y="471" width="185" height="15.5"/>
+                                                <rect key="frame" x="101" y="491" width="185" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-zQ-ms1">
-                                                <rect key="frame" x="20" y="505" width="335" height="60"/>
+                                                <rect key="frame" x="20" y="525" width="335" height="60"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="duu-D4-MRG"/>
@@ -179,7 +188,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe and let go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-Qg-NcB">
-                                                <rect key="frame" x="101" y="538" width="101" height="15.5"/>
+                                                <rect key="frame" x="101" y="558" width="101" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
