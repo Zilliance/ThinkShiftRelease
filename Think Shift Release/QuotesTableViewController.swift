@@ -97,6 +97,8 @@ class QuotesTableViewController: UITableViewController {
     // MARK: - User Action
     
     @IBAction func addItem(_ sender: Any?) {
-        print("addItem")
+        let vc = UIStoryboard(name: "QuotesViewController", bundle: nil).instantiateViewController(withIdentifier: "NewQuoteNav")
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }

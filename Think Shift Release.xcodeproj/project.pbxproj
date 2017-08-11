@@ -59,6 +59,7 @@
 		8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3290A1F30F02F00844C5F /* BreatheTableViewController.swift */; };
 		8CF0E7521F35171400416251 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E7511F35171400416251 /* CardView.swift */; };
 		8CF0E7FC1F38C01000416251 /* ShiftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */; };
+		E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */; };
 		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
 		E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA521F3CCAB5002920D0 /* IntroViewController.swift */; };
 		E347EA571F3CCABD002920D0 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA551F3CCABD002920D0 /* Tour.storyboard */; };
@@ -187,6 +188,7 @@
 		B7A859058B9E1ECC42EBD260 /* Pods-Think Shift ReleaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseUITests/Pods-Think Shift ReleaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2BD2815F9A9D7197684CA5 /* Pods-Think Shift ReleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift ReleaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift ReleaseTests/Pods-Think Shift ReleaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		DEA1E44CD9DB5285787C0A71 /* Pods-Think Shift Release.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift Release.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release.debug.xcconfig"; sourceTree = "<group>"; };
+		E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		E347EA511F3CCAB5002920D0 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		E347EA521F3CCAB5002920D0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E347EA551F3CCABD002920D0 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
@@ -340,6 +342,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E32B80041F3E0E940041AEE4 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */,
+				E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		E32B80051F3E0EA20041AEE4 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */,
+				E37828431F195FED005E91A8 /* MusicTableViewController.swift */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		E32B80061F3E0EA70041AEE4 /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */,
+				E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */,
+				E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */,
+			);
+			name = Quote;
+			sourceTree = "<group>";
+		};
+		E32B80071F3E0EAF0041AEE4 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */,
+				E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */,
+				4F65CF101F34A14F00C4A5B9 /* ImageViewController.storyboard */,
+				4F65CF121F34A16400C4A5B9 /* ImageViewController.swift */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		E347EA4F1F3CCA7A002920D0 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,18 +415,12 @@
 			children = (
 				8CF0E7FB1F38C01000416251 /* ShiftViewController.storyboard */,
 				E38608EB1F16C97E00816DF4 /* ShiftViewController.swift */,
-				E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */,
-				E37828431F195FED005E91A8 /* MusicTableViewController.swift */,
-				E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */,
-				E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */,
-				4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */,
-				4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */,
-				4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */,
-				4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */,
 				E38608E91F16C96400816DF4 /* ShiftSetBoundariesViewController.swift */,
 				E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */,
-				4F65CF101F34A14F00C4A5B9 /* ImageViewController.storyboard */,
-				4F65CF121F34A16400C4A5B9 /* ImageViewController.swift */,
+				E32B80041F3E0E940041AEE4 /* Video */,
+				E32B80051F3E0EA20041AEE4 /* Music */,
+				E32B80071F3E0EAF0041AEE4 /* Image */,
+				E32B80061F3E0EA70041AEE4 /* Quote */,
 			);
 			name = Shift;
 			sourceTree = "<group>";
@@ -907,6 +942,7 @@
 				8C631F841F228F7300B2CA4C /* UIFont+CustomFonts.swift in Sources */,
 				E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */,
 				8C631F861F228F7300B2CA4C /* UIViewController+Extensions.swift in Sources */,
+				E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */,
 				4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
 				8C166DD51F3CE9B50071A98C /* SummaryShiftViewController.swift in Sources */,
