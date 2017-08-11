@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7De-3n-46M">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Popup View Controller-->
+        <scene sceneID="OVL-BA-xtq">
+            <objects>
+                <viewController id="7De-3n-46M" customClass="PopupViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="paj-qW-snr"/>
+                        <viewControllerLayoutGuide type="bottom" id="aA5-cD-Lm9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="brh-2M-XYg">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stressor-big" translatesAutoresizingMaskIntoConstraints="NO" id="7Ni-VT-uxE">
+                                <rect key="frame" x="91.5" y="47" width="151" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="FrH-59-AGy"/>
+                                    <constraint firstAttribute="height" constant="151" id="cCi-vZ-3Ta"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you feel calm enough to think well?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-eA-25f">
+                                <rect key="frame" x="32" y="206" width="255" height="45.5"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                <color key="textColor" red="0.31764705882352939" green="0.25882352941176467" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzO-ci-i8m">
+                                <rect key="frame" x="0.0" y="260" width="335" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sj2-1t-0c5">
+                                        <rect key="frame" x="60" y="26" width="215" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mle-Xn-LmX">
+                                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                                                <state key="normal" title="NO" backgroundImage="no-button-bg">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="noAction:" destination="7De-3n-46M" eventType="touchUpInside" id="xz6-ki-gg3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="048-XV-HEZ">
+                                                <rect key="frame" x="112.5" y="0.0" width="102.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                                                <state key="normal" title="YES" backgroundImage="yes-button-bg">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="yesAction:" destination="7De-3n-46M" eventType="touchUpInside" id="P8C-CO-3yg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8Jb-GJ-qEU"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="sj2-1t-0c5" firstAttribute="leading" secondItem="wzO-ci-i8m" secondAttribute="leading" constant="60" id="0z3-1q-ftJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="sj2-1t-0c5" secondAttribute="trailing" constant="60" id="HnB-xz-Ofb"/>
+                                    <constraint firstAttribute="height" constant="90" id="Wnh-5B-3PD"/>
+                                    <constraint firstItem="sj2-1t-0c5" firstAttribute="top" secondItem="wzO-ci-i8m" secondAttribute="top" constant="26" id="zjG-mu-79b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Ni-VT-uxE" firstAttribute="centerX" secondItem="brh-2M-XYg" secondAttribute="centerX" id="7Cs-WJ-DJc"/>
+                            <constraint firstItem="7Ni-VT-uxE" firstAttribute="top" secondItem="paj-qW-snr" secondAttribute="bottom" constant="27" id="HxL-bG-JMH"/>
+                            <constraint firstItem="aA5-cD-Lm9" firstAttribute="top" secondItem="wzO-ci-i8m" secondAttribute="bottom" id="KYU-Kt-XAR"/>
+                            <constraint firstItem="wzO-ci-i8m" firstAttribute="leading" secondItem="brh-2M-XYg" secondAttribute="leading" id="NQQ-Cx-Xf9"/>
+                            <constraint firstAttribute="trailing" secondItem="e5j-eA-25f" secondAttribute="trailing" constant="48" id="aNI-YK-Pob"/>
+                            <constraint firstItem="e5j-eA-25f" firstAttribute="top" secondItem="7Ni-VT-uxE" secondAttribute="bottom" constant="8" id="cTj-8K-wOu"/>
+                            <constraint firstAttribute="trailing" secondItem="wzO-ci-i8m" secondAttribute="trailing" id="t2c-Cc-XFs"/>
+                            <constraint firstItem="e5j-eA-25f" firstAttribute="leading" secondItem="brh-2M-XYg" secondAttribute="leading" constant="32" id="uPd-x0-Nr3"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="335" height="350"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7s2-fh-kBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="no-button-bg" width="100" height="40"/>
+        <image name="stressor-big" width="151" height="151"/>
+        <image name="yes-button-bg" width="100" height="40"/>
+    </resources>
+</document>
