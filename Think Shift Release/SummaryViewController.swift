@@ -123,6 +123,14 @@ class SummaryViewController: UIViewController {
     //MARK -- User Actions
     
     @IBAction func reminderAction(_ sender: Any) {
+        
+        
+        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
+            assertionFailure()
+            return
+        }
+        
+        self.navigationController?.pushViewController(scheduler, animated: true)
     }
     
     @IBAction func close(_ sender: Any?) {

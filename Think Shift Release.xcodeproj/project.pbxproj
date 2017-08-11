@@ -538,12 +538,12 @@
 		E378284A1F196506005E91A8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B13E61F3E6050002C0353 /* ActionPlan */,
-				8C2B13CD1F3E56AE002C0353 /* Schedule */,
 				E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */,
 				8C166DDD1F3E215E0071A98C /* PopupPresentationController.swift */,
 				8C166DDF1F3E234F0071A98C /* PopupModalTransition.swift */,
 				8CF0E7511F35171400416251 /* CardView.swift */,
+				8C2B13E61F3E6050002C0353 /* ActionPlan */,
+				8C2B13CD1F3E56AE002C0353 /* Schedule */,
 				8C166DD81F3E0AE30071A98C /* Popup */,
 				E37828521F19835E005E91A8 /* Sidebar */,
 				E347EA4F1F3CCA7A002920D0 /* Intro */,
