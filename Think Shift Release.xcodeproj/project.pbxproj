@@ -47,7 +47,7 @@
 		8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */; };
 		8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */; };
 		8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */; };
-		8C2B13F01F3E60E9002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13EB1F3E60E9002C0353 /* Plan.storyboard */; };
+		8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F11F3E690E002C0353 /* Plan.storyboard */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -193,7 +193,7 @@
 		8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
 		8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationPlanCell.swift; sourceTree = "<group>"; };
 		8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationsManager+ViewModel.swift"; sourceTree = "<group>"; };
-		8C2B13EB1F3E60E9002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
+		8C2B13F11F3E690E002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		8C2B13E61F3E6050002C0353 /* ActionPlan */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B13EB1F3E60E9002C0353 /* Plan.storyboard */,
+				8C2B13F11F3E690E002C0353 /* Plan.storyboard */,
 				8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */,
 				8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */,
 				8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */,
@@ -844,7 +844,7 @@
 				8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
 				8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */,
-				8C2B13F01F3E60E9002C0353 /* Plan.storyboard in Resources */,
+				8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */,
 				8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */,
 				8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */,
 				8C631F9A1F22991E00B2CA4C /* Muli-BoldItalic.ttf in Resources */,

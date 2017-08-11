@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VdO-3j-Vpy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VdO-3j-Vpy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,8 +25,8 @@
         <!--Custom Navigation Controller-->
         <scene sceneID="Ms0-ID-LMc">
             <objects>
-                <navigationController id="VdO-3j-Vpy" customClass="CustomNavigationController" customModule="Zilliance" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z49-HN-nc2">
+                <navigationController id="VdO-3j-Vpy" customClass="CustomNavigationController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z49-HN-nc2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -41,7 +41,7 @@
         <!--Weekly Action Plan-->
         <scene sceneID="Rft-bT-Sdx">
             <objects>
-                <viewController storyboardIdentifier="ActionPlanViewController" id="7rv-vl-neW" customClass="ActionPlanViewController" customModule="Zilliance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActionPlanViewController" id="7rv-vl-neW" customClass="ActionPlanViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W6S-lR-hyZ"/>
                         <viewControllerLayoutGuide type="bottom" id="dZO-2L-Sbu"/>
@@ -55,7 +55,7 @@
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeditationPlanCell" rowHeight="93" id="BBj-N4-aDD" customClass="MeditationPlanCell" customModule="Zilliance" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeditationPlanCell" rowHeight="93" id="BBj-N4-aDD" customClass="MeditationPlanCell" customModule="Think_Shift_Release" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="BBj-N4-aDD" id="FWq-uj-E5d">
@@ -75,13 +75,13 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7R-r7-bUA">
                                                             <rect key="frame" x="78" y="14" width="257" height="33"/>
-                                                            <string key="text">Want to feel great right now? Try this quick meditation!
+                                                            <string key="text">Want to feel great right now? Try this 12 minute meditation!
 </string>
                                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="13"/>
                                                             <color key="textColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="headphonesSquare" translatesAutoresizingMaskIntoConstraints="NO" id="FMh-rN-zQF">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="song-icon" translatesAutoresizingMaskIntoConstraints="NO" id="FMh-rN-zQF">
                                                             <rect key="frame" x="20" y="10.5" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="8jJ-h2-TgC"/>
@@ -115,7 +115,7 @@
                                             <outlet property="viewContainer" destination="tUo-bu-nsJ" id="BUg-jK-cV3"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActionPlanCell" id="z66-Ji-nho" customClass="ActionPlanCell" customModule="Zilliance" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActionPlanCell" id="z66-Ji-nho" customClass="ActionPlanCell" customModule="Think_Shift_Release" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="121" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z66-Ji-nho" id="EPl-dt-ALg">
@@ -147,7 +147,7 @@
                                                     <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="1j0-5e-8Ig">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1j0-5e-8Ig">
                                                     <rect key="frame" x="325" y="26" width="28" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="XCQ-dR-n5x"/>
@@ -212,6 +212,29 @@
                                             <outlet property="recurrenceLabel" destination="fO7-mY-fBl" id="p2z-rJ-y5h"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlaceholderCell" id="tEP-Au-MC3">
+                                        <rect key="frame" x="0.0" y="201" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tEP-Au-MC3" id="wuX-9f-c22">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing here? You haven’t scheduled anything yet! Choose any slice, click “Improve Slice” and schedule your action steps." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q9-z5-zjU">
+                                                    <rect key="frame" x="15" y="8" width="345" height="64"/>
+                                                    <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="13"/>
+                                                    <color key="textColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="2q9-z5-zjU" secondAttribute="bottom" constant="8" id="S6k-f7-VgW"/>
+                                                <constraint firstItem="2q9-z5-zjU" firstAttribute="top" secondItem="wuX-9f-c22" secondAttribute="top" constant="8" id="WGE-w4-Nck"/>
+                                                <constraint firstAttribute="trailing" secondItem="2q9-z5-zjU" secondAttribute="trailing" constant="15" id="plg-nk-t05"/>
+                                                <constraint firstItem="2q9-z5-zjU" firstAttribute="leading" secondItem="wuX-9f-c22" secondAttribute="leading" constant="15" id="yf9-GR-Wft"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.97731775707668733" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="7rv-vl-neW" id="j8j-2x-hma"/>
@@ -233,6 +256,11 @@
                                 <action selector="close:" destination="7rv-vl-neW" id="O95-ge-0QO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="aUV-ZH-GS4">
+                            <connections>
+                                <action selector="shareAction:" destination="7rv-vl-neW" id="Mhc-sG-kyJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -245,7 +273,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" width="50" height="50"/>
-        <image name="headphonesSquare" width="40" height="40"/>
+        <image name="calendar-icon" width="20" height="20"/>
+        <image name="song-icon" width="60" height="60"/>
     </resources>
 </document>

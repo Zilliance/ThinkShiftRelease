@@ -25,6 +25,7 @@ class ScheduleViewController: UIViewController {
         case calendar
     }
     
+    
     fileprivate var currentViewController: UIViewController?
     
     fileprivate var viewControllers: [UIViewController] = []
@@ -66,7 +67,7 @@ class ScheduleViewController: UIViewController {
     private func setupView() {
         
         self.segmentedControl.tintColor = UIColor.white
-        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.navBar] , for: .selected)
+        self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.switchBlueColor] , for: .selected)
         self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .normal)
     }
     
@@ -109,6 +110,7 @@ class ScheduleViewController: UIViewController {
         currentViewController = controller
     }
     
+    // MARK: - User Action
 
     @IBAction func notifyAction(_ sender: UIButton) {
         
@@ -122,7 +124,7 @@ class ScheduleViewController: UIViewController {
             return
         }
         
-       // notification.associatedObjectId = self.textViewContent?.userActivity.id
+        //notification.associatedObjectId = self.textViewContent?.userActivity.id
         
         LocalNotificationsHelper.shared.requestAuthorization(inViewController: self) { (authorized) in
             
@@ -130,7 +132,9 @@ class ScheduleViewController: UIViewController {
                 self.showAlert(title: "", message: "Please allow the app to send notifications")
                 return
             }
-        
+            
+            self.notifyMeButton.isEnabled = false
+            
             NotificationsManager.sharedInstance.storeNotification(notification: notification) { (notification, error) in
                 
                 if let error = error {
@@ -146,7 +150,6 @@ class ScheduleViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                     
                 }
-                
             }
         }
         

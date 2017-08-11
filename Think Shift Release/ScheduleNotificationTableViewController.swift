@@ -20,7 +20,6 @@ class ScheduleNotificationTableViewController: UITableViewController {
     
     var preloadedNotification: Notification?
     
-    
     private let dateFormatter = DateFormatter()
     
     fileprivate var selectedTime: Date?
@@ -38,13 +37,12 @@ class ScheduleNotificationTableViewController: UITableViewController {
         self.dateFormatter.amSymbol = "AM"
         self.dateFormatter.pmSymbol = "PM"
         
-        self.daysSegment.tintColor = UIColor.navBar
+        self.daysSegment.tintColor = UIColor.switchBlueColor
         self.daysSegment.setTitleTextAttributes([NSFontAttributeName: UIFont.muliRegular(size: 10.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
-        self.daysSegment.setTitleTextAttributes([NSFontAttributeName: UIFont.muliRegular(size: 10.0), NSForegroundColorAttributeName: UIColor.groupTableViewBackground] , for: .normal)
+        self.daysSegment.setTitleTextAttributes([NSFontAttributeName: UIFont.muliRegular(size: 10.0), NSForegroundColorAttributeName: UIColor.scheduleTextColor] , for: .normal)
         self.tableView.tableFooterView = UIView()
         
-        self.weeklySwitch.onTintColor = UIColor.navBar
-        
+        self.weeklySwitch.onTintColor = UIColor.switchBlueColor
         
         if let preloadedNotification = self.preloadedNotification, let startDate = preloadedNotification.startDate {
             self.zillianceTextViewController.textView.text = preloadedNotification.body
@@ -64,10 +62,8 @@ class ScheduleNotificationTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.zillianceTextViewController = segue.destination as! ZillianceTextViewController
-        //self.zillianceTextViewController.textViewContent = self.textViewContent
     }
     
-
 
     // MARK - Table View Delegate
     
@@ -126,7 +122,13 @@ extension ScheduleNotificationTableViewController: NotificationEditor {
         
         notification.startDate = Date()
         
-        let startDate = notification.getNextWeekDate(fromDate: initialDate) ?? initialDate
+        var startDate: Date
+        
+        if (initialDate > Date()) {
+            startDate = initialDate
+        } else {
+            startDate = notification.getNextWeekDate(fromDate: initialDate) ?? initialDate
+        }
         
         let nextWeek = Date().addingTimeInterval(60 * 60 * 24 * 7)
         
