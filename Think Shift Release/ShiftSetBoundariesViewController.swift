@@ -34,8 +34,8 @@ class ShiftSetBoundariesViewController: UIViewController {
 
 extension ShiftSetBoundariesViewController: StressorEditor {
     func save() {
-        self.stressor.shiftBoundariesDoTalkWith = self.talkAboutTextView.text
-        self.stressor.shiftBoundariesNotTalkWith = self.notTalkAboutTextView.text
+        self.stressor.shiftBoundariesDoTalkWith = self.talkAboutTextView.text.characters.count > 0 ? self.talkAboutTextView.text : nil
+        self.stressor.shiftBoundariesNotTalkWith = self.notTalkAboutTextView.text.characters.count > 0 ? self.notTalkAboutTextView.text : nil
     }
 }
 

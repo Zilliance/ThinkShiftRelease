@@ -101,7 +101,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
 
 extension ThinkViewController: StressorEditor {
     func save() {
-        self.stressor.thinkThoughts = self.textView.text
+        self.stressor.thinkThoughts = self.textView.text.characters.count > 0 ? self.textView.text : nil
     }
 }
 

@@ -16,7 +16,17 @@ final class Stressor: Object {
     }
     
     dynamic var title: String?
-    dynamic var completed: Bool = false
+    
+    var completed: Bool {
+        var completed = true
+        for string in [self.thinkThoughts, self.thinkInnerWisdom, self.thinkActionStep, self.thinkBetterFeeling, self.shiftBoundariesDoTalkWith, self.shiftBoundariesNotTalkWith, self.releaseIntention, self.releaseAffirmation] {
+            if string == nil {
+                completed = false
+            }
+        }
+        return completed
+    }
+    
     dynamic var dateCreated: Date = Date()
     
     //think

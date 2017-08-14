@@ -32,7 +32,7 @@ class ThinkPositivelyViewController: UIViewController {
 
 extension ThinkPositivelyViewController: StressorEditor {
     func save() {
-        self.stressor.thinkBetterFeeling = textView.text
+        self.stressor.thinkBetterFeeling = self.textView.text.characters.count > 0 ? self.textView.text : nil
     }
 }
 
