@@ -18,13 +18,8 @@ final class Stressor: Object {
     dynamic var title: String?
     
     var completed: Bool {
-        var completed = true
-        for string in [self.thinkThoughts, self.thinkInnerWisdom, self.thinkActionStep, self.thinkBetterFeeling, self.shiftBoundariesDoTalkWith, self.shiftBoundariesNotTalkWith, self.releaseIntention, self.releaseAffirmation] {
-            if string == nil {
-                completed = false
-            }
-        }
-        return completed
+        let strings = [self.thinkThoughts, self.thinkInnerWisdom, self.thinkActionStep, self.thinkBetterFeeling, self.shiftBoundariesDoTalkWith, self.shiftBoundariesNotTalkWith, self.releaseIntention, self.releaseAffirmation]
+        return strings.flatMap { $0 }.filter { $0.isEmpty == false }.count == strings.count
     }
     
     dynamic var dateCreated: Date = Date()
