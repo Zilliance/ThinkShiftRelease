@@ -87,13 +87,33 @@ class StressorViewController: UIViewController {
             return
         }
         
-        self.playAnimation(named: "Main Think") {
-            
+        // See SectionAnimationDelegate.didDismiss below for action after playback is complete
+        self.play(animation: .think, completion: nil)
+    }
+    
+    @IBAction func didTapShift(_ sender: Any) {
+        guard self.didEnterStressor else {
+            self.showAlert(title: "Please enter a name for your stressor", message: nil)
+            return
         }
         
+        // See SectionAnimationDelegate.didDismiss below for action after playback is complete
+        self.play(animation: .shift, completion: nil)
+    }
+    
+    @IBAction func didTapRelease(_ sender: Any) {
+        guard self.didEnterStressor else {
+            self.showAlert(title: "Please enter a name for your stressor", message: nil)
+            return
+        }
         
-        return ;
-        
+        // See SectionAnimationDelegate.didDismiss below for action after playback is complete
+        self.play(animation: .release, completion: nil)
+    }
+    
+    // MARK: - Alerts and Videos
+    
+    fileprivate func showThinkCards() {
         guard let popupViewController = UIStoryboard(name: "Popup", bundle: nil).instantiateInitialViewController() as? PopupViewController
             else {
                 assertionFailure()
@@ -104,54 +124,42 @@ class StressorViewController: UIViewController {
             self.performSegue(withIdentifier: "ThinkSegue", sender: nil)
         }
         
+        // Show second card on no action
+        
         popupViewController.transitioningDelegate = self
         popupViewController.modalPresentationStyle = .custom
         
         self.present(popupViewController, animated: true, completion: nil)
-        
     }
     
-    @IBAction func didTapShift(_ sender: Any) {
-        guard self.didEnterStressor else {
-            self.showAlert(title: "Please enter a name for your stressor", message: nil)
-            return
-        }
+    private func play(animation: SectionAnimation, completion: (()->Void)?) {
+        let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
+        let host = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! SectionAnimationViewController
         
-        self.playAnimation(named: "Main Shift") {
-            self.performSegue(withIdentifier: "ShiftSegue", sender: nil)
-        }
-    }
-    
-    @IBAction func didTapRelease(_ sender: Any) {
-        guard self.didEnterStressor else {
-            self.showAlert(title: "Please enter a name for your stressor", message: nil)
-            return
-        }
+        let _ = host.view // force load for access to embedded playerViewController
         
-        self.playAnimation(named: "Release") {
-            self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
-        }
-
-    }
-    
-    // MARK: - Alerts and Videos
-    
-    private func playAnimation(named name: String, completion: (()->Void)?) {
-        let player = AVPlayer(url: Bundle.main.url(forResource: name, withExtension: "mp4")!)
-        let animation = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! AVPlayerViewController
-        
-        animation.player = player
-        animation.transitioningDelegate = self
-        animation.modalPresentationStyle = .custom
+        host.playerViewController.player = player
+        host.transitioningDelegate = self
+        host.modalPresentationStyle = .custom
+        host.animation = animation
+        host.delegate = self
         
         self.playbackObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
-            self?.playbackObserver = nil
-            animation.dismiss(animated: true, completion: {
-                completion?()
-            })
+            
+            if let playbackObserver = self?.playbackObserver {
+                NotificationCenter.default.removeObserver(playbackObserver)
+                self?.playbackObserver = nil
+            }
+            
+            if !host.isFullScreen {
+                // Programmatically dismissing when player is full screen causes a crash
+                host.dismiss(animated: true, completion: {
+                    completion?()
+                })
+            }
         }
         
-        self.present(animation, animated: true, completion: nil)
+        self.present(host, animated: true, completion: nil)
         player.play()
     }
     
@@ -180,18 +188,18 @@ extension StressorViewController: UIViewControllerTransitioningDelegate {
         switch presented {
         case is PopupViewController:
             return PopupPresentationController(presentedViewController: presented, presenting: presenting)
-        case is AVPlayerViewController:
+        case is SectionAnimationViewController:
             return AnimationPresentationController(presentedViewController: presented, presenting: presenting)
         default:
             return nil
         }
-}
+    }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch dismissed {
         case is PopupViewController:
             return PopupModalTransition(withType: .dismissing)
-        case is AVPlayerViewController:
+        case is SectionAnimationViewController:
             return AnimationModalTransition(withType: .dismissing)
         default:
             return nil
@@ -202,10 +210,26 @@ extension StressorViewController: UIViewControllerTransitioningDelegate {
         switch presented {
         case is PopupViewController:
             return PopupModalTransition(withType: .presenting)
-        case is AVPlayerViewController:
+        case is SectionAnimationViewController:
             return AnimationModalTransition(withType: .presenting)
         default:
             return nil
+        }
+    }
+}
+
+extension StressorViewController: SectionAnimationDelegate {
+    func didDimiss(_ viewController: SectionAnimationViewController) {
+        
+        switch viewController.animation {
+        case .think?:
+            self.showThinkCards()
+        case .shift?:
+            self.performSegue(withIdentifier: "ShiftSegue", sender: nil)
+        case .release?:
+            self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
+        default:
+            assertionFailure()
         }
     }
 }

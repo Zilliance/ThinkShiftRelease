@@ -101,8 +101,9 @@ extension AnimationModalTransition: UIViewControllerAnimatedTransitioning {
         
         // End playback : would rather have this somewhere else, delegate method or something
         
-        if let animation = fromViewController as? AVPlayerViewController {
-            animation.player?.pause()
+        if let animation = fromViewController as? SectionAnimationViewController {
+            animation.playerViewController.player?.pause()
+            animation.delegate?.didDimiss(animation)
         }
         
         // Capture overlay

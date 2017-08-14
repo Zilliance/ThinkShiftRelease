@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b5I-fU-dTE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UTc-Z3-pIJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Section Animation View Controller-->
+        <scene sceneID="4fp-HD-BDi">
+            <objects>
+                <viewController id="UTc-Z3-pIJ" customClass="SectionAnimationViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lss-Ry-fao"/>
+                        <viewControllerLayoutGuide type="bottom" id="nPI-pK-8xn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QSd-Zu-cc7">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="275"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zev-Fo-1Bk">
+                                <rect key="frame" x="0.0" y="20" width="330" height="255"/>
+                                <connections>
+                                    <segue destination="b5I-fU-dTE" kind="embed" id="CTd-R5-WYw"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zev-Fo-1Bk" secondAttribute="trailing" id="6xb-Gm-Imr"/>
+                            <constraint firstItem="zev-Fo-1Bk" firstAttribute="top" secondItem="lss-Ry-fao" secondAttribute="bottom" id="Fyx-b4-0MM"/>
+                            <constraint firstItem="nPI-pK-8xn" firstAttribute="top" secondItem="zev-Fo-1Bk" secondAttribute="bottom" id="GEc-CI-DF7"/>
+                            <constraint firstItem="zev-Fo-1Bk" firstAttribute="leading" secondItem="QSd-Zu-cc7" secondAttribute="leading" id="nAI-4c-VPV"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="330" height="275"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDi-fK-eNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5" y="18"/>
+        </scene>
         <!--AV Player View Controller-->
         <scene sceneID="38r-i5-zxr">
             <objects>
