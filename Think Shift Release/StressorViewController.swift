@@ -8,12 +8,14 @@
 
 import UIKit
 import KMPlaceholderTextView
+import AVFoundation
+import AVKit
 
 protocol StressorEditor {
     func save()
 }
 
-class StressorViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class StressorViewController: UIViewController {
 
     @IBOutlet weak var thinkButton: UIButton!
     @IBOutlet weak var shiftButton: UIButton!
@@ -23,6 +25,8 @@ class StressorViewController: UIViewController, UIViewControllerTransitioningDel
     
     var stressor: Stressor = Stressor()
     
+    private var playbackObserver: NSObjectProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -30,10 +34,16 @@ class StressorViewController: UIViewController, UIViewControllerTransitioningDel
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         self.save()
+        
         if (self.isMovingFromParentViewController) {
             guard let count = self.stressorTextView.text?.characters.count, count > 0 else { return }
             self.updateDatabase()
+        }
+        
+        if let playbackObserver = self.playbackObserver {
+            NotificationCenter.default.removeObserver(playbackObserver)
         }
     }
     
@@ -59,35 +69,30 @@ class StressorViewController: UIViewController, UIViewControllerTransitioningDel
                 Database.shared.user.stressors.append(self.stressor)
             }
         }
-        
     }
     
-    func presentationController(forPresented presented: UIViewController,
-                                presenting: UIViewController?,
-                                source: UIViewController) -> UIPresentationController? {
-        let presentationController = PopupPresentationController(presentedViewController: presented,
-                                                                 presenting: presenting)
-        return presentationController
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return PopupModalTransition(withType: .dismissing)
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return PopupModalTransition(withType: .presenting)
-
+    private var didEnterStressor: Bool {
+        if let count = self.stressorTextView.text?.characters.count, count > 0 {
+            return true
+        } else {
+            return false
+        }
     }
     
     // MARK: -
 
     @IBAction func didTapThink(_ sender: Any) {
-        
-        
-        guard let count = self.stressorTextView.text?.characters.count, count > 0 else {
+        guard self.didEnterStressor else {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
+        
+        self.playAnimation(named: "Main Think") {
+            
+        }
+        
+        
+        return ;
         
         guard let popupViewController = UIStoryboard(name: "Popup", bundle: nil).instantiateInitialViewController() as? PopupViewController
             else {
@@ -107,7 +112,7 @@ class StressorViewController: UIViewController, UIViewControllerTransitioningDel
     }
     
     @IBAction func didTapShift(_ sender: Any) {
-        guard let count = self.stressorTextView.text?.characters.count, count > 0 else {
+        guard self.didEnterStressor else {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
@@ -115,12 +120,34 @@ class StressorViewController: UIViewController, UIViewControllerTransitioningDel
     }
     
     @IBAction func didTapRelease(_ sender: Any) {
-        guard let count = self.stressorTextView.text?.characters.count, count > 0 else {
+        guard self.didEnterStressor else {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
         self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
     }
+    
+    // MARK: - Alerts and Videos
+    
+    private func playAnimation(named name: String, completion: (()->Void)?) {
+        let player = AVPlayer(url: Bundle.main.url(forResource: name, withExtension: "mp4")!)
+        let animation = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! AVPlayerViewController
+        
+        animation.player = player
+        animation.transitioningDelegate = self
+        animation.modalPresentationStyle = .custom
+        
+        self.playbackObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
+            animation.dismiss(animated: true, completion: nil)
+            self?.playbackObserver = nil
+            completion?()
+        }
+        
+        self.present(animation, animated: true, completion: nil)
+        player.play()
+    }
+    
+    // MARK: -
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.stressor = Stressor(value: self.stressor)
@@ -137,6 +164,41 @@ class StressorViewController: UIViewController, UIViewControllerTransitioningDel
             vc.stressor = self.stressor
         }
         
+    }
+}
+
+extension StressorViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        switch presented {
+        case is PopupViewController:
+            return PopupPresentationController(presentedViewController: presented, presenting: presenting)
+        case is AVPlayerViewController:
+            return AnimationPresentationController(presentedViewController: presented, presenting: presenting)
+        default:
+            return nil
+        }
+}
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch dismissed {
+        case is PopupViewController:
+            return PopupModalTransition(withType: .dismissing)
+        case is AVPlayerViewController:
+            return AnimationModalTransition(withType: .dismissing)
+        default:
+            return nil
+        }
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch presented {
+        case is PopupViewController:
+            return PopupModalTransition(withType: .presenting)
+        case is AVPlayerViewController:
+            return AnimationModalTransition(withType: .presenting)
+        default:
+            return nil
+        }
     }
 }
 
