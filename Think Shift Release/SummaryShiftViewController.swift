@@ -12,7 +12,11 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
     
     @IBOutlet weak var notTalkWithLabel: UILabel!
     @IBOutlet weak var talkWithLabel: UILabel!
+    @IBOutlet weak var contentView: UIScrollView!
     
+    @IBOutlet weak var mediaCardHeight: NSLayoutConstraint!    
+    var mediaCardHidden = false
+
     var stressor: Stressor? = nil {
         didSet {
             self.notTalkWithLabel.text = stressor?.shiftBoundariesNotTalkWith
@@ -22,7 +26,10 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if (mediaCardHidden) {
+            self.mediaCardHeight.constant = 0
+        }
     }
 
 }

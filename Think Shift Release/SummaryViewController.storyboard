@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Summary View Controller-->
+        <!--Title-->
         <scene sceneID="4go-VQ-N40">
             <objects>
                 <viewController id="5M9-Zb-8Dz" customClass="SummaryViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="unU-Tz-UTV">
-                                <rect key="frame" x="0.0" y="22" width="375" height="77"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="77"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="QRS-ks-WoW"/>
@@ -102,11 +102,11 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsm-Mh-Z1m" userLabel="VC Container">
-                                <rect key="frame" x="0.0" y="117" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="161" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNC-qg-k57" userLabel="WhiteLine">
-                                <rect key="frame" x="0.0" y="97" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="sld-fL-Csa"/>
@@ -152,6 +152,14 @@
                             <constraint firstAttribute="trailing" secondItem="nsm-Mh-Z1m" secondAttribute="trailing" id="rrx-MO-omH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Hna-po-1xG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="SMg-Wf-9sN">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="5M9-Zb-8Dz" id="G5Q-Y8-hAH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="unU-Tz-UTV" id="2Fm-IP-b7c"/>
                         <outlet property="vcContainerView" destination="nsm-Mh-Z1m" id="AQf-7s-s6P"/>
@@ -334,6 +342,7 @@
                     <connections>
                         <outlet property="actionStepLabel" destination="Z2c-6o-kGi" id="MRS-Kx-L9S"/>
                         <outlet property="betterFeelingLabel" destination="Fij-Eb-Zhn" id="yY1-mu-Wru"/>
+                        <outlet property="contentView" destination="Wg0-Yk-WLJ" id="4mr-RH-Ubu"/>
                         <outlet property="innerWisdomLabel" destination="q44-zp-Cv1" id="A6f-in-4W7"/>
                     </connections>
                 </viewController>
@@ -528,7 +537,6 @@
                                                     <constraint firstAttribute="height" constant="160" id="7eS-QS-VuM"/>
                                                     <constraint firstItem="Avr-9F-iSo" firstAttribute="top" secondItem="wHR-Z0-aYC" secondAttribute="bottom" constant="4" id="9Y2-HY-bTN"/>
                                                     <constraint firstItem="Avr-9F-iSo" firstAttribute="leading" secondItem="Utc-eH-p5B" secondAttribute="trailing" constant="10" id="CwF-tQ-ixZ"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="b3F-jO-Dyh"/>
                                                     <constraint firstAttribute="bottom" secondItem="T3t-h9-8vj" secondAttribute="bottom" constant="10" id="hiy-QS-jHl"/>
                                                     <constraint firstAttribute="trailing" secondItem="wHR-Z0-aYC" secondAttribute="trailing" constant="10" id="jN6-hx-kIJ"/>
                                                     <constraint firstItem="Utc-eH-p5B" firstAttribute="top" secondItem="tmF-No-H8A" secondAttribute="top" constant="15" id="kwj-aU-45F"/>
@@ -572,6 +580,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="pmh-2Y-Tfc" id="GbE-hM-AWf"/>
+                        <outlet property="mediaCardHeight" destination="7eS-QS-VuM" id="DoN-dC-AVl"/>
                         <outlet property="notTalkWithLabel" destination="Kaj-XL-1pE" id="nbd-MW-h4k"/>
                         <outlet property="talkWithLabel" destination="Nme-KU-NBH" id="sFH-zc-TyY"/>
                     </connections>
@@ -711,6 +721,7 @@ and instead experience _________ .</string>
                     </view>
                     <connections>
                         <outlet property="affirmationLabel" destination="Crl-Mj-xGk" id="MNj-1X-9fh"/>
+                        <outlet property="contentView" destination="j85-le-K4J" id="KpU-3G-aj0"/>
                         <outlet property="intentionLabel" destination="5M2-rn-Nk1" id="j8w-DC-Thy"/>
                     </connections>
                 </viewController>
@@ -742,7 +753,7 @@ and instead experience _________ .</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release meditation Instrumental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-8H-iGI">
-                                            <rect key="frame" x="68" y="10" width="175" height="14"/>
+                                            <rect key="frame" x="68" y="10" width="235" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="wvX-H1-9tF"/>
                                             </constraints>
@@ -751,7 +762,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenght" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-8u-wCm">
-                                            <rect key="frame" x="68" y="24" width="175" height="14"/>
+                                            <rect key="frame" x="68" y="24" width="235" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="ylp-sz-mhh"/>
                                             </constraints>
@@ -760,7 +771,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9M-sd-GlI">
-                                            <rect key="frame" x="253" y="15.5" width="42" height="20"/>
+                                            <rect key="frame" x="313" y="15.5" width="42" height="20"/>
                                             <color key="backgroundColor" red="0.16078431369999999" green="0.4823529412" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Zdc-XP-OnS"/>

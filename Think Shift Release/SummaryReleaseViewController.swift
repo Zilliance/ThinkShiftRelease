@@ -12,6 +12,8 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
 
     @IBOutlet weak var intentionLabel: UILabel!
     @IBOutlet weak var affirmationLabel: UILabel!
+    @IBOutlet weak var contentView: UIScrollView!
+    
     var stressor: Stressor? = nil {
         didSet {
             self.intentionLabel.text = stressor?.releaseIntention
@@ -21,6 +23,6 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 }

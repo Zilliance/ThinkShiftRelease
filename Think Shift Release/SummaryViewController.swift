@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFGenerator
 
 protocol SummaryItemViewController {
     var stressor: Stressor? { get set }
@@ -142,6 +143,7 @@ class SummaryViewController: UIViewController {
             navigationController.popViewController(animated: true)
         }
     }
+    
 }
 
 extension SummaryViewController: UICollectionViewDataSource {
@@ -182,5 +184,64 @@ extension SummaryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width / CGFloat(self.items.count) - 8, height: 77)
     }
+    
+}
+
+extension SummaryViewController {
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        
+        self.generatePDF { [unowned self] (destinationURL,error) in
+            
+            if let destinationURL = destinationURL {
+                
+                let activityViewController = UIActivityViewController(activityItems: [destinationURL] , applicationActivities: nil)
+                
+                self.present(activityViewController,
+                             animated: true,
+                             completion: nil)
+            }
+            else {
+                
+                //todo handle errors?
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    func generatePDF(completion: (URL?, Error?) -> ()) {
+        let storyboard = UIStoryboard(name: "SummaryViewController", bundle: nil)
+        
+        let thinkVC = storyboard.instantiateViewController(withIdentifier: "think") as! SummaryThinkViewController
+        thinkVC.view.frame = self.view.frame
+        thinkVC.view.layoutIfNeeded()
+        
+        let shiftVC = storyboard.instantiateViewController(withIdentifier: "shift") as! SummaryShiftViewController
+        shiftVC.mediaCardHidden = true
+        shiftVC.view.frame = self.view.frame
+        shiftVC.view.layoutIfNeeded()
+
+        let releaseVC = storyboard.instantiateViewController(withIdentifier: "release") as! SummaryReleaseViewController
+        releaseVC.view.frame = self.view.frame
+        releaseVC.view.layoutIfNeeded() 
+        
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending("stressor.pdf"))
+        
+        // writes to Disk directly.
+        do {
+            try PDFGenerator.generate([thinkVC.contentView, shiftVC.contentView, releaseVC.contentView], to: dst)
+            
+            print("PDF saved in: " + dst.absoluteString)
+            completion(dst, nil)
+            
+        } catch (let error) {
+            print(error)
+            completion(nil, error)
+        }
+    }
+    
     
 }
