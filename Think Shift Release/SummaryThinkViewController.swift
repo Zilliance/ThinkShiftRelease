@@ -11,15 +11,15 @@ import UIKit
 class SummaryThinkViewController: UIViewController, SummaryItemViewController {
 
 
-    @IBOutlet weak var thoughtsLabel: UILabel!
     @IBOutlet weak var innerWisdomLabel: UILabel!
     @IBOutlet weak var actionStepLabel: UILabel!
+    @IBOutlet weak var betterFeelingLabel: UILabel!
     
     @IBOutlet weak var contentView: UIScrollView!
     
     var stressor: Stressor? = nil {
         didSet {
-            self.thoughtsLabel.text = stressor?.thinkThoughts
+            self.betterFeelingLabel.text = stressor?.thinkBetterFeeling
             self.actionStepLabel.text = stressor?.thinkActionStep
             self.innerWisdomLabel.text = stressor?.thinkInnerWisdom
         }

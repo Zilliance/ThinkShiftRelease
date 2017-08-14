@@ -14,9 +14,6 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     @IBOutlet weak var affirmationLabel: UILabel!
     @IBOutlet weak var contentView: UIScrollView!
     
-    @IBOutlet weak var mediaCardHeight: NSLayoutConstraint!
-    var mediaCardHidden = false
-
     var stressor: Stressor? = nil {
         didSet {
             self.intentionLabel.text = stressor?.releaseIntention
@@ -27,9 +24,5 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (mediaCardHidden) {
-            self.mediaCardHeight.constant = 0
-        }
-
     }
 }

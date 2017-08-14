@@ -152,10 +152,10 @@
                             <constraint firstAttribute="trailing" secondItem="nsm-Mh-Z1m" secondAttribute="trailing" id="rrx-MO-omH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="9Ee-V4-lEc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="yoK-Ik-Db9">
+                    <navigationItem key="navigationItem" title="Title" id="Hna-po-1xG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="SMg-Wf-9sN">
                             <connections>
-                                <action selector="shareButtonTapped:" destination="5M9-Zb-8Dz" id="HFL-B3-ePs"/>
+                                <action selector="shareButtonTapped:" destination="5M9-Zb-8Dz" id="G5Q-Y8-hAH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -190,7 +190,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSc-Y5-Yul" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="20" width="335" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THOUGHTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAb-yX-IL8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INNER WISDOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAb-yX-IL8">
                                                         <rect key="frame" x="75" y="19" width="250" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="1rM-Qy-qZe"/>
@@ -206,7 +206,7 @@
                                                             <constraint firstAttribute="width" constant="50" id="zUN-2B-GaQ"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am upset because input" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q44-zp-Cv1">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inner wisdom input" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q44-zp-Cv1">
                                                         <rect key="frame" x="75" y="41" width="250" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -229,7 +229,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-f0-w7O" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="125" width="335" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INNER WISDOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi7-xo-C9k">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTION STEP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi7-xo-C9k">
                                                         <rect key="frame" x="75" y="19" width="250" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="Bzy-M0-yOl"/>
@@ -245,7 +245,7 @@
                                                             <constraint firstAttribute="width" constant="50" id="cDn-hN-lNV"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inner wisdom input" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2c-6o-kGi">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action step input" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2c-6o-kGi">
                                                         <rect key="frame" x="75" y="41" width="250" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -269,7 +269,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPe-oB-ITo" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="230" width="335" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTION STEP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jja-cV-4bP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BETTER FEELING THOUGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jja-cV-4bP">
                                                         <rect key="frame" x="75" y="19" width="250" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="zv1-l9-yKP"/>
@@ -285,7 +285,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="uG5-jR-Xxw"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="action step input" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-Eb-Zhn">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Better feeling input" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-Eb-Zhn">
                                                         <rect key="frame" x="75" y="41" width="250" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -340,10 +340,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actionStepLabel" destination="Fij-Eb-Zhn" id="Ykn-1l-9oq"/>
-                        <outlet property="contentView" destination="Wg0-Yk-WLJ" id="RHn-py-pP6"/>
-                        <outlet property="innerWisdomLabel" destination="Z2c-6o-kGi" id="EUi-WD-FC5"/>
-                        <outlet property="thoughtsLabel" destination="q44-zp-Cv1" id="as4-fK-RcS"/>
+                        <outlet property="actionStepLabel" destination="Z2c-6o-kGi" id="MRS-Kx-L9S"/>
+                        <outlet property="betterFeelingLabel" destination="Fij-Eb-Zhn" id="yY1-mu-Wru"/>
+                        <outlet property="contentView" destination="Wg0-Yk-WLJ" id="4mr-RH-Ubu"/>
+                        <outlet property="innerWisdomLabel" destination="q44-zp-Cv1" id="A6f-in-4W7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZ5-1k-bAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -471,7 +471,7 @@
                                                     <constraint firstItem="rHL-CI-q8Z" firstAttribute="leading" secondItem="V4d-J6-5TO" secondAttribute="trailing" constant="10" id="ygD-86-MJ0"/>
                                                 </constraints>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmF-No-H8A" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmF-No-H8A" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="230" width="335" height="160"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSTANT MOOD SHIFTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHR-Z0-aYC">
@@ -580,8 +580,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="pmh-2Y-Tfc" id="trE-sk-qVb"/>
-                        <outlet property="mediaCardHeight" destination="7eS-QS-VuM" id="jxW-vO-8yp"/>
+                        <outlet property="contentView" destination="pmh-2Y-Tfc" id="GbE-hM-AWf"/>
+                        <outlet property="mediaCardHeight" destination="7eS-QS-VuM" id="DoN-dC-AVl"/>
                         <outlet property="notTalkWithLabel" destination="Kaj-XL-1pE" id="nbd-MW-h4k"/>
                         <outlet property="talkWithLabel" destination="Nme-KU-NBH" id="sFH-zc-TyY"/>
                     </connections>
@@ -606,7 +606,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5o-WP-CoF" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="472"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGf-k0-Lb1" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="20" width="335" height="100"/>
@@ -689,69 +689,14 @@ and instead experience _________ .</string>
                                                     <constraint firstItem="DIY-8f-1q0" firstAttribute="leading" secondItem="IjQ-Rb-FOy" secondAttribute="leading" constant="15" id="xRp-9h-rop"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPU-ex-hez" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="230" width="335" height="232"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREATH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj8-xI-FIK">
-                                                        <rect key="frame" x="75" y="19" width="250" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="mVJ-0M-ku6"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
-                                                        <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="release-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ob7-B4-UID">
-                                                        <rect key="frame" x="15" y="15" width="50" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="18t-b1-aSX"/>
-                                                            <constraint firstAttribute="width" constant="50" id="ry9-Li-Wbh"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy:  “Use your breath…additional text will go here…text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-M7-pEs">
-                                                        <rect key="frame" x="75" y="41" width="250" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="35" id="0u5-yl-ivK"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
-                                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LbB-2d-K0V" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="89" width="315" height="120"/>
-                                                        <connections>
-                                                            <segue destination="oMw-vW-lYP" kind="embed" id="UH7-Ed-Prn"/>
-                                                        </connections>
-                                                    </containerView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="LbB-2d-K0V" secondAttribute="bottom" constant="23" id="3XU-Qh-mUj"/>
-                                                    <constraint firstItem="Mj8-xI-FIK" firstAttribute="top" secondItem="kPU-ex-hez" secondAttribute="top" constant="19" id="3qh-tk-7Mp"/>
-                                                    <constraint firstItem="ob7-B4-UID" firstAttribute="top" secondItem="kPU-ex-hez" secondAttribute="top" constant="15" id="61u-GV-OBk"/>
-                                                    <constraint firstItem="LbB-2d-K0V" firstAttribute="leading" secondItem="kPU-ex-hez" secondAttribute="leading" constant="10" id="Dnq-L7-7Hw"/>
-                                                    <constraint firstItem="Ovm-M7-pEs" firstAttribute="top" secondItem="Mj8-xI-FIK" secondAttribute="bottom" constant="4" id="Eud-bm-B7r"/>
-                                                    <constraint firstItem="LbB-2d-K0V" firstAttribute="top" secondItem="Ovm-M7-pEs" secondAttribute="bottom" constant="13" id="O2o-JX-TAA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="LbB-2d-K0V" secondAttribute="trailing" constant="10" id="PL3-3C-i5H"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Mj8-xI-FIK" secondAttribute="trailing" constant="10" id="SYY-av-J33"/>
-                                                    <constraint firstItem="Mj8-xI-FIK" firstAttribute="leading" secondItem="ob7-B4-UID" secondAttribute="trailing" constant="10" id="XCu-1a-tjV"/>
-                                                    <constraint firstItem="Ovm-M7-pEs" firstAttribute="leading" secondItem="ob7-B4-UID" secondAttribute="trailing" constant="10" id="act-QR-KKR"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Ovm-M7-pEs" secondAttribute="trailing" constant="10" id="bUN-na-3Zj"/>
-                                                    <constraint firstAttribute="height" constant="232" id="nbX-Ej-zy8"/>
-                                                    <constraint firstItem="ob7-B4-UID" firstAttribute="leading" secondItem="kPU-ex-hez" secondAttribute="leading" constant="15" id="zuT-lF-uQC"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="kPU-ex-hez" firstAttribute="top" secondItem="IjQ-Rb-FOy" secondAttribute="bottom" constant="5" id="0mZ-ha-2MO"/>
-                                            <constraint firstAttribute="trailing" secondItem="kPU-ex-hez" secondAttribute="trailing" constant="20" id="6qa-kK-doe"/>
                                             <constraint firstItem="cGf-k0-Lb1" firstAttribute="top" secondItem="z5o-WP-CoF" secondAttribute="top" constant="20" id="71U-ZX-OID"/>
                                             <constraint firstItem="IjQ-Rb-FOy" firstAttribute="leading" secondItem="z5o-WP-CoF" secondAttribute="leading" constant="20" id="Gzb-F8-LVp"/>
-                                            <constraint firstItem="kPU-ex-hez" firstAttribute="leading" secondItem="z5o-WP-CoF" secondAttribute="leading" constant="20" id="IX3-ec-ksa"/>
+                                            <constraint firstAttribute="bottom" secondItem="IjQ-Rb-FOy" secondAttribute="bottom" constant="10" id="HRy-me-Mt2"/>
                                             <constraint firstAttribute="trailing" secondItem="IjQ-Rb-FOy" secondAttribute="trailing" constant="20" id="JiQ-bm-CFO"/>
                                             <constraint firstAttribute="trailing" secondItem="cGf-k0-Lb1" secondAttribute="trailing" constant="20" id="MN4-R8-ruS"/>
-                                            <constraint firstAttribute="bottom" secondItem="kPU-ex-hez" secondAttribute="bottom" constant="10" id="gWG-5Q-OXy"/>
                                             <constraint firstItem="IjQ-Rb-FOy" firstAttribute="top" secondItem="cGf-k0-Lb1" secondAttribute="bottom" constant="5" id="pzc-kz-oj1"/>
                                             <constraint firstItem="cGf-k0-Lb1" firstAttribute="leading" secondItem="z5o-WP-CoF" secondAttribute="leading" constant="20" id="yZ3-Zu-jJi"/>
                                         </constraints>
@@ -776,9 +721,8 @@ and instead experience _________ .</string>
                     </view>
                     <connections>
                         <outlet property="affirmationLabel" destination="Crl-Mj-xGk" id="MNj-1X-9fh"/>
-                        <outlet property="contentView" destination="j85-le-K4J" id="iSq-RD-aVq"/>
+                        <outlet property="contentView" destination="j85-le-K4J" id="KpU-3G-aj0"/>
                         <outlet property="intentionLabel" destination="5M2-rn-Nk1" id="j8w-DC-Thy"/>
-                        <outlet property="mediaCardHeight" destination="nbX-Ej-zy8" id="sYV-Vo-oOC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUx-HL-GA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -790,15 +734,15 @@ and instead experience _________ .</string>
             <objects>
                 <tableViewController id="oMw-vW-lYP" customClass="BreatheTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pz5-Or-Va9">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BreatheTableViewCell" rowHeight="51" id="oTg-ll-kaw" customClass="BreatheTableViewCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="315" height="51"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oTg-ll-kaw" id="88q-vE-QAa">
-                                    <rect key="frame" x="0.0" y="0.0" width="315" height="50.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="track-icon" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-3W-mkp">
@@ -809,7 +753,7 @@ and instead experience _________ .</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release meditation Instrumental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-8H-iGI">
-                                            <rect key="frame" x="68" y="10" width="175" height="14"/>
+                                            <rect key="frame" x="68" y="10" width="235" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="wvX-H1-9tF"/>
                                             </constraints>
@@ -818,7 +762,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenght" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-8u-wCm">
-                                            <rect key="frame" x="68" y="24" width="175" height="14"/>
+                                            <rect key="frame" x="68" y="24" width="235" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="ylp-sz-mhh"/>
                                             </constraints>
@@ -827,7 +771,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9M-sd-GlI">
-                                            <rect key="frame" x="253" y="15.5" width="42" height="20"/>
+                                            <rect key="frame" x="313" y="15.5" width="42" height="20"/>
                                             <color key="backgroundColor" red="0.16078431369999999" green="0.4823529412" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Zdc-XP-OnS"/>

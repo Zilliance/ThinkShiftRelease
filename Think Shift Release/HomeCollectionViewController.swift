@@ -55,16 +55,16 @@ class TSRCollectionViewCell: UICollectionViewCell {
     
     func setup(for stressor: Stressor) {
         
-        self.contentView.layer.borderWidth = 0
-         self.titleLabel.text = stressor.title
+        self.titleLabel.text = stressor.title
+        
+        self.completedLabel.layer.borderWidth = UIMock.Appearance.borderWidth
+        self.completedLabel.layer.cornerRadius = UIMock.Appearance.cornerRadius
         
         if stressor.completed {
             self.completedLabel.backgroundColor = .navBar
             self.completedLabel.textColor = .white
             self.completedLabel.text = TSRCollectionViewCell.dateFormatter.string(from: stressor.dateCreated)
-            self.completedLabel.layer.borderWidth = 0
             self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
-            self.completedLabel.layer.cornerRadius = UIMock.Appearance.cornerRadius
             
         }
             
@@ -72,9 +72,7 @@ class TSRCollectionViewCell: UICollectionViewCell {
             self.completedLabel.backgroundColor = .contentBackground
             self.completedLabel.textColor = .darkBlue
             self.completedLabel.text = "In progress"
-            self.completedLabel.layer.borderWidth = UIMock.Appearance.borderWidth
             self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
-            self.completedLabel.layer.cornerRadius = UIMock.Appearance.cornerRadius
             
         }
     }

@@ -33,6 +33,14 @@ final class CustomSideViewController: SideMenuController
         return .lightContent
     }
     
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     func setupHome() {
         guard let home = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateInitialViewController(), let sideController = UIStoryboard(name: "SideMenu", bundle: nil).instantiateInitialViewController() else {
             assertionFailure()

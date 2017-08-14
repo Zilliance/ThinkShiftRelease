@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var selectLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var seeActionPlanButton: UIButton!
+    @IBOutlet weak var actionPlanButtonContainerView: UIView!
     
     private var collectionViewController: HomeCollectionViewController!
     
@@ -39,6 +41,8 @@ class HomeViewController: UIViewController {
             self.topOverlay.alpha = self.isDeleting ? 0.6 : 0
             self.deleteButton.alpha = self.isDeleting ? 1 : 0
             self.selectLabel.alpha = self.isDeleting ? 1 : 0
+            self.seeActionPlanButton.alpha = self.isDeleting ? 0 : 1
+            self.actionPlanButtonContainerView.alpha = self.isDeleting ? 0 : 1
         })
     }
     

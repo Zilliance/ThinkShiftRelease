@@ -81,6 +81,8 @@ class SummaryViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(close(_:)))
         }
         
+        self.title = self.stressor.title
+        
         self.collectionView.contentInset = UIEdgeInsetsMake(0, 2, 0, 2)
         
         self.showViewController(controller: items[0].viewController)
@@ -223,7 +225,6 @@ extension SummaryViewController {
         shiftVC.view.layoutIfNeeded()
 
         let releaseVC = storyboard.instantiateViewController(withIdentifier: "release") as! SummaryReleaseViewController
-        releaseVC.mediaCardHidden = true
         releaseVC.view.frame = self.view.frame
         releaseVC.view.layoutIfNeeded() 
         
