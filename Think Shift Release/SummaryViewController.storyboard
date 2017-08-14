@@ -340,9 +340,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionStepCard" destination="HLg-f0-w7O" id="4X7-XI-onU"/>
                         <outlet property="actionStepLabel" destination="Z2c-6o-kGi" id="MRS-Kx-L9S"/>
+                        <outlet property="betterFeelingCard" destination="LPe-oB-ITo" id="31R-7N-hFt"/>
                         <outlet property="betterFeelingLabel" destination="Fij-Eb-Zhn" id="yY1-mu-Wru"/>
                         <outlet property="contentView" destination="Wg0-Yk-WLJ" id="4mr-RH-Ubu"/>
+                        <outlet property="innerWisdomCard" destination="BSc-Y5-Yul" id="koz-f0-bGw"/>
                         <outlet property="innerWisdomLabel" destination="q44-zp-Cv1" id="A6f-in-4W7"/>
                     </connections>
                 </viewController>
@@ -582,7 +585,10 @@
                     <connections>
                         <outlet property="contentView" destination="pmh-2Y-Tfc" id="GbE-hM-AWf"/>
                         <outlet property="mediaCardHeight" destination="7eS-QS-VuM" id="DoN-dC-AVl"/>
+                        <outlet property="instantMoodCard" destination="tmF-No-H8A" id="CwZ-qX-n6b"/>
+                        <outlet property="notTalkCard" destination="cjQ-bt-Wsc" id="P0h-S7-FFD"/>
                         <outlet property="notTalkWithLabel" destination="Kaj-XL-1pE" id="nbd-MW-h4k"/>
+                        <outlet property="talkCard" destination="qkb-oe-Qeb" id="fpG-ek-Z4N"/>
                         <outlet property="talkWithLabel" destination="Nme-KU-NBH" id="sFH-zc-TyY"/>
                     </connections>
                 </viewController>
@@ -720,8 +726,10 @@ and instead experience _________ .</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="affirmationCard" destination="IjQ-Rb-FOy" id="Rek-xj-H9M"/>
                         <outlet property="affirmationLabel" destination="Crl-Mj-xGk" id="MNj-1X-9fh"/>
                         <outlet property="contentView" destination="j85-le-K4J" id="KpU-3G-aj0"/>
+                        <outlet property="intentionCard" destination="cGf-k0-Lb1" id="LnN-Ji-kqy"/>
                         <outlet property="intentionLabel" destination="5M2-rn-Nk1" id="j8w-DC-Thy"/>
                     </connections>
                 </viewController>
