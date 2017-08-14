@@ -49,8 +49,9 @@ class ReleaseViewController: UIViewController, ShowsSummary {
 
 extension ReleaseViewController: StressorEditor {
     func save() {
-        self.stressor.releaseIntention = self.intentionTextView.text
-        self.stressor.releaseAffirmation = self.affirmationTextView.text
+        
+        self.stressor.releaseIntention = self.intentionTextView.text.characters.count > 0 ? self.intentionTextView.text : nil
+        self.stressor.releaseAffirmation = self.affirmationTextView.text.characters.count > 0 ? self.affirmationTextView.text : nil
     }
 }
 

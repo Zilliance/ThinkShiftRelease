@@ -39,8 +39,8 @@ class ThinkConstructivelyViewController: UIViewController {
 
 extension ThinkConstructivelyViewController: StressorEditor {
     func save() {
-        self.stressor.thinkInnerWisdom = self.wisdomTextView.text
-        self.stressor.thinkActionStep = self.actionStepTextView.text
+        self.stressor.thinkInnerWisdom = self.wisdomTextView.text.characters.count > 0 ? self.wisdomTextView.text : nil
+        self.stressor.thinkActionStep = self.actionStepTextView.text.characters.count > 0 ? self.actionStepTextView.text : nil
     }
 }
 

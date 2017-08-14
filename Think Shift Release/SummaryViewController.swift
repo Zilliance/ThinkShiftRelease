@@ -80,6 +80,8 @@ class SummaryViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(close(_:)))
         }
         
+        self.title = self.stressor.title
+        
         self.collectionView.contentInset = UIEdgeInsetsMake(0, 2, 0, 2)
         
         self.showViewController(controller: items[0].viewController)
