@@ -23,6 +23,14 @@ class ShiftSetBoundariesViewController: UIViewController {
 
     private func setupView() {
         self.view.backgroundColor = .clear
+        
+        if let talkWith = self.stressor.shiftBoundariesDoTalkWith {
+            self.talkAboutTextView.text = talkWith
+        }
+        
+        if let notTalkWith = self.stressor.shiftBoundariesNotTalkWith {
+            self.notTalkAboutTextView.text = notTalkWith
+        }
     }
 
     @IBAction func didTapTryInstantMoodShift(_ sender: Any) {

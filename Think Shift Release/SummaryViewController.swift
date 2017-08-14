@@ -154,9 +154,9 @@ class SummaryViewController: UIViewController {
             return
         }
         
-        thinkViewController.stressor = self.stressor
-        shiftViewController.stressor = self.stressor
-        releaseViewController.stressor = self.stressor
+        thinkViewController.stressor = Stressor(value: self.stressor)
+        shiftViewController.stressor = Stressor(value: self.stressor)
+        releaseViewController.stressor = Stressor(value: self.stressor)
         
         switch summaryGoto {
         case .thinkFirstSegment:
