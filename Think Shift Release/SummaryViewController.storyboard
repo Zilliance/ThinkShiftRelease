@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -102,7 +102,7 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsm-Mh-Z1m" userLabel="VC Container">
-                                <rect key="frame" x="0.0" y="137" width="375" height="427"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNC-qg-k57" userLabel="WhiteLine">
@@ -137,7 +137,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Tqw-ZH-Y5v" firstAttribute="top" secondItem="nsm-Mh-Z1m" secondAttribute="bottom" constant="20" id="ADn-rc-9nu"/>
+                            <constraint firstItem="Tqw-ZH-Y5v" firstAttribute="top" secondItem="nsm-Mh-Z1m" secondAttribute="bottom" id="ADn-rc-9nu"/>
                             <constraint firstAttribute="trailing" secondItem="unU-Tz-UTV" secondAttribute="trailing" id="AgT-li-yF8"/>
                             <constraint firstItem="Tqw-ZH-Y5v" firstAttribute="leading" secondItem="XOB-ZW-pPd" secondAttribute="leading" id="EMO-W5-8hY"/>
                             <constraint firstItem="Dmj-Rz-Bp6" firstAttribute="top" secondItem="Tqw-ZH-Y5v" secondAttribute="bottom" id="GXK-rU-752"/>
@@ -147,7 +147,7 @@
                             <constraint firstItem="unU-Tz-UTV" firstAttribute="top" secondItem="yRl-WE-MHH" secondAttribute="bottom" constant="2" id="i0a-Nl-XZb"/>
                             <constraint firstAttribute="trailing" secondItem="hNC-qg-k57" secondAttribute="trailing" id="kAt-8O-JGW"/>
                             <constraint firstItem="hNC-qg-k57" firstAttribute="leading" secondItem="XOB-ZW-pPd" secondAttribute="leading" id="ows-Uh-mwD"/>
-                            <constraint firstItem="nsm-Mh-Z1m" firstAttribute="top" secondItem="hNC-qg-k57" secondAttribute="bottom" constant="20" id="qjt-0n-zUn"/>
+                            <constraint firstItem="nsm-Mh-Z1m" firstAttribute="top" secondItem="hNC-qg-k57" secondAttribute="bottom" id="qjt-0n-zUn"/>
                             <constraint firstItem="hNC-qg-k57" firstAttribute="top" secondItem="unU-Tz-UTV" secondAttribute="bottom" constant="-2" id="rht-nu-HQc"/>
                             <constraint firstAttribute="trailing" secondItem="nsm-Mh-Z1m" secondAttribute="trailing" id="rrx-MO-omH"/>
                         </constraints>
