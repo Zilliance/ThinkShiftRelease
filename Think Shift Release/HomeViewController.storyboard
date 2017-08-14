@@ -162,8 +162,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="actionPlanButtonContainerView" destination="2W2-fa-0ze" id="90a-Pv-WQJ"/>
                         <outlet property="deleteButton" destination="Xjo-QT-fvy" id="Kzu-G8-Hqs"/>
                         <outlet property="editButton" destination="qiq-iy-IjU" id="ayW-wF-UYo"/>
+                        <outlet property="seeActionPlanButton" destination="iax-9N-dba" id="AAd-Xn-0Qu"/>
                         <outlet property="selectLabel" destination="aT8-Y5-rql" id="db6-zg-87o"/>
                         <outlet property="startButton" destination="9FY-WM-2Js" id="Iut-rG-rJi"/>
                         <outlet property="topOverlay" destination="NlX-nn-VPD" id="xNS-zn-WFp"/>
