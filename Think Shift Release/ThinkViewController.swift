@@ -8,6 +8,8 @@
 
 import UIKit
 import KMPlaceholderTextView
+import AVFoundation
+import AVKit
 
 class ThinkViewController: UIViewController, ShowsSummary {
     
@@ -19,6 +21,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     private var embeddedViewController: UIViewController?
     
     var stressor: Stressor!
+    private var playbackObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,14 @@ class ThinkViewController: UIViewController, ShowsSummary {
 //        let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively") as! ThinkConstructivelyViewController
 //        viewController.stressor = self.stressor
 //        self.embed(viewController: viewController)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let playbackObserver = self.playbackObserver {
+            NotificationCenter.default.removeObserver(playbackObserver)
+        }
     }
 
     private func setupView() {
@@ -77,10 +88,34 @@ class ThinkViewController: UIViewController, ShowsSummary {
             return
         }
         
+        guard let animation: SectionAnimation = {
+            switch sender.selectedSegmentIndex {
+            case 0:
+                return .thinkConstructively
+            case 1:
+                return .thinkPositively
+            default:
+                return nil
+            }
+            }() else {
+                assertionFailure()
+                return
+        }
+        
+        // Embed
+        
         if let embeddedViewController = self.embeddedViewController {
             self.unembed(viewController: embeddedViewController)
         }
+        
         self.embed(viewController: vc)
+        
+        // Play animation
+        
+        if !UserDefaults.standard.hasPlayed(animation: animation) {
+            UserDefaults.standard.setHasPlayed(animation: animation)
+            self.play(animation: animation, completion: nil)
+        }
     }
     
     private func embed(viewController: UIViewController) {
@@ -97,7 +132,79 @@ class ThinkViewController: UIViewController, ShowsSummary {
         viewController.removeFromParentViewController()
         self.embeddedViewController = nil
     }
+    
+    // MARK: - Videos
+    
+    private func play(animation: SectionAnimation, completion: (()->Void)?) {
+        let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
+        let host = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! SectionAnimationViewController
+        
+        let _ = host.view // force load for access to embedded playerViewController
+        
+        host.playerViewController.player = player
+        host.transitioningDelegate = self
+        host.modalPresentationStyle = .custom
+        host.animation = animation
+        host.delegate = self
+        
+        self.playbackObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
+            
+            if let playbackObserver = self?.playbackObserver {
+                NotificationCenter.default.removeObserver(playbackObserver)
+                self?.playbackObserver = nil
+            }
+            
+            if !host.isFullScreen {
+                // Programmatically dismissing when player is full screen causes a crash
+                host.dismiss(animated: true, completion: {
+                    completion?()
+                })
+            }
+        }
+        
+        self.present(host, animated: true, completion: nil)
+        player.play()
+    }
 }
+
+// MARK: -
+
+extension ThinkViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        switch presented {
+        case is SectionAnimationViewController:
+            return AnimationPresentationController(presentedViewController: presented, presenting: presenting)
+        default:
+            return nil
+        }
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch dismissed {
+        case is SectionAnimationViewController:
+            return AnimationModalTransition(withType: .dismissing)
+        default:
+            return nil
+        }
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch presented {
+        case is SectionAnimationViewController:
+            return AnimationModalTransition(withType: .presenting)
+        default:
+            return nil
+        }
+    }
+}
+
+extension ThinkViewController: SectionAnimationDelegate {
+    func didDimiss(_ viewController: SectionAnimationViewController) {
+        // noop
+    }
+}
+
+// MARK: -
 
 extension ThinkViewController: StressorEditor {
     func save() {

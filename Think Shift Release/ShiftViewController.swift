@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class ShiftViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var subviewContainer: UIView!
@@ -16,6 +18,7 @@ class ShiftViewController: UIViewController, ShowsSummary {
     private var embeddedViewController: UIViewController?
     
     var stressor: Stressor!
+    private var playbackObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,14 @@ class ShiftViewController: UIViewController, ShowsSummary {
         
 //        self.embed(viewController: UIStoryboard(name: "ShiftViewController", bundle: nil).instantiateViewController(withIdentifier: "ShiftMood"))
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let playbackObserver = self.playbackObserver {
+            NotificationCenter.default.removeObserver(playbackObserver)
+        }
+    }
 
     // MARK: -
     
@@ -60,12 +71,39 @@ class ShiftViewController: UIViewController, ShowsSummary {
             default:
                 return nil
             }
-            }() else {
-                assertionFailure()
-                return
+        }() else {
+            assertionFailure()
+            return
+        }
+        
+        guard let animation: SectionAnimation = {
+            switch sender.selectedSegmentIndex {
+            case 0:
+                return .instantMoodShifters
+            case 1:
+                return .settingBoundaries
+            default:
+                return nil
+            }
+        }() else {
+            assertionFailure()
+            return
+        }
+        
+        // Embed
+        
+        if let embeddedViewController = self.embeddedViewController {
+            self.unembed(viewController: embeddedViewController)
         }
         
         self.embed(viewController: vc)
+        
+        // Play animation
+        
+        if !UserDefaults.standard.hasPlayed(animation: animation) {
+            UserDefaults.standard.setHasPlayed(animation: animation)
+            self.play(animation: animation, completion: nil)
+        }
     }
     
     private func embed(viewController: UIViewController) {
@@ -82,4 +120,75 @@ class ShiftViewController: UIViewController, ShowsSummary {
         viewController.removeFromParentViewController()
     }
 
+    // MARK: - Videos
+    
+    private func play(animation: SectionAnimation, completion: (()->Void)?) {
+        let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
+        let host = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! SectionAnimationViewController
+        
+        let _ = host.view // force load for access to embedded playerViewController
+        
+        host.playerViewController.player = player
+        host.transitioningDelegate = self
+        host.modalPresentationStyle = .custom
+        host.animation = animation
+        host.delegate = self
+        
+        self.playbackObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
+            
+            if let playbackObserver = self?.playbackObserver {
+                NotificationCenter.default.removeObserver(playbackObserver)
+                self?.playbackObserver = nil
+            }
+            
+            if !host.isFullScreen {
+                // Programmatically dismissing when player is full screen causes a crash
+                host.dismiss(animated: true, completion: {
+                    completion?()
+                })
+            }
+        }
+        
+        self.present(host, animated: true, completion: nil)
+        player.play()
+    }
 }
+
+// MARK: -
+
+extension ShiftViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        switch presented {
+        case is SectionAnimationViewController:
+            return AnimationPresentationController(presentedViewController: presented, presenting: presenting)
+        default:
+            return nil
+        }
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch dismissed {
+        case is SectionAnimationViewController:
+            return AnimationModalTransition(withType: .dismissing)
+        default:
+            return nil
+        }
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch presented {
+        case is SectionAnimationViewController:
+            return AnimationModalTransition(withType: .presenting)
+        default:
+            return nil
+        }
+    }
+}
+
+extension ShiftViewController: SectionAnimationDelegate {
+    func didDimiss(_ viewController: SectionAnimationViewController) {
+        // noop
+    }
+}
+
+// MARK: -
