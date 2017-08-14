@@ -6,9 +6,10 @@
 //  Copyright © 2017 Zilliance. All rights reserved.
 //
 
-import Foundation
 
 import UIKit
+import AVFoundation
+import AVKit
 
 final class DismissingBackgroundView: UIVisualEffectView {
     var viewController: UIViewController?
@@ -92,21 +93,27 @@ extension AnimationModalTransition: UIViewControllerAnimatedTransitioning {
     }
     
     private func dismissTransition(with transitionContext: UIViewControllerContextTransitioning) {
-        
+        let containerView = transitionContext.containerView
         let fromViewController = transitionContext.viewController(forKey: .from)
         let toViewController = transitionContext.viewController(forKey: .to)
         
         guard let frame = toViewController?.view.frame else { return }
         
-        if let subviews = toViewController?.view.subviews {
-            
-            for view in subviews {
-                if let overlay = view as? DismissingBackgroundView {
-                    self.overlay = overlay
-                }
-            }
-            
+        // End playback : would rather have this somewhere else, delegate method or something
+        
+        if let animation = fromViewController as? AVPlayerViewController {
+            animation.player?.pause()
         }
+        
+        // Capture overlay
+        
+        for view in containerView.subviews {
+            if let overlay = view as? DismissingBackgroundView {
+                self.overlay = overlay
+            }
+        }
+        
+        // Transition
         
         UIView.animate(withDuration: self.transitionDuration, animations: {
             fromViewController?.view.transform = CGAffineTransform(translationX: 0, y: frame.height)

@@ -116,7 +116,10 @@ class StressorViewController: UIViewController {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
-        self.performSegue(withIdentifier: "ShiftSegue", sender: nil)
+        
+        self.playAnimation(named: "Main Shift") {
+            self.performSegue(withIdentifier: "ShiftSegue", sender: nil)
+        }
     }
     
     @IBAction func didTapRelease(_ sender: Any) {
@@ -124,7 +127,11 @@ class StressorViewController: UIViewController {
             self.showAlert(title: "Please enter a name for your stressor", message: nil)
             return
         }
-        self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
+        
+        self.playAnimation(named: "Release") {
+            self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
+        }
+
     }
     
     // MARK: - Alerts and Videos
@@ -138,9 +145,10 @@ class StressorViewController: UIViewController {
         animation.modalPresentationStyle = .custom
         
         self.playbackObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
-            animation.dismiss(animated: true, completion: nil)
             self?.playbackObserver = nil
-            completion?()
+            animation.dismiss(animated: true, completion: {
+                completion?()
+            })
         }
         
         self.present(animation, animated: true, completion: nil)
