@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Summary View Controller-->
+        <!--Title-->
         <scene sceneID="4go-VQ-N40">
             <objects>
                 <viewController id="5M9-Zb-8Dz" customClass="SummaryViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="unU-Tz-UTV">
-                                <rect key="frame" x="0.0" y="22" width="375" height="77"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="77"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="QRS-ks-WoW"/>
@@ -102,11 +102,11 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsm-Mh-Z1m" userLabel="VC Container">
-                                <rect key="frame" x="0.0" y="117" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="161" width="375" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNC-qg-k57" userLabel="WhiteLine">
-                                <rect key="frame" x="0.0" y="97" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="sld-fL-Csa"/>
@@ -152,6 +152,14 @@
                             <constraint firstAttribute="trailing" secondItem="nsm-Mh-Z1m" secondAttribute="trailing" id="rrx-MO-omH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="9Ee-V4-lEc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="yoK-Ik-Db9">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="5M9-Zb-8Dz" id="HFL-B3-ePs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="unU-Tz-UTV" id="2Fm-IP-b7c"/>
                         <outlet property="vcContainerView" destination="nsm-Mh-Z1m" id="AQf-7s-s6P"/>
@@ -333,6 +341,7 @@
                     </view>
                     <connections>
                         <outlet property="actionStepLabel" destination="Fij-Eb-Zhn" id="Ykn-1l-9oq"/>
+                        <outlet property="contentView" destination="Wg0-Yk-WLJ" id="RHn-py-pP6"/>
                         <outlet property="innerWisdomLabel" destination="Z2c-6o-kGi" id="EUi-WD-FC5"/>
                         <outlet property="thoughtsLabel" destination="q44-zp-Cv1" id="as4-fK-RcS"/>
                     </connections>
@@ -462,7 +471,7 @@
                                                     <constraint firstItem="rHL-CI-q8Z" firstAttribute="leading" secondItem="V4d-J6-5TO" secondAttribute="trailing" constant="10" id="ygD-86-MJ0"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmF-No-H8A" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmF-No-H8A" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="230" width="335" height="160"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSTANT MOOD SHIFTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHR-Z0-aYC">
@@ -528,7 +537,6 @@
                                                     <constraint firstAttribute="height" constant="160" id="7eS-QS-VuM"/>
                                                     <constraint firstItem="Avr-9F-iSo" firstAttribute="top" secondItem="wHR-Z0-aYC" secondAttribute="bottom" constant="4" id="9Y2-HY-bTN"/>
                                                     <constraint firstItem="Avr-9F-iSo" firstAttribute="leading" secondItem="Utc-eH-p5B" secondAttribute="trailing" constant="10" id="CwF-tQ-ixZ"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="b3F-jO-Dyh"/>
                                                     <constraint firstAttribute="bottom" secondItem="T3t-h9-8vj" secondAttribute="bottom" constant="10" id="hiy-QS-jHl"/>
                                                     <constraint firstAttribute="trailing" secondItem="wHR-Z0-aYC" secondAttribute="trailing" constant="10" id="jN6-hx-kIJ"/>
                                                     <constraint firstItem="Utc-eH-p5B" firstAttribute="top" secondItem="tmF-No-H8A" secondAttribute="top" constant="15" id="kwj-aU-45F"/>
@@ -572,6 +580,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="pmh-2Y-Tfc" id="trE-sk-qVb"/>
+                        <outlet property="mediaCardHeight" destination="7eS-QS-VuM" id="jxW-vO-8yp"/>
                         <outlet property="notTalkWithLabel" destination="Kaj-XL-1pE" id="nbd-MW-h4k"/>
                         <outlet property="talkWithLabel" destination="Nme-KU-NBH" id="sFH-zc-TyY"/>
                     </connections>
@@ -727,7 +737,6 @@ and instead experience _________ .</string>
                                                     <constraint firstItem="Mj8-xI-FIK" firstAttribute="leading" secondItem="ob7-B4-UID" secondAttribute="trailing" constant="10" id="XCu-1a-tjV"/>
                                                     <constraint firstItem="Ovm-M7-pEs" firstAttribute="leading" secondItem="ob7-B4-UID" secondAttribute="trailing" constant="10" id="act-QR-KKR"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ovm-M7-pEs" secondAttribute="trailing" constant="10" id="bUN-na-3Zj"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="eJ2-wN-TEN"/>
                                                     <constraint firstAttribute="height" constant="232" id="nbX-Ej-zy8"/>
                                                     <constraint firstItem="ob7-B4-UID" firstAttribute="leading" secondItem="kPU-ex-hez" secondAttribute="leading" constant="15" id="zuT-lF-uQC"/>
                                                 </constraints>
@@ -767,7 +776,9 @@ and instead experience _________ .</string>
                     </view>
                     <connections>
                         <outlet property="affirmationLabel" destination="Crl-Mj-xGk" id="MNj-1X-9fh"/>
+                        <outlet property="contentView" destination="j85-le-K4J" id="iSq-RD-aVq"/>
                         <outlet property="intentionLabel" destination="5M2-rn-Nk1" id="j8w-DC-Thy"/>
+                        <outlet property="mediaCardHeight" destination="nbX-Ej-zy8" id="sYV-Vo-oOC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUx-HL-GA3" userLabel="First Responder" sceneMemberID="firstResponder"/>

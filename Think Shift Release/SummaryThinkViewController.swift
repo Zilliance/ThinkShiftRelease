@@ -15,6 +15,8 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
     @IBOutlet weak var innerWisdomLabel: UILabel!
     @IBOutlet weak var actionStepLabel: UILabel!
     
+    @IBOutlet weak var contentView: UIScrollView!
+    
     var stressor: Stressor? = nil {
         didSet {
             self.thoughtsLabel.text = stressor?.thinkThoughts
