@@ -21,6 +21,8 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
     @IBOutlet weak var actionStepCard: CardView!
     @IBOutlet weak var betterFeelingCard: CardView!
     
+    var goto: ((SummaryGoto) -> ())? = nil
+    
     var stressor: Stressor? = nil {
         didSet {
             self.betterFeelingLabel.text = stressor?.thinkBetterFeeling
@@ -42,12 +44,17 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
 
 extension SummaryThinkViewController {
     @objc fileprivate func innerWisdomTap() {
+        self.goto?(.thinkFirstSegment)
+        
     }
     
     @objc fileprivate func actionStepTap() {
+        self.goto?(.thinkFirstSegment)
+        
     }
     
     @objc fileprivate func betterFeelingTap() {
+        self.goto?(.thinkSecondSegment)
     }
 }
 

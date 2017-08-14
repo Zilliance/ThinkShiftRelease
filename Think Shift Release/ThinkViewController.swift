@@ -22,12 +22,20 @@ class ThinkViewController: UIViewController, ShowsSummary {
     
     var stressor: Stressor!
     private var playbackObserver: NSObjectProtocol?
+    var segment: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupSummaryButton()
         self.setupView()
+        
+        if let segment = self.segment {
+            
+            self.segmentedControl.selectedSegmentIndex = segment
+            self.didMakeThinkSelection(self.segmentedControl)
+            
+        }
         
         // Embed Think Constructively
         

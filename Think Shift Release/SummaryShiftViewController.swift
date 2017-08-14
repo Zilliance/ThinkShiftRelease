@@ -21,6 +21,8 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
     @IBOutlet weak var talkCard: CardView!
     @IBOutlet weak var instantMoodCard: CardView!
     
+    var goto: ((SummaryGoto) -> ())? = nil
+    
     var stressor: Stressor? = nil {
         didSet {
             self.notTalkWithLabel.text = stressor?.shiftBoundariesNotTalkWith
@@ -45,14 +47,14 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
 
 extension SummaryShiftViewController {
     @objc fileprivate func notTalkTap() {
-        
+        self.goto?(.shiftSecondSegment)
     }
     
     @objc fileprivate func talkTap() {
-        
+        self.goto?(.shiftSecondSegment)
     }
     
     @objc fileprivate func instantMoodTap() {
-        
+        self.goto?(.shiftFirstSegment)
     }
 }

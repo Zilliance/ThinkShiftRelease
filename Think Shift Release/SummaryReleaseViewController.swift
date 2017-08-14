@@ -18,6 +18,8 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     @IBOutlet weak var intentionCard: CardView!
     @IBOutlet weak var affirmationCard: CardView!
     
+    var goto: ((SummaryGoto) -> ())? = nil
+    
     var stressor: Stressor? = nil {
         didSet {
             self.intentionLabel.text = stressor?.releaseIntention
@@ -35,11 +37,12 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
 }
 
 extension SummaryReleaseViewController {
+    
     @objc fileprivate func intentionTap() {
-        
+        self.goto?(.release)
     }
     
     @objc fileprivate func affirmationTap() {
-        
+        self.goto?(.release)
     }
 }
