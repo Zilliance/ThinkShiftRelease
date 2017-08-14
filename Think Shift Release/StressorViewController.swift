@@ -87,8 +87,12 @@ class StressorViewController: UIViewController {
             return
         }
         
-        // See SectionAnimationDelegate.didDismiss below for action after playback is complete
-        self.play(animation: .think, completion: nil)
+        if UserDefaults.standard.hasPlayed(animation: .think) {
+            self.showThinkCards()
+        } else {
+            UserDefaults.standard.setHasPlayed(animation: .think)
+            self.play(animation: .think, completion: nil)
+        }
     }
     
     @IBAction func didTapShift(_ sender: Any) {
@@ -97,8 +101,12 @@ class StressorViewController: UIViewController {
             return
         }
         
-        // See SectionAnimationDelegate.didDismiss below for action after playback is complete
-        self.play(animation: .shift, completion: nil)
+        if UserDefaults.standard.hasPlayed(animation: .shift) {
+            self.performSegue(withIdentifier: "ShiftSegue", sender: nil)
+        } else {
+            UserDefaults.standard.setHasPlayed(animation: .shift)
+            self.play(animation: .shift, completion: nil)
+        }
     }
     
     @IBAction func didTapRelease(_ sender: Any) {
@@ -107,8 +115,12 @@ class StressorViewController: UIViewController {
             return
         }
         
-        // See SectionAnimationDelegate.didDismiss below for action after playback is complete
-        self.play(animation: .release, completion: nil)
+        if UserDefaults.standard.hasPlayed(animation: .release) {
+           self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
+        } else {
+            UserDefaults.standard.setHasPlayed(animation: .release)
+            self.play(animation: .release, completion: nil)
+        }
     }
     
     // MARK: - Alerts and Videos
@@ -183,6 +195,8 @@ class StressorViewController: UIViewController {
     }
 }
 
+// MARK: -
+
 extension StressorViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         switch presented {
@@ -233,6 +247,8 @@ extension StressorViewController: SectionAnimationDelegate {
         }
     }
 }
+
+// MARK: -
 
 extension StressorViewController: StressorEditor {
     func save() {

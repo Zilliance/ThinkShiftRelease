@@ -13,7 +13,7 @@ import AVKit
 
 enum SectionAnimation: String {
     case think = "Main Think"
-    case thinkConstructivey = "Think Constructively"
+    case thinkConstructively = "Think Constructively"
     case thinkPositively = "Think Positively"
     
     case shift = "Main Shift"
@@ -23,9 +23,21 @@ enum SectionAnimation: String {
     case release = "Release"
     
     var defaultsKey: String {
-        return "Did Play \(self.rawValue) Video"
+        return "Has Played \(self.rawValue) Video"
     }
 }
+
+extension UserDefaults {
+    func hasPlayed(animation: SectionAnimation) -> Bool {
+        return self.bool(forKey: animation.defaultsKey)
+    }
+    
+    func setHasPlayed(animation: SectionAnimation) {
+        self.set(true, forKey: animation.defaultsKey)
+    }
+}
+
+// MARK: -
 
 protocol SectionAnimationDelegate {
     func didDimiss(_ viewController: SectionAnimationViewController)
