@@ -26,6 +26,8 @@ class VideosCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.collectionView?.allowsMultipleSelection = true
+
         self.videoPicker.delegate = self
                 
         self.reloadVideos()
