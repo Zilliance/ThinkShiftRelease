@@ -31,12 +31,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRb-OU-WAC">
                                 <rect key="frame" x="20" y="603" width="335" height="44"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.52941176469999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="2Sd-VP-YXc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
-                                <state key="normal" title="ADD A NEW TRACK">
+                                <state key="normal" title="ADD A NEW QUOTE" backgroundImage="no-button-bg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -98,7 +97,7 @@
         <scene sceneID="gim-aj-FDq">
             <objects>
                 <navigationController storyboardIdentifier="NewQuoteNav" id="VCG-N0-VtB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0yJ-er-6g2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0yJ-er-6g2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -239,6 +238,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="no-button-bg" width="100" height="40"/>
         <image name="quote-icon-hex" width="44" height="50"/>
     </resources>
 </document>
