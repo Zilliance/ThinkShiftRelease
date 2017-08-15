@@ -88,6 +88,21 @@ extension Database {
         }
     }
     
+    func deleteObjects(_ objects: [Object]) {
+        do {
+            try realm.write {
+                
+                objects.forEach({ (object) in
+                    realm.delete(object)
+                })
+            }
+        }
+        catch let error {
+            print(error)
+        }
+    }
+    
+    
     func add(realmObject: Object, update: Bool = false) {
         do {
             try realm.write({

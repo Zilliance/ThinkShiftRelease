@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,13 +8,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Images-->
         <scene sceneID="rDx-Yv-wrj">
             <objects>
-                <collectionViewController storyboardIdentifier="imagesStoryboard" title="Images" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gvK-e2-GDc" customClass="ImagesCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="A5j-eP-oNE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController title="Images" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gvK-e2-GDc" customClass="ImagesCollectionViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="A5j-eP-oNE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hgQ-1K-baN">
@@ -56,6 +64,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hel-ny-Ncq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1162" y="3680"/>
+        </scene>
+        <!--Images-->
+        <scene sceneID="2eg-DG-YMr">
+            <objects>
+                <viewController storyboardIdentifier="imagesStoryboard" id="xP8-gS-ML9" customClass="ImagesViewControllerContainer" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w03-7k-eps"/>
+                        <viewControllerLayoutGuide type="bottom" id="YWp-Vt-Xy3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pcA-s3-za6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FR0-1v-MBU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="543"/>
+                                <connections>
+                                    <segue destination="gvK-e2-GDc" kind="embed" id="Eqi-lm-eof"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="425-Pg-Sul">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.2901960784" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="DWU-ij-rxm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteTapped" destination="xP8-gS-ML9" eventType="touchUpInside" id="G2c-h2-NoT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxp-8h-FP4">
+                                <rect key="frame" x="20" y="593" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Rjl-gs-E1m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                <state key="normal" title="ADD NEW IMAGE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTapped" destination="xP8-gS-ML9" eventType="touchUpInside" id="1lI-6z-Rtp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FR0-1v-MBU" firstAttribute="top" secondItem="w03-7k-eps" secondAttribute="bottom" id="GSG-fu-ueJ"/>
+                            <constraint firstItem="425-Pg-Sul" firstAttribute="top" secondItem="FR0-1v-MBU" secondAttribute="bottom" id="I0Y-yb-f88"/>
+                            <constraint firstItem="FR0-1v-MBU" firstAttribute="leading" secondItem="pcA-s3-za6" secondAttribute="leading" id="I4x-hV-oUR"/>
+                            <constraint firstAttribute="trailing" secondItem="425-Pg-Sul" secondAttribute="trailing" id="Ia6-jg-TMA"/>
+                            <constraint firstAttribute="trailing" secondItem="sxp-8h-FP4" secondAttribute="trailing" constant="20" id="SBO-NV-MOs"/>
+                            <constraint firstItem="425-Pg-Sul" firstAttribute="leading" secondItem="pcA-s3-za6" secondAttribute="leading" id="VvJ-za-9eG"/>
+                            <constraint firstItem="YWp-Vt-Xy3" firstAttribute="top" secondItem="425-Pg-Sul" secondAttribute="bottom" id="Yog-Cy-uw9"/>
+                            <constraint firstAttribute="bottom" secondItem="sxp-8h-FP4" secondAttribute="bottom" constant="30" id="Zpa-iw-RLA"/>
+                            <constraint firstItem="sxp-8h-FP4" firstAttribute="leading" secondItem="pcA-s3-za6" secondAttribute="leading" constant="20" id="g0o-AW-JUs"/>
+                            <constraint firstAttribute="trailing" secondItem="FR0-1v-MBU" secondAttribute="trailing" id="lJJ-Iz-Rqo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Images" id="h5C-4K-3Bq">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Dgm-t7-SrR">
+                            <connections>
+                                <action selector="editTapped:" destination="xP8-gS-ML9" id="7hE-Bh-28X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addButton" destination="sxp-8h-FP4" id="tOa-T8-yJr"/>
+                        <outlet property="deleteButtonHeight" destination="DWU-ij-rxm" id="ABe-bb-KSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4U5-5q-thm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="3874.8125937031487"/>
         </scene>
     </scenes>
 </document>

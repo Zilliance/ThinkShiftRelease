@@ -105,4 +105,44 @@ final class User: Object {
         }
     }
     
+    func videoObject(videoPath: String) -> Video? {
+        return videoPaths.filter { (video) -> Bool in
+            return video.value == videoPath
+        }.first
+    }
+    
+    func imageObject(path: String) -> Image? {
+        return imagesPaths.filter { (image) -> Bool in
+            return image.value == path
+            }.first
+    }
+    
+    func deleteImages(objects: [Image]) {
+
+        try? Database.shared.realm.write {
+            objects.forEach { (image) in
+                if let index = imagesPaths.index(of: image) {
+                    self.imagesPaths.remove(objectAtIndex: index)
+                }
+                Database.shared.realm.delete(image)
+
+            }
+        }
+        
+    }
+    
+    func deleteVideos(objects: [Video]) {
+        
+        try? Database.shared.realm.write {
+            objects.forEach { (video) in
+                if let index = videoPaths.index(of: video) {
+                    self.videoPaths.remove(objectAtIndex: index)
+                }
+                
+                Database.shared.realm.delete(video)
+            }
+            
+        }
+    }
+    
 }

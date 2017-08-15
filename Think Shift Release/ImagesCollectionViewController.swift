@@ -12,6 +12,35 @@ import Photos
 final class ImageCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var isDeleting = false
+    
+    override var isSelected: Bool {
+        didSet {
+            guard isDeleting else {
+                return
+            }
+            if isSelected {
+                self.addBorder()
+            }
+            else {
+                self.removeBorder()
+            }
+        }
+    }
+    
+    private func addBorder() {
+        
+        self.contentView.layer.borderWidth = 2
+        self.contentView.layer.borderColor = UIColor.aquaBlue.cgColor
+        
+    }
+    
+    private func removeBorder() {
+        
+        self.contentView.layer.borderWidth = 0
+        
+    }
 }
 
 
@@ -19,6 +48,16 @@ class ImagesCollectionViewController: UICollectionViewController {
     
     private var images: [URL: UIImage] = [:]
     fileprivate lazy var picker = UIImagePickerController()
+    
+    var deleting: Bool = false {
+        didSet {
+
+            for cell in self.collectionView?.visibleCells as! [ImageCell] {
+                cell.isDeleting = true
+            }
+        
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +70,11 @@ class ImagesCollectionViewController: UICollectionViewController {
         // Register cell classes
         // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
         self.picker.delegate = self
 
-        loadImages()
+        self.collectionView?.allowsMultipleSelection = true
+
+        reloadImages()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,13 +108,11 @@ class ImagesCollectionViewController: UICollectionViewController {
         }
         let url = imageUrls[indexPath.row]
         
-//        if let image = PhotoUtils.getPhoto(assetURL: url) {
-//            
-//            cell.imageView.image = image
-//        }
         
         let image = self.images[url]
         cell.imageView.image = image
+        
+        cell.isDeleting = self.deleting
     
         return cell
     }
@@ -84,12 +122,12 @@ class ImagesCollectionViewController: UICollectionViewController {
 
     // MARK: - User Action
     
-    @IBAction func addItem(_ sender: Any?) {
+    func addItem() {
         self.present(self.picker, animated: true, completion: nil)
     }
     
     
-    fileprivate func loadImages() {
+    func reloadImages() {
         
         let imageUrls = Array(Database.shared.user.imagesPaths).flatMap { (imagePath) -> URL? in
             return URL(string: imagePath.value)
@@ -105,6 +143,10 @@ class ImagesCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard !deleting else {
+            return
+        }
         
         let imageUrls = Array(Database.shared.user.imagesPaths.sorted(byKeyPath: "dateAdded")).flatMap { (imagePath) -> URL? in
             return URL(string: imagePath.value)
@@ -135,6 +177,6 @@ extension ImagesCollectionViewController: UIImagePickerControllerDelegate, UINav
         
         picker.dismiss(animated: true, completion: nil)
         
-        self.loadImages()
+        self.reloadImages()
     }
 }
