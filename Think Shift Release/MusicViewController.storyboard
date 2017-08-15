@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MZ7-Lh-35K">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,13 +8,66 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Music View Controller-->
+        <scene sceneID="u99-wJ-xjD">
+            <objects>
+                <viewController id="MZ7-Lh-35K" customClass="MusicViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kNl-YU-vzr"/>
+                        <viewControllerLayoutGuide type="bottom" id="3dj-f1-J2r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AaG-Pe-fDb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-lG-IHz">
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FzV-76-LJR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                <state key="normal" title="ADD A NEW TRACK" backgroundImage="music-button-bg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTrackAction:" destination="MZ7-Lh-35K" eventType="touchUpInside" id="Znu-Wx-Txo"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vam-AL-w20">
+                                <rect key="frame" x="0.0" y="20" width="375" height="563"/>
+                                <connections>
+                                    <segue destination="0xm-rc-gJS" kind="embed" id="qeW-YN-Gft"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I0c-lG-IHz" firstAttribute="top" secondItem="vam-AL-w20" secondAttribute="bottom" constant="20" id="AZq-vQ-mII"/>
+                            <constraint firstAttribute="trailing" secondItem="vam-AL-w20" secondAttribute="trailing" id="JQP-6s-YEG"/>
+                            <constraint firstItem="3dj-f1-J2r" firstAttribute="top" secondItem="I0c-lG-IHz" secondAttribute="bottom" constant="20" id="K7e-Kr-xPW"/>
+                            <constraint firstItem="I0c-lG-IHz" firstAttribute="leading" secondItem="AaG-Pe-fDb" secondAttribute="leading" constant="20" id="Rud-VF-YCg"/>
+                            <constraint firstItem="vam-AL-w20" firstAttribute="leading" secondItem="AaG-Pe-fDb" secondAttribute="leading" id="fqs-5N-gM9"/>
+                            <constraint firstItem="vam-AL-w20" firstAttribute="top" secondItem="kNl-YU-vzr" secondAttribute="bottom" id="jDx-WS-aYT"/>
+                            <constraint firstAttribute="trailing" secondItem="I0c-lG-IHz" secondAttribute="trailing" constant="20" id="zIJ-YL-j5S"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2t0-Ha-E2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-727" y="3656"/>
+        </scene>
         <!--Music-->
         <scene sceneID="4Gh-23-Znm">
             <objects>
                 <tableViewController storyboardIdentifier="musicStoryboard" title="Music" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0xm-rc-gJS" customClass="MusicTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CiN-hU-Hv0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -38,4 +91,7 @@
             <point key="canvasLocation" x="1" y="3663"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="music-button-bg" width="335" height="44"/>
+    </resources>
 </document>

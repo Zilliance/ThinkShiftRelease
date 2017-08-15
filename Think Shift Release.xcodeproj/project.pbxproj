@@ -53,6 +53,7 @@
 		8C2B13F41F4387CD002C0353 /* Popup2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F31F4387CD002C0353 /* Popup2.storyboard */; };
 		8C2B13F61F438847002C0353 /* Popup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F51F438847002C0353 /* Popup2ViewController.swift */; };
 		8C2B13F81F439FC0002C0353 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */; };
+		8C2B13FA1F43A7BB002C0353 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F91F43A7BB002C0353 /* MusicViewController.swift */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -215,6 +216,7 @@
 		8C2B13F31F4387CD002C0353 /* Popup2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popup2.storyboard; sourceTree = "<group>"; };
 		8C2B13F51F438847002C0353 /* Popup2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup2ViewController.swift; sourceTree = "<group>"; };
 		8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		8C2B13F91F43A7BB002C0353 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 			children = (
 				4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */,
 				E37828431F195FED005E91A8 /* MusicTableViewController.swift */,
+				8C2B13F91F43A7BB002C0353 /* MusicViewController.swift */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -1092,6 +1095,7 @@
 				E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */,
 				8C166DCD1F3A6BFA0071A98C /* QuoteTableViewCell.swift in Sources */,
 				8C166DD71F3CE9D80071A98C /* SummaryReleaseViewController.swift in Sources */,
+				8C2B13FA1F43A7BB002C0353 /* MusicViewController.swift in Sources */,
 				E347EA581F3CCABD002920D0 /* TourPageViewController.swift in Sources */,
 				E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */,
 				8C2B13E31F3E5ED6002C0353 /* NotificationsManager.swift in Sources */,
