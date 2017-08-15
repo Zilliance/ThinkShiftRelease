@@ -52,6 +52,7 @@
 		8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F11F3E690E002C0353 /* Plan.storyboard */; };
 		8C2B13F41F4387CD002C0353 /* Popup2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F31F4387CD002C0353 /* Popup2.storyboard */; };
 		8C2B13F61F438847002C0353 /* Popup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F51F438847002C0353 /* Popup2ViewController.swift */; };
+		8C2B13F81F439FC0002C0353 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
 		8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F701F228E0900B2CA4C /* WebView.storyboard */; };
 		8C631F761F228E5500B2CA4C /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */; };
@@ -213,6 +214,7 @@
 		8C2B13F11F3E690E002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		8C2B13F31F4387CD002C0353 /* Popup2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popup2.storyboard; sourceTree = "<group>"; };
 		8C2B13F51F438847002C0353 /* Popup2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup2ViewController.swift; sourceTree = "<group>"; };
+		8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		8C631F701F228E0900B2CA4C /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		8C631F721F228E5500B2CA4C /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSideViewController.swift; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */,
 				E37828451F195FF1005E91A8 /* QuotesTableViewController.swift */,
 				E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */,
+				8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */,
 			);
 			name = Quote;
 			sourceTree = "<group>";
@@ -1122,6 +1125,7 @@
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
 				E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */,
 				4FD1C7271F43946B004F63A9 /* ImagesViewControllerContainer.swift in Sources */,
+				8C2B13F81F439FC0002C0353 /* QuotesViewController.swift in Sources */,
 				8C631F831F228F7300B2CA4C /* UIDevice+Extensions.swift in Sources */,
 				E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */,
 				E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */,

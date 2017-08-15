@@ -561,10 +561,10 @@
             </objects>
             <point key="canvasLocation" x="765" y="3316"/>
         </scene>
-        <!--quotesStoryboard-->
+        <!--QuotesViewController-->
         <scene sceneID="fw6-GN-RDU">
             <objects>
-                <viewControllerPlaceholder storyboardName="QuotesViewController" referencedIdentifier="quotesStoryboard" id="zoi-G2-hIb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="QuotesViewController" id="zoi-G2-hIb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pD-ry-2WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="177" y="3401"/>

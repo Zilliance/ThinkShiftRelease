@@ -10,7 +10,7 @@ import UIKit
 
 class QuotesTableViewController: UITableViewController {
     
-    private var quotes: [Quote] = []
+    var quotes: [Quote] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +18,13 @@ class QuotesTableViewController: UITableViewController {
         //register nibs:
         let nibName = UINib(nibName: "QuoteCell", bundle:nil)
         self.tableView.register(nibName, forCellReuseIdentifier: "QuoteCell")
-        self.view.layer.contents = UIImage(named: "shift-bg")?.cgImage
+       
 
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 40
-        
+        self.tableView.backgroundColor = .clear
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
         
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.quotes = Array(Database.shared.user.quotes)
     }
 
@@ -36,6 +35,10 @@ class QuotesTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if let parentVC = self.parent {
+            parentVC.navigationItem.rightBarButtonItem = self.editButtonItem
+            parentVC.title = "Quotes"
+        }
         self.tableView.reloadData()
     }
 
@@ -70,12 +73,4 @@ class QuotesTableViewController: UITableViewController {
         }
     }
 
-
-    // MARK: - User Action
-    
-    @IBAction func addItem(_ sender: Any?) {
-        let vc = UIStoryboard(name: "QuotesViewController", bundle: nil).instantiateViewController(withIdentifier: "NewQuoteNav")
-        
-        self.present(vc, animated: true, completion: nil)
-    }
 }
