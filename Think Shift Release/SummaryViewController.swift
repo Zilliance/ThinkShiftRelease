@@ -81,7 +81,11 @@ class SummaryViewController: UIViewController {
     fileprivate var currentIndex = 0
     
     
-    fileprivate let items: [SummaryItem] = [SummaryItem(title: "Think", imageActive: #imageLiteral(resourceName: "thinkActive"), imageInactive: #imageLiteral(resourceName: "thinkInactive"), unselectedColor: UIColor.thinkGreen, viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "think")), SummaryItem(title: "Shift", imageActive: #imageLiteral(resourceName: "shiftActive"), imageInactive: #imageLiteral(resourceName: "shiftInactive"), unselectedColor: UIColor.shiftPurple , viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "shift")), SummaryItem(title: "Release", imageActive: #imageLiteral(resourceName: "releaseActive"), imageInactive: #imageLiteral(resourceName: "releaseInactive"), unselectedColor: UIColor.releaseBlue, viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "release"))]
+    fileprivate let items: [SummaryItem] = [
+        SummaryItem(title: "Think", imageActive: #imageLiteral(resourceName: "thinkActive"), imageInactive: #imageLiteral(resourceName: "thinkInactive"), unselectedColor: UIColor.thinkGreen, viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "think")),
+        SummaryItem(title: "Shift", imageActive: #imageLiteral(resourceName: "shiftActive"), imageInactive: #imageLiteral(resourceName: "shiftInactive"), unselectedColor: UIColor.shiftPurple , viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "shift")),
+        SummaryItem(title: "Release", imageActive: #imageLiteral(resourceName: "releaseActive"), imageInactive: #imageLiteral(resourceName: "releaseInactive"), unselectedColor: UIColor.releaseBlue, viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "release"))
+    ]
     
 
     override func viewDidLoad() {
