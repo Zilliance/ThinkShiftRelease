@@ -27,7 +27,6 @@ class ThinkViewController: UIViewController, ShowsSummary {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setupSummaryButton()
         self.setupView()
         
         if let segment = self.segment {
@@ -35,6 +34,9 @@ class ThinkViewController: UIViewController, ShowsSummary {
             self.segmentedControl.selectedSegmentIndex = segment
             self.didMakeThinkSelection(self.segmentedControl)
             
+        }
+        else {
+            self.setupSummaryButton()
         }
         
         // Embed Think Constructively

@@ -172,6 +172,7 @@ class SummaryViewController: UIViewController {
             shiftViewController.segment = 1
             self.navigationController?.pushViewController(shiftViewController, animated: true)
         case .release:
+            releaseViewController.segment = 0
             self.navigationController?.pushViewController(releaseViewController, animated: true)
             
         }
