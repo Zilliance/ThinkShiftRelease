@@ -105,4 +105,18 @@ final class User: Object {
         }
     }
     
+    func videoObject(videoPath: String) -> Video? {
+        return videoPaths.filter { (video) -> Bool in
+            return video.value == videoPath
+        }.first
+    }
+    
+    func imageObject(path: String) -> Image? {
+        return imagesPaths.filter { (image) -> Bool in
+            return image.value == path
+            }.first
+    }
+    
+
+    
 }

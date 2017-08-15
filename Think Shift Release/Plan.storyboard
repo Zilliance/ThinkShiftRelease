@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VdO-3j-Vpy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VdO-3j-Vpy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,25 +55,25 @@
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeditationPlanCell" rowHeight="93" id="BBj-N4-aDD" customClass="MeditationPlanCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="93"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeditationPlanCell" rowHeight="94" id="BBj-N4-aDD" customClass="MeditationPlanCell" customModule="Think_Shift_Release" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="BBj-N4-aDD" id="FWq-uj-E5d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBj-N4-aDD" id="FWq-uj-E5d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cvg-FU-MEk">
-                                                    <rect key="frame" x="126" y="78" width="122" height="7"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cvg-FU-MEk">
+                                                    <rect key="frame" x="126" y="84" width="122" height="1"/>
                                                     <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="bHh-ox-FiT"/>
                                                         <constraint firstAttribute="width" constant="122" id="hAm-kM-o9b"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-bu-nsJ">
-                                                    <rect key="frame" x="15" y="10" width="345" height="60"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-bu-nsJ">
+                                                    <rect key="frame" x="15" y="16" width="345" height="60"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7R-r7-bUA">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7R-r7-bUA">
                                                             <rect key="frame" x="78" y="14" width="257" height="33"/>
                                                             <string key="text">Want to feel great right now? Try this 12 minute meditation!
 </string>
@@ -81,7 +81,7 @@
                                                             <color key="textColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="song-icon" translatesAutoresizingMaskIntoConstraints="NO" id="FMh-rN-zQF">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="song-icon" translatesAutoresizingMaskIntoConstraints="NO" id="FMh-rN-zQF">
                                                             <rect key="frame" x="20" y="10.5" width="40" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="8jJ-h2-TgC"/>
@@ -102,10 +102,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="tUo-bu-nsJ" firstAttribute="top" secondItem="FWq-uj-E5d" secondAttribute="topMargin" constant="15" id="0Zs-my-Vsm"/>
                                                 <constraint firstItem="Cvg-FU-MEk" firstAttribute="centerX" secondItem="FWq-uj-E5d" secondAttribute="centerX" id="SuP-8A-yZK"/>
                                                 <constraint firstItem="Cvg-FU-MEk" firstAttribute="top" secondItem="tUo-bu-nsJ" secondAttribute="bottom" constant="8" id="UaQ-9v-QAd"/>
                                                 <constraint firstAttribute="bottom" secondItem="Cvg-FU-MEk" secondAttribute="bottom" constant="8" id="VSr-Yw-q1s"/>
+                                                <constraint firstItem="tUo-bu-nsJ" firstAttribute="top" secondItem="FWq-uj-E5d" secondAttribute="top" constant="16" id="eHU-zj-NIp"/>
                                                 <constraint firstItem="tUo-bu-nsJ" firstAttribute="leading" secondItem="FWq-uj-E5d" secondAttribute="leading" constant="15" id="iaE-Lf-yOU"/>
                                                 <constraint firstAttribute="trailing" secondItem="tUo-bu-nsJ" secondAttribute="trailing" constant="15" id="qVj-EX-fWk"/>
                                             </constraints>
@@ -116,7 +116,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActionPlanCell" id="z66-Ji-nho" customClass="ActionPlanCell" customModule="Think_Shift_Release" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="121" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="122" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z66-Ji-nho" id="EPl-dt-ALg">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
@@ -213,7 +213,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlaceholderCell" id="tEP-Au-MC3">
-                                        <rect key="frame" x="0.0" y="201" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="202" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tEP-Au-MC3" id="wuX-9f-c22">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>

@@ -16,16 +16,19 @@ class VideosCollectionViewController: UICollectionViewController {
     fileprivate lazy var videoPicker = UIImagePickerController()
     var urls: [URL] = []
     var images: [URL: UIImage] = [:]
+    
+    var deleting: Bool = false {
+        didSet {
+            self.collectionView?.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
         self.videoPicker.delegate = self
-        
-        self.collectionView?.layer.contents = UIImage(named: "shift-bg")?.cgImage
-        
-        self.loadVideos()
+                
+        self.reloadVideos()
 
     }
 
@@ -34,12 +37,17 @@ class VideosCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addItem(_ sender: Any?) {
+    func addItem() {
         self.videoPicker.mediaTypes = [kUTTypeMovie, kUTTypeAVIMovie, kUTTypeVideo, kUTTypeMPEG4] as [String]
         self.present(self.videoPicker, animated: true, completion: nil)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard !deleting else {
+            return
+        }
+        
         let videoURL = self.urls[indexPath.row]
         
         let playerViewController = AVPlayerViewController()
@@ -70,6 +78,8 @@ extension VideosCollectionViewController {
         
         cell.imageView.image = image
         
+        cell.isDeleting = self.deleting
+        
         return cell
     }
     
@@ -77,7 +87,7 @@ extension VideosCollectionViewController {
 
 extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func loadVideos(){
+    func reloadVideos(){
     
         self.urls = Array(Database.shared.user.videoPaths).flatMap { (videoPath) -> URL? in
             return URL(string: videoPath.value)
@@ -102,7 +112,7 @@ extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINav
         
         picker.dismiss(animated: true, completion: nil)
         
-        self.loadVideos()
+        self.reloadVideos()
 
     }
     

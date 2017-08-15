@@ -12,6 +12,35 @@ import Photos
 final class ImageCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var isDeleting = false
+    
+    override var isSelected: Bool {
+        didSet {
+            guard isDeleting else {
+                return
+            }
+            if isSelected {
+                self.addBorder()
+            }
+            else {
+                self.removeBorder()
+            }
+        }
+    }
+    
+    private func addBorder() {
+        
+        self.contentView.layer.borderWidth = 2
+        self.contentView.layer.borderColor = UIColor.aquaBlue.cgColor
+        
+    }
+    
+    private func removeBorder() {
+        
+        self.contentView.layer.borderWidth = 0
+        
+    }
 }
 
 

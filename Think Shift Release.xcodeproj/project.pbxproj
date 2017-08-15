@@ -16,6 +16,7 @@
 		4F65CF111F34A14F00C4A5B9 /* ImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF101F34A14F00C4A5B9 /* ImageViewController.storyboard */; };
 		4F65CF131F34A16400C4A5B9 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65CF121F34A16400C4A5B9 /* ImageViewController.swift */; };
 		4F65CF151F34A1FE00C4A5B9 /* PhotoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */; };
+		4FD1C7251F437373004F63A9 /* VideoViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1C7241F437373004F63A9 /* VideoViewControllerContainer.swift */; };
 		4FE59AF91F2A3D0800AAE778 /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */; };
 		4FE59B001F2B7A5E00AAE778 /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */; };
 		4FE59B041F2B820200AAE778 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE59B031F2B820200AAE778 /* MediaCell.swift */; };
@@ -173,6 +174,7 @@
 		4F65CF101F34A14F00C4A5B9 /* ImageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF121F34A16400C4A5B9 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoUtils.swift; sourceTree = "<group>"; };
+		4FD1C7241F437373004F63A9 /* VideoViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewControllerContainer.swift; sourceTree = "<group>"; };
 		4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
 		4FE59AFF1F2B7A5E00AAE778 /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
 		4FE59B031F2B820200AAE778 /* MediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 			children = (
 				4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */,
 				E37828411F195FE7005E91A8 /* VideosCollectionViewController.swift */,
+				4FD1C7241F437373004F63A9 /* VideoViewControllerContainer.swift */,
 			);
 			name = Video;
 			sourceTree = "<group>";
@@ -1093,6 +1096,7 @@
 				E38608EC1F16C97E00816DF4 /* ShiftViewController.swift in Sources */,
 				E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */,
 				E312B35B1F421C7000F2F5F0 /* AnimationPresentationController.swift in Sources */,
+				4FD1C7251F437373004F63A9 /* VideoViewControllerContainer.swift in Sources */,
 				E38608CF1F15904B00816DF4 /* UIMockCollectionViewCell.swift in Sources */,
 				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
 				8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */,
