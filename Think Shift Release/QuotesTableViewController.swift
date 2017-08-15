@@ -10,24 +10,22 @@ import UIKit
 
 class QuotesTableViewController: UITableViewController {
     
-    private var quotes: [Quote] {
-        return Array(Database.shared.user.quotes)
-    }
-
+    var quotes: [Quote] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //register nibs:
         let nibName = UINib(nibName: "QuoteCell", bundle:nil)
         self.tableView.register(nibName, forCellReuseIdentifier: "QuoteCell")
-        self.view.layer.contents = UIImage(named: "shift-bg")?.cgImage
+       
 
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 40
-        
+        self.tableView.backgroundColor = .clear
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
+        self.quotes = Array(Database.shared.user.quotes)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +35,10 @@ class QuotesTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if let parentVC = self.parent {
+            parentVC.navigationItem.rightBarButtonItem = self.editButtonItem
+            parentVC.title = "Quotes"
+        }
         self.tableView.reloadData()
     }
 
@@ -57,12 +59,18 @@ class QuotesTableViewController: UITableViewController {
         cell.setQuote(label: quote.title, author: quote.author)
         return cell
     }
-
-    // MARK: - User Action
     
-    @IBAction func addItem(_ sender: Any?) {
-        let vc = UIStoryboard(name: "QuotesViewController", bundle: nil).instantiateViewController(withIdentifier: "NewQuoteNav")
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        self.present(vc, animated: true, completion: nil)
+        if editingStyle == .delete {
+            
+            let quote = self.quotes[indexPath.row]
+            Database.shared.user.remove(quote: quote)
+            self.quotes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
     }
+
 }

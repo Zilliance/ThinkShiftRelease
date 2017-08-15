@@ -19,17 +19,27 @@ class MusicTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.layer.contents = UIImage(named: "shift-bg")?.cgImage
         
         //register nibs:
         let nibName = UINib(nibName: "MediaCell", bundle:nil)
         self.tableView.register(nibName, forCellReuseIdentifier: "MediaCell")
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
+        self.tableView.backgroundColor = .clear
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.mediaPicker.delegate = self
         
         self.loadItems()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let parentVC = self.parent {
+            parentVC.navigationItem.rightBarButtonItem = self.editButtonItem
+            parentVC.title = "Music"
+        }
+        self.tableView.reloadData()
 
     }
 

@@ -145,4 +145,8 @@ final class User: Object {
         }
     }
     
+    func remove(quote: Quote) {
+        Database.shared.delete(quote)
+    }
+    
 }

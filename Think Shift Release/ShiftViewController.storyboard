@@ -545,10 +545,10 @@
             </objects>
             <point key="canvasLocation" x="-601" y="3310"/>
         </scene>
-        <!--musicStoryboard-->
+        <!--MusicViewController-->
         <scene sceneID="45e-Uf-j87">
             <objects>
-                <viewControllerPlaceholder storyboardName="MusicViewController" referencedIdentifier="musicStoryboard" id="QRC-YQ-7SW" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MusicViewController" id="QRC-YQ-7SW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmJ-Ev-NCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-318" y="3376"/>
@@ -561,10 +561,10 @@
             </objects>
             <point key="canvasLocation" x="765" y="3316"/>
         </scene>
-        <!--quotesStoryboard-->
+        <!--QuotesViewController-->
         <scene sceneID="fw6-GN-RDU">
             <objects>
-                <viewControllerPlaceholder storyboardName="QuotesViewController" referencedIdentifier="quotesStoryboard" id="zoi-G2-hIb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="QuotesViewController" id="zoi-G2-hIb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pD-ry-2WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="177" y="3401"/>

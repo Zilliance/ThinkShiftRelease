@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6fr-H2-3CN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,12 +17,60 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Quotes View Controller-->
+        <scene sceneID="rkk-C2-6D8">
+            <objects>
+                <viewController id="6fr-H2-3CN" customClass="QuotesViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="407-z6-2Aw"/>
+                        <viewControllerLayoutGuide type="bottom" id="cfo-Mp-vYB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sPG-gY-UUj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRb-OU-WAC">
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2Sd-VP-YXc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                <state key="normal" title="ADD A NEW QUOTE" backgroundImage="no-button-bg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addItem:" destination="6fr-H2-3CN" eventType="touchUpInside" id="QgP-M8-QwN"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5H8-Ao-3Kn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="563"/>
+                                <connections>
+                                    <segue destination="wGv-3J-wz3" kind="embed" id="NGD-bN-lxr"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zRb-OU-WAC" secondAttribute="trailing" constant="20" id="1JA-gT-0Wq"/>
+                            <constraint firstItem="zRb-OU-WAC" firstAttribute="top" secondItem="5H8-Ao-3Kn" secondAttribute="bottom" constant="20" id="2Ce-tN-aqA"/>
+                            <constraint firstItem="cfo-Mp-vYB" firstAttribute="top" secondItem="zRb-OU-WAC" secondAttribute="bottom" constant="20" id="PM7-vo-LLl"/>
+                            <constraint firstAttribute="trailing" secondItem="5H8-Ao-3Kn" secondAttribute="trailing" id="QCd-8o-TQf"/>
+                            <constraint firstItem="zRb-OU-WAC" firstAttribute="leading" secondItem="sPG-gY-UUj" secondAttribute="leading" constant="20" id="ZSJ-GH-PI5"/>
+                            <constraint firstItem="5H8-Ao-3Kn" firstAttribute="top" secondItem="407-z6-2Aw" secondAttribute="bottom" id="jiF-E2-c6d"/>
+                            <constraint firstItem="5H8-Ao-3Kn" firstAttribute="leading" secondItem="sPG-gY-UUj" secondAttribute="leading" id="vz5-2I-1wD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTW-K9-BnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="3680"/>
+        </scene>
         <!--Quotes-->
         <scene sceneID="smf-fX-pnt">
             <objects>
                 <tableViewController storyboardIdentifier="quotesStoryboard" title="Quotes" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wGv-3J-wz3" customClass="QuotesTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pDi-Rq-HJh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -49,7 +97,7 @@
         <scene sceneID="gim-aj-FDq">
             <objects>
                 <navigationController storyboardIdentifier="NewQuoteNav" id="VCG-N0-VtB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0yJ-er-6g2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0yJ-er-6g2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -190,6 +238,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="no-button-bg" width="100" height="40"/>
         <image name="quote-icon-hex" width="44" height="50"/>
     </resources>
 </document>
