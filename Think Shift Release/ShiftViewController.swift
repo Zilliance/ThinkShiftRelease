@@ -32,8 +32,6 @@ class ShiftViewController: UIViewController, ShowsSummary {
         } else {
             self.stressorLabel.text = nil
         }
-
-        self.setupSummaryButton()
         
         // Segmented Control
         
@@ -46,6 +44,9 @@ class ShiftViewController: UIViewController, ShowsSummary {
             self.segmentedControl.selectedSegmentIndex = segment
             self.didMakeShiftSelection(self.segmentedControl)
             
+        }
+        else {
+            self.setupSummaryButton()
         }
         
         

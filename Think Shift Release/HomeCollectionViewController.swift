@@ -171,7 +171,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             assertionFailure()
             return
         }
-        vc.stressor = stressor
+        // pass stressor copy
+        vc.stressor = Stressor(value: stressor)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

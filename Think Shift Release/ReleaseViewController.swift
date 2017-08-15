@@ -19,6 +19,7 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var bottomView: UIView!
     
     var stressor: Stressor!
+    var segment: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,13 @@ class ReleaseViewController: UIViewController, ShowsSummary {
             self.stressorLabel.text = nil
         }
         
-        self.setupSummaryButton()
+        if let _ = self.segment {
+            
+        }
+        else {
+            
+            self.setupSummaryButton()
+        }
     }
 }
 

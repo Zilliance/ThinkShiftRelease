@@ -25,8 +25,7 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
     
     var stressor: Stressor? = nil {
         didSet {
-            self.notTalkWithLabel.text = stressor?.shiftBoundariesNotTalkWith
-            self.talkWithLabel.text = stressor?.shiftBoundariesDoTalkWith
+          self.refreshView()
         }
     }
 
@@ -41,6 +40,18 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
         self.talkCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(talkTap)))
         self.instantMoodCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(instantMoodTap)))
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.refreshView()
+    }
+    
+    private func refreshView() {
+        
+        self.notTalkWithLabel.text = self.stressor?.shiftBoundariesNotTalkWith
+        self.talkWithLabel.text = self.stressor?.shiftBoundariesDoTalkWith
+        
     }
 
 }
