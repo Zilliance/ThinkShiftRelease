@@ -20,6 +20,8 @@ class ShiftViewController: UIViewController, ShowsSummary {
     var stressor: Stressor!
     private var playbackObserver: NSObjectProtocol?
     
+    var segment: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,14 @@ class ShiftViewController: UIViewController, ShowsSummary {
         self.segmentedControl.tintColor = UIColor.navBar
         self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)
         self.segmentedControl.setTitleTextAttributes([NSFontAttributeName: UIFont.muliBold(size: 12.0), NSForegroundColorAttributeName: UIColor.navBar] , for: .normal)
+        
+        if let segment = self.segment {
+            
+            self.segmentedControl.selectedSegmentIndex = segment
+            self.didMakeShiftSelection(self.segmentedControl)
+            
+        }
+        
         
         // Embed Shift Mood
         

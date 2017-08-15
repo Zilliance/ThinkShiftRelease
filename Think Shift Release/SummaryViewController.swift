@@ -9,7 +9,17 @@
 import UIKit
 import PDFGenerator
 
+enum SummaryGoto {
+    case thinkFirstSegment
+    case thinkSecondSegment
+    case shiftFirstSegment
+    case shiftSecondSegment
+    case release
+}
+
 protocol SummaryItemViewController {
+    
+    var goto: ((SummaryGoto) -> ())? { get set }
     var stressor: Stressor? { get set }
 }
 
@@ -89,6 +99,14 @@ class SummaryViewController: UIViewController {
         
         // pre select first position
         self.collectionView.selectItem(at: IndexPath(item: self.itemSection.rawValue, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        
+        if var item = items[0].viewController as? SummaryItemViewController {
+            item.goto = {  [unowned self] goto in
+                
+                self.goto(summaryGoto: goto)
+                
+            }
+        }
     }
     
     fileprivate func showViewController(controller: UIViewController) {
@@ -118,10 +136,46 @@ class SummaryViewController: UIViewController {
         
         if var itemViewController = controller as? SummaryItemViewController {
             itemViewController.stressor = self.stressor
+            
+            itemViewController.goto = {  [unowned self] goto in
+                
+                self.goto(summaryGoto: goto)
+                
+            }
+
         }
         
     }
 
+    fileprivate func goto(summaryGoto: SummaryGoto) {
+        
+        guard let thinkViewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateInitialViewController() as? ThinkViewController, let shiftViewController = UIStoryboard(name: "ShiftViewController", bundle: nil).instantiateInitialViewController() as? ShiftViewController, let releaseViewController = UIStoryboard(name: "ReleaseViewController", bundle: nil).instantiateInitialViewController() as? ReleaseViewController else {
+            assertionFailure()
+            return
+        }
+        
+        thinkViewController.stressor = Stressor(value: self.stressor)
+        shiftViewController.stressor = Stressor(value: self.stressor)
+        releaseViewController.stressor = Stressor(value: self.stressor)
+        
+        switch summaryGoto {
+        case .thinkFirstSegment:
+            thinkViewController.segment = 0
+            self.navigationController?.pushViewController(thinkViewController, animated: true)
+        case .thinkSecondSegment:
+            thinkViewController.segment = 1
+            self.navigationController?.pushViewController(thinkViewController, animated: true)
+        case .shiftFirstSegment:
+            shiftViewController.segment = 0
+            self.navigationController?.pushViewController(shiftViewController, animated: true)
+        case .shiftSecondSegment:
+            shiftViewController.segment = 1
+            self.navigationController?.pushViewController(shiftViewController, animated: true)
+        case .release:
+            self.navigationController?.pushViewController(releaseViewController, animated: true)
+            
+        }
+    }
 
     //MARK -- User Actions
     

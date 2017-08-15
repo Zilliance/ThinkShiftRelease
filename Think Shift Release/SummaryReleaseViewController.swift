@@ -14,6 +14,12 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     @IBOutlet weak var affirmationLabel: UILabel!
     @IBOutlet weak var contentView: UIScrollView!
     
+    
+    @IBOutlet weak var intentionCard: CardView!
+    @IBOutlet weak var affirmationCard: CardView!
+    
+    var goto: ((SummaryGoto) -> ())? = nil
+    
     var stressor: Stressor? = nil {
         didSet {
             self.intentionLabel.text = stressor?.releaseIntention
@@ -24,5 +30,19 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.intentionCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(intentionTap)))
+        self.affirmationCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(affirmationTap)))
+
+    }
+}
+
+extension SummaryReleaseViewController {
+    
+    @objc fileprivate func intentionTap() {
+        self.goto?(.release)
+    }
+    
+    @objc fileprivate func affirmationTap() {
+        self.goto?(.release)
     }
 }
