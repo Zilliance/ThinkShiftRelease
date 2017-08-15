@@ -25,9 +25,7 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
     
     var stressor: Stressor? = nil {
         didSet {
-            self.betterFeelingLabel.text = stressor?.thinkBetterFeeling
-            self.actionStepLabel.text = stressor?.thinkActionStep
-            self.innerWisdomLabel.text = stressor?.thinkInnerWisdom
+            self.refreshView()
         }
         
         
@@ -38,6 +36,18 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
         self.innerWisdomCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(innerWisdomTap)))
         self.actionStepCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(actionStepTap)))
         self.betterFeelingCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(betterFeelingTap)))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.refreshView()
+    }
+    
+    private func refreshView() {
+        self.betterFeelingLabel.text = stressor?.thinkBetterFeeling
+        self.actionStepLabel.text = stressor?.thinkActionStep
+        self.innerWisdomLabel.text = stressor?.thinkInnerWisdom
+
     }
 
 }

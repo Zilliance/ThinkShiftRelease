@@ -26,7 +26,8 @@ extension ShowsSummary where Self: UIViewController {
             assertionFailure()
             return
         }
-        vc.stressor = self.stressor
+        //pass copy of stressor to summary
+        vc.stressor = Stressor(value: self.stressor)
         let nc = UINavigationController(rootViewController: vc)
         self.present(nc, animated: true, completion: nil)
     }

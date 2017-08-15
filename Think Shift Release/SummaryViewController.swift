@@ -109,6 +109,43 @@ class SummaryViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        let loadedVC = self.items.map { $0.viewController }.filter { $0.isViewLoaded }.last
+        
+        if var item = loadedVC as? SummaryItemViewController {
+            
+            item.stressor = self.stressor
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        if (self.isMovingToParentViewController) {
+            self.updateDatabase()
+        }
+        
+    }
+    
+    private func updateDatabase() {
+        
+        let update = Database.shared.user.stressors.filter { $0.id == self.stressor.id }.count > 0
+        
+        if (update) {
+            Database.shared.add(realmObject: self.stressor, update: true)
+        }
+        else {
+            Database.shared.save {
+                Database.shared.user.stressors.append(self.stressor)
+            }
+        }
+    }
+    
+    
     fileprivate func showViewController(controller: UIViewController) {
         
         if (currentViewController != nil)
@@ -154,9 +191,9 @@ class SummaryViewController: UIViewController {
             return
         }
         
-        thinkViewController.stressor = Stressor(value: self.stressor)
-        shiftViewController.stressor = Stressor(value: self.stressor)
-        releaseViewController.stressor = Stressor(value: self.stressor)
+        thinkViewController.stressor = self.stressor
+        shiftViewController.stressor = self.stressor
+        releaseViewController.stressor = self.stressor
         
         switch summaryGoto {
         case .thinkFirstSegment:

@@ -22,8 +22,7 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     
     var stressor: Stressor? = nil {
         didSet {
-            self.intentionLabel.text = stressor?.releaseIntention
-            self.affirmationLabel.text = stressor?.releaseAffirmation
+            self.refreshView()
         }
     }
     
@@ -33,6 +32,16 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
         self.intentionCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(intentionTap)))
         self.affirmationCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(affirmationTap)))
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.refreshView()
+    }
+    
+    private func refreshView() {
+        self.intentionLabel.text = stressor?.releaseIntention
+        self.affirmationLabel.text = stressor?.releaseAffirmation
     }
 }
 
