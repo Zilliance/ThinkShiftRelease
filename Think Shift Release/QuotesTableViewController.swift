@@ -10,10 +10,8 @@ import UIKit
 
 class QuotesTableViewController: UITableViewController {
     
-    private var quotes: [Quote] {
-        return Array(Database.shared.user.quotes)
-    }
-
+    private var quotes: [Quote] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +25,8 @@ class QuotesTableViewController: UITableViewController {
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.quotes = Array(Database.shared.user.quotes)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +56,20 @@ class QuotesTableViewController: UITableViewController {
         cell.setQuote(label: quote.title, author: quote.author)
         return cell
     }
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let quote = self.quotes[indexPath.row]
+            Database.shared.user.remove(quote: quote)
+            self.quotes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
+
 
     // MARK: - User Action
     

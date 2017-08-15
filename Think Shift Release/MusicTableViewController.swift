@@ -26,7 +26,7 @@ class MusicTableViewController: UITableViewController {
         self.tableView.register(nibName, forCellReuseIdentifier: "MediaCell")
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem(_:)))
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.mediaPicker.delegate = self
         
         self.loadItems()
