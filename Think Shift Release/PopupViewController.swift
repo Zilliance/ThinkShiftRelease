@@ -11,6 +11,7 @@ import UIKit
 class PopupViewController: UIViewController {
     
     var yesAction: (() -> ())? = nil
+    var noAction: (() -> ())? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,9 @@ class PopupViewController: UIViewController {
     //MARK - User Actions
 
     @IBAction func noAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) { [unowned self] in
+            self.noAction?()
+        }
     }
 
     @IBAction func yesAction(_ sender: Any) {
