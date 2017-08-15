@@ -65,12 +65,13 @@ final class VideoViewControllerContainer: UIViewController {
         guard let selectedIndexes = self.videoViewController.collectionView?.indexPathsForSelectedItems else {
             return
         }
+        let videoPaths = Database.shared.user.videoPaths
         
         let selectedItems: [Video] = selectedIndexes.map {
-            return Database.shared.user.videoPaths[$0.row]
+            return videoPaths[$0.row]
         }
         
-        Database.shared.deleteObjects(selectedItems)
+        Database.shared.user.deleteVideos(objects: selectedItems)
         
         self.videoViewController.reloadVideos()
 

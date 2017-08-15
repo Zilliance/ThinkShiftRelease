@@ -117,6 +117,32 @@ final class User: Object {
             }.first
     }
     
+    func deleteImages(objects: [Image]) {
 
+        try? Database.shared.realm.write {
+            objects.forEach { (image) in
+                if let index = imagesPaths.index(of: image) {
+                    self.imagesPaths.remove(objectAtIndex: index)
+                }
+                Database.shared.realm.delete(image)
+
+            }
+        }
+        
+    }
+    
+    func deleteVideos(objects: [Video]) {
+        
+        try? Database.shared.realm.write {
+            objects.forEach { (video) in
+                if let index = videoPaths.index(of: video) {
+                    self.videoPaths.remove(objectAtIndex: index)
+                }
+                
+                Database.shared.realm.delete(video)
+            }
+            
+        }
+    }
     
 }

@@ -66,11 +66,13 @@ final class ImagesViewControllerContainer: UIViewController {
             return
         }
         
+        let imagePaths = Database.shared.user.imagesPaths
+        
         let selectedItems: [Image] = selectedIndexes.map {
-            return Database.shared.user.imagesPaths[$0.row]
+            return imagePaths[$0.row]
         }
         
-        Database.shared.deleteObjects(selectedItems)
+        Database.shared.user.deleteImages(objects: selectedItems)
         
         self.imagesViewController.reloadImages()
         
