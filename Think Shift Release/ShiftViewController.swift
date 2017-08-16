@@ -51,8 +51,9 @@ class ShiftViewController: UIViewController, ShowsSummary {
             self.setupSummaryButton()
         }
         
-        self.newStressor = { stressor in
-            self.stressor = Stressor(value: stressor)
+        self.newStressor = { [unowned self] stressor in
+            self.stressor.shiftBoundariesDoTalkWith = stressor.shiftBoundariesDoTalkWith
+            self.stressor.shiftBoundariesNotTalkWith = stressor.shiftBoundariesNotTalkWith
             self.didMakeShiftSelection(self.segmentedControl)
         }
         

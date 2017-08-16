@@ -26,8 +26,9 @@ class ReleaseViewController: UIViewController, ShowsSummary {
         super.viewDidLoad()
         self.setupView()
         
-        self.newStressor = { stressor in
-            self.stressor = Stressor(value: stressor)
+        self.newStressor = { [unowned self] stressor in
+            self.stressor.releaseIntention = stressor.releaseIntention
+            self.stressor.releaseAffirmation = stressor.releaseAffirmation
             self.setupView()
             
         }
