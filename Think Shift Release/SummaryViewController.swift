@@ -113,8 +113,8 @@ class SummaryViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         let loadedVCs = self.items.map { $0.viewController }.filter { $0.isViewLoaded } as? [SummaryItemViewController]
         

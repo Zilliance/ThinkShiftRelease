@@ -19,6 +19,11 @@ class ThinkPositivelyViewController: UIViewController {
         super.viewDidLoad()
         self.setupViews()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
 
     private func setupViews() {
         
@@ -46,14 +51,9 @@ extension ThinkPositivelyViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
-            self.save()
             textView.resignFirstResponder()
             return false
         }
         return true
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        self.save()
     }
 }

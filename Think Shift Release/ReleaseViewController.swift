@@ -26,6 +26,11 @@ class ReleaseViewController: UIViewController, ShowsSummary {
         self.setupView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
+    
     private func setupView() {
         
         self.bottomView.layer.contents = UIImage(named: "release-bg")?.cgImage
@@ -80,14 +85,9 @@ extension ReleaseViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
-            self.save()
             textView.resignFirstResponder()
             return false
         }
         return true
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        self.save()
     }
 }

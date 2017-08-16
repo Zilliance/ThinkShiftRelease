@@ -48,7 +48,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        self.save()
         if let playbackObserver = self.playbackObserver {
             NotificationCenter.default.removeObserver(playbackObserver)
         }
@@ -232,14 +232,10 @@ extension ThinkViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
-            self.save()
             textView.resignFirstResponder()
             return false
         }
         return true
     }
     
-    func textViewDidEndEditing(_ textView: UITextView) {
-        self.save()
-    }
 }

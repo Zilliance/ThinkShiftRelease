@@ -20,6 +20,11 @@ class ShiftSetBoundariesViewController: UIViewController {
         super.viewDidLoad()
         self.setupView()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
 
     private func setupView() {
         self.view.backgroundColor = .clear
@@ -50,14 +55,10 @@ extension ShiftSetBoundariesViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
-            self.save()
             textView.resignFirstResponder()
             return false
         }
         return true
     }
     
-    func textViewDidEndEditing(_ textView: UITextView) {
-        self.save()
-    }
 }
