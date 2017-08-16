@@ -24,6 +24,8 @@ class ThinkViewController: UIViewController, ShowsSummary {
     private var playbackObserver: NSObjectProtocol?
     var segment: Int?
     
+    var newStressor: ((Stressor) -> ())? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +39,12 @@ class ThinkViewController: UIViewController, ShowsSummary {
         }
         else {
             self.setupSummaryButton()
+        }
+        
+        self.newStressor = { stressor in
+            self.stressor = Stressor(value: stressor)
+            self.setupView()
+
         }
         
         // Embed Think Constructively

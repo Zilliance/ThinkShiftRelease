@@ -18,6 +18,8 @@ class ShiftViewController: UIViewController, ShowsSummary {
     private var embeddedViewController: UIViewController?
     
     var stressor: Stressor!
+    var newStressor: ((Stressor) -> ())? = nil
+    
     private var playbackObserver: NSObjectProtocol?
     
     var segment: Int?
@@ -49,6 +51,10 @@ class ShiftViewController: UIViewController, ShowsSummary {
             self.setupSummaryButton()
         }
         
+        self.newStressor = { stressor in
+            self.stressor = Stressor(value: stressor)
+            self.didMakeShiftSelection(self.segmentedControl)
+        }
         
         // Embed Shift Mood
         

@@ -75,6 +75,7 @@ class SummaryViewController: UIViewController {
     var itemSection: ItemSection = .think
     
     var stressor: Stressor!
+    var updatedStressor: ((Stressor) -> ())?
     
     fileprivate var currentViewController: UIViewController?
     
@@ -130,7 +131,8 @@ class SummaryViewController: UIViewController {
         
         if let navigationController = self.navigationController {
             if (self.isMovingToParentViewController || navigationController.isBeingDismissed) {
-                 self.updateDatabase()
+                self.updatedStressor?(self.stressor)
+                self.updateDatabase()
             }
         }
         

@@ -19,11 +19,18 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var bottomView: UIView!
     
     var stressor: Stressor!
+    var newStressor: ((Stressor) -> ())? = nil
     var segment: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
+        self.newStressor = { stressor in
+            self.stressor = Stressor(value: stressor)
+            self.setupView()
+            
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
