@@ -52,6 +52,20 @@ class ReleaseViewController: UIViewController, ShowsSummary {
             self.setupSummaryButton()
         }
     }
+    
+    // MARK: - Learn More
+    
+    @IBAction func learnMoreAboutIntention(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("intention learn more", comment: ""))
+    }
+    
+    @IBAction func learnMoreAboutAffirmation(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("affirmation learn more", comment: ""))
+    }
+    
+    @IBAction func learnMoreAboutBreathe(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("breathe learn more", comment: ""))
+    }
 }
 
 extension ReleaseViewController: StressorEditor {

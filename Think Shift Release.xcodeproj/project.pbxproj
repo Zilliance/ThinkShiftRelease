@@ -133,6 +133,9 @@
 		E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */; };
 		E38608F01F18055000816DF4 /* UIMockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */; };
 		E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */; };
+		E38CB6051F44DE1C004AFEA4 /* LearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38CB6041F44DE1C004AFEA4 /* LearnMoreViewController.swift */; };
+		E38CB6071F44DE22004AFEA4 /* LearnMore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38CB6061F44DE22004AFEA4 /* LearnMore.storyboard */; };
+		E38CB6091F44E3D1004AFEA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38CB6081F44E3D1004AFEA4 /* Localizable.strings */; };
 		E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B761F21BB670060FED4 /* Stressor.swift */; };
 		E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B781F21BB9A0060FED4 /* Database.swift */; };
 		E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B7A1F21BBBC0060FED4 /* User.swift */; };
@@ -306,6 +309,9 @@
 		E38608ED1F18007B00816DF4 /* ShiftMoodShiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftMoodShiftViewController.swift; sourceTree = "<group>"; };
 		E38608EF1F18055000816DF4 /* UIMockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockTableViewController.swift; sourceTree = "<group>"; };
 		E38608F11F18056000816DF4 /* UIMockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockTableViewCell.swift; sourceTree = "<group>"; };
+		E38CB6041F44DE1C004AFEA4 /* LearnMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnMoreViewController.swift; sourceTree = "<group>"; };
+		E38CB6061F44DE22004AFEA4 /* LearnMore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearnMore.storyboard; sourceTree = "<group>"; };
+		E38CB6081F44E3D1004AFEA4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E3A30B761F21BB670060FED4 /* Stressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stressor.swift; sourceTree = "<group>"; };
 		E3A30B781F21BB9A0060FED4 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		E3A30B7A1F21BBBC0060FED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -607,6 +613,7 @@
 				E378284C1F196DA2005E91A8 /* Summary */,
 				8C2B13CD1F3E56AE002C0353 /* Schedule */,
 				E312B3571F4219CB00F2F5F0 /* Section Animations */,
+				E38CB6031F44DDF7004AFEA4 /* Learn More Popup */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -737,6 +744,15 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		E38CB6031F44DDF7004AFEA4 /* Learn More Popup */ = {
+			isa = PBXGroup;
+			children = (
+				E38CB6061F44DE22004AFEA4 /* LearnMore.storyboard */,
+				E38CB6041F44DE1C004AFEA4 /* LearnMoreViewController.swift */,
+			);
+			name = "Learn More Popup";
+			sourceTree = "<group>";
+		};
 		E3BE78E31F3534C60063A6A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +768,7 @@
 				E312B3491F4219A400F2F5F0 /* Instant Mood Shifters.mp4 */,
 				E312B34D1F4219A400F2F5F0 /* Setting Boundaries.mp4 */,
 				E312B34C1F4219A400F2F5F0 /* Release.mp4 */,
+				E38CB6081F44E3D1004AFEA4 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -906,9 +923,11 @@
 				8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */,
 				E312B3511F4219AB00F2F5F0 /* Main Shift.mp4 in Resources */,
 				8C2B13F41F4387CD002C0353 /* Popup2.storyboard in Resources */,
+				E38CB6091F44E3D1004AFEA4 /* Localizable.strings in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
 				E312B3561F4219AB00F2F5F0 /* Think Positively.mp4 in Resources */,
 				8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */,
+				E38CB6071F44DE22004AFEA4 /* LearnMore.storyboard in Resources */,
 				8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */,
 				8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */,
 				8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */,
@@ -1105,6 +1124,7 @@
 				E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */,
 				E312B3611F42459800F2F5F0 /* SectionAnimationViewController.swift in Sources */,
 				4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */,
+				E38CB6051F44DE1C004AFEA4 /* LearnMoreViewController.swift in Sources */,
 				8C2B13D61F3E5796002C0353 /* ScheduleNotificationTableViewController.swift in Sources */,
 				E312B35D1F421C8E00F2F5F0 /* AnimationModalTransition.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,

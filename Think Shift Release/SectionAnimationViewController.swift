@@ -44,9 +44,15 @@ protocol SectionAnimationDelegate {
 }
 
 class SectionAnimationViewController: UIViewController {
+    enum Source {
+        case card
+        case icon
+    }
+    
     var playerViewController: AVPlayerViewController!
     var delegate: SectionAnimationDelegate?
     var animation: SectionAnimation?
+    var source: Source?
     
     var isFullScreen: Bool {
         return self.playerViewController.videoBounds.width > AnimationPresentationController.width

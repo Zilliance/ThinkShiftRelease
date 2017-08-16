@@ -37,7 +37,6 @@ class ShiftSetBoundariesViewController: UIViewController {
         
     }
 
-
 }
 
 extension ShiftSetBoundariesViewController: StressorEditor {

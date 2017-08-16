@@ -34,7 +34,12 @@ class ThinkConstructivelyViewController: UIViewController {
         
         self.view.backgroundColor = .clear
     }
-
+    
+    // MARK: - Learn More
+    
+    @IBAction func learnMoreAboutInnerWisdom(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("inner wisdom learn more", comment: ""))
+    }
 }
 
 extension ThinkConstructivelyViewController: StressorEditor {

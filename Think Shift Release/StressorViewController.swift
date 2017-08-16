@@ -49,6 +49,7 @@ class StressorViewController: UIViewController {
     
     private func setupView() {
         self.title = "New Stressor"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         for button in [self.thinkButton, self.shiftButton, self.releaseButton] as [UIButton] {
             button.imageView?.contentMode = .scaleAspectFit
@@ -91,7 +92,7 @@ class StressorViewController: UIViewController {
             self.showThinkCards()
         } else {
             UserDefaults.standard.setHasPlayed(animation: .think)
-            self.play(animation: .think, completion: nil)
+            self.play(animation: .think, fromCard: true, completion: nil)
         }
     }
     
@@ -105,7 +106,7 @@ class StressorViewController: UIViewController {
             self.performSegue(withIdentifier: "ShiftSegue", sender: nil)
         } else {
             UserDefaults.standard.setHasPlayed(animation: .shift)
-            self.play(animation: .shift, completion: nil)
+            self.play(animation: .shift, fromCard: true, completion: nil)
         }
     }
     
@@ -119,8 +120,25 @@ class StressorViewController: UIViewController {
            self.performSegue(withIdentifier: "ReleaseSegue", sender: nil)
         } else {
             UserDefaults.standard.setHasPlayed(animation: .release)
-            self.play(animation: .release, completion: nil)
+            self.play(animation: .release, fromCard: true, completion: nil)
         }
+    }
+    
+    // MARK: - Tap to Play Video
+    
+    @IBAction func playThinkVideo() {
+        self.play(animation: .think, fromCard: false, completion: nil)
+        UserDefaults.standard.setHasPlayed(animation: .think)
+    }
+    
+    @IBAction func playShiftVideo() {
+        self.play(animation: .shift, fromCard: false, completion: nil)
+        UserDefaults.standard.setHasPlayed(animation: .shift)
+    }
+    
+    @IBAction func playReleaseVideo() {
+        self.play(animation: .release, fromCard: false, completion: nil)
+        UserDefaults.standard.setHasPlayed(animation: .release)
     }
     
     // MARK: - Alerts and Videos
@@ -155,7 +173,7 @@ class StressorViewController: UIViewController {
         self.present(popupViewController, animated: true, completion: nil)
     }
     
-    private func play(animation: SectionAnimation, completion: (()->Void)?) {
+    private func play(animation: SectionAnimation, fromCard: Bool, completion: (()->Void)?) {
         let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
         let host = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! SectionAnimationViewController
         
@@ -164,6 +182,7 @@ class StressorViewController: UIViewController {
         host.playerViewController.player = player
         host.transitioningDelegate = self
         host.modalPresentationStyle = .custom
+        host.source = fromCard ? .card : .icon
         host.animation = animation
         host.delegate = self
         
@@ -245,6 +264,10 @@ extension StressorViewController: UIViewControllerTransitioningDelegate {
 
 extension StressorViewController: SectionAnimationDelegate {
     func didDimiss(_ viewController: SectionAnimationViewController) {
+        // Only take the next action if the user tapped from the card and not the video icon
+        guard viewController.source == .card else {
+            return
+        }
         
         switch viewController.animation {
         case .think?:
