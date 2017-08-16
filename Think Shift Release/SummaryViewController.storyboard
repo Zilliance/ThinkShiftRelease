@@ -706,7 +706,7 @@ and instead experience _________ .</string>
                                                 </constraints>
                                             </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTf-PS-E5X" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="150" width="335" height="120"/>
+                                                <rect key="frame" x="20" y="230" width="335" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="fvT-sx-Uli"/>
                                                 </constraints>
@@ -783,7 +783,7 @@ and instead experience _________ .</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release meditation Instrumental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-8H-iGI">
-                                            <rect key="frame" x="68" y="10" width="235" height="14"/>
+                                            <rect key="frame" x="68" y="10" width="195" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="wvX-H1-9tF"/>
                                             </constraints>
@@ -792,7 +792,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenght" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-8u-wCm">
-                                            <rect key="frame" x="68" y="24" width="235" height="14"/>
+                                            <rect key="frame" x="68" y="24" width="195" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="ylp-sz-mhh"/>
                                             </constraints>
@@ -801,7 +801,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9M-sd-GlI">
-                                            <rect key="frame" x="313" y="15.5" width="42" height="20"/>
+                                            <rect key="frame" x="273" y="15.5" width="42" height="20"/>
                                             <color key="backgroundColor" red="0.16078431369999999" green="0.4823529412" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Zdc-XP-OnS"/>

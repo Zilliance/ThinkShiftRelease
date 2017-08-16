@@ -56,4 +56,8 @@ extension ShiftSetBoundariesViewController: UITextViewDelegate {
         }
         return true
     }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.save()
+    }
 }

@@ -113,25 +113,27 @@ class SummaryViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
-        let loadedVC = self.items.map { $0.viewController }.filter { $0.isViewLoaded }.last
+        let loadedVCs = self.items.map { $0.viewController }.filter { $0.isViewLoaded } as? [SummaryItemViewController]
         
-        if var item = loadedVC as? SummaryItemViewController {
-            
-            item.stressor = self.stressor
-        }
+        loadedVCs?.forEach({ item in
+            var itemvc = item
+            itemvc.stressor = self.stressor
+        })
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        if (self.isMovingToParentViewController) {
-            self.updateDatabase()
+        if let navigationController = self.navigationController {
+            if (self.isMovingToParentViewController || navigationController.isBeingDismissed) {
+                 self.updateDatabase()
+            }
         }
+        
         
     }
     
