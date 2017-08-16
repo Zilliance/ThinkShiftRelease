@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eGY-Dw-N4x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eGY-Dw-N4x">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -197,10 +197,12 @@
                                         <rect key="frame" x="15" y="80" width="305" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Not talk about with input"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
+                                                <string key="value">For example, I will not think or talk about everything I have to do when I am with my family and friends. I want to be present and enjoy our time together.</string>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="LO6-XO-zk2" id="shM-CG-Qzb"/>
@@ -247,10 +249,12 @@
                                         <rect key="frame" x="15" y="85.5" width="305" height="54.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Talk about with input"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
+                                                <string key="value">For example, I will think about my to-do list for 15 minutes at the start of my work day and use that time prioritize what I actually need to get done. I will also talk about it with Sue tomorrow and see what tasks I can delegate to her. </string>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="LO6-XO-zk2" id="Bgk-aF-ufZ"/>

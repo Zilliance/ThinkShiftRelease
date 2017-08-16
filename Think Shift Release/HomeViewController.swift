@@ -63,6 +63,7 @@ class HomeViewController: UIViewController {
         
         self.present(navigation, animated: true)
     }
+    
     @IBAction func menuAction(_ sender: UIBarButtonItem) {
         self.sideMenuController?.toggle()
     }

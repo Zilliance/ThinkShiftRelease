@@ -175,6 +175,12 @@ class ThinkViewController: UIViewController, ShowsSummary {
         self.present(host, animated: true, completion: nil)
         player.play()
     }
+    
+    // MARK: - Learn More
+    
+    @IBAction func learnMoreAboutThoughts(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("think learn more", comment: ""))
+    }
 }
 
 // MARK: -

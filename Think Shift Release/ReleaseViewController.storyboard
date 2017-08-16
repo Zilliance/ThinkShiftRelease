@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FhI-cT-o6y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FhI-cT-o6y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,7 +62,7 @@
                                                                 <rect key="frame" x="15" y="80" width="305" height="60"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, I am at peace. I am loved. All is well."/>
@@ -84,11 +84,15 @@
                                                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a simple affirmation ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDS-LK-fOO">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an affirmation that evokes the feeling of your intention. Learn more." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDS-LK-fOO">
                                                                 <rect key="frame" x="75" y="39" width="252" height="15.5"/>
+                                                                <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="bLO-ao-wKD" appends="YES" id="0Aa-g0-m0p"/>
+                                                                </connections>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,17 +131,21 @@
                                                                     <constraint firstAttribute="height" constant="50" id="rWB-Wt-gja"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I can use the power of my intention ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an intention for what you want to release and the emotion you would like to experience instead. Learn more. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
                                                                 <rect key="frame" x="75" y="39" width="244" height="15.5"/>
+                                                                <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="5Mo-rj-VkO" appends="YES" id="FYG-NA-Pew"/>
+                                                                </connections>
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b7c-jd-IHN" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                                                 <rect key="frame" x="15" y="80" width="305" height="60"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
@@ -188,11 +196,15 @@ and instead experience _______ .</string>
                                                                     <segue destination="aOh-pM-Y7g" kind="embed" id="7A3-dg-1cQ"/>
                                                                 </connections>
                                                             </containerView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use your breath to experience the emotion ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-BV-gfn">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use your breath to achieve the feeling of your intention. Learn more." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-BV-gfn">
                                                                 <rect key="frame" x="75" y="39" width="250" height="15.5"/>
+                                                                <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="XgS-aB-1UD" appends="YES" id="fSq-Vz-omd"/>
+                                                                </connections>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="release-icon" translatesAutoresizingMaskIntoConstraints="NO" id="fvO-Pz-tUC">
                                                                 <rect key="frame" x="15" y="15" width="50" height="50"/>
@@ -312,6 +324,21 @@ and instead experience _______ .</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6B-ng-hTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5Mo-rj-VkO" userLabel="Intention Learn More Tap">
+                    <connections>
+                        <action selector="learnMoreAboutIntention:" destination="FhI-cT-o6y" id="JQs-WG-HOL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bLO-ao-wKD" userLabel="Affirmation Lean More Tap">
+                    <connections>
+                        <action selector="learnMoreAboutAffirmation:" destination="FhI-cT-o6y" id="w6g-y1-lFS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XgS-aB-1UD" userLabel="Breathe Learn More Tap">
+                    <connections>
+                        <action selector="learnMoreAboutBreathe:" destination="FhI-cT-o6y" id="sVa-ps-gh5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1328.8" y="2120.6896551724139"/>
         </scene>

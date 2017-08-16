@@ -28,6 +28,12 @@ class ThinkPositivelyViewController: UIViewController {
         
         self.view.backgroundColor = .clear
     }
+    
+    // MARK: - Learn More
+    
+    @IBAction func learnMoreAboutBetterFeelingThought(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("better feeling thought learn more", comment: ""))
+    }
 }
 
 extension ThinkPositivelyViewController: StressorEditor {
