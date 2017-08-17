@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PM4-6T-8G3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PM4-6T-8G3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -143,8 +143,8 @@
                                                         <constraint firstAttribute="height" constant="2" id="qUU-Az-5k5"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use what’s here or write your own" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwS-fk-TZA">
-                                                    <rect key="frame" x="20" y="73" width="193" height="15.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use what’s here or write your own." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwS-fk-TZA">
+                                                    <rect key="frame" x="20" y="73" width="196" height="15.5"/>
                                                     <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
                                                     <color key="textColor" red="0.25882352941176467" green="0.36470588235294116" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -385,8 +385,8 @@
                                             <segue destination="EJb-C2-6D7" kind="embed" id="rIn-ya-6HM"/>
                                         </connections>
                                     </containerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use what's here or write your own" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7y6-SR-bzK">
-                                        <rect key="frame" x="20" y="73" width="193.5" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use what's here or write your own." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7y6-SR-bzK">
+                                        <rect key="frame" x="20" y="73" width="196" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
                                         <color key="textColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>

@@ -41,6 +41,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRo-6c-pII" userLabel="BottomView">
                                                 <rect key="frame" x="0.0" y="261" width="375" height="406"/>
                                                 <subviews>
+                                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICS-4b-mfA" userLabel="Seg Con Background">
+                                                        <rect key="frame" x="30" y="20" width="315" height="30"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="315" id="R94-kq-3sX"/>
+                                                            <constraint firstAttribute="height" constant="30" id="w37-vb-UaU"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="zRk-VW-ka4">
                                                         <rect key="frame" x="30" y="20" width="315" height="31"/>
                                                         <constraints>
@@ -61,11 +74,15 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="ICS-4b-mfA" firstAttribute="top" secondItem="rRo-6c-pII" secondAttribute="top" constant="20" id="5pM-XH-obr"/>
                                                     <constraint firstItem="qLt-F0-hRq" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" id="Jbw-Yk-TMH"/>
+                                                    <constraint firstItem="qLt-F0-hRq" firstAttribute="top" secondItem="ICS-4b-mfA" secondAttribute="bottom" constant="20" id="LhH-jj-Fyk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ICS-4b-mfA" secondAttribute="trailing" constant="30" id="VbI-uI-oDz"/>
                                                     <constraint firstItem="zRk-VW-ka4" firstAttribute="top" secondItem="rRo-6c-pII" secondAttribute="top" constant="20" id="Z8V-ol-yTB"/>
                                                     <constraint firstItem="zRk-VW-ka4" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" constant="30" id="eLs-7S-Sgg"/>
                                                     <constraint firstItem="qLt-F0-hRq" firstAttribute="top" secondItem="zRk-VW-ka4" secondAttribute="bottom" constant="20" id="nAF-gF-Dl4"/>
                                                     <constraint firstAttribute="bottom" secondItem="qLt-F0-hRq" secondAttribute="bottom" id="rcs-eL-QO1"/>
+                                                    <constraint firstItem="ICS-4b-mfA" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" constant="30" id="s2c-jX-NAY"/>
                                                     <constraint firstAttribute="trailing" secondItem="qLt-F0-hRq" secondAttribute="trailing" id="u8W-i3-VGh"/>
                                                     <constraint firstAttribute="trailing" secondItem="zRk-VW-ka4" secondAttribute="trailing" constant="30" id="xz2-yo-9wE"/>
                                                 </constraints>
@@ -104,7 +121,7 @@
                                                         </connections>
                                                     </textView>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write your thoughts about this stressor. Learn more. I am upset because…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocM-w5-5KM">
-                                                        <rect key="frame" x="75" y="40" width="250" height="15.5"/>
+                                                        <rect key="frame" x="75" y="40" width="250" height="30.5"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -259,7 +276,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write what your Inner Wisdom says you need. Learn more. What do I need to feel better?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-uh-Se0">
-                                        <rect key="frame" x="75" y="41" width="250" height="15.5"/>
+                                        <rect key="frame" x="75" y="41" width="250" height="45.5"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                         <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>

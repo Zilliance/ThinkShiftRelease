@@ -47,7 +47,7 @@ class ActionPlanCell: UITableViewCell {
             self.recurrenceIndicatorView.backgroundColor = UIColor.lightGray
         }
         
-        let imageName = item.type == .calendar ? "calendar" : "notification"
+        let imageName = item.type == .calendar ? "iconCalendar" : "iconNotification"
         let image = UIImage(named: imageName)
         self.notificationTypeImageView.image = image
         

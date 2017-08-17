@@ -63,7 +63,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
         }
 
         if let title = self.stressor.title {
-            self.stressorLabel.text = "I am stressed out about \(title)"
+            self.stressorLabel.text = "I am upset about \(title)"
         } else {
             self.stressorLabel.text = nil
         }
