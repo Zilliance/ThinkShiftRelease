@@ -36,6 +36,7 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
         self.innerWisdomCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(innerWisdomTap)))
         self.actionStepCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(actionStepTap)))
         self.betterFeelingCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(betterFeelingTap)))
+        self.view.layer.contents = UIImage(named: "think-bg")?.cgImage
     }
     
     override func viewWillAppear(_ animated: Bool) {

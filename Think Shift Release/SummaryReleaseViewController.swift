@@ -31,6 +31,7 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
         
         self.intentionCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(intentionTap)))
         self.affirmationCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(affirmationTap)))
+        self.view.layer.contents = UIImage(named: "release-bg")?.cgImage
 
     }
     

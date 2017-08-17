@@ -39,6 +39,7 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
         self.notTalkCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(notTalkTap)))
         self.talkCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(talkTap)))
         self.instantMoodCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(instantMoodTap)))
+        self.view.layer.contents = UIImage(named: "shift-bg")?.cgImage
 
     }
     
