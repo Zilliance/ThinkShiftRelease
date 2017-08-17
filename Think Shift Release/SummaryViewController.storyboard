@@ -845,6 +845,7 @@ and instead experience _________ .</string>
                     <connections>
                         <outlet property="affirmationCard" destination="IjQ-Rb-FOy" id="Rek-xj-H9M"/>
                         <outlet property="affirmationLabel" destination="Crl-Mj-xGk" id="MNj-1X-9fh"/>
+                        <outlet property="breatheCardHeight" destination="A7b-zM-aeP" id="F3U-Ns-q4w"/>
                         <outlet property="contentView" destination="j85-le-K4J" id="KpU-3G-aj0"/>
                         <outlet property="intentionCard" destination="cGf-k0-Lb1" id="LnN-Ji-kqy"/>
                         <outlet property="intentionLabel" destination="5M2-rn-Nk1" id="j8w-DC-Thy"/>
@@ -878,7 +879,7 @@ and instead experience _________ .</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release meditation Instrumental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-8H-iGI">
-                                            <rect key="frame" x="68" y="10" width="235" height="14"/>
+                                            <rect key="frame" x="68" y="10" width="165" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="wvX-H1-9tF"/>
                                             </constraints>
@@ -887,7 +888,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenght" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-8u-wCm">
-                                            <rect key="frame" x="68" y="24" width="235" height="14"/>
+                                            <rect key="frame" x="68" y="24" width="165" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="ylp-sz-mhh"/>
                                             </constraints>
@@ -896,7 +897,7 @@ and instead experience _________ .</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9M-sd-GlI">
-                                            <rect key="frame" x="313" y="15.5" width="42" height="20"/>
+                                            <rect key="frame" x="243" y="15.5" width="42" height="20"/>
                                             <color key="backgroundColor" red="0.16078431369999999" green="0.4823529412" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Zdc-XP-OnS"/>

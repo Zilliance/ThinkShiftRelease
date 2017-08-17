@@ -325,6 +325,7 @@ extension SummaryViewController {
         shiftVC.view.layoutIfNeeded()
 
         let releaseVC = storyboard.instantiateViewController(withIdentifier: "release") as! SummaryReleaseViewController
+        releaseVC.breatheCardHidden = true
         releaseVC.view.frame = self.view.frame
         releaseVC.view.layoutIfNeeded() 
         

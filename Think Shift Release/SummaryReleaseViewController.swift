@@ -17,6 +17,9 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     
     @IBOutlet weak var intentionCard: CardView!
     @IBOutlet weak var affirmationCard: CardView!
+    @IBOutlet weak var breatheCardHeight: NSLayoutConstraint!
+    
+    var breatheCardHidden = false
     
     var goto: ((SummaryGoto) -> ())? = nil
     
@@ -28,6 +31,10 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (self.breatheCardHidden) {
+            self.breatheCardHeight.constant = 0
+        }
         
         self.intentionCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(intentionTap)))
         self.affirmationCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(affirmationTap)))
