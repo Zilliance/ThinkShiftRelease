@@ -14,6 +14,7 @@ extension UIColor {
     static let darkBlue = UIColor.color(forRed: 30.0, green: 43.0, blue: 62.0, alpha: 1)
     static let darkBlueText = UIColor.color(forRed: 32, green: 49, blue: 65, alpha: 1)
     static let navBar = UIColor.color(forRed: 51.0, green: 74.0, blue: 95.0, alpha: 1)
+    static let sectionDescriptionColor = UIColor.color(forRed: 74, green: 74, blue: 74, alpha: 1)
 
     static let silverColor = UIColor.color(forRed: 225, green: 225, blue: 228, alpha: 1)
 

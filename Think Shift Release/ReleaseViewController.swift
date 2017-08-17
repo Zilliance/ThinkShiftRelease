@@ -16,6 +16,9 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var experienceTextView: KMPlaceholderTextView!
     @IBOutlet weak var stressorLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var intentionDescription: UILabel!
+    @IBOutlet weak var affirmationDescription: UILabel!
+    @IBOutlet weak var breatheDescription: UILabel!
     
     @IBOutlet weak var bottomView: UIView!
     
@@ -68,11 +71,13 @@ class ReleaseViewController: UIViewController, ShowsSummary {
         
         if let _ = self.segment {
             
-        }
-        else {
-            
+        } else {
             self.setupSummaryButton()
         }
+        
+        self.intentionDescription.attributedText = self.intentionDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
+        self.affirmationDescription.attributedText = self.affirmationDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
+        self.breatheDescription.attributedText = self.breatheDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
     }
     
     // MARK: - Learn More

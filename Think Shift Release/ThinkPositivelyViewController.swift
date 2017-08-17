@@ -12,6 +12,8 @@ import KMPlaceholderTextView
 class ThinkPositivelyViewController: UIViewController {
 
     @IBOutlet weak var textView: KMPlaceholderTextView!
+    @IBOutlet weak var betterFeelingThought: UILabel!
+
     
     var stressor: Stressor!
     
@@ -36,6 +38,8 @@ class ThinkPositivelyViewController: UIViewController {
         }
         
         self.view.backgroundColor = .clear
+        
+        self.betterFeelingThought.attributedText = self.betterFeelingThought.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
     }
     
     // MARK: - Learn More
