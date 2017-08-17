@@ -13,6 +13,7 @@ protocol ShowsSummary {
     func setupSummaryButton()
     func viewSummary(_ sender: Any?)
     var newStressor: ((Stressor) -> ())? { get set }
+    var summarySection: ItemSection! { get set }
 }
 
 extension ShowsSummary where Self: UIViewController {
@@ -29,6 +30,7 @@ extension ShowsSummary where Self: UIViewController {
         }
         //pass copy of stressor to summary
         vc.stressor = Stressor(value: self.stressor)
+        vc.itemSection = self.summarySection
         vc.updatedStressor = { stressor in
             self.newStressor?(stressor)
         }

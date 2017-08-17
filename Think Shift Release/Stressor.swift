@@ -18,7 +18,7 @@ final class Stressor: Object {
     dynamic var title: String?
     
     var completed: Bool {
-        let strings = [self.thinkThoughts, self.thinkInnerWisdom, self.thinkActionStep, self.thinkBetterFeeling, self.shiftBoundariesDoTalkWith, self.shiftBoundariesNotTalkWith, self.releaseIntention, self.releaseAffirmation]
+        let strings = [self.thinkThoughts, self.thinkInnerWisdom, self.thinkActionStep, self.thinkBetterFeeling, self.shiftBoundariesDoTalkWith, self.shiftBoundariesNotTalkWith, self.releaseMyIntention, self.releaseAffirmation, self.releaseInsteadExperience]
         return strings.flatMap { $0 }.filter { $0.isEmpty == false }.count == strings.count
     }
     
@@ -35,7 +35,8 @@ final class Stressor: Object {
     dynamic var shiftBoundariesDoTalkWith: String?
     
     //release
-    dynamic var releaseIntention: String?
+    dynamic var releaseMyIntention: String?
+    dynamic var releaseInsteadExperience: String?
     dynamic var releaseAffirmation: String?
     
 }

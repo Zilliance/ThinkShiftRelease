@@ -19,6 +19,7 @@ class ShiftViewController: UIViewController, ShowsSummary {
     
     var stressor: Stressor!
     var newStressor: ((Stressor) -> ())? = nil
+    var summarySection: ItemSection! = .shift
     
     private var playbackObserver: NSObjectProtocol?
     
@@ -54,7 +55,6 @@ class ShiftViewController: UIViewController, ShowsSummary {
         self.newStressor = { [unowned self] stressor in
             self.stressor.shiftBoundariesDoTalkWith = stressor.shiftBoundariesDoTalkWith
             self.stressor.shiftBoundariesNotTalkWith = stressor.shiftBoundariesNotTalkWith
-            self.didMakeShiftSelection(self.segmentedControl)
         }
         
         // Embed Shift Mood

@@ -13,6 +13,7 @@ class ReleaseViewController: UIViewController, ShowsSummary {
 
     @IBOutlet weak var affirmationTextView: KMPlaceholderTextView!
     @IBOutlet weak var intentionTextView: KMPlaceholderTextView!
+    @IBOutlet weak var experienceTextView: KMPlaceholderTextView!
     @IBOutlet weak var stressorLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
@@ -22,12 +23,15 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     var newStressor: ((Stressor) -> ())? = nil
     var segment: Int?
     
+    var summarySection: ItemSection! = .release
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
         
         self.newStressor = { [unowned self] stressor in
-            self.stressor.releaseIntention = stressor.releaseIntention
+            self.stressor.releaseMyIntention = stressor.releaseMyIntention
+            self.stressor.releaseInsteadExperience = stressor.releaseInsteadExperience
             self.stressor.releaseAffirmation = stressor.releaseAffirmation
             self.setupView()
             
@@ -47,9 +51,14 @@ class ReleaseViewController: UIViewController, ShowsSummary {
             self.affirmationTextView.text = affirmation
         }
         
-        if let intention = self.stressor.releaseIntention {
+        if let intention = self.stressor.releaseMyIntention {
             self.intentionTextView.text = intention
         }
+        
+        if let experience = self.stressor.releaseInsteadExperience {
+            self.experienceTextView.text = experience
+        }
+        
         
         if let title = self.stressor.title {
             self.stressorLabel.text = "I am upset about \(title)"
@@ -84,7 +93,8 @@ class ReleaseViewController: UIViewController, ShowsSummary {
 extension ReleaseViewController: StressorEditor {
     func save() {
         
-        self.stressor.releaseIntention = self.intentionTextView.text.characters.count > 0 ? self.intentionTextView.text : nil
+        self.stressor.releaseMyIntention = self.intentionTextView.text.characters.count > 0 ? self.intentionTextView.text : nil
+        self.stressor.releaseInsteadExperience = self.experienceTextView.text.characters.count > 0 ? self.experienceTextView.text : nil
         self.stressor.releaseAffirmation = self.affirmationTextView.text.characters.count > 0 ? self.affirmationTextView.text : nil
     }
 }
