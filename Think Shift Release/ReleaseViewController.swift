@@ -19,11 +19,24 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var bottomView: UIView!
     
     var stressor: Stressor!
+    var newStressor: ((Stressor) -> ())? = nil
     var segment: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
+        self.newStressor = { [unowned self] stressor in
+            self.stressor.releaseIntention = stressor.releaseIntention
+            self.stressor.releaseAffirmation = stressor.releaseAffirmation
+            self.setupView()
+            
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
     }
     
     private func setupView() {
@@ -80,7 +93,6 @@ extension ReleaseViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
-            self.save()
             textView.resignFirstResponder()
             return false
         }

@@ -24,6 +24,8 @@ class ThinkViewController: UIViewController, ShowsSummary {
     private var playbackObserver: NSObjectProtocol?
     var segment: Int?
     
+    var newStressor: ((Stressor) -> ())? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +41,15 @@ class ThinkViewController: UIViewController, ShowsSummary {
             self.setupSummaryButton()
         }
         
+        self.newStressor = { [unowned self] stressor in
+            self.stressor.thinkThoughts = stressor.thinkThoughts
+            self.stressor.thinkActionStep = stressor.thinkActionStep
+            self.stressor.thinkInnerWisdom = stressor.thinkInnerWisdom
+            self.stressor.thinkBetterFeeling = stressor.thinkBetterFeeling
+            self.setupView()
+
+        }
+        
         // Embed Think Constructively
         
 //        let viewController = UIStoryboard(name: "ThinkViewController", bundle: nil).instantiateViewController(withIdentifier: "ThinkConstructively") as! ThinkConstructivelyViewController
@@ -48,7 +59,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        self.save()
         if let playbackObserver = self.playbackObserver {
             NotificationCenter.default.removeObserver(playbackObserver)
         }
@@ -232,10 +243,10 @@ extension ThinkViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
-            self.save()
             textView.resignFirstResponder()
             return false
         }
         return true
     }
+    
 }

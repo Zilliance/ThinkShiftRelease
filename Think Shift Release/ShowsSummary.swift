@@ -12,6 +12,7 @@ protocol ShowsSummary {
     var stressor: Stressor! { get }
     func setupSummaryButton()
     func viewSummary(_ sender: Any?)
+    var newStressor: ((Stressor) -> ())? { get set }
 }
 
 extension ShowsSummary where Self: UIViewController {
@@ -28,6 +29,10 @@ extension ShowsSummary where Self: UIViewController {
         }
         //pass copy of stressor to summary
         vc.stressor = Stressor(value: self.stressor)
+        vc.updatedStressor = { stressor in
+            self.newStressor?(stressor)
+        }
+        
         let nc = UINavigationController(rootViewController: vc)
         self.present(nc, animated: true, completion: nil)
     }
