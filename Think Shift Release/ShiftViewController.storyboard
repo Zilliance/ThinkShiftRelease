@@ -98,7 +98,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am upset about ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ee-9o-NqF">
-                                                        <rect key="frame" x="75" y="42" width="250" height="14"/>
+                                                        <rect key="frame" x="75" y="42" width="250" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When and/or with whom will I NOT think or talk about this stressor?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYx-Y4-Pvd">
-                                        <rect key="frame" x="75" y="40" width="250" height="28"/>
+                                        <rect key="frame" x="75" y="40" width="245" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -224,7 +224,7 @@
                                     <constraint firstAttribute="height" constant="155" id="4Oo-Oa-OfX"/>
                                     <constraint firstAttribute="bottom" secondItem="6vq-LD-Z4v" secondAttribute="bottom" constant="15" id="Fg5-oz-vgO"/>
                                     <constraint firstAttribute="trailing" secondItem="6vq-LD-Z4v" secondAttribute="trailing" constant="15" id="IFV-Cz-pLZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="uYx-Y4-Pvd" secondAttribute="trailing" constant="10" id="JHT-Ar-PDn"/>
+                                    <constraint firstAttribute="trailing" secondItem="uYx-Y4-Pvd" secondAttribute="trailing" constant="15" id="JHT-Ar-PDn"/>
                                     <constraint firstItem="uYx-Y4-Pvd" firstAttribute="top" secondItem="yje-xK-1tD" secondAttribute="bottom" constant="4" id="NbR-hG-ajI"/>
                                     <constraint firstItem="yje-xK-1tD" firstAttribute="top" secondItem="cO8-6K-IXJ" secondAttribute="top" constant="19" id="O0c-Xv-Eac"/>
                                     <constraint firstItem="uYx-Y4-Pvd" firstAttribute="leading" secondItem="FLd-bh-3jb" secondAttribute="trailing" constant="10" id="U9M-GW-G3O"/>
@@ -256,7 +256,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cK8-ME-BcF" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                        <rect key="frame" x="15" y="83" width="305" height="57"/>
+                                        <rect key="frame" x="15" y="85.5" width="305" height="54.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
@@ -271,7 +271,7 @@
                                         </connections>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When and/or with whom will I think or talk about this stressor?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbr-b9-G7g">
-                                        <rect key="frame" x="75" y="40" width="250" height="28"/>
+                                        <rect key="frame" x="75" y="40" width="245" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@
                                 <constraints>
                                     <constraint firstItem="dbr-b9-G7g" firstAttribute="top" secondItem="jJq-ep-tCg" secondAttribute="bottom" constant="4" id="3XE-fs-T0L"/>
                                     <constraint firstItem="dbr-b9-G7g" firstAttribute="leading" secondItem="7vq-IO-GFX" secondAttribute="trailing" constant="10" id="5Gc-XJ-UUj"/>
-                                    <constraint firstAttribute="trailing" secondItem="dbr-b9-G7g" secondAttribute="trailing" constant="10" id="6ed-7h-rWZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="dbr-b9-G7g" secondAttribute="trailing" constant="15" id="6ed-7h-rWZ"/>
                                     <constraint firstItem="cK8-ME-BcF" firstAttribute="leading" secondItem="SUn-jS-XBW" secondAttribute="leading" constant="15" id="Cej-Vq-Rc6"/>
                                     <constraint firstAttribute="height" constant="155" id="Gqe-6H-Axe"/>
                                     <constraint firstItem="jJq-ep-tCg" firstAttribute="leading" secondItem="7vq-IO-GFX" secondAttribute="trailing" constant="10" id="N5d-YZ-ho5"/>
@@ -361,7 +361,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIDEOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bO-zP-Mmt">
-                                                <rect key="frame" x="0.0" y="72" width="160" height="14"/>
+                                                <rect key="frame" x="0.0" y="72" width="160" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -408,7 +408,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUSIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAw-ab-Fcc">
-                                                <rect key="frame" x="0.0" y="72" width="160" height="14"/>
+                                                <rect key="frame" x="0.0" y="72" width="160" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.2901960784" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -460,7 +460,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUOTES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S45-H9-hPZ">
-                                                <rect key="frame" x="0.0" y="72" width="160" height="14"/>
+                                                <rect key="frame" x="0.0" y="72" width="160" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.2901960784" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -507,7 +507,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMAGES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOu-9C-4je">
-                                                <rect key="frame" x="0.0" y="72" width="160" height="14"/>
+                                                <rect key="frame" x="0.0" y="72" width="160" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.2901960784" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>

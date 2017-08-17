@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FhI-cT-o6y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FhI-cT-o6y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,17 +39,122 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zo4-rg-VYF" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="830"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-D3-cIK">
-                                                <rect key="frame" x="0.0" y="110" width="375" height="690"/>
+                                                <rect key="frame" x="0.0" y="110" width="375" height="720"/>
                                                 <subviews>
                                                     <view alpha="0.44999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-2o-8Ul" userLabel="WhiteOverlay">
-                                                        <rect key="frame" x="0.0" y="30" width="375" height="660"/>
+                                                        <rect key="frame" x="0.0" y="30" width="375" height="690"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-hN-uyM" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="40" width="335" height="270"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY INTENTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee2-58-GKJ">
+                                                                <rect key="frame" x="75" y="19" width="244" height="18"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="18" id="Dg6-79-Xm5"/>
+                                                                    <constraint firstAttribute="width" constant="244" id="k50-28-a6T"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="release-icon" translatesAutoresizingMaskIntoConstraints="NO" id="aks-6i-EMv">
+                                                                <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="2gb-CT-TWv"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="rWB-Wt-gja"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an intention for what you want to release and the emotion you would like to experience instead. Learn more." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
+                                                                <rect key="frame" x="75" y="39" width="244" height="45.5"/>
+                                                                <gestureRecognizers/>
+                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="5Mo-rj-VkO" appends="YES" id="FYG-NA-Pew"/>
+                                                                </connections>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b7c-jd-IHN" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                                                <rect key="frame" x="15" y="122" width="305" height="52"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="52" id="O3V-At-xXl"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="It is my intention to release ..."/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="FhI-cT-o6y" id="3ae-6s-dka"/>
+                                                                </connections>
+                                                            </textView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IqM-ip-fAq" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                                                <rect key="frame" x="15" y="201.5" width="305" height="52"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="52" id="evR-2D-TNd"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="... and instead experience ..."/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="FhI-cT-o6y" id="0JS-ey-yH5"/>
+                                                                </connections>
+                                                            </textView>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is my intention to release ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0R-ft-CmO">
+                                                                <rect key="frame" x="15" y="99.5" width="163" height="15.5"/>
+                                                                <gestureRecognizers/>
+                                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
+                                                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... and instead experience ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-qM-eyb">
+                                                                <rect key="frame" x="15" y="179" width="154" height="15.5"/>
+                                                                <gestureRecognizers/>
+                                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
+                                                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="ee2-58-GKJ" firstAttribute="top" secondItem="Ucb-hN-uyM" secondAttribute="top" constant="19" id="3ML-wN-3X2"/>
+                                                            <constraint firstItem="A6h-pT-bOC" firstAttribute="leading" secondItem="aks-6i-EMv" secondAttribute="trailing" constant="10" id="8CJ-67-eUc"/>
+                                                            <constraint firstItem="IqM-ip-fAq" firstAttribute="top" secondItem="P8p-qM-eyb" secondAttribute="bottom" constant="7" id="8Wy-DD-22o"/>
+                                                            <constraint firstItem="b7c-jd-IHN" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="CEH-WA-YF8"/>
+                                                            <constraint firstAttribute="trailing" secondItem="IqM-ip-fAq" secondAttribute="trailing" constant="15" id="Mo8-JW-2Mr"/>
+                                                            <constraint firstItem="aks-6i-EMv" firstAttribute="top" secondItem="Ucb-hN-uyM" secondAttribute="top" constant="15" id="SUu-XB-Z1J"/>
+                                                            <constraint firstItem="aks-6i-EMv" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="TOy-zg-1Wk"/>
+                                                            <constraint firstItem="ee2-58-GKJ" firstAttribute="leading" secondItem="aks-6i-EMv" secondAttribute="trailing" constant="10" id="ZQ1-YD-j4N"/>
+                                                            <constraint firstAttribute="trailing" secondItem="A6h-pT-bOC" secondAttribute="trailing" constant="16" id="aVc-ro-iiH"/>
+                                                            <constraint firstItem="o0R-ft-CmO" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="atx-jS-gJo"/>
+                                                            <constraint firstItem="P8p-qM-eyb" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="dBN-cN-GPF"/>
+                                                            <constraint firstItem="o0R-ft-CmO" firstAttribute="top" secondItem="A6h-pT-bOC" secondAttribute="bottom" constant="15" id="ewe-m7-Guu"/>
+                                                            <constraint firstItem="b7c-jd-IHN" firstAttribute="top" secondItem="o0R-ft-CmO" secondAttribute="bottom" constant="7" id="hlR-OQ-BGa"/>
+                                                            <constraint firstItem="IqM-ip-fAq" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="k7l-Fc-G2j"/>
+                                                            <constraint firstItem="A6h-pT-bOC" firstAttribute="top" secondItem="ee2-58-GKJ" secondAttribute="bottom" constant="2" id="k8c-xU-Hr2"/>
+                                                            <constraint firstItem="P8p-qM-eyb" firstAttribute="top" secondItem="b7c-jd-IHN" secondAttribute="bottom" constant="5" id="q3Z-EN-LLM"/>
+                                                            <constraint firstAttribute="height" constant="270" id="qar-tp-vCx"/>
+                                                            <constraint firstAttribute="trailing" secondItem="b7c-jd-IHN" secondAttribute="trailing" constant="15" id="ygv-Cc-gbe"/>
+                                                        </constraints>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9e-U9-dp7" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="285" width="335" height="155"/>
+                                                        <rect key="frame" x="20" y="315" width="335" height="155"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="release-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-Rv-4km">
                                                                 <rect key="frame" x="15" y="15" width="50" height="50"/>
@@ -111,113 +216,8 @@
                                                             <constraint firstItem="PDS-LK-fOO" firstAttribute="top" secondItem="8O9-sp-itJ" secondAttribute="bottom" constant="2" id="xdw-gN-KdI"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-hN-uyM" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="40" width="335" height="240"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY INTENTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee2-58-GKJ">
-                                                                <rect key="frame" x="75" y="19" width="244" height="18"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="18" id="Dg6-79-Xm5"/>
-                                                                    <constraint firstAttribute="width" constant="244" id="k50-28-a6T"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
-                                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="release-icon" translatesAutoresizingMaskIntoConstraints="NO" id="aks-6i-EMv">
-                                                                <rect key="frame" x="15" y="15" width="50" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="50" id="2gb-CT-TWv"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="rWB-Wt-gja"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an intention for what you want to release" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
-                                                                <rect key="frame" x="75" y="39" width="244" height="30.5"/>
-                                                                <gestureRecognizers/>
-                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
-                                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="5Mo-rj-VkO" appends="YES" id="FYG-NA-Pew"/>
-                                                                </connections>
-                                                            </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b7c-jd-IHN" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                                                <rect key="frame" x="15" y="107.5" width="305" height="52"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="52" id="O3V-At-xXl"/>
-                                                                </constraints>
-                                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="It is my intention to release ..."/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <outlet property="delegate" destination="FhI-cT-o6y" id="3ae-6s-dka"/>
-                                                                </connections>
-                                                            </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IqM-ip-fAq" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                                                <rect key="frame" x="15" y="187.5" width="305" height="52"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="52" id="evR-2D-TNd"/>
-                                                                </constraints>
-                                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="... and instead experience ..."/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <outlet property="delegate" destination="FhI-cT-o6y" id="0JS-ey-yH5"/>
-                                                                </connections>
-                                                            </textView>
-                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is my intention to release ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0R-ft-CmO">
-                                                                <rect key="frame" x="15" y="84.5" width="163" height="16"/>
-                                                                <gestureRecognizers/>
-                                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
-                                                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... and instead experience ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8p-qM-eyb">
-                                                                <rect key="frame" x="15" y="164.5" width="154" height="16"/>
-                                                                <gestureRecognizers/>
-                                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
-                                                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstItem="ee2-58-GKJ" firstAttribute="top" secondItem="Ucb-hN-uyM" secondAttribute="top" constant="19" id="3ML-wN-3X2"/>
-                                                            <constraint firstItem="A6h-pT-bOC" firstAttribute="leading" secondItem="aks-6i-EMv" secondAttribute="trailing" constant="10" id="8CJ-67-eUc"/>
-                                                            <constraint firstItem="IqM-ip-fAq" firstAttribute="top" secondItem="P8p-qM-eyb" secondAttribute="bottom" constant="7" id="8Wy-DD-22o"/>
-                                                            <constraint firstItem="b7c-jd-IHN" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="CEH-WA-YF8"/>
-                                                            <constraint firstAttribute="trailing" secondItem="IqM-ip-fAq" secondAttribute="trailing" constant="15" id="Mo8-JW-2Mr"/>
-                                                            <constraint firstItem="aks-6i-EMv" firstAttribute="top" secondItem="Ucb-hN-uyM" secondAttribute="top" constant="15" id="SUu-XB-Z1J"/>
-                                                            <constraint firstItem="aks-6i-EMv" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="TOy-zg-1Wk"/>
-                                                            <constraint firstItem="ee2-58-GKJ" firstAttribute="leading" secondItem="aks-6i-EMv" secondAttribute="trailing" constant="10" id="ZQ1-YD-j4N"/>
-                                                            <constraint firstAttribute="trailing" secondItem="A6h-pT-bOC" secondAttribute="trailing" constant="16" id="aVc-ro-iiH"/>
-                                                            <constraint firstItem="o0R-ft-CmO" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="atx-jS-gJo"/>
-                                                            <constraint firstItem="P8p-qM-eyb" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="dBN-cN-GPF"/>
-                                                            <constraint firstItem="o0R-ft-CmO" firstAttribute="top" secondItem="A6h-pT-bOC" secondAttribute="bottom" constant="15" id="ewe-m7-Guu"/>
-                                                            <constraint firstItem="b7c-jd-IHN" firstAttribute="top" secondItem="o0R-ft-CmO" secondAttribute="bottom" constant="7" id="hlR-OQ-BGa"/>
-                                                            <constraint firstItem="IqM-ip-fAq" firstAttribute="leading" secondItem="Ucb-hN-uyM" secondAttribute="leading" constant="15" id="k7l-Fc-G2j"/>
-                                                            <constraint firstItem="A6h-pT-bOC" firstAttribute="top" secondItem="ee2-58-GKJ" secondAttribute="bottom" constant="2" id="k8c-xU-Hr2"/>
-                                                            <constraint firstItem="P8p-qM-eyb" firstAttribute="top" secondItem="b7c-jd-IHN" secondAttribute="bottom" constant="5" id="q3Z-EN-LLM"/>
-                                                            <constraint firstAttribute="height" constant="240" id="qar-tp-vCx"/>
-                                                            <constraint firstAttribute="trailing" secondItem="b7c-jd-IHN" secondAttribute="trailing" constant="15" id="ygv-Cc-gbe"/>
-                                                        </constraints>
-                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-J4-2lk" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="445" width="335" height="225"/>
+                                                        <rect key="frame" x="20" y="475" width="335" height="225"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREATHE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-Kp-d7h">
                                                                 <rect key="frame" x="75" y="19" width="64.5" height="18"/>
@@ -355,10 +355,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="affirmationDescription" destination="PDS-LK-fOO" id="Vf7-h8-jza"/>
                         <outlet property="affirmationTextView" destination="IZd-bq-fi4" id="pae-Cg-Cjd"/>
                         <outlet property="bottomView" destination="RKp-D3-cIK" id="prK-9K-vYh"/>
+                        <outlet property="breatheDescription" destination="mfK-BV-gfn" id="OWp-Qm-OJ0"/>
                         <outlet property="containerView" destination="udn-OG-Sw0" id="Edr-FV-Ouv"/>
                         <outlet property="experienceTextView" destination="IqM-ip-fAq" id="62x-Ve-mJa"/>
+                        <outlet property="intentionDescription" destination="A6h-pT-bOC" id="7Qq-WP-wfh"/>
                         <outlet property="intentionTextView" destination="b7c-jd-IHN" id="kLd-fs-sqi"/>
                         <outlet property="stressorLabel" destination="vLI-Zs-a3r" id="TS7-Iy-zKQ"/>
                     </connections>

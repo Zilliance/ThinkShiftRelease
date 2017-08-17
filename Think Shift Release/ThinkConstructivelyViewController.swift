@@ -13,6 +13,7 @@ class ThinkConstructivelyViewController: UIViewController {
 
     @IBOutlet weak var wisdomTextView: KMPlaceholderTextView!
     @IBOutlet weak var actionStepTextView: KMPlaceholderTextView!
+    @IBOutlet weak var innerWisdomDescription: UILabel!
     
     var stressor: Stressor!
     
@@ -36,6 +37,8 @@ class ThinkConstructivelyViewController: UIViewController {
         }
         
         self.view.backgroundColor = .clear
+        
+        self.innerWisdomDescription.attributedText = self.innerWisdomDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
     }
     
     // MARK: - Learn More

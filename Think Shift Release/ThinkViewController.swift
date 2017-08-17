@@ -18,6 +18,8 @@ class ThinkViewController: UIViewController, ShowsSummary {
     @IBOutlet weak var textView: KMPlaceholderTextView!
     @IBOutlet weak var stressorLabel: UILabel!
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var thoughtsDescription: UILabel!
+    
     private var embeddedViewController: UIViewController?
     
     var stressor: Stressor!
@@ -47,8 +49,9 @@ class ThinkViewController: UIViewController, ShowsSummary {
             self.stressor.thinkInnerWisdom = stressor.thinkInnerWisdom
             self.stressor.thinkBetterFeeling = stressor.thinkBetterFeeling
             self.setupView()
-
         }
+        
+        self.thoughtsDescription.attributedText = self.thoughtsDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
         
         // Embed Think Constructively
         
