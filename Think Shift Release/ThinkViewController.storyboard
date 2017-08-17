@@ -42,12 +42,8 @@
                                                 <rect key="frame" x="0.0" y="261" width="375" height="406"/>
                                                 <subviews>
                                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICS-4b-mfA" userLabel="Seg Con Background">
-                                                        <rect key="frame" x="30" y="20" width="315" height="30"/>
+                                                        <rect key="frame" x="30" y="20" width="315" height="28"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="315" id="R94-kq-3sX"/>
-                                                            <constraint firstAttribute="height" constant="30" id="w37-vb-UaU"/>
-                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="4"/>
@@ -55,11 +51,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="zRk-VW-ka4">
-                                                        <rect key="frame" x="30" y="20" width="315" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="NBc-Jt-q1p"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="olh-eU-g5y"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="30" y="20" width="315" height="29"/>
                                                         <segments>
                                                             <segment title="Think Constructively"/>
                                                             <segment title="Think Positively"/>
@@ -69,7 +61,7 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLt-F0-hRq">
-                                                        <rect key="frame" x="0.0" y="70" width="375" height="336"/>
+                                                        <rect key="frame" x="0.0" y="68" width="375" height="338"/>
                                                     </containerView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,7 +113,7 @@
                                                         </connections>
                                                     </textView>
                                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write your thoughts about this stressor. Learn more. I am upset because…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocM-w5-5KM">
-                                                        <rect key="frame" x="75" y="40" width="250" height="30.5"/>
+                                                        <rect key="frame" x="75" y="40" width="250" height="28"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
@@ -168,7 +160,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am upset about ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HK3-Je-l0w">
-                                                        <rect key="frame" x="75" y="49" width="250" height="15.5"/>
+                                                        <rect key="frame" x="75" y="49" width="250" height="14"/>
                                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                         <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -276,7 +268,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write what your Inner Wisdom says you need. Learn more. What do I need to feel better?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-uh-Se0">
-                                        <rect key="frame" x="75" y="41" width="250" height="45.5"/>
+                                        <rect key="frame" x="75" y="41" width="250" height="28"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                         <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
