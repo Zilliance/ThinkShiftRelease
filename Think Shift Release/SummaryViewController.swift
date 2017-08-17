@@ -52,6 +52,12 @@ class SummaryCell: UICollectionViewCell {
     
 }
 
+enum ItemSection: Int {
+    case think = 0
+    case shift
+    case release
+}
+
 struct SummaryItem {
     let title: String
     let imageActive: UIImage
@@ -65,12 +71,6 @@ class SummaryViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var vcContainerView: UIView!
-    
-    enum ItemSection: Int {
-        case think = 0
-        case shift
-        case release
-    }
 
     var itemSection: ItemSection = .think
     
@@ -100,7 +100,7 @@ class SummaryViewController: UIViewController {
         
         self.collectionView.contentInset = UIEdgeInsetsMake(0, 2, 0, 2)
         
-        self.showViewController(controller: items[0].viewController)
+        self.showViewController(controller: items[self.itemSection.rawValue].viewController)
         
         // pre select first position
         self.collectionView.selectItem(at: IndexPath(item: self.itemSection.rawValue, section: 0), animated: true, scrollPosition: .centeredHorizontally)

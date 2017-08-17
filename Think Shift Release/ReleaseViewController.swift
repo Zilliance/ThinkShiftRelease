@@ -23,6 +23,8 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     var newStressor: ((Stressor) -> ())? = nil
     var segment: Int?
     
+    var summarySection: ItemSection! = .release
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()

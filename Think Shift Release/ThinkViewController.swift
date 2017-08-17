@@ -23,7 +23,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     var stressor: Stressor!
     private var playbackObserver: NSObjectProtocol?
     var segment: Int?
-    
+    var summarySection: ItemSection! = .think
     var newStressor: ((Stressor) -> ())? = nil
     
     override func viewDidLoad() {
