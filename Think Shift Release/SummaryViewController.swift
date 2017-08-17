@@ -75,6 +75,7 @@ class SummaryViewController: UIViewController {
     var itemSection: ItemSection = .think
     
     var stressor: Stressor!
+    var updatedStressor: ((Stressor) -> ())?
     
     fileprivate var currentViewController: UIViewController?
     
@@ -116,22 +117,25 @@ class SummaryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        let loadedVC = self.items.map { $0.viewController }.filter { $0.isViewLoaded }.last
+        let loadedVCs = self.items.map { $0.viewController }.filter { $0.isViewLoaded } as? [SummaryItemViewController]
         
-        if var item = loadedVC as? SummaryItemViewController {
-            
-            item.stressor = self.stressor
-        }
+        loadedVCs?.forEach({ item in
+            var itemvc = item
+            itemvc.stressor = self.stressor
+        })
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        if (self.isMovingToParentViewController) {
-            self.updateDatabase()
+        if let navigationController = self.navigationController {
+            if (self.isMovingToParentViewController || navigationController.isBeingDismissed) {
+                self.updatedStressor?(self.stressor)
+                self.updateDatabase()
+            }
         }
+        
         
     }
     

@@ -18,8 +18,11 @@ class ThinkConstructivelyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.setupViews()
-
     }
     
     private func setupViews() {
@@ -40,6 +43,12 @@ class ThinkConstructivelyViewController: UIViewController {
     @IBAction func learnMoreAboutInnerWisdom(_ sender: Any?) {
         LearnMoreViewController.present(from: self, text: NSLocalizedString("inner wisdom learn more", comment: ""))
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.save()
+    }
+
 }
 
 extension ThinkConstructivelyViewController: StressorEditor {
@@ -53,10 +62,10 @@ extension ThinkConstructivelyViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
-            self.save()
             textView.resignFirstResponder()
             return false
         }
         return true
     }
+    
 }
