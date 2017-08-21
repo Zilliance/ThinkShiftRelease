@@ -39,4 +39,22 @@ final class Stressor: Object {
     dynamic var releaseInsteadExperience: String?
     dynamic var releaseAffirmation: String?
     
+    //copy from stressor
+    
+    func copy(from stressor:Stressor) {
+        
+        self.thinkThoughts = stressor.thinkThoughts
+        self.dateCreated = stressor.dateCreated
+        self.thinkInnerWisdom = stressor.thinkInnerWisdom
+        self.thinkActionStep = stressor.thinkActionStep
+        self.thinkBetterFeeling = stressor.thinkBetterFeeling
+        
+        self.shiftBoundariesDoTalkWith = stressor.shiftBoundariesDoTalkWith
+        self.shiftBoundariesNotTalkWith = stressor.shiftBoundariesNotTalkWith
+        
+        self.releaseAffirmation = stressor.releaseAffirmation
+        self.releaseMyIntention = stressor.releaseMyIntention
+        self.releaseAffirmation = stressor.releaseAffirmation
+    }
+    
 }

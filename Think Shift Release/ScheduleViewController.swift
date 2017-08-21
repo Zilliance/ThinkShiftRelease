@@ -25,6 +25,7 @@ class ScheduleViewController: UIViewController {
         case calendar
     }
     
+    var text: String = ""
     
     fileprivate var currentViewController: UIViewController?
     
@@ -57,6 +58,9 @@ class ScheduleViewController: UIViewController {
         
         notificationsViewController.preloadedNotification = self.preloadedNotification
         calendarViewController.preloadedNotification = self.preloadedNotification
+        
+        notificationsViewController.text = self.text
+        calendarViewController.text = self.text
         
         self.viewControllers.append(notificationsViewController)
         self.viewControllers.append(calendarViewController)

@@ -44,10 +44,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
         }
         
         self.newStressor = { [unowned self] stressor in
-            self.stressor.thinkThoughts = stressor.thinkThoughts
-            self.stressor.thinkActionStep = stressor.thinkActionStep
-            self.stressor.thinkInnerWisdom = stressor.thinkInnerWisdom
-            self.stressor.thinkBetterFeeling = stressor.thinkBetterFeeling
+            self.stressor.copy(from: stressor)
             self.setupView()
         }
         
