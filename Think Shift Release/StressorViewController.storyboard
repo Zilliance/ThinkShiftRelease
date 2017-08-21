@@ -194,10 +194,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olg-uj-1E1" userLabel="Think Video">
-                                                <rect key="frame" x="323" y="413" width="22" height="15"/>
+                                                <rect key="frame" x="323" y="409.5" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="HQt-bk-t7x"/>
-                                                    <constraint firstAttribute="height" constant="15" id="Z5b-oZ-Eqj"/>
+                                                    <constraint firstAttribute="height" constant="22" id="Z5b-oZ-Eqj"/>
                                                 </constraints>
                                                 <state key="normal" image="video"/>
                                                 <connections>
@@ -205,9 +205,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRT-8p-zI0" userLabel="Shift Video">
-                                                <rect key="frame" x="323" y="480.5" width="22" height="15"/>
+                                                <rect key="frame" x="323" y="477" width="22" height="22"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="bdV-ur-OE0"/>
+                                                    <constraint firstAttribute="height" constant="22" id="bdV-ur-OE0"/>
                                                     <constraint firstAttribute="width" constant="22" id="vPz-xz-wMU"/>
                                                 </constraints>
                                                 <state key="normal" image="video"/>
@@ -216,10 +216,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-Pg-V39" userLabel="Release Video">
-                                                <rect key="frame" x="323" y="547.5" width="22" height="15"/>
+                                                <rect key="frame" x="323" y="544" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="bYH-Mc-moU"/>
-                                                    <constraint firstAttribute="height" constant="15" id="jJB-5B-dGx"/>
+                                                    <constraint firstAttribute="height" constant="22" id="jJB-5B-dGx"/>
                                                 </constraints>
                                                 <state key="normal" image="video"/>
                                                 <connections>
@@ -330,6 +330,6 @@
         <image name="shift-icon" width="60" height="60"/>
         <image name="stressor-icon" width="52" height="60"/>
         <image name="think-icon" width="60" height="60"/>
-        <image name="video" width="27" height="17"/>
+        <image name="video" width="30" height="30"/>
     </resources>
 </document>
