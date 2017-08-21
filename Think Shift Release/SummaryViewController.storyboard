@@ -127,7 +127,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="8bs-i1-bQ5"/>
                                         </constraints>
+<<<<<<< Updated upstream
                                         <state key="normal" title="SET REMINDER" backgroundImage="tsr-button-background"/>
+=======
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                        <state key="normal" title="    TAKE ACTION" image="iconNotification">
+                                            <color key="titleColor" red="0.013387111015617847" green="0.64878100156784058" blue="0.81588780879974365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+>>>>>>> Stashed changes
                                         <connections>
                                             <action selector="reminderAction:" destination="5M9-Zb-8Dz" eventType="touchUpInside" id="UCV-YZ-1fG"/>
                                         </connections>

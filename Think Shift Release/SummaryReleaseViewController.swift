@@ -58,6 +58,38 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
 }
 
 extension SummaryReleaseViewController {
+<<<<<<< Updated upstream
+=======
+    
+    @IBAction func scheduleReminderRelease(_ sender: Any?) {
+        let stressor = "Stressor: \(self.stressor?.title ?? "")"
+        let details1 = "My Intention: \(self.stressor?.releaseMyIntention ?? "")"
+        let details2 = "My Affirmation: \(self.stressor?.releaseAffirmation ?? "")"
+        let details3 = "Repeat my affirmation to the rhythm of my breath to evoke the feeling of my intention."
+        let reminder = "\(stressor)\n\(details1)\n\(details2)\n\(details3)"
+        
+        self.showScheduler(text: reminder)
+    }
+    
+    fileprivate func showScheduler(text: String) {
+        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
+            assertionFailure()
+            return
+        }
+        guard let parent = self.parent else {
+            assertionFailure()
+            return
+        }
+        
+        scheduler.title = self.stressor?.title
+        scheduler.text = text
+        
+        parent.navigationController?.pushViewController(scheduler, animated: true)
+    }
+}
+
+extension SummaryReleaseViewController {
+>>>>>>> Stashed changes
     
     @objc fileprivate func intentionTap() {
         self.goto?(.release)
