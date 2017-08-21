@@ -87,10 +87,6 @@ extension SummaryReleaseViewController {
 }
 
 extension SummaryReleaseViewController {
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> a522fd108ce87e718339e1c2038e7e4588b28714
     
     @objc fileprivate func intentionTap() {
         self.goto?(.release)
