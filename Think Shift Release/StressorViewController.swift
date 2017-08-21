@@ -32,6 +32,13 @@ class StressorViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let value =  UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        UIViewController.attemptRotationToDeviceOrientation()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -233,7 +240,9 @@ extension StressorViewController: UIViewControllerTransitioningDelegate {
         case is PopupViewController, is Popup2ViewController:
             return PopupPresentationController(presentedViewController: presented, presenting: presenting)
         case is SectionAnimationViewController:
-            return AnimationPresentationController(presentedViewController: presented, presenting: presenting)
+            let presentationController = AnimationPresentationController(presentedViewController: presented, presenting: presenting)
+            presentationController.delegate = self
+            return presentationController
         default:
             return nil
         }
@@ -260,6 +269,18 @@ extension StressorViewController: UIViewControllerTransitioningDelegate {
             return nil
         }
     }
+    
+}
+
+extension StressorViewController: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        if traitCollection.verticalSizeClass == .compact  {
+            return .overFullScreen
+        } else {
+            return .custom
+        }
+    }
+
 }
 
 extension StressorViewController: SectionAnimationDelegate {
