@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,6 +15,9 @@
         </array>
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -556,6 +560,12 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your favorite content from your phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19Y-QQ-tUH">
+                                <rect key="frame" x="36" y="322" width="303" height="19"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -565,8 +575,11 @@
                             <constraint firstAttribute="trailing" secondItem="PsT-Bd-9wi" secondAttribute="trailing" id="AZB-a1-0wf"/>
                             <constraint firstItem="PsT-Bd-9wi" firstAttribute="leading" secondItem="T1L-VH-w9l" secondAttribute="leading" id="I4k-FL-ExT"/>
                             <constraint firstItem="AQ0-12-2hH" firstAttribute="leading" secondItem="T1L-VH-w9l" secondAttribute="leading" constant="20" id="Jyq-MN-Q4J"/>
+                            <constraint firstItem="19Y-QQ-tUH" firstAttribute="top" secondItem="AQ0-12-2hH" secondAttribute="bottom" constant="40" id="LP4-jE-eey"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="19Y-QQ-tUH" secondAttribute="trailing" constant="20" id="R0Z-Sj-LrJ"/>
                             <constraint firstItem="GlC-GB-GMK" firstAttribute="top" secondItem="PsT-Bd-9wi" secondAttribute="bottom" id="RTc-iO-ud8"/>
                             <constraint firstAttribute="trailing" secondItem="hep-gd-aQI" secondAttribute="trailing" constant="20" id="cl2-Gk-Dzd"/>
+                            <constraint firstItem="19Y-QQ-tUH" firstAttribute="leading" secondItem="T1L-VH-w9l" secondAttribute="leadingMargin" constant="20" id="ezZ-1S-48a"/>
                             <constraint firstItem="AQ0-12-2hH" firstAttribute="top" secondItem="yRG-aM-rDZ" secondAttribute="bottom" constant="16" id="iqU-NO-hLx"/>
                             <constraint firstItem="PsT-Bd-9wi" firstAttribute="top" secondItem="T1L-VH-w9l" secondAttribute="top" id="usT-VI-QuL"/>
                             <constraint firstItem="yRG-aM-rDZ" firstAttribute="top" secondItem="Ovh-WE-IiB" secondAttribute="bottom" constant="46" id="viX-FC-N32"/>
