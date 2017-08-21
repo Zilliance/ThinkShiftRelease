@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-KA-VYV" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="730"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIg-kh-cFr" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="10" width="335" height="90"/>
@@ -150,7 +150,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRo-6c-pII" userLabel="BottomView">
-                                                <rect key="frame" x="0.0" y="281" width="375" height="386"/>
+                                                <rect key="frame" x="0.0" y="281" width="375" height="449"/>
                                                 <subviews>
                                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICS-4b-mfA" userLabel="Seg Con Background">
                                                         <rect key="frame" x="30" y="20" width="315" height="28"/>
@@ -172,7 +172,7 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLt-F0-hRq">
-                                                        <rect key="frame" x="0.0" y="68" width="375" height="318"/>
+                                                        <rect key="frame" x="0.0" y="68" width="375" height="381"/>
                                                     </containerView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,7 +195,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aIg-kh-cFr" secondAttribute="trailing" constant="20" id="0d6-Iu-GLl"/>
                                             <constraint firstAttribute="trailing" secondItem="WM1-SQ-hKK" secondAttribute="trailing" constant="20" id="10s-j3-gVU"/>
-                                            <constraint firstAttribute="height" constant="667" id="DBP-lG-JJs"/>
+                                            <constraint firstAttribute="height" constant="730" id="DBP-lG-JJs"/>
                                             <constraint firstItem="aIg-kh-cFr" firstAttribute="top" secondItem="Rm9-KA-VYV" secondAttribute="top" constant="10" id="F99-eQ-ItO"/>
                                             <constraint firstAttribute="bottom" secondItem="rRo-6c-pII" secondAttribute="bottom" id="HMi-m7-fZl"/>
                                             <constraint firstItem="WM1-SQ-hKK" firstAttribute="top" secondItem="aIg-kh-cFr" secondAttribute="bottom" constant="5" id="NWH-jw-E6d"/>
@@ -444,10 +444,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.44999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iag-M6-Acv" userLabel="WhiteOverlay">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="YrL-ji-avE"/>
+                                    <constraint firstAttribute="height" constant="230" id="YrL-ji-avE"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byf-NT-dv4" userLabel="Mood Video">
