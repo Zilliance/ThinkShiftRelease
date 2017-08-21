@@ -97,6 +97,7 @@
 		E312B35B1F421C7000F2F5F0 /* AnimationPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B35A1F421C7000F2F5F0 /* AnimationPresentationController.swift */; };
 		E312B35D1F421C8E00F2F5F0 /* AnimationModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B35C1F421C8E00F2F5F0 /* AnimationModalTransition.swift */; };
 		E312B3611F42459800F2F5F0 /* SectionAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */; };
+		E32A6D691F4B7D06008FEA06 /* OnboardingPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */; };
 		E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */; };
 		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
 		E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA521F3CCAB5002920D0 /* IntroViewController.swift */; };
@@ -267,6 +268,7 @@
 		E312B35A1F421C7000F2F5F0 /* AnimationPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPresentationController.swift; sourceTree = "<group>"; };
 		E312B35C1F421C8E00F2F5F0 /* AnimationModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationModalTransition.swift; sourceTree = "<group>"; };
 		E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionAnimationViewController.swift; sourceTree = "<group>"; };
+		E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPopover.swift; sourceTree = "<group>"; };
 		E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		E347EA511F3CCAB5002920D0 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		E347EA521F3CCAB5002920D0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -592,6 +594,7 @@
 				E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */,
 				4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */,
 				E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */,
+				E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1126,6 +1129,7 @@
 				4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */,
 				E38CB6051F44DE1C004AFEA4 /* LearnMoreViewController.swift in Sources */,
 				8C2B13D61F3E5796002C0353 /* ScheduleNotificationTableViewController.swift in Sources */,
+				E32A6D691F4B7D06008FEA06 /* OnboardingPopover.swift in Sources */,
 				E312B35D1F421C8E00F2F5F0 /* AnimationModalTransition.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
 				8C2B13E51F3E5F08002C0353 /* CalendarHelper.swift in Sources */,

@@ -78,9 +78,9 @@ class SummaryViewController: UIViewController {
     var updatedStressor: ((Stressor) -> ())?
     
     fileprivate var currentViewController: UIViewController?
-    
     fileprivate var currentIndex = 0
     
+    fileprivate var tapHint: OnboardingPopover?
     
     fileprivate let items: [SummaryItem] = [
         SummaryItem(title: "Think", imageActive: #imageLiteral(resourceName: "thinkActive"), imageInactive: #imageLiteral(resourceName: "thinkInactive"), unselectedColor: UIColor.thinkGreen, viewController: UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateViewController(withIdentifier: "think")),
@@ -112,6 +112,8 @@ class SummaryViewController: UIViewController {
                 
             }
         }
+        
+        self.showTapHint()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -244,6 +246,42 @@ class SummaryViewController: UIViewController {
         }
     }
     
+    // MARK: -
+    
+    // MARK: - Hint
+    
+    fileprivate func showTapHint() {
+        guard !UserDefaults.standard.bool(forKey: "SummaryTapHintShown") else {
+            return
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let ss = self, ss.view.window != nil else {
+                return
+            }
+            
+            var center = CGPoint(x: ss.view.frame.midX, y: ss.view.frame.midY)
+            center.y += 10
+            
+            ss.tapHint = OnboardingPopover()
+            
+            ss.tapHint?.title = "Click on any blank sections to complete the activities in each of the TSR tabs"
+            ss.tapHint?.hasShadow = true
+            ss.tapHint?.shadowColor = UIColor(white: 0, alpha: 0.4)
+            ss.tapHint?.arrowLocation = .centeredOnTarget
+            ss.tapHint?.present(in: ss.view, at: center, from: .below)
+            
+            UserDefaults.standard.set(true, forKey: "SummaryTapHintShown")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+                self?.dismissTapHint()
+            }
+        }
+    }
+    
+    fileprivate func dismissTapHint() {
+        self.tapHint?.dismiss()
+    }
 }
 
 extension SummaryViewController: UICollectionViewDataSource {
