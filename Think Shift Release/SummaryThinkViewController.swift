@@ -54,6 +54,26 @@ class SummaryThinkViewController: UIViewController, SummaryItemViewController {
 }
 
 extension SummaryThinkViewController {
+    @IBAction func scheduleReminderInnerWisdom(_ sender: Any?) {
+        let stressor = "Stressor: \(self.stressor?.title ?? "")"
+        let details = "Inner Wisdom: \(self.stressor?.thinkInnerWisdom ?? "")"
+        let reminder = "\(stressor)\n\(details)"
+    }
+    
+    @IBAction func scheduleReminderActionStep(_ sender: Any?) {
+        let stressor = "Stressor: \(self.stressor?.title ?? "")"
+        let details = "Action Step: \(self.stressor?.thinkActionStep ?? "")"
+        let reminder = "\(stressor)\n\(details)"
+    }
+    
+    @IBAction func scheduleReminderBetterFeelingThought(_ sender: Any?) {
+        let stressor = "Stressor: \(self.stressor?.title ?? "")"
+        let details = "Better Feeling Thought: \(self.stressor?.thinkBetterFeeling ?? "")"
+        let reminder = "\(stressor)\n\(details)"
+    }
+}
+
+extension SummaryThinkViewController {
     @objc fileprivate func innerWisdomTap() {
         self.goto?(.thinkFirstSegment)
         

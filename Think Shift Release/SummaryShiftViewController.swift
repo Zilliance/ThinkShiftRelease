@@ -58,6 +58,26 @@ class SummaryShiftViewController: UIViewController, SummaryItemViewController {
 }
 
 extension SummaryShiftViewController {
+    @IBAction func scheduleReminderNotTalkAbout(_ sender: Any?) {
+        let stressor = "Stressor: \(self.stressor?.title ?? "")"
+        let details = "Boundaries - I will NOT think of talk about this stressor: \(self.stressor?.shiftBoundariesNotTalkWith ?? "")"
+        let reminder = "\(stressor)\n\(details)"
+    }
+    
+    @IBAction func scheduleReminderTalkAbout(_ sender: Any?) {
+        let stressor = "Stressor: \(self.stressor?.title ?? "")"
+        let details = "Boundaries - I will think of talk about this stressor: \(self.stressor?.shiftBoundariesDoTalkWith ?? "")"
+        let reminder = "\(stressor)\n\(details)"
+    }
+    
+    @IBAction func scheduleReminderMoodShifter(_ sender: Any?) {
+        let stressor = "Stressor: \(self.stressor?.title ?? "")"
+        let details = "When I am triggered by this stressor, I will remember to go to the Think, Shift, Release app to access my Instant Mood Shifters."
+        let reminder = "\(stressor)\n\(details)"
+    }
+}
+
+extension SummaryShiftViewController {
     @objc fileprivate func notTalkTap() {
         self.goto?(.shiftSecondSegment)
     }
