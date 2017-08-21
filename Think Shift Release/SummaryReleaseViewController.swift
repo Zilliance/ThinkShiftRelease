@@ -58,9 +58,7 @@ class SummaryReleaseViewController: UIViewController, SummaryItemViewController 
 }
 
 extension SummaryReleaseViewController {
-<<<<<<< Updated upstream
-=======
-    
+
     @IBAction func scheduleReminderRelease(_ sender: Any?) {
         let stressor = "Stressor: \(self.stressor?.title ?? "")"
         let details1 = "My Intention: \(self.stressor?.releaseMyIntention ?? "")"
@@ -89,7 +87,10 @@ extension SummaryReleaseViewController {
 }
 
 extension SummaryReleaseViewController {
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> a522fd108ce87e718339e1c2038e7e4588b28714
     
     @objc fileprivate func intentionTap() {
         self.goto?(.release)
