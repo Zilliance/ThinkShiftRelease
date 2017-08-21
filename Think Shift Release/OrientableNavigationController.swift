@@ -27,7 +27,7 @@ class OrientableNavigationController: UINavigationController {
     static var defaultInterfaceOrientations: UIInterfaceOrientationMask = .portrait
     
     override var shouldAutorotate: Bool {   
-        return true
+        return (visibleViewController?.shouldAutorotate)!
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

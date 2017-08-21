@@ -49,6 +49,10 @@ class SectionAnimationViewController: UIViewController {
         case icon
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     var playerViewController: AVPlayerViewController!
     var delegate: SectionAnimationDelegate?
     var animation: SectionAnimation?
