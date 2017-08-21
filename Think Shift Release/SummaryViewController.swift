@@ -225,19 +225,6 @@ class SummaryViewController: UIViewController {
 
     //MARK -- User Actions
     
-    @IBAction func reminderAction(_ sender: Any) {
-        
-        // Call SummaryReleaseViewController.scheduleReminderRelease
-        // Delete commented code below
-        
-//        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
-//            assertionFailure()
-//            return
-//        }
-//        
-//        self.navigationController?.pushViewController(scheduler, animated: true)
-    }
-    
     @IBAction func close(_ sender: Any?) {
         if let _ = self.presentingViewController {
             self.dismiss(animated: true, completion: nil)
@@ -245,8 +232,6 @@ class SummaryViewController: UIViewController {
             navigationController.popViewController(animated: true)
         }
     }
-    
-    // MARK: -
     
     // MARK: - Hint
     
