@@ -163,8 +163,8 @@ class SummaryViewController: UIViewController {
             currentViewController?.didMove(toParentViewController: nil)
         }
         
-        controller.willMove(toParentViewController: self)
         self.vcContainerView.addSubview(controller.view)
+        self.addChildViewController(controller)
         
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -174,8 +174,6 @@ class SummaryViewController: UIViewController {
             controller.view.topAnchor.constraint(equalTo: self.vcContainerView.topAnchor),
             controller.view.bottomAnchor.constraint(equalTo: self.vcContainerView.bottomAnchor)
             ])
-        
-        controller.didMove(toParentViewController: self)
         
         currentViewController = controller
         
@@ -227,13 +225,15 @@ class SummaryViewController: UIViewController {
     
     @IBAction func reminderAction(_ sender: Any) {
         
+        // Call SummaryReleaseViewController.scheduleReminderRelease
+        // Delete commented code below
         
-        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
-            assertionFailure()
-            return
-        }
-        
-        self.navigationController?.pushViewController(scheduler, animated: true)
+//        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
+//            assertionFailure()
+//            return
+//        }
+//        
+//        self.navigationController?.pushViewController(scheduler, animated: true)
     }
     
     @IBAction func close(_ sender: Any?) {
