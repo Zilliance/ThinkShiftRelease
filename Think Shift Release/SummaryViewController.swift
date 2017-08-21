@@ -71,6 +71,8 @@ class SummaryViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var vcContainerView: UIView!
+    @IBOutlet weak var buttonHeight: NSLayoutConstraint!
+    @IBOutlet weak var reminderButton: UIButton!
 
     var itemSection: ItemSection = .think
     
@@ -225,15 +227,10 @@ class SummaryViewController: UIViewController {
     
     @IBAction func reminderAction(_ sender: Any) {
         
-        // Call SummaryReleaseViewController.scheduleReminderRelease
-        // Delete commented code below
-        
-//        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
-//            assertionFailure()
-//            return
-//        }
-//        
-//        self.navigationController?.pushViewController(scheduler, animated: true)
+        if let releaseSummary = self.items[ItemSection.release.rawValue].viewController as? SummaryReleaseViewController {
+            releaseSummary.scheduleReminderRelease(self)
+        }
+ 
     }
     
     @IBAction func close(_ sender: Any?) {
@@ -275,6 +272,9 @@ extension SummaryViewController: UICollectionViewDelegate
         }
         
         self.currentIndex = indexPath.row
+        
+        self.buttonHeight.constant = self.currentIndex == ItemSection.release.rawValue ? 70 : 0
+        self.reminderButton.isHidden = self.currentIndex == ItemSection.release.rawValue ? false : true
     }
     
 }
