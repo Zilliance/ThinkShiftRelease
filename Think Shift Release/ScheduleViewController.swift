@@ -59,8 +59,8 @@ class ScheduleViewController: UIViewController {
         notificationsViewController.preloadedNotification = self.preloadedNotification
         calendarViewController.preloadedNotification = self.preloadedNotification
         
-        notificationsViewController.zillianceTextViewController.textView.text = self.text
-        calendarViewController.zillianceTextViewController.textView.text = self.text
+        notificationsViewController.text = self.text
+        calendarViewController.text = self.text
         
         self.viewControllers.append(notificationsViewController)
         self.viewControllers.append(calendarViewController)

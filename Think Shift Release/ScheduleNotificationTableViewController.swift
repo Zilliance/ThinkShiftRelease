@@ -22,9 +22,11 @@ class ScheduleNotificationTableViewController: UITableViewController {
     
     private let dateFormatter = DateFormatter()
     
+    var text: String?
+    
     fileprivate var selectedTime: Date?
 
-    var zillianceTextViewController: ZillianceTextViewController!
+    fileprivate var zillianceTextViewController: ZillianceTextViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,10 @@ class ScheduleNotificationTableViewController: UITableViewController {
         self.dateFormatter.dateFormat = "h:mm a"
         self.dateFormatter.amSymbol = "AM"
         self.dateFormatter.pmSymbol = "PM"
+        
+        if let text = self.text {
+            self.zillianceTextViewController.textView.text = text
+        }
         
         self.daysSegment.tintColor = UIColor.switchBlueColor
         self.daysSegment.setTitleTextAttributes([NSFontAttributeName: UIFont.muliRegular(size: 10.0), NSForegroundColorAttributeName: UIColor.white] , for: .selected)

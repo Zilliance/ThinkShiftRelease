@@ -15,8 +15,10 @@ class AddToCalendarViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    var zillianceTextViewController: ZillianceTextViewController!
+    fileprivate var zillianceTextViewController: ZillianceTextViewController!
     var preloadedNotification: Notification?
+    
+    var text: String?
 
     fileprivate var pickerDates: [Date] = []
 
@@ -28,6 +30,10 @@ class AddToCalendarViewController: UIViewController {
     
     func setupView() {
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
+        if let text = self.text {
+            self.zillianceTextViewController.textView.text = text
+        }
         
         
         // date picker
