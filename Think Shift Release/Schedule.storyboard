@@ -75,6 +75,11 @@
                                 <state key="normal" title="NOTIFY ME">
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="notifyAction:" destination="PM4-6T-8G3" eventType="touchUpInside" id="QuH-Se-fNk"/>
                                 </connections>
@@ -230,7 +235,7 @@
                                                     </constraints>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring Weekly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1w-Aj-TeP">
-                                                    <rect key="frame" x="20" y="18.5" width="81.5" height="13"/>
+                                                    <rect key="frame" x="20" y="19" width="78" height="12"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                                     <color key="textColor" red="0.25882352941176467" green="0.36470588235294116" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -253,13 +258,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uT-TE-ZS4">
-                                                    <rect key="frame" x="20" y="18.5" width="23" height="13"/>
+                                                    <rect key="frame" x="20" y="19" width="22" height="12"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                                     <color key="textColor" red="0.25882352941176467" green="0.36470588235294116" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to set time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGi-8I-bW1">
-                                                    <rect key="frame" x="280.5" y="18.5" width="68.5" height="13"/>
+                                                    <rect key="frame" x="283" y="19" width="66" height="12"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                                     <color key="textColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -282,7 +287,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCi-6A-Icg">
-                                                    <rect key="frame" x="20" y="18.5" width="24" height="13"/>
+                                                    <rect key="frame" x="20" y="19" width="24" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="21D-Wl-Gk6"/>
                                                     </constraints>
