@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5M9-Zb-8Dz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -119,43 +119,14 @@
                                     <constraint firstAttribute="height" constant="20" id="sld-fL-Csa"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqw-ZH-Y5v" userLabel="ButtonContainer">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
-                                <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vID-OA-wjt">
-                                        <rect key="frame" x="20" y="-22.5" width="335" height="44"/>
-                                        <color key="backgroundColor" red="0.79555457830429077" green="0.94107520580291748" blue="0.97919803857803345" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="8bs-i1-bQ5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
-                                        <state key="normal" title="    TAKE ACTION" image="iconNotification">
-                                            <color key="titleColor" red="0.013387111015617847" green="0.64878100156784058" blue="0.81588780879974365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="reminderAction:" destination="5M9-Zb-8Dz" eventType="touchUpInside" id="UCV-YZ-1fG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" id="kzk-1d-aUt"/>
-                                    <constraint firstItem="vID-OA-wjt" firstAttribute="centerY" secondItem="Tqw-ZH-Y5v" secondAttribute="centerY" id="lMN-ws-vmI"/>
-                                    <constraint firstAttribute="trailing" secondItem="vID-OA-wjt" secondAttribute="trailing" constant="20" id="ldw-BP-5M8"/>
-                                    <constraint firstItem="vID-OA-wjt" firstAttribute="leading" secondItem="Tqw-ZH-Y5v" secondAttribute="leading" constant="20" id="n2g-qe-mPh"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Tqw-ZH-Y5v" firstAttribute="top" secondItem="nsm-Mh-Z1m" secondAttribute="bottom" id="ADn-rc-9nu"/>
                             <constraint firstAttribute="trailing" secondItem="unU-Tz-UTV" secondAttribute="trailing" id="AgT-li-yF8"/>
                             <constraint firstItem="KTZ-Cr-XQ9" firstAttribute="leading" secondItem="XOB-ZW-pPd" secondAttribute="leading" id="DUm-1T-Ym6"/>
-                            <constraint firstItem="Tqw-ZH-Y5v" firstAttribute="leading" secondItem="XOB-ZW-pPd" secondAttribute="leading" id="EMO-W5-8hY"/>
-                            <constraint firstItem="Dmj-Rz-Bp6" firstAttribute="top" secondItem="Tqw-ZH-Y5v" secondAttribute="bottom" id="GXK-rU-752"/>
                             <constraint firstItem="nsm-Mh-Z1m" firstAttribute="leading" secondItem="XOB-ZW-pPd" secondAttribute="leading" id="bNy-cf-oZo"/>
                             <constraint firstItem="unU-Tz-UTV" firstAttribute="leading" secondItem="XOB-ZW-pPd" secondAttribute="leading" id="bl1-nW-KpF"/>
-                            <constraint firstAttribute="trailing" secondItem="Tqw-ZH-Y5v" secondAttribute="trailing" id="e0Q-lQ-iAx"/>
+                            <constraint firstItem="Dmj-Rz-Bp6" firstAttribute="top" secondItem="nsm-Mh-Z1m" secondAttribute="bottom" id="fCD-l8-rnf"/>
                             <constraint firstItem="unU-Tz-UTV" firstAttribute="top" secondItem="yRl-WE-MHH" secondAttribute="bottom" constant="2" id="i0a-Nl-XZb"/>
                             <constraint firstAttribute="trailing" secondItem="hNC-qg-k57" secondAttribute="trailing" id="kAt-8O-JGW"/>
                             <constraint firstAttribute="trailing" secondItem="KTZ-Cr-XQ9" secondAttribute="trailing" id="mw5-5Z-q15"/>
@@ -724,8 +695,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-e4-dgP">
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <color key="backgroundColor" red="0.79555457829999998" green="0.94107520580000004" blue="0.97919803859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1fV-rX-rnm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                <state key="normal" title="    TAKE ACTION" image="iconNotification">
+                                    <color key="titleColor" red="0.01338711102" green="0.64878100159999996" blue="0.8158878088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reminderAction:" destination="5M9-Zb-8Dz" eventType="touchUpInside" id="s8U-6r-8NT"/>
+                                    <action selector="scheduleReminderRelease:" destination="j6w-vy-i4f" eventType="touchUpInside" id="CUR-sJ-1fY"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j85-le-K4J">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="563"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5o-WP-CoF" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="580"/>
@@ -947,9 +933,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="z5o-WP-CoF" firstAttribute="width" secondItem="cjh-XM-b6v" secondAttribute="width" id="FNw-rL-ge2"/>
-                            <constraint firstItem="Sc9-BL-ylE" firstAttribute="top" secondItem="j85-le-K4J" secondAttribute="bottom" id="Nmj-La-OdU"/>
+                            <constraint firstAttribute="trailing" secondItem="qJB-e4-dgP" secondAttribute="trailing" constant="20" id="JHK-QW-shQ"/>
                             <constraint firstAttribute="trailing" secondItem="j85-le-K4J" secondAttribute="trailing" id="Qbr-y1-yGJ"/>
+                            <constraint firstItem="Sc9-BL-ylE" firstAttribute="top" secondItem="qJB-e4-dgP" secondAttribute="bottom" constant="20" id="YTu-6L-E99"/>
                             <constraint firstItem="j85-le-K4J" firstAttribute="top" secondItem="tj7-Ha-S2z" secondAttribute="bottom" id="ewM-jA-GNL"/>
+                            <constraint firstItem="qJB-e4-dgP" firstAttribute="leading" secondItem="cjh-XM-b6v" secondAttribute="leading" constant="20" id="rYX-ca-42H"/>
+                            <constraint firstItem="qJB-e4-dgP" firstAttribute="top" secondItem="j85-le-K4J" secondAttribute="bottom" constant="20" id="sGi-g7-rd3"/>
                             <constraint firstItem="j85-le-K4J" firstAttribute="leading" secondItem="cjh-XM-b6v" secondAttribute="leading" id="xHW-dw-f7l"/>
                         </constraints>
                     </view>
