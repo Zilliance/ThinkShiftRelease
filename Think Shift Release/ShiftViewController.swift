@@ -53,8 +53,7 @@ class ShiftViewController: UIViewController, ShowsSummary {
         }
         
         self.newStressor = { [unowned self] stressor in
-            self.stressor.shiftBoundariesDoTalkWith = stressor.shiftBoundariesDoTalkWith
-            self.stressor.shiftBoundariesNotTalkWith = stressor.shiftBoundariesNotTalkWith
+            self.stressor.copy(from: stressor)
         }
         
         // Embed Shift Mood

@@ -24,7 +24,7 @@ class ScheduleNotificationTableViewController: UITableViewController {
     
     fileprivate var selectedTime: Date?
 
-    fileprivate var zillianceTextViewController: ZillianceTextViewController!
+    var zillianceTextViewController: ZillianceTextViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,7 +15,7 @@ class AddToCalendarViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    fileprivate var zillianceTextViewController: ZillianceTextViewController!
+    var zillianceTextViewController: ZillianceTextViewController!
     var preloadedNotification: Notification?
 
     fileprivate var pickerDates: [Date] = []

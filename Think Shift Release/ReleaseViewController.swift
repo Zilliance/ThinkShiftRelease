@@ -33,11 +33,7 @@ class ReleaseViewController: UIViewController, ShowsSummary {
         self.setupView()
         
         self.newStressor = { [unowned self] stressor in
-            self.stressor.releaseMyIntention = stressor.releaseMyIntention
-            self.stressor.releaseInsteadExperience = stressor.releaseInsteadExperience
-            self.stressor.releaseAffirmation = stressor.releaseAffirmation
-            self.setupView()
-            
+            self.stressor.copy(from: stressor)
         }
     }
     
