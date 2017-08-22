@@ -314,7 +314,7 @@
                                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example: I need some quiet downtime to recharge, or I need to delegate some tasks on my to-do list."/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example: I need quiet time to recharge, or I need to delegate some tasks on my to-do list. "/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="0ra-RT-KAi" id="O06-AW-Erw"/>

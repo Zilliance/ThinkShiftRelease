@@ -61,10 +61,11 @@ extension SummaryReleaseViewController {
 
     @IBAction func scheduleReminderRelease(_ sender: Any?) {
         let stressor = "Stressor: \(self.stressor?.title ?? "")"
-        let details1 = "My Intention: \(self.stressor?.releaseMyIntention ?? "")"
-        let details2 = "My Affirmation: \(self.stressor?.releaseAffirmation ?? "")"
-        let details3 = "Repeat my affirmation to the rhythm of my breath to evoke the feeling of my intention."
-        let reminder = "\(stressor)\n\(details1)\n\(details2)\n\(details3)"
+        let details1 = "My Intention - release: \(self.stressor?.releaseMyIntention ?? "")"
+        let details2 = "My Intention - experience instead: \(self.stressor?.releaseInsteadExperience ?? "")"
+        let details3 = "My Affirmation: \(self.stressor?.releaseAffirmation ?? "")"
+        let details4 = "Repeat my affirmation to the rhythm of my breath to evoke the feeling of my intention."
+        let reminder = "\(stressor)\n\(details1)\n\(details2)\n\(details3)\n\(details4)"
         
         self.showScheduler(text: reminder)
     }

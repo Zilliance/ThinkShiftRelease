@@ -123,7 +123,7 @@
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="It is my intention to release ..."/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, anger"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </userDefinedRuntimeAttribute>
@@ -142,7 +142,7 @@
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="... and instead experience ..."/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, peace"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                         <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </userDefinedRuntimeAttribute>
