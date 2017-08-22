@@ -47,6 +47,10 @@ class ReleaseViewController: UIViewController, ShowsSummary {
         self.save()
     }
     
+    func summaryPreSave() {
+         self.save()
+    }
+    
     private func setupView() {
         
         self.bottomView.layer.contents = UIImage(named: "release-bg")?.cgImage

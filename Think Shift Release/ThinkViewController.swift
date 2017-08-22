@@ -69,6 +69,18 @@ class ThinkViewController: UIViewController, ShowsSummary {
         }
     }
 
+    func summaryPreSave() {
+        
+        if let vc = self.embeddedViewController as? ThinkPositivelyViewController {
+            vc.save()
+        }
+        if let vc = self.embeddedViewController as? ThinkConstructivelyViewController {
+            vc.save()
+        }
+        
+        self.save()
+    }
+    
     private func setupView() {
         
         self.bottomView.layer.contents = UIImage(named: "think-bg")?.cgImage
