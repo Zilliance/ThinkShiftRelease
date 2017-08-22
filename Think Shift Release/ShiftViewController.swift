@@ -68,6 +68,12 @@ class ShiftViewController: UIViewController, ShowsSummary {
             NotificationCenter.default.removeObserver(playbackObserver)
         }
     }
+    
+    func summaryPreSave() {
+        if let vc = self.embeddedViewController as? ShiftSetBoundariesViewController {
+            vc.save()
+        }
+    }
 
     // MARK: -
     

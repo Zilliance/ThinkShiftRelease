@@ -8,10 +8,12 @@
 
 import UIKit
 
+
 protocol ShowsSummary {
     var stressor: Stressor! { get }
     func setupSummaryButton()
     func viewSummary(_ sender: Any?)
+    func summaryPreSave()
     var newStressor: ((Stressor) -> ())? { get set }
     var summarySection: ItemSection! { get set }
 }
@@ -29,6 +31,7 @@ extension ShowsSummary where Self: UIViewController {
             return
         }
         //pass copy of stressor to summary
+        self.summaryPreSave()
         vc.stressor = Stressor(value: self.stressor)
         vc.itemSection = self.summarySection
         vc.updatedStressor = { stressor in
