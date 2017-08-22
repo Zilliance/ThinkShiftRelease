@@ -124,9 +124,6 @@
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, anger"/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="FhI-cT-o6y" id="3ae-6s-dka"/>
@@ -143,9 +140,6 @@
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, peace"/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="FhI-cT-o6y" id="0JS-ey-yH5"/>
@@ -206,9 +200,6 @@
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, I am at peace. I am loved. All is well."/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="FhI-cT-o6y" id="K8p-eX-SJk"/>

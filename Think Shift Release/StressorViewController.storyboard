@@ -102,7 +102,7 @@
                                                         <rect key="frame" x="15" y="87.5" width="305" height="62.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter one or two words that describe what you are upset about. For example, work or relationships."/>
