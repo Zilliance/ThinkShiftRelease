@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zo4-rg-VYF" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="830"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="845"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBa-wu-IrW" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="10" width="335" height="90"/>
@@ -77,14 +77,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-D3-cIK">
-                                                <rect key="frame" x="0.0" y="110" width="375" height="720"/>
+                                                <rect key="frame" x="0.0" y="110" width="375" height="735"/>
                                                 <subviews>
                                                     <view alpha="0.44999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-2o-8Ul" userLabel="WhiteOverlay">
-                                                        <rect key="frame" x="0.0" y="30" width="375" height="690"/>
+                                                        <rect key="frame" x="0.0" y="20" width="375" height="715"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-hN-uyM" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="40" width="335" height="270"/>
+                                                        <rect key="frame" x="20" y="55" width="335" height="270"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY INTENTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee2-58-GKJ">
                                                                 <rect key="frame" x="75" y="19" width="244" height="18"/>
@@ -124,9 +124,6 @@
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, anger"/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="FhI-cT-o6y" id="3ae-6s-dka"/>
@@ -143,9 +140,6 @@
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, peace"/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="FhI-cT-o6y" id="0JS-ey-yH5"/>
@@ -189,7 +183,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9e-U9-dp7" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="315" width="335" height="155"/>
+                                                        <rect key="frame" x="20" y="330" width="335" height="155"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="release-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-Rv-4km">
                                                                 <rect key="frame" x="15" y="15" width="50" height="50"/>
@@ -206,9 +200,6 @@
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, I am at peace. I am loved. All is well."/>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="FhI-cT-o6y" id="K8p-eX-SJk"/>
@@ -252,7 +243,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-J4-2lk" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="475" width="335" height="225"/>
+                                                        <rect key="frame" x="20" y="490" width="335" height="225"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREATHE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-Kp-d7h">
                                                                 <rect key="frame" x="75" y="19" width="64.5" height="18"/>
@@ -304,22 +295,35 @@
                                                             <constraint firstItem="fvO-Pz-tUC" firstAttribute="top" secondItem="Ocs-J4-2lk" secondAttribute="top" constant="15" id="uGe-cO-Go9"/>
                                                         </constraints>
                                                     </view>
+                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frS-kJ-OQB" userLabel="Mood Video">
+                                                        <rect key="frame" x="333" y="27" width="22" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="22" id="1pU-f1-CRU"/>
+                                                            <constraint firstAttribute="height" constant="22" id="CUV-V5-7Im"/>
+                                                        </constraints>
+                                                        <state key="normal" image="video"/>
+                                                        <connections>
+                                                            <action selector="playVideo:" destination="FhI-cT-o6y" eventType="touchUpInside" id="cbF-gE-r4A"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="0TO-2o-8Ul" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" id="A7z-v6-GvF"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ucb-hN-uyM" secondAttribute="trailing" constant="20" id="GgJ-Q0-JBa"/>
+                                                    <constraint firstItem="frS-kJ-OQB" firstAttribute="top" secondItem="RKp-D3-cIK" secondAttribute="top" constant="27" id="JZB-Ie-LND"/>
                                                     <constraint firstAttribute="trailing" secondItem="0TO-2o-8Ul" secondAttribute="trailing" id="L6T-HO-E84"/>
-                                                    <constraint firstItem="0TO-2o-8Ul" firstAttribute="top" secondItem="RKp-D3-cIK" secondAttribute="top" constant="30" id="Ori-Mk-dfi"/>
+                                                    <constraint firstItem="0TO-2o-8Ul" firstAttribute="top" secondItem="RKp-D3-cIK" secondAttribute="top" constant="20" id="Ori-Mk-dfi"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ocs-J4-2lk" secondAttribute="trailing" constant="20" id="Rjq-0B-ZM1"/>
                                                     <constraint firstAttribute="bottom" secondItem="Ocs-J4-2lk" secondAttribute="bottom" constant="20" id="SlO-he-WwZ"/>
                                                     <constraint firstItem="j9e-U9-dp7" firstAttribute="top" secondItem="Ucb-hN-uyM" secondAttribute="bottom" constant="5" id="T8S-8U-mYe"/>
-                                                    <constraint firstItem="Ucb-hN-uyM" firstAttribute="top" secondItem="RKp-D3-cIK" secondAttribute="top" constant="40" id="W7a-Vl-lMk"/>
+                                                    <constraint firstItem="Ucb-hN-uyM" firstAttribute="top" secondItem="RKp-D3-cIK" secondAttribute="top" constant="55" id="W7a-Vl-lMk"/>
                                                     <constraint firstItem="j9e-U9-dp7" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" constant="20" id="WRO-q5-7GN"/>
                                                     <constraint firstItem="Ucb-hN-uyM" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" constant="20" id="bNQ-17-yhi"/>
                                                     <constraint firstItem="Ocs-J4-2lk" firstAttribute="leading" secondItem="RKp-D3-cIK" secondAttribute="leading" constant="20" id="fdd-gw-viE"/>
                                                     <constraint firstAttribute="bottom" secondItem="0TO-2o-8Ul" secondAttribute="bottom" id="nAP-yn-a6b"/>
                                                     <constraint firstAttribute="trailing" secondItem="j9e-U9-dp7" secondAttribute="trailing" constant="20" id="oij-Tx-ZV1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="frS-kJ-OQB" secondAttribute="trailing" constant="20" id="qVV-lM-tph"/>
                                                     <constraint firstItem="Ocs-J4-2lk" firstAttribute="top" secondItem="j9e-U9-dp7" secondAttribute="bottom" constant="5" id="qif-2G-lOB"/>
                                                 </constraints>
                                             </view>
@@ -473,5 +477,6 @@
         <image name="release-icon" width="60" height="60"/>
         <image name="stressor-icon" width="52" height="60"/>
         <image name="track-icon" width="60" height="60"/>
+        <image name="video" width="30" height="30"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VdO-3j-Vpy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VdO-3j-Vpy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,7 @@
         <scene sceneID="Ms0-ID-LMc">
             <objects>
                 <navigationController id="VdO-3j-Vpy" customClass="CustomNavigationController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z49-HN-nc2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Z49-HN-nc2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -130,19 +130,19 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaC-h9-PVF">
-                                                    <rect key="frame" x="16.5" y="10" width="26" height="14"/>
+                                                    <rect key="frame" x="16.5" y="10" width="26" height="15.5"/>
                                                     <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                                     <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Reduce the amount of time spent on social media by reading a book instead." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMH-nW-ahj">
-                                                    <rect key="frame" x="56" y="23" width="256" height="30.5"/>
+                                                    <rect key="frame" x="56" y="24" width="256" height="33"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="13"/>
                                                     <color key="textColor" red="0.25882352941176467" green="0.36470588235294116" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="11:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-f7-WCV">
-                                                    <rect key="frame" x="56" y="11" width="39" height="10.5"/>
+                                                    <rect key="frame" x="56" y="11" width="40.5" height="11.5"/>
                                                     <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="9"/>
                                                     <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raz-xw-TQo">
-                                                    <rect key="frame" x="14.5" y="23" width="31.5" height="33"/>
+                                                    <rect key="frame" x="12.5" y="24" width="34" height="35.5"/>
                                                     <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="28"/>
                                                     <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -219,17 +219,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing here? You haven’t scheduled anything yet! Choose any stressor and tap “Set Reminder” from the summary screen." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q9-z5-zjU">
-                                                    <rect key="frame" x="15" y="8" width="345" height="64"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing here? You haven’t scheduled anything yet! Choose any stressor and tap the notification icons from the summary screen." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q9-z5-zjU">
+                                                    <rect key="frame" x="15" y="8" width="305" height="64"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="13"/>
                                                     <color key="textColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconNotification" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-Di-ifs">
+                                                    <rect key="frame" x="327" y="30" width="20" height="20"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XIW-Di-ifs" secondAttribute="trailing" constant="20" id="ECo-HZ-1pi"/>
                                                 <constraint firstAttribute="bottom" secondItem="2q9-z5-zjU" secondAttribute="bottom" constant="8" id="S6k-f7-VgW"/>
                                                 <constraint firstItem="2q9-z5-zjU" firstAttribute="top" secondItem="wuX-9f-c22" secondAttribute="top" constant="8" id="WGE-w4-Nck"/>
-                                                <constraint firstAttribute="trailing" secondItem="2q9-z5-zjU" secondAttribute="trailing" constant="15" id="plg-nk-t05"/>
+                                                <constraint firstAttribute="trailing" secondItem="2q9-z5-zjU" secondAttribute="trailing" constant="55" id="plg-nk-t05"/>
+                                                <constraint firstItem="XIW-Di-ifs" firstAttribute="centerY" secondItem="wuX-9f-c22" secondAttribute="centerY" id="rHU-Yg-yAQ"/>
                                                 <constraint firstItem="2q9-z5-zjU" firstAttribute="leading" secondItem="wuX-9f-c22" secondAttribute="leading" constant="15" id="yf9-GR-Wft"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -274,6 +279,7 @@
     </scenes>
     <resources>
         <image name="calendar-icon" width="20" height="20"/>
+        <image name="iconNotification" width="20" height="20"/>
         <image name="song-icon" width="60" height="60"/>
     </resources>
 </document>
