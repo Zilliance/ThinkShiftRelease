@@ -28,6 +28,11 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     
     var summarySection: ItemSection! = .release
     
+    fileprivate var isSectionCompleted: Bool {
+        return !self.affirmationTextView.text.isEmpty && !self.intentionTextView.text.isEmpty && !self.experienceTextView.text.isEmpty
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()

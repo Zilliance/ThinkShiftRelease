@@ -20,6 +20,10 @@ class ThinkConstructivelyViewController: UIViewController {
     var stressor: Stressor!
     private var playbackObserver: NSObjectProtocol?
     
+    fileprivate var isSectionCompleted: Bool {
+        return !self.wisdomTextView.text.isEmpty && !self.actionStepTextView.text.isEmpty
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -148,6 +152,7 @@ extension ThinkConstructivelyViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
+            print(self.isSectionCompleted)
             textView.resignFirstResponder()
             return false
         }

@@ -18,6 +18,11 @@ class ShiftSetBoundariesViewController: UIViewController {
     
     var stressor: Stressor!
     private var playbackObserver: NSObjectProtocol?
+    
+    fileprivate var isSectionCompleted: Bool {
+        return !self.talkAboutTextView.text.isEmpty && !self.notTalkAboutTextView.text.isEmpty
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
