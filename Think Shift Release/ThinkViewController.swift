@@ -28,6 +28,10 @@ class ThinkViewController: UIViewController, ShowsSummary {
     var summarySection: ItemSection! = .think
     var newStressor: ((Stressor) -> ())? = nil
     
+    fileprivate var isSectionCompleted: Bool {
+        return !self.textView.text.isEmpty
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -19,6 +19,10 @@ class ThinkPositivelyViewController: UIViewController {
     var stressor: Stressor!
     private var playbackObserver: NSObjectProtocol?
     
+    fileprivate var isSectionCompleted: Bool {
+        return !self.textView.text.isEmpty
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
