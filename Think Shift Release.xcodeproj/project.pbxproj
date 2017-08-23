@@ -137,6 +137,7 @@
 		E38CB6051F44DE1C004AFEA4 /* LearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38CB6041F44DE1C004AFEA4 /* LearnMoreViewController.swift */; };
 		E38CB6071F44DE22004AFEA4 /* LearnMore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38CB6061F44DE22004AFEA4 /* LearnMore.storyboard */; };
 		E38CB6091F44E3D1004AFEA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38CB6081F44E3D1004AFEA4 /* Localizable.strings */; };
+		E39D16331F4E310200F76C57 /* TourSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D16321F4E310200F76C57 /* TourSceneViewController.swift */; };
 		E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B761F21BB670060FED4 /* Stressor.swift */; };
 		E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B781F21BB9A0060FED4 /* Database.swift */; };
 		E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B7A1F21BBBC0060FED4 /* User.swift */; };
@@ -314,6 +315,7 @@
 		E38CB6041F44DE1C004AFEA4 /* LearnMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnMoreViewController.swift; sourceTree = "<group>"; };
 		E38CB6061F44DE22004AFEA4 /* LearnMore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearnMore.storyboard; sourceTree = "<group>"; };
 		E38CB6081F44E3D1004AFEA4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E39D16321F4E310200F76C57 /* TourSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourSceneViewController.swift; sourceTree = "<group>"; };
 		E3A30B761F21BB670060FED4 /* Stressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stressor.swift; sourceTree = "<group>"; };
 		E3A30B781F21BB9A0060FED4 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		E3A30B7A1F21BBBC0060FED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 			children = (
 				E347EA551F3CCABD002920D0 /* Tour.storyboard */,
 				E347EA561F3CCABD002920D0 /* TourPageViewController.swift */,
+				E39D16321F4E310200F76C57 /* TourSceneViewController.swift */,
 			);
 			name = Tour;
 			sourceTree = "<group>";
@@ -1112,6 +1115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C631F821F228F7300B2CA4C /* UIColor+CustomColors.swift in Sources */,
+				E39D16331F4E310200F76C57 /* TourSceneViewController.swift in Sources */,
 				E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */,
 				8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */,
 				E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */,
