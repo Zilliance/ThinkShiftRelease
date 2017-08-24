@@ -103,7 +103,7 @@
                                                                     <constraint firstAttribute="height" constant="50" id="rWB-Wt-gja"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an intention for what you want to release and the emotion you would like to experience instead. Learn more." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify what you want to release and the emotion you would like to experience instead. Learn more." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-pT-bOC">
                                                                 <rect key="frame" x="75" y="39" width="244" height="45.5"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
