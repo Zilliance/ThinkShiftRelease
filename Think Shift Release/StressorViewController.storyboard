@@ -72,8 +72,8 @@
                                                     <action selector="didTapThink:" destination="5hf-Zo-Oc3" eventType="touchUpInside" id="eIt-kE-8Jv"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think positively, think constructively" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u3-zZ-TZL">
-                                                <rect key="frame" x="101" y="424" width="194" height="15.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think Positively, Think Constructively" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u3-zZ-TZL">
+                                                <rect key="frame" x="101" y="424" width="200" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -165,8 +165,8 @@
                                                     <action selector="didTapShift:" destination="5hf-Zo-Oc3" eventType="touchUpInside" id="9PI-sZ-Wrn"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant mood shift, set boundaries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuJ-CF-Ow7">
-                                                <rect key="frame" x="101" y="491" width="185" height="15.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant Mood Shift, Set Boundaries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuJ-CF-Ow7">
+                                                <rect key="frame" x="101" y="491" width="188.5" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -187,14 +187,14 @@
                                                     <action selector="didTapRelease:" destination="5hf-Zo-Oc3" eventType="touchUpInside" id="Lvo-t0-7iq"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe and let go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-Qg-NcB">
-                                                <rect key="frame" x="101" y="558" width="101" height="15.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe and Let Go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-Qg-NcB">
+                                                <rect key="frame" x="101" y="558" width="106.5" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olg-uj-1E1" userLabel="Think Video">
-                                                <rect key="frame" x="323" y="409.5" width="22" height="22"/>
+                                                <rect key="frame" x="323" y="401.5" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="HQt-bk-t7x"/>
                                                     <constraint firstAttribute="height" constant="22" id="Z5b-oZ-Eqj"/>
@@ -205,7 +205,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRT-8p-zI0" userLabel="Shift Video">
-                                                <rect key="frame" x="323" y="477" width="22" height="22"/>
+                                                <rect key="frame" x="323" y="468.5" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="bdV-ur-OE0"/>
                                                     <constraint firstAttribute="width" constant="22" id="vPz-xz-wMU"/>
@@ -216,7 +216,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-Pg-V39" userLabel="Release Video">
-                                                <rect key="frame" x="323" y="544" width="22" height="22"/>
+                                                <rect key="frame" x="323" y="535.5" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="bYH-Mc-moU"/>
                                                     <constraint firstAttribute="height" constant="22" id="jJB-5B-dGx"/>
@@ -242,10 +242,10 @@
                                             <constraint firstAttribute="trailing" secondItem="3Jz-4k-d8V" secondAttribute="trailing" constant="20" id="MV5-Ji-YkQ"/>
                                             <constraint firstItem="ew5-5r-B0H" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="RGl-0Z-3Rs"/>
                                             <constraint firstItem="5u3-zZ-TZL" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="101" id="Um7-L7-M5g"/>
-                                            <constraint firstItem="Olg-uj-1E1" firstAttribute="centerY" secondItem="jxl-an-Hyx" secondAttribute="centerY" id="cfR-Or-4mZ"/>
+                                            <constraint firstItem="Olg-uj-1E1" firstAttribute="centerY" secondItem="jxl-an-Hyx" secondAttribute="centerY" constant="-8.5" id="cfR-Or-4mZ"/>
                                             <constraint firstItem="UEM-zQ-ms1" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="czl-4c-hnC"/>
                                             <constraint firstItem="DuJ-CF-Ow7" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="101" id="d8X-O8-yoZ"/>
-                                            <constraint firstItem="pRT-8p-zI0" firstAttribute="centerY" secondItem="3Jz-4k-d8V" secondAttribute="centerY" id="dLA-Cm-AhW"/>
+                                            <constraint firstItem="pRT-8p-zI0" firstAttribute="centerY" secondItem="3Jz-4k-d8V" secondAttribute="centerY" constant="-8.5" id="dLA-Cm-AhW"/>
                                             <constraint firstAttribute="trailing" secondItem="UEM-zQ-ms1" secondAttribute="trailing" constant="20" id="doo-Wl-u6C"/>
                                             <constraint firstItem="70Y-8n-GXu" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="fXy-04-kvm"/>
                                             <constraint firstItem="ODz-Qg-NcB" firstAttribute="top" secondItem="3Jz-4k-d8V" secondAttribute="bottom" constant="40" id="fvO-yo-khW"/>
@@ -254,7 +254,7 @@
                                             <constraint firstAttribute="trailing" secondItem="pRT-8p-zI0" secondAttribute="trailing" constant="30" id="luA-Sw-0wc"/>
                                             <constraint firstAttribute="trailing" secondItem="ihf-Pg-V39" secondAttribute="trailing" constant="30" id="n5r-ng-dfr"/>
                                             <constraint firstItem="70Y-8n-GXu" firstAttribute="top" secondItem="ew5-5r-B0H" secondAttribute="bottom" constant="8" id="p4f-uZ-ajB"/>
-                                            <constraint firstItem="ihf-Pg-V39" firstAttribute="centerY" secondItem="UEM-zQ-ms1" secondAttribute="centerY" id="sNE-cF-CwX"/>
+                                            <constraint firstItem="ihf-Pg-V39" firstAttribute="centerY" secondItem="UEM-zQ-ms1" secondAttribute="centerY" constant="-8.5" id="sNE-cF-CwX"/>
                                             <constraint firstItem="3Jz-4k-d8V" firstAttribute="top" secondItem="jxl-an-Hyx" secondAttribute="bottom" constant="7" id="tTX-Su-KZe"/>
                                             <constraint firstItem="BPr-BX-HdS" firstAttribute="leading" secondItem="0tF-fU-3Mz" secondAttribute="leading" constant="20" id="tYR-qq-W3N"/>
                                             <constraint firstItem="e8l-tZ-C82" firstAttribute="top" secondItem="BPr-BX-HdS" secondAttribute="bottom" constant="14" id="uSc-99-hl1"/>

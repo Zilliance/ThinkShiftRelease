@@ -81,8 +81,19 @@ class ReleaseViewController: UIViewController, ShowsSummary {
             self.setupSummaryButton()
         }
         
-        self.intentionDescription.attributedText = self.intentionDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
+        // Format learn more sentences
+        
+        let intentionAttrStr = self.intentionDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor).mutableCopy() as! NSMutableAttributedString
+        let intentionStr = intentionAttrStr.string as NSString
+        
+        let range = intentionStr.range(of: "emotion", options: .caseInsensitive, range: NSRange(location: 0, length: intentionStr.length))
+        
+        intentionAttrStr.setAttributes([NSFontAttributeName: UIFont.muliLightItalic(size: 12)], range: range)
+        
+        self.intentionDescription.attributedText = intentionAttrStr
+        
         self.affirmationDescription.attributedText = self.affirmationDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
+        
         self.breatheDescription.attributedText = self.breatheDescription.text?.learnMoreAttributedString(font: .muliLight(size: 12), color: .sectionDescriptionColor)
     }
     
