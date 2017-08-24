@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cun-Rf-Jg6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cun-Rf-Jg6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Popup2 View Controller-->
+        <!--Labeled Popup View Controller-->
         <scene sceneID="Lsb-vt-u1t">
             <objects>
-                <viewController id="cun-Rf-Jg6" customClass="Popup2ViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cun-Rf-Jg6" customClass="LabeledPopupViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fhN-GL-vUA"/>
                         <viewControllerLayoutGuide type="bottom" id="SiI-si-0pV"/>
@@ -51,7 +51,6 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="xDv-r0-kHC" firstAttribute="leading" secondItem="4LB-xR-gnw" secondAttribute="leading" constant="60" id="7JZ-Dt-gjw"/>
                                     <constraint firstAttribute="height" constant="90" id="UCn-at-dht"/>

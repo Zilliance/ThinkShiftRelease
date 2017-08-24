@@ -50,8 +50,8 @@
 		8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */; };
 		8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */; };
 		8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F11F3E690E002C0353 /* Plan.storyboard */; };
-		8C2B13F41F4387CD002C0353 /* Popup2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F31F4387CD002C0353 /* Popup2.storyboard */; };
-		8C2B13F61F438847002C0353 /* Popup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F51F438847002C0353 /* Popup2ViewController.swift */; };
+		8C2B13F41F4387CD002C0353 /* LabeledPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */; };
+		8C2B13F61F438847002C0353 /* LabeledPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */; };
 		8C2B13F81F439FC0002C0353 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */; };
 		8C2B13FA1F43A7BB002C0353 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F91F43A7BB002C0353 /* MusicViewController.swift */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
@@ -218,8 +218,8 @@
 		8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationPlanCell.swift; sourceTree = "<group>"; };
 		8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationsManager+ViewModel.swift"; sourceTree = "<group>"; };
 		8C2B13F11F3E690E002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
-		8C2B13F31F4387CD002C0353 /* Popup2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popup2.storyboard; sourceTree = "<group>"; };
-		8C2B13F51F438847002C0353 /* Popup2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup2ViewController.swift; sourceTree = "<group>"; };
+		8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LabeledPopup.storyboard; sourceTree = "<group>"; };
+		8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledPopupViewController.swift; sourceTree = "<group>"; };
 		8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		8C2B13F91F43A7BB002C0353 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
@@ -385,8 +385,8 @@
 			children = (
 				8C166DD91F3E0AFB0071A98C /* Popup.storyboard */,
 				8C166DDB1F3E10080071A98C /* PopupViewController.swift */,
-				8C2B13F31F4387CD002C0353 /* Popup2.storyboard */,
-				8C2B13F51F438847002C0353 /* Popup2ViewController.swift */,
+				8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */,
+				8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */,
 				8C166DDD1F3E215E0071A98C /* PopupPresentationController.swift */,
 				8C166DDF1F3E234F0071A98C /* PopupModalTransition.swift */,
 			);
@@ -582,7 +582,6 @@
 			children = (
 				E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */,
 				E38608DD1F16908400816DF4 /* StressorViewController.swift */,
-				8C166DD81F3E0AE30071A98C /* Popup */,
 			);
 			name = Stressor;
 			sourceTree = "<group>";
@@ -619,6 +618,7 @@
 				E378284C1F196DA2005E91A8 /* Summary */,
 				8C2B13CD1F3E56AE002C0353 /* Schedule */,
 				E312B3571F4219CB00F2F5F0 /* Section Animations */,
+				8C166DD81F3E0AE30071A98C /* Popup */,
 				E38CB6031F44DDF7004AFEA4 /* Learn More Popup */,
 			);
 			name = Scenes;
@@ -928,7 +928,7 @@
 				8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */,
 				8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */,
 				E312B3511F4219AB00F2F5F0 /* Main Shift.mp4 in Resources */,
-				8C2B13F41F4387CD002C0353 /* Popup2.storyboard in Resources */,
+				8C2B13F41F4387CD002C0353 /* LabeledPopup.storyboard in Resources */,
 				E38CB6091F44E3D1004AFEA4 /* Localizable.strings in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
 				E312B3561F4219AB00F2F5F0 /* Think Positively.mp4 in Resources */,
@@ -1190,7 +1190,7 @@
 				E347EA5B1F3CCAF7002920D0 /* VideoPlayerViewController.swift in Sources */,
 				E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */,
 				E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */,
-				8C2B13F61F438847002C0353 /* Popup2ViewController.swift in Sources */,
+				8C2B13F61F438847002C0353 /* LabeledPopupViewController.swift in Sources */,
 				E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */,
 				E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */,
 				8C2B13E11F3E5E73002C0353 /* LocalNotificationsHelper.swift in Sources */,
