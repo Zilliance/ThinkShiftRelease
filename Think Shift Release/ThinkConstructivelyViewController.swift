@@ -100,6 +100,23 @@ class ThinkConstructivelyViewController: UIViewController {
         player.play()
     }
     
+    // MARK: -
+    
+    func showCompleted() {
+        guard !UserDefaults.standard.bool(forKey: "ThinkConstructivelyCompletedShown") else {
+            return
+        }
+        UserDefaults.standard.set(true, forKey: "ThinkConstructivelyCompletedShown")
+        
+        let labeledPopupViewController = UIStoryboard(name: "LabeledPopup", bundle: nil).instantiateInitialViewController() as! LabeledPopupViewController
+        
+        labeledPopupViewController.transitioningDelegate = self
+        labeledPopupViewController.modalPresentationStyle = .custom
+        labeledPopupViewController.attributedString = LabeledPopupViewController.sectionCompletedAttributedString
+        
+        self.present(labeledPopupViewController, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: -
@@ -107,8 +124,13 @@ class ThinkConstructivelyViewController: UIViewController {
 extension ThinkConstructivelyViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         switch presented {
+        
+        case is PopupViewController, is LabeledPopupViewController:
+            return PopupPresentationController(presentedViewController: presented, presenting: presenting)
+
         case is SectionAnimationViewController:
             return AnimationPresentationController(presentedViewController: presented, presenting: presenting)
+        
         default:
             return nil
         }
@@ -116,8 +138,13 @@ extension ThinkConstructivelyViewController: UIViewControllerTransitioningDelega
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch dismissed {
+        
+        case is PopupViewController, is LabeledPopupViewController:
+            return PopupModalTransition(withType: .dismissing)
+            
         case is SectionAnimationViewController:
             return AnimationModalTransition(withType: .dismissing)
+        
         default:
             return nil
         }
@@ -125,8 +152,13 @@ extension ThinkConstructivelyViewController: UIViewControllerTransitioningDelega
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch presented {
+        
+        case is PopupViewController, is LabeledPopupViewController:
+            return PopupModalTransition(withType: .presenting)
+            
         case is SectionAnimationViewController:
             return AnimationModalTransition(withType: .presenting)
+        
         default:
             return nil
         }
@@ -150,10 +182,11 @@ extension ThinkConstructivelyViewController: StressorEditor {
 
 extension ThinkConstructivelyViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n")
-        {
-            print(self.isSectionCompleted)
+        if (text == "\n") {
             textView.resignFirstResponder()
+            if self.isSectionCompleted {
+                self.showCompleted()
+            }
             return false
         }
         return true

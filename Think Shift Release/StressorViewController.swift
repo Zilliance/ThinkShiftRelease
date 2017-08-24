@@ -162,14 +162,14 @@ class StressorViewController: UIViewController {
         }
         
         popupViewController.noAction = {
-            guard let popup2ViewController = UIStoryboard(name: "Popup2", bundle: nil).instantiateInitialViewController() as? Popup2ViewController
+            guard let labeledPopupViewController = UIStoryboard(name: "LabeledPopup", bundle: nil).instantiateInitialViewController() as? LabeledPopupViewController
                 else {
                     assertionFailure()
                     return
             }
-            popup2ViewController.transitioningDelegate = self
-            popup2ViewController.modalPresentationStyle = .custom
-            self.present(popup2ViewController, animated: true, completion: nil)
+            labeledPopupViewController.transitioningDelegate = self
+            labeledPopupViewController.modalPresentationStyle = .custom
+            self.present(labeledPopupViewController, animated: true, completion: nil)
         }
         
         // Show second card on no action
@@ -237,12 +237,15 @@ class StressorViewController: UIViewController {
 extension StressorViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         switch presented {
-        case is PopupViewController, is Popup2ViewController:
+        
+        case is PopupViewController, is LabeledPopupViewController:
             return PopupPresentationController(presentedViewController: presented, presenting: presenting)
+        
         case is SectionAnimationViewController:
             let presentationController = AnimationPresentationController(presentedViewController: presented, presenting: presenting)
             presentationController.delegate = self
             return presentationController
+        
         default:
             return nil
         }
@@ -250,10 +253,13 @@ extension StressorViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch dismissed {
-        case is PopupViewController, is Popup2ViewController:
+        
+        case is PopupViewController, is LabeledPopupViewController:
             return PopupModalTransition(withType: .dismissing)
+        
         case is SectionAnimationViewController:
             return AnimationModalTransition(withType: .dismissing)
+        
         default:
             return nil
         }
@@ -261,10 +267,13 @@ extension StressorViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch presented {
-        case is PopupViewController, is Popup2ViewController:
+        
+        case is PopupViewController, is LabeledPopupViewController:
             return PopupModalTransition(withType: .presenting)
+        
         case is SectionAnimationViewController:
             return AnimationModalTransition(withType: .presenting)
+        
         default:
             return nil
         }
