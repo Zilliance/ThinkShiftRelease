@@ -164,7 +164,7 @@
                                                 <rect key="frame" x="0.0" y="311" width="375" height="449"/>
                                                 <subviews>
                                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICS-4b-mfA" userLabel="Seg Con Background">
-                                                        <rect key="frame" x="30" y="20" width="315" height="28"/>
+                                                        <rect key="frame" x="20" y="20" width="335" height="28"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -173,7 +173,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="zRk-VW-ka4">
-                                                        <rect key="frame" x="30" y="20" width="315" height="29"/>
+                                                        <rect key="frame" x="20" y="20" width="335" height="29"/>
                                                         <segments>
                                                             <segment title="Think Constructively"/>
                                                             <segment title="Think Positively"/>
@@ -191,14 +191,14 @@
                                                     <constraint firstItem="ICS-4b-mfA" firstAttribute="top" secondItem="rRo-6c-pII" secondAttribute="top" constant="20" id="5pM-XH-obr"/>
                                                     <constraint firstItem="qLt-F0-hRq" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" id="Jbw-Yk-TMH"/>
                                                     <constraint firstItem="qLt-F0-hRq" firstAttribute="top" secondItem="ICS-4b-mfA" secondAttribute="bottom" constant="20" id="LhH-jj-Fyk"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ICS-4b-mfA" secondAttribute="trailing" constant="30" id="VbI-uI-oDz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ICS-4b-mfA" secondAttribute="trailing" constant="20" id="VbI-uI-oDz"/>
                                                     <constraint firstItem="zRk-VW-ka4" firstAttribute="top" secondItem="rRo-6c-pII" secondAttribute="top" constant="20" id="Z8V-ol-yTB"/>
-                                                    <constraint firstItem="zRk-VW-ka4" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" constant="30" id="eLs-7S-Sgg"/>
+                                                    <constraint firstItem="zRk-VW-ka4" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" constant="20" id="eLs-7S-Sgg"/>
                                                     <constraint firstItem="qLt-F0-hRq" firstAttribute="top" secondItem="zRk-VW-ka4" secondAttribute="bottom" constant="20" id="nAF-gF-Dl4"/>
                                                     <constraint firstAttribute="bottom" secondItem="qLt-F0-hRq" secondAttribute="bottom" id="rcs-eL-QO1"/>
-                                                    <constraint firstItem="ICS-4b-mfA" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" constant="30" id="s2c-jX-NAY"/>
+                                                    <constraint firstItem="ICS-4b-mfA" firstAttribute="leading" secondItem="rRo-6c-pII" secondAttribute="leading" constant="20" id="s2c-jX-NAY"/>
                                                     <constraint firstAttribute="trailing" secondItem="qLt-F0-hRq" secondAttribute="trailing" id="u8W-i3-VGh"/>
-                                                    <constraint firstAttribute="trailing" secondItem="zRk-VW-ka4" secondAttribute="trailing" constant="30" id="xz2-yo-9wE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zRk-VW-ka4" secondAttribute="trailing" constant="20" id="xz2-yo-9wE"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

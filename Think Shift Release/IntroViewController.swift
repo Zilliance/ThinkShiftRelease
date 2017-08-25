@@ -50,9 +50,13 @@ class IntroViewController: UIViewController {
             NSForegroundColorAttributeName: UIColor.lightBlue,
             NSLinkAttributeName: videoURL
         ]
+        let nameAttributes: [String: Any] = [
+            NSFontAttributeName: UIFont.muliItalic(size: 14)
+        ]
         
         let tourRange = (attrText.string as NSString).range(of: "Tour")
-        let videoRange = (attrText.string as NSString).range(of: "Think Shift Release video")
+        let videoRange = (attrText.string as NSString).range(of: "Think.Shift.Release. video")
+        let nameRanges = (attrText.string as NSString).ranges(of: "Think.Shift.Release.")
         
         if tourRange.location != NSNotFound {
             attrText.addAttributes(tourAttributes, range: tourRange)
@@ -64,6 +68,10 @@ class IntroViewController: UIViewController {
             attrText.addAttributes(videoAttributes, range: videoRange)
         } else {
             assertionFailure()
+        }
+        
+        nameRanges.forEach { range in
+            attrText.addAttributes(nameAttributes, range: range)
         }
         
         self.textView.attributedText = attrText
