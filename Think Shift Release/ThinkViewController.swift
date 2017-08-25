@@ -172,6 +172,10 @@ class ThinkViewController: UIViewController, ShowsSummary {
     
     // MARK: - Videos
     
+    @IBAction func playThinkVideo(_ sender: Any?) {
+        self.play(animation: .think, completion: nil)
+    }
+    
     private func play(animation: SectionAnimation, completion: (()->Void)?) {
         let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
         let host = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! SectionAnimationViewController

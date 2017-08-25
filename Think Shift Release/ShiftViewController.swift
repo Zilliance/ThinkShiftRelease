@@ -145,6 +145,10 @@ class ShiftViewController: UIViewController, ShowsSummary {
 
     // MARK: - Videos
     
+    @IBAction func playShiftVideo(_ sender: Any?) {
+        self.play(animation: .shift, completion: nil)
+    }
+    
     private func play(animation: SectionAnimation, completion: (()->Void)?) {
         let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
         let host = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! SectionAnimationViewController

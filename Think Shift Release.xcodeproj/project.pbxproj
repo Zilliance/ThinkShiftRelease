@@ -99,6 +99,7 @@
 		E312B3611F42459800F2F5F0 /* SectionAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */; };
 		E32A6D691F4B7D06008FEA06 /* OnboardingPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */; };
 		E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */; };
+		E331393C1F50C2FB00F60086 /* NSString+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E331393B1F50C2FB00F60086 /* NSString+Ranges.swift */; };
 		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
 		E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA521F3CCAB5002920D0 /* IntroViewController.swift */; };
 		E347EA571F3CCABD002920D0 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA551F3CCABD002920D0 /* Tour.storyboard */; };
@@ -271,6 +272,7 @@
 		E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionAnimationViewController.swift; sourceTree = "<group>"; };
 		E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPopover.swift; sourceTree = "<group>"; };
 		E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
+		E331393B1F50C2FB00F60086 /* NSString+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Ranges.swift"; sourceTree = "<group>"; };
 		E347EA511F3CCAB5002920D0 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		E347EA521F3CCAB5002920D0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E347EA551F3CCABD002920D0 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 		8C631F7A1F228F6500B2CA4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E331393B1F50C2FB00F60086 /* NSString+Ranges.swift */,
 				8C2B13DC1F3E5D37002C0353 /* Date+Extensions.swift */,
 				8C631F7B1F228F7300B2CA4C /* String+Extensions.swift */,
 				8C631F7C1F228F7300B2CA4C /* UIColor+CustomColors.swift */,
@@ -1152,6 +1155,7 @@
 				8C2B13DB1F3E5C7D002C0353 /* DetachableObject.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
 				8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */,
+				E331393C1F50C2FB00F60086 /* NSString+Ranges.swift in Sources */,
 				8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */,
 				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,

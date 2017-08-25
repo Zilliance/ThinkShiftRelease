@@ -52,9 +52,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z3-59Z">
                                 <rect key="frame" x="21" y="280" width="333" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">The Think Shift Release App gives you three powerful tools for feeling better when you find yourself in the grip of negative emotion. Rather than letting the negativity control you, Think, Shift, Release allows you to take control of the moment - and respond with a little less crazy and a lot more composure.
+                                <string key="text">The Think.Shift.Release. app gives you three powerful tools for feeling better when you find yourself in the grip of negative emotions. Rather than letting the negativity control you, Think.Shift.Release. allows you to take control of the moment - and respond with a little less crazy and a lot more composure.
 
-Check out the Tour and the Think Shift Release video in the main menu for more information.</string>
+Check out the Tour and the Think.Shift.Release. video in the main menu for more information.</string>
                                 <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

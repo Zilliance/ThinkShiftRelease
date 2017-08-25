@@ -29,6 +29,7 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     var segment: Int?
     
     var summarySection: ItemSection! = .release
+    private var playbackObserver: NSObjectProtocol?
     
     fileprivate var isSectionCompleted: Bool {
         return !self.affirmationTextView.text.isEmpty && !self.intentionTextView.text.isEmpty && !self.experienceTextView.text.isEmpty
@@ -126,6 +127,43 @@ class ReleaseViewController: UIViewController, ShowsSummary {
         labeledPopupViewController.attributedString = LabeledPopupViewController.sectionCompletedAttributedString
         
         self.present(labeledPopupViewController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Videos
+    
+    @IBAction func playReleaseVideo(_ sender: Any?) {
+        self.play(animation: .release, completion: nil)
+    }
+    
+    private func play(animation: SectionAnimation, completion: (()->Void)?) {
+        let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
+        let host = UIStoryboard(name: "Animation", bundle: nil).instantiateInitialViewController() as! SectionAnimationViewController
+        
+        let _ = host.view // force load for access to embedded playerViewController
+        
+        host.playerViewController.player = player
+        host.transitioningDelegate = self
+        host.modalPresentationStyle = .custom
+        host.animation = animation
+        host.delegate = self
+        
+        self.playbackObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
+            
+            if let playbackObserver = self?.playbackObserver {
+                NotificationCenter.default.removeObserver(playbackObserver)
+                self?.playbackObserver = nil
+            }
+            
+            if !host.isFullScreen {
+                // Programmatically dismissing when player is full screen causes a crash
+                host.dismiss(animated: true, completion: {
+                    completion?()
+                })
+            }
+        }
+        
+        self.present(host, animated: true, completion: nil)
+        player.play()
     }
     
 }
