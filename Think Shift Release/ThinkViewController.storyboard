@@ -39,10 +39,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-KA-VYV" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="730"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmx-T3-LO9" userLabel="Think Video">
+                                                <rect key="frame" x="333" y="10" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="trh-S3-bxY"/>
+                                                    <constraint firstAttribute="height" constant="22" id="vvd-0w-aaI"/>
+                                                </constraints>
+                                                <state key="normal" image="video"/>
+                                                <connections>
+                                                    <action selector="playThinkVideo:" destination="mJs-FP-iIT" eventType="touchUpInside" id="Kab-WE-KL5"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIg-kh-cFr" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="10" width="335" height="90"/>
+                                                <rect key="frame" x="20" y="40" width="335" height="90"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STRESSOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQy-Ru-REL">
                                                         <rect key="frame" x="75" y="19" width="90" height="26"/>
@@ -81,7 +92,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WM1-SQ-hKK" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="105" width="335" height="166"/>
+                                                <rect key="frame" x="20" y="135" width="335" height="166"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THOUGHTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StW-Mt-lMd">
                                                         <rect key="frame" x="75" y="19" width="90" height="17"/>
@@ -150,7 +161,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRo-6c-pII" userLabel="BottomView">
-                                                <rect key="frame" x="0.0" y="281" width="375" height="449"/>
+                                                <rect key="frame" x="0.0" y="311" width="375" height="449"/>
                                                 <subviews>
                                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICS-4b-mfA" userLabel="Seg Con Background">
                                                         <rect key="frame" x="30" y="20" width="315" height="28"/>
@@ -195,13 +206,15 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aIg-kh-cFr" secondAttribute="trailing" constant="20" id="0d6-Iu-GLl"/>
                                             <constraint firstAttribute="trailing" secondItem="WM1-SQ-hKK" secondAttribute="trailing" constant="20" id="10s-j3-gVU"/>
-                                            <constraint firstAttribute="height" constant="730" id="DBP-lG-JJs"/>
-                                            <constraint firstItem="aIg-kh-cFr" firstAttribute="top" secondItem="Rm9-KA-VYV" secondAttribute="top" constant="10" id="F99-eQ-ItO"/>
+                                            <constraint firstAttribute="height" constant="760" id="DBP-lG-JJs"/>
+                                            <constraint firstItem="aIg-kh-cFr" firstAttribute="top" secondItem="Rm9-KA-VYV" secondAttribute="top" constant="40" id="F99-eQ-ItO"/>
                                             <constraint firstAttribute="bottom" secondItem="rRo-6c-pII" secondAttribute="bottom" id="HMi-m7-fZl"/>
                                             <constraint firstItem="WM1-SQ-hKK" firstAttribute="top" secondItem="aIg-kh-cFr" secondAttribute="bottom" constant="5" id="NWH-jw-E6d"/>
                                             <constraint firstItem="WM1-SQ-hKK" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" constant="20" id="YAL-aZ-5Wl"/>
                                             <constraint firstItem="rRo-6c-pII" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" id="dwd-3E-gxk"/>
                                             <constraint firstAttribute="trailing" secondItem="rRo-6c-pII" secondAttribute="trailing" id="fFI-8C-0ah"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vmx-T3-LO9" secondAttribute="trailing" constant="20" id="gXc-Lj-57t"/>
+                                            <constraint firstItem="Vmx-T3-LO9" firstAttribute="top" secondItem="Rm9-KA-VYV" secondAttribute="top" constant="10" id="hc2-Cq-VGQ"/>
                                             <constraint firstItem="aIg-kh-cFr" firstAttribute="leading" secondItem="Rm9-KA-VYV" secondAttribute="leading" constant="20" id="n8R-Ho-xci"/>
                                             <constraint firstItem="rRo-6c-pII" firstAttribute="top" secondItem="WM1-SQ-hKK" secondAttribute="bottom" constant="10" id="uHD-5m-Rut"/>
                                         </constraints>
