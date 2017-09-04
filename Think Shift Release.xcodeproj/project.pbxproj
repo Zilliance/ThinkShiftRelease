@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35C7AE65B8AB068CEC5BFFCE /* Pods_Think_Shift_ReleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */; };
 		4F15A5191F277A5C004210B4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F15A5181F277A5C004210B4 /* Quote.swift */; };
+		4F2CDCEF1F5A09900048FA9C /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCEE1F5A09900048FA9C /* Analytics.swift */; };
 		4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */; };
 		4F65CF031F3205F500C4A5B9 /* QuotesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */; };
 		4F65CF051F32070600C4A5B9 /* ImagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */; };
@@ -176,6 +177,7 @@
 		2423C36AB9FB6727030CE496 /* Pods-Think Shift Release.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think Shift Release.release.xcconfig"; path = "Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release.release.xcconfig"; sourceTree = "<group>"; };
 		3A97A1A1112F1A68DD042CAC /* Pods_Think_Shift_ReleaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think_Shift_ReleaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F15A5181F277A5C004210B4 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = Model/Quote.swift; sourceTree = "<group>"; };
+		4F2CDCEE1F5A09900048FA9C /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MusicViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuotesViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagesViewController.storyboard; sourceTree = "<group>"; };
@@ -357,6 +359,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2CDCED1F5A09820048FA9C /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				4F2CDCEE1F5A09900048FA9C /* Analytics.swift */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
 		4FE59B021F2B81EC00AAE778 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,6 +706,7 @@
 		E38608991F158D2800816DF4 /* Think Shift Release */ = {
 			isa = PBXGroup;
 			children = (
+				4F2CDCED1F5A09820048FA9C /* Analytics */,
 				E386089E1F158D2800816DF4 /* Main.storyboard */,
 				E386089A1F158D2800816DF4 /* AppDelegate.swift */,
 				E378284B1F19650E005E91A8 /* Model */,
@@ -1005,13 +1016,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Think Shift ReleaseUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7C30CFC3529AF5531CD577EA /* [CP] Embed Pods Frameworks */ = {
@@ -1020,9 +1034,36 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Think Shift Release/Pods-Think Shift Release-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Amplitude-iOS/Amplitude_iOS.framework",
+				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/MZAppearance/MZAppearance.framework",
+				"${BUILT_PRODUCTS_DIR}/MZFormSheetController/MZFormSheetController.framework",
+				"${BUILT_PRODUCTS_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework",
+				"${BUILT_PRODUCTS_DIR}/MultiSelectSegmentedControl/MultiSelectSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/PDFGenerator/PDFGenerator.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Amplitude_iOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZAppearance.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFormSheetController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFormSheetPresentationController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiSelectSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PDFGenerator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1035,13 +1076,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Think Shift ReleaseTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C30A72B7FBF1BED72AFD2F2 /* [CP] Embed Pods Frameworks */ = {
@@ -1080,13 +1124,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Think Shift Release-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA7FBE88DA3B2133ACD71ECA /* [CP] Copy Pods Resources */ = {
@@ -1127,6 +1174,7 @@
 				E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */,
 				E312B3611F42459800F2F5F0 /* SectionAnimationViewController.swift in Sources */,
 				4F65CF071F321ED700C4A5B9 /* TimeInterval+Extensions.swift in Sources */,
+				4F2CDCEF1F5A09900048FA9C /* Analytics.swift in Sources */,
 				E38CB6051F44DE1C004AFEA4 /* LearnMoreViewController.swift in Sources */,
 				8C2B13D61F3E5796002C0353 /* ScheduleNotificationTableViewController.swift in Sources */,
 				E32A6D691F4B7D06008FEA06 /* OnboardingPopover.swift in Sources */,

@@ -50,7 +50,7 @@ class SectionAnimationViewController: UIViewController {
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
+        return [.portrait, .landscape]
     }
     
     var playerViewController: AVPlayerViewController!

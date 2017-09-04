@@ -18,6 +18,9 @@ target 'Think Shift Release' do
   pod 'MZFormSheetController'
   pod 'YouTubePlayer'
   pod 'PDFGenerator', '~> 2.0.1'
+  pod 'Fabric'
+  pod 'Answers'
+  pod 'Amplitude-iOS', '~> 3.14.1'
 
   target 'Think Shift ReleaseTests' do
     inherit! :search_paths
