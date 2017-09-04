@@ -21,6 +21,8 @@ final class ImageViewController: UIViewController {
         
         self.imageView.image = self.image
         
+        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftSawImage)
+        
     }
     
 }

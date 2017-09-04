@@ -81,7 +81,7 @@ class BreatheTableViewController: UITableViewController {
     private let reuseIdentifier = "BreatheTableViewCell"
     
     private let songs: [Song] = [.meditation, .instrumental]
-    private var currentSong: Song?
+    fileprivate var currentSong: Song?
     private var audioPlayer: AVAudioPlayer?
 
     override func viewDidLoad() {
@@ -99,6 +99,9 @@ class BreatheTableViewController: UITableViewController {
             print("audioPlayer error \(error.localizedDescription)")
         }
         audioPlayer?.play()
+        
+        Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioStarted(song.title))
+
         self.currentSong = song
         
     }
@@ -109,6 +112,9 @@ class BreatheTableViewController: UITableViewController {
             if song == self.currentSong {
                 if player.isPlaying {
                     player.stop()
+                    
+                    Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioStopped(song.title))
+                    
                 } else {
                     player.play()
                 }
@@ -194,4 +200,20 @@ class BreatheTableViewController: UITableViewController {
     }
 
 
+}
+
+extension BreatheTableViewController: AVAudioPlayerDelegate {
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
+        guard let currentSongTitle = self.currentSong?.title else {
+            assertionFailure()
+            return
+        }
+        
+        Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioFinished(currentSongTitle))
+        
+    }
+    
+    
 }

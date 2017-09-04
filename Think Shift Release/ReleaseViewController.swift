@@ -115,6 +115,7 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     // MARK: -
     
     func showCompleted() {
+        
         guard !UserDefaults.standard.bool(forKey: "ReleaseCompletedShown") else {
             return
         }
@@ -225,10 +226,21 @@ extension ReleaseViewController: SectionAnimationDelegate {
 
 extension ReleaseViewController: StressorEditor {
     func save() {
+        let wasCompleted = self.stressor.completed
+        let releaseWasComlpeted = self.stressor.releaseCompleted
         
         self.stressor.releaseMyIntention = self.intentionTextView.text.characters.count > 0 ? self.intentionTextView.text : nil
         self.stressor.releaseInsteadExperience = self.experienceTextView.text.characters.count > 0 ? self.experienceTextView.text : nil
         self.stressor.releaseAffirmation = self.affirmationTextView.text.characters.count > 0 ? self.affirmationTextView.text : nil
+        
+        if (self.stressor.completed && !wasCompleted) {
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+        }
+        
+        if (self.stressor.releaseCompleted && !releaseWasComlpeted) {
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+        }
+        
     }
 }
 

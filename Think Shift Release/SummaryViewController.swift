@@ -67,7 +67,7 @@ struct SummaryItem {
     
 }
 
-class SummaryViewController: UIViewController {
+class SummaryViewController: AnalyzedViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var vcContainerView: UIView!
@@ -114,6 +114,10 @@ class SummaryViewController: UIViewController {
         }
         
         self.showTapHint()
+        
+        if (!self.stressor.completed) {
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorResumed)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -323,6 +327,14 @@ extension SummaryViewController {
                 self.present(activityViewController,
                              animated: true,
                              completion: nil)
+                
+                activityViewController.completionWithItemsHandler = { (activityType, completed:Bool, returnedItems:[Any]?, error: Error?) in
+                        if completed {
+                            
+                            Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.summaryShared)
+                            
+                        }
+                }
             }
             else {
                 

@@ -87,16 +87,25 @@ final class LeftMenuViewController: UIViewController {
     
     @IBAction func privacyPolicyTapped(_ sender: Any) {
         self.showHTMLView(htmlFile: "zilliance privacy policy", title: "Privacy Policy")
+
+        Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.privacyPolycyViewed)
+
     }
     
     @IBAction func termsOfServicesTapped(_ sender: Any) {
         self.showHTMLView(htmlFile: "zilliance terms of service", title: "Terms Of Service")
+        
+        Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.termsOfServicesViewed)
+
     }
     
     func showAboutCompany() {
         let vc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "AboutCompany")
         let nav = UINavigationController(rootViewController: vc)
         self.sideMenuController?.embed(centerViewController: nav)
+        
+        Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.companyViewed)
+
     }
     
     func showTour() {
@@ -119,6 +128,8 @@ final class LeftMenuViewController: UIViewController {
     
     func showFaq() {
         self.showHTMLView(htmlFile: "faq", title: "FAQ")
+        
+        Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.faqViewed)
     }
 }
 

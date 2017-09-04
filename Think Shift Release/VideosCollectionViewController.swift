@@ -44,6 +44,10 @@ class VideosCollectionViewController: UICollectionViewController {
         self.present(self.videoPicker, animated: true, completion: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard !deleting else {
@@ -58,6 +62,13 @@ class VideosCollectionViewController: UICollectionViewController {
         
         playerViewController.player = player
         
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
+            
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingVideo)
+        }
+
+        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingVideo)
+
         present(playerViewController, animated: true) {
             player.play()
         }
@@ -113,6 +124,8 @@ extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINav
         Database.shared.user.addVideo(videoPath: url.absoluteString)
         
         picker.dismiss(animated: true, completion: nil)
+        
+        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewVideo)
         
         self.reloadVideos()
 

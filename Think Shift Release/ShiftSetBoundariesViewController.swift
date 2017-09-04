@@ -170,8 +170,21 @@ extension ShiftSetBoundariesViewController: SectionAnimationDelegate {
 
 extension ShiftSetBoundariesViewController: StressorEditor {
     func save() {
+        let wasCompleted = self.stressor.completed
+        let shiftWasCompleted = self.stressor.shiftCompleted
+
         self.stressor.shiftBoundariesDoTalkWith = self.talkAboutTextView.text.characters.count > 0 ? self.talkAboutTextView.text : nil
         self.stressor.shiftBoundariesNotTalkWith = self.notTalkAboutTextView.text.characters.count > 0 ? self.notTalkAboutTextView.text : nil
+        
+        if (self.stressor.completed && !wasCompleted) {
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+        }
+        
+        if (self.stressor.shiftCompleted && !shiftWasCompleted) {
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStepCompleted)
+        }
+
+
     }
 }
 

@@ -170,7 +170,19 @@ extension ThinkPositivelyViewController: SectionAnimationDelegate {
 
 extension ThinkPositivelyViewController: StressorEditor {
     func save() {
+        let wasCompleted = self.stressor.completed
+        let thinkWasCompleted = self.stressor.thinkCompleted
+
         self.stressor.thinkBetterFeeling = self.textView.text.characters.count > 0 ? self.textView.text : nil
+        
+        if (self.stressor.completed && !wasCompleted) {
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+        }
+        
+        if (self.stressor.thinkCompleted && !thinkWasCompleted) {
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+        }
+
     }
 }
 

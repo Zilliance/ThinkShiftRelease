@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: AnalyzedViewController {
 
     @IBOutlet weak var topOverlay: UIView!
     @IBOutlet weak var editButton: UIBarButtonItem!
