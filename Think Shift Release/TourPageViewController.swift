@@ -82,7 +82,7 @@ class TourPageViewController: UIPageViewController {
         if let firstViewController = self.introViewControllers.first {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
             
-            Analytics.sendEvent(event: ZillianceAnalytics.ZillianceDetailedAnalytics.tourPagedViewed(0))
+            Analytics.send(event: ZillianceAnalytics.ZillianceDetailedAnalytics.tourPagedViewed(0))
 
         }
     }
@@ -104,7 +104,7 @@ class TourPageViewController: UIPageViewController {
             return
         }
         
-        Analytics.sendEvent(event: ZillianceAnalytics.ZillianceDetailedAnalytics.tourClosed(index))
+        Analytics.send(event: ZillianceAnalytics.ZillianceDetailedAnalytics.tourClosed(index))
     }
     
     
@@ -171,7 +171,7 @@ extension TourPageViewController: UIPageViewControllerDelegate {
             return
         }
 
-        Analytics.sendEvent(event: ZillianceAnalytics.ZillianceDetailedAnalytics.tourPagedViewed(index))
+        Analytics.send(event: ZillianceAnalytics.ZillianceDetailedAnalytics.tourPagedViewed(index))
     }
 }
 

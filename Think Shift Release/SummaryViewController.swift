@@ -116,7 +116,7 @@ class SummaryViewController: AnalyzedViewController {
         self.showTapHint()
         
         if (!self.stressor.completed) {
-            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.stressorResumed)
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorResumed)
         }
     }
     
@@ -331,7 +331,7 @@ extension SummaryViewController {
                 activityViewController.completionWithItemsHandler = { (activityType, completed:Bool, returnedItems:[Any]?, error: Error?) in
                         if completed {
                             
-                            Analytics.sendEvent(event: ZillianceAnalytics.ZillianceBaseAnalytics.summaryShared)
+                            Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.summaryShared)
                             
                         }
                 }

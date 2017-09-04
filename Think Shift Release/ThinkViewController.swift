@@ -261,11 +261,11 @@ extension ThinkViewController: StressorEditor {
         self.stressor.thinkThoughts = self.textView.text.characters.count > 0 ? self.textView.text : nil
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
         
         if (self.stressor.thinkCompleted && !thinkWasCompleted) {
-            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
         }
 
 

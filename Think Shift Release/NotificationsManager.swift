@@ -115,7 +115,7 @@ final class NotificationsManager: NotificationStore {
                     completion?(notification, nil)
                     
                     let event = notification.type == .calendar ? ZillianceAnalytics.ZillianceBaseAnalytics.calendarEventAdded : (notification.recurrence != .none ? ZillianceAnalytics.ZillianceBaseAnalytics.repeatingReminderAdded : ZillianceAnalytics.ZillianceBaseAnalytics.reminderAdded)
-                    Analytics.sendEvent(event: event)
+                    Analytics.send(event: event)
                     
                 })
             }

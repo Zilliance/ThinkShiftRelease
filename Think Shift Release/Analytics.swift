@@ -143,7 +143,7 @@ final class Analytics {
         
     }
     
-    static func sendEvent(event: AnalyticEvent) {
+    static func send(event: AnalyticEvent) {
         
         Answers.logCustomEvent(withName: event.name, customAttributes: event.data)
         

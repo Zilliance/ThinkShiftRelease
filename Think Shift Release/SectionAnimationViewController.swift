@@ -71,7 +71,7 @@ class SectionAnimationViewController: UIViewController {
             return
         }
         
-        Analytics.sendEvent(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoStarted(animation.rawValue))
+        Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoStarted(animation.rawValue))
 
     }
     
@@ -84,9 +84,9 @@ class SectionAnimationViewController: UIViewController {
         }
         
         if (CMTimeCompare(currentTime, duration) >= 0) {
-            Analytics.sendEvent(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoCompleted(animation.rawValue))
+            Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoCompleted(animation.rawValue))
         } else {
-            Analytics.sendEvent(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoStopped(animation.rawValue))
+            Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoStopped(animation.rawValue))
         }
         
     }

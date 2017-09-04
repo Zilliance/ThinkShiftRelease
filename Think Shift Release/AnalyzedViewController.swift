@@ -20,7 +20,7 @@ class AnalyzedViewController: UIViewController {
         super.viewDidLoad()
         
         let viewName = self.theClassName
-        Analytics.sendEvent(event: ZillianceAnalytics.ZillianceDetailedAnalytics.viewControllerShown(viewName))
+        Analytics.send(event: ZillianceAnalytics.ZillianceDetailedAnalytics.viewControllerShown(viewName))
 
     }
     

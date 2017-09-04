@@ -234,11 +234,11 @@ extension ReleaseViewController: StressorEditor {
         self.stressor.releaseAffirmation = self.affirmationTextView.text.characters.count > 0 ? self.affirmationTextView.text : nil
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
         
         if (self.stressor.releaseCompleted && !releaseWasComlpeted) {
-            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
         }
         
     }

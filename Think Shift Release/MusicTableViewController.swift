@@ -155,11 +155,11 @@ class MusicTableViewController: UITableViewController {
             }
             
             if (player.playbackState == .stopped) {
-                Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingMusic)
+                Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingMusic)
             }
         }
         
-        Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingMusic)
+        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingMusic)
     
     }
 
@@ -237,7 +237,7 @@ extension MusicTableViewController: MPMediaPickerControllerDelegate {
                 self.tableView.reloadData()
             }
             
-            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewMusic)
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewMusic)
             
         }
         

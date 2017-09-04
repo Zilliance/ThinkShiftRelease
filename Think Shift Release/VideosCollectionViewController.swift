@@ -64,10 +64,10 @@ class VideosCollectionViewController: UICollectionViewController {
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
             
-            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingVideo)
+            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingVideo)
         }
 
-        Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingVideo)
+        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingVideo)
 
         present(playerViewController, animated: true) {
             player.play()
@@ -125,7 +125,7 @@ extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINav
         
         picker.dismiss(animated: true, completion: nil)
         
-        Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewVideo)
+        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewVideo)
         
         self.reloadVideos()
 
