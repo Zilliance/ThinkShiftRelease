@@ -51,8 +51,8 @@
 		8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */; };
 		8C2B13EF1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */; };
 		8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F11F3E690E002C0353 /* Plan.storyboard */; };
-		8C2B13F41F4387CD002C0353 /* Popup2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F31F4387CD002C0353 /* Popup2.storyboard */; };
-		8C2B13F61F438847002C0353 /* Popup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F51F438847002C0353 /* Popup2ViewController.swift */; };
+		8C2B13F41F4387CD002C0353 /* LabeledPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */; };
+		8C2B13F61F438847002C0353 /* LabeledPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */; };
 		8C2B13F81F439FC0002C0353 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */; };
 		8C2B13FA1F43A7BB002C0353 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F91F43A7BB002C0353 /* MusicViewController.swift */; };
 		8C631F6F1F228DCB00B2CA4C /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */; };
@@ -100,6 +100,7 @@
 		E312B3611F42459800F2F5F0 /* SectionAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */; };
 		E32A6D691F4B7D06008FEA06 /* OnboardingPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */; };
 		E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */; };
+		E331393C1F50C2FB00F60086 /* NSString+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E331393B1F50C2FB00F60086 /* NSString+Ranges.swift */; };
 		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
 		E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA521F3CCAB5002920D0 /* IntroViewController.swift */; };
 		E347EA571F3CCABD002920D0 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA551F3CCABD002920D0 /* Tour.storyboard */; };
@@ -138,6 +139,7 @@
 		E38CB6051F44DE1C004AFEA4 /* LearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38CB6041F44DE1C004AFEA4 /* LearnMoreViewController.swift */; };
 		E38CB6071F44DE22004AFEA4 /* LearnMore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38CB6061F44DE22004AFEA4 /* LearnMore.storyboard */; };
 		E38CB6091F44E3D1004AFEA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38CB6081F44E3D1004AFEA4 /* Localizable.strings */; };
+		E39D16331F4E310200F76C57 /* TourSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D16321F4E310200F76C57 /* TourSceneViewController.swift */; };
 		E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B761F21BB670060FED4 /* Stressor.swift */; };
 		E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B781F21BB9A0060FED4 /* Database.swift */; };
 		E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B7A1F21BBBC0060FED4 /* User.swift */; };
@@ -219,8 +221,8 @@
 		8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationPlanCell.swift; sourceTree = "<group>"; };
 		8C2B13EA1F3E60E9002C0353 /* NotificationsManager+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationsManager+ViewModel.swift"; sourceTree = "<group>"; };
 		8C2B13F11F3E690E002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
-		8C2B13F31F4387CD002C0353 /* Popup2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popup2.storyboard; sourceTree = "<group>"; };
-		8C2B13F51F438847002C0353 /* Popup2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup2ViewController.swift; sourceTree = "<group>"; };
+		8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LabeledPopup.storyboard; sourceTree = "<group>"; };
+		8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledPopupViewController.swift; sourceTree = "<group>"; };
 		8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		8C2B13F91F43A7BB002C0353 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		8C631F6E1F228DCB00B2CA4C /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionAnimationViewController.swift; sourceTree = "<group>"; };
 		E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPopover.swift; sourceTree = "<group>"; };
 		E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
+		E331393B1F50C2FB00F60086 /* NSString+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Ranges.swift"; sourceTree = "<group>"; };
 		E347EA511F3CCAB5002920D0 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		E347EA521F3CCAB5002920D0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E347EA551F3CCABD002920D0 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
@@ -316,6 +319,7 @@
 		E38CB6041F44DE1C004AFEA4 /* LearnMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnMoreViewController.swift; sourceTree = "<group>"; };
 		E38CB6061F44DE22004AFEA4 /* LearnMore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearnMore.storyboard; sourceTree = "<group>"; };
 		E38CB6081F44E3D1004AFEA4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E39D16321F4E310200F76C57 /* TourSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourSceneViewController.swift; sourceTree = "<group>"; };
 		E3A30B761F21BB670060FED4 /* Stressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stressor.swift; sourceTree = "<group>"; };
 		E3A30B781F21BB9A0060FED4 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		E3A30B7A1F21BBBC0060FED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -393,8 +397,8 @@
 			children = (
 				8C166DD91F3E0AFB0071A98C /* Popup.storyboard */,
 				8C166DDB1F3E10080071A98C /* PopupViewController.swift */,
-				8C2B13F31F4387CD002C0353 /* Popup2.storyboard */,
-				8C2B13F51F438847002C0353 /* Popup2ViewController.swift */,
+				8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */,
+				8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */,
 				8C166DDD1F3E215E0071A98C /* PopupPresentationController.swift */,
 				8C166DDF1F3E234F0071A98C /* PopupModalTransition.swift */,
 			);
@@ -429,6 +433,7 @@
 		8C631F7A1F228F6500B2CA4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E331393B1F50C2FB00F60086 /* NSString+Ranges.swift */,
 				8C2B13DC1F3E5D37002C0353 /* Date+Extensions.swift */,
 				8C631F7B1F228F7300B2CA4C /* String+Extensions.swift */,
 				8C631F7C1F228F7300B2CA4C /* UIColor+CustomColors.swift */,
@@ -543,6 +548,7 @@
 			children = (
 				E347EA551F3CCABD002920D0 /* Tour.storyboard */,
 				E347EA561F3CCABD002920D0 /* TourPageViewController.swift */,
+				E39D16321F4E310200F76C57 /* TourSceneViewController.swift */,
 			);
 			name = Tour;
 			sourceTree = "<group>";
@@ -589,7 +595,6 @@
 			children = (
 				E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */,
 				E38608DD1F16908400816DF4 /* StressorViewController.swift */,
-				8C166DD81F3E0AE30071A98C /* Popup */,
 			);
 			name = Stressor;
 			sourceTree = "<group>";
@@ -626,6 +631,7 @@
 				E378284C1F196DA2005E91A8 /* Summary */,
 				8C2B13CD1F3E56AE002C0353 /* Schedule */,
 				E312B3571F4219CB00F2F5F0 /* Section Animations */,
+				8C166DD81F3E0AE30071A98C /* Popup */,
 				E38CB6031F44DDF7004AFEA4 /* Learn More Popup */,
 			);
 			name = Scenes;
@@ -936,7 +942,7 @@
 				8C631F711F228E0900B2CA4C /* WebView.storyboard in Resources */,
 				8C166DD11F3CDAF30071A98C /* SummaryViewController.storyboard in Resources */,
 				E312B3511F4219AB00F2F5F0 /* Main Shift.mp4 in Resources */,
-				8C2B13F41F4387CD002C0353 /* Popup2.storyboard in Resources */,
+				8C2B13F41F4387CD002C0353 /* LabeledPopup.storyboard in Resources */,
 				E38CB6091F44E3D1004AFEA4 /* Localizable.strings in Resources */,
 				8C631F991F22991E00B2CA4C /* Muli-Bold.ttf in Resources */,
 				E312B3561F4219AB00F2F5F0 /* Think Positively.mp4 in Resources */,
@@ -1159,6 +1165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C631F821F228F7300B2CA4C /* UIColor+CustomColors.swift in Sources */,
+				E39D16331F4E310200F76C57 /* TourSceneViewController.swift in Sources */,
 				E38608D21F1592F000816DF4 /* UIMockButton.swift in Sources */,
 				8C631F811F228F7300B2CA4C /* String+Extensions.swift in Sources */,
 				E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */,
@@ -1196,6 +1203,7 @@
 				8C2B13DB1F3E5C7D002C0353 /* DetachableObject.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
 				8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */,
+				E331393C1F50C2FB00F60086 /* NSString+Ranges.swift in Sources */,
 				8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */,
 				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
@@ -1234,7 +1242,7 @@
 				E347EA5B1F3CCAF7002920D0 /* VideoPlayerViewController.swift in Sources */,
 				E38608EE1F18007B00816DF4 /* ShiftMoodShiftViewController.swift in Sources */,
 				E38608DA1F159D6F00816DF4 /* UIMockTextField.swift in Sources */,
-				8C2B13F61F438847002C0353 /* Popup2ViewController.swift in Sources */,
+				8C2B13F61F438847002C0353 /* LabeledPopupViewController.swift in Sources */,
 				E38608F21F18056000816DF4 /* UIMockTableViewCell.swift in Sources */,
 				E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */,
 				8C2B13E11F3E5E73002C0353 /* LocalNotificationsHelper.swift in Sources */,

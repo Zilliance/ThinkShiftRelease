@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cun-Rf-Jg6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Labeled Popup View Controller-->
+        <scene sceneID="Lsb-vt-u1t">
+            <objects>
+                <viewController id="cun-Rf-Jg6" customClass="LabeledPopupViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fhN-GL-vUA"/>
+                        <viewControllerLayoutGuide type="bottom" id="SiI-si-0pV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Nh-8C-nAy">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LB-xR-gnw">
+                                <rect key="frame" x="0.0" y="260" width="335" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xDv-r0-kHC">
+                                        <rect key="frame" x="60" y="26" width="215" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGS-Op-0KY">
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="40"/>
+                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                                                <state key="normal" title="CONTINUE" backgroundImage="no-button-bg">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="continueAction:" destination="cun-Rf-Jg6" eventType="touchUpInside" id="0LO-Ub-t87"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HSa-2N-VCu"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xDv-r0-kHC" firstAttribute="leading" secondItem="4LB-xR-gnw" secondAttribute="leading" constant="60" id="7JZ-Dt-gjw"/>
+                                    <constraint firstAttribute="height" constant="90" id="UCn-at-dht"/>
+                                    <constraint firstAttribute="trailing" secondItem="xDv-r0-kHC" secondAttribute="trailing" constant="60" id="fMY-6D-W6A"/>
+                                    <constraint firstItem="xDv-r0-kHC" firstAttribute="top" secondItem="4LB-xR-gnw" secondAttribute="top" constant="26" id="sh1-B6-CdO"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygM-lj-KeA">
+                                <rect key="frame" x="40" y="54" width="255" height="201"/>
+                                <string key="text">You can’t think straight when you’re flooded with emotion.
+
+ Sometimes you need to Shift or Release first, then Think when you’re feeling a little better.</string>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="20"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.25882352939999997" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ygM-lj-KeA" firstAttribute="top" secondItem="fhN-GL-vUA" secondAttribute="bottom" constant="34" id="FHG-5d-TX4"/>
+                            <constraint firstAttribute="trailing" secondItem="ygM-lj-KeA" secondAttribute="trailing" constant="40" id="IRx-BM-m1w"/>
+                            <constraint firstItem="ygM-lj-KeA" firstAttribute="leading" secondItem="4Nh-8C-nAy" secondAttribute="leading" constant="40" id="f0K-fS-qps"/>
+                            <constraint firstItem="SiI-si-0pV" firstAttribute="top" secondItem="4LB-xR-gnw" secondAttribute="bottom" id="j7O-fu-kMg"/>
+                            <constraint firstAttribute="trailing" secondItem="4LB-xR-gnw" secondAttribute="trailing" id="qIV-xv-C9m"/>
+                            <constraint firstItem="4LB-xR-gnw" firstAttribute="leading" secondItem="4Nh-8C-nAy" secondAttribute="leading" id="yHQ-KM-M1G"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="335" height="350"/>
+                    <connections>
+                        <outlet property="label" destination="ygM-lj-KeA" id="g3j-2a-Z08"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDp-pS-fcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="no-button-bg" width="100" height="40"/>
+    </resources>
+</document>

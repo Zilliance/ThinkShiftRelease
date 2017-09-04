@@ -68,6 +68,12 @@ class ShiftViewController: UIViewController, ShowsSummary {
             NotificationCenter.default.removeObserver(playbackObserver)
         }
     }
+    
+    func summaryPreSave() {
+        if let vc = self.embeddedViewController as? ShiftSetBoundariesViewController {
+            vc.save()
+        }
+    }
 
     // MARK: -
     
@@ -138,6 +144,10 @@ class ShiftViewController: UIViewController, ShowsSummary {
     }
 
     // MARK: - Videos
+    
+    @IBAction func playShiftVideo(_ sender: Any?) {
+        self.play(animation: .shift, completion: nil)
+    }
     
     private func play(animation: SectionAnimation, completion: (()->Void)?) {
         let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)

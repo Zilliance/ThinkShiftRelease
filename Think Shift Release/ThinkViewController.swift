@@ -69,6 +69,18 @@ class ThinkViewController: UIViewController, ShowsSummary {
         }
     }
 
+    func summaryPreSave() {
+        
+        if let vc = self.embeddedViewController as? ThinkPositivelyViewController {
+            vc.save()
+        }
+        if let vc = self.embeddedViewController as? ThinkConstructivelyViewController {
+            vc.save()
+        }
+        
+        self.save()
+    }
+    
     private func setupView() {
         
         self.bottomView.layer.contents = UIImage(named: "think-bg")?.cgImage
@@ -159,6 +171,10 @@ class ThinkViewController: UIViewController, ShowsSummary {
     }
     
     // MARK: - Videos
+    
+    @IBAction func playThinkVideo(_ sender: Any?) {
+        self.play(animation: .think, completion: nil)
+    }
     
     private func play(animation: SectionAnimation, completion: (()->Void)?) {
         let player = AVPlayer(url: Bundle.main.url(forResource: animation.rawValue, withExtension: "mp4")!)
