@@ -112,7 +112,6 @@
 		E37828481F195FF8005E91A8 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37828471F195FF8005E91A8 /* ImagesCollectionViewController.swift */; };
 		E37828501F198177005E91A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E378284F1F198177005E91A8 /* HomeViewController.swift */; };
 		E386089B1F158D2800816DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E386089A1F158D2800816DF4 /* AppDelegate.swift */; };
-		E38608A01F158D2800816DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E386089E1F158D2800816DF4 /* Main.storyboard */; };
 		E38608A21F158D2800816DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E38608A11F158D2800816DF4 /* Assets.xcassets */; };
 		E38608A51F158D2800816DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */; };
 		E38608B01F158D2800816DF4 /* Think_Shift_ReleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608AF1F158D2800816DF4 /* Think_Shift_ReleaseTests.swift */; };
@@ -286,7 +285,6 @@
 		E378284F1F198177005E91A8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E38608971F158D2800816DF4 /* Think Shift Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Think Shift Release.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E386089A1F158D2800816DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E386089F1F158D2800816DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E38608A11F158D2800816DF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E38608A41F158D2800816DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E38608A61F158D2800816DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -702,7 +700,6 @@
 		E38608991F158D2800816DF4 /* Think Shift Release */ = {
 			isa = PBXGroup;
 			children = (
-				E386089E1F158D2800816DF4 /* Main.storyboard */,
 				E386089A1F158D2800816DF4 /* AppDelegate.swift */,
 				E378284B1F19650E005E91A8 /* Model */,
 				E378284A1F196506005E91A8 /* Scenes */,
@@ -948,7 +945,6 @@
 				8C631FA01F22991E00B2CA4C /* Muli-Light.ttf in Resources */,
 				8C2B13CF1F3E56BF002C0353 /* Schedule.storyboard in Resources */,
 				8CD329011F292CA900844C5F /* ThinkViewController.storyboard in Resources */,
-				E38608A01F158D2800816DF4 /* Main.storyboard in Resources */,
 				E312B3591F4219DC00F2F5F0 /* Animation.storyboard in Resources */,
 				4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */,
 				E312B3521F4219AB00F2F5F0 /* Main Think.mp4 in Resources */,
@@ -1239,14 +1235,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E386089E1F158D2800816DF4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E386089F1F158D2800816DF4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E38608A31F158D2800816DF4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

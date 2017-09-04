@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5n-hP-LNa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5n-hP-LNa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -224,9 +224,12 @@
                                                 <constraint firstAttribute="width" constant="50" id="yQe-xB-eut"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select-checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="Ohr-fA-hL7">
+                                        <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select-checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="Ohr-fA-hL7">
                                             <rect key="frame" x="271.5" y="40" width="20" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="n4W-of-u7d"/>
+                                                <constraint firstAttribute="width" constant="20" id="vI7-lT-yI7"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e07-hf-r4e">
                                             <rect key="frame" x="235" y="10" width="70" height="16"/>
@@ -247,8 +250,10 @@
                                     <constraint firstItem="e07-hf-r4e" firstAttribute="leading" secondItem="TsG-Jq-EOA" secondAttribute="trailing" constant="5" id="E9Q-UD-dHB"/>
                                     <constraint firstItem="TsG-Jq-EOA" firstAttribute="leading" secondItem="ogi-GE-ghO" secondAttribute="trailing" constant="20" id="M8x-s3-Pdh"/>
                                     <constraint firstItem="TsG-Jq-EOA" firstAttribute="top" secondItem="dbH-kv-U5y" secondAttribute="top" constant="28" id="NI8-MG-qiT"/>
+                                    <constraint firstItem="Ohr-fA-hL7" firstAttribute="centerY" secondItem="dbH-kv-U5y" secondAttribute="centerY" id="Tbs-2K-kFQ"/>
                                     <constraint firstItem="ogi-GE-ghO" firstAttribute="centerY" secondItem="dbH-kv-U5y" secondAttribute="centerY" id="d02-7a-RwP"/>
                                     <constraint firstAttribute="bottom" secondItem="TsG-Jq-EOA" secondAttribute="bottom" constant="28" id="isI-XJ-Jgi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ohr-fA-hL7" secondAttribute="trailing" constant="8.5" id="mga-Ah-rBl"/>
                                     <constraint firstItem="ogi-GE-ghO" firstAttribute="leading" secondItem="dbH-kv-U5y" secondAttribute="leading" constant="15" id="pmh-GA-Eqg"/>
                                 </constraints>
                                 <connections>
