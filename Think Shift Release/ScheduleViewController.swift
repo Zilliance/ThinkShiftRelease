@@ -13,7 +13,7 @@ protocol NotificationEditor {
     func getNotification() -> Notification?
 }
 
-class ScheduleViewController: UIViewController {
+class ScheduleViewController: AnalyzedViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var notifyMeButton: UIButton!

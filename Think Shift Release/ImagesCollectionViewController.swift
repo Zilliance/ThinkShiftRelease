@@ -175,6 +175,8 @@ extension ImagesCollectionViewController: UIImagePickerControllerDelegate, UINav
         
         Database.shared.user.addImage(imagePath: url.absoluteString)
         
+        Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewImage)
+        
         picker.dismiss(animated: true, completion: nil)
         
         self.reloadImages()

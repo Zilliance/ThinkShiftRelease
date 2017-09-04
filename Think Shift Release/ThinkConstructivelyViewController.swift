@@ -175,8 +175,20 @@ extension ThinkConstructivelyViewController: SectionAnimationDelegate {
 
 extension ThinkConstructivelyViewController: StressorEditor {
     func save() {
+        let wasCompleted = self.stressor.completed
+        let thinkWasCompleted = self.stressor.thinkCompleted
+        
         self.stressor.thinkInnerWisdom = self.wisdomTextView.text.characters.count > 0 ? self.wisdomTextView.text : nil
         self.stressor.thinkActionStep = self.actionStepTextView.text.characters.count > 0 ? self.actionStepTextView.text : nil
+        
+        if (self.stressor.completed && !wasCompleted) {
+            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+        }
+        
+        if (self.stressor.thinkCompleted && !thinkWasCompleted) {
+            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+        }
+
     }
 }
 

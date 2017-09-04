@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuotesViewController: UIViewController {
+class QuotesViewController: AnalyzedViewController {
     
     private var tableViewController: QuotesTableViewController!
 

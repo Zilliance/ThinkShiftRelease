@@ -10,6 +10,7 @@ import UIKit
 
 import Foundation
 import AVKit
+import AVFoundation
 
 enum SectionAnimation: String {
     case think = "Main Think"
@@ -60,6 +61,34 @@ class SectionAnimationViewController: UIViewController {
     
     var isFullScreen: Bool {
         return self.playerViewController.videoBounds.width > AnimationPresentationController.width
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let animation = self.animation else {
+            assertionFailure()
+            return
+        }
+        
+        Analytics.sendEvent(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoStarted(animation.rawValue))
+
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        guard let duration = self.playerViewController.player?.currentItem?.duration, let currentTime = self.playerViewController.player?.currentItem?.currentTime(), let animation = self.animation else {
+            assertionFailure()
+            return
+        }
+        
+        if (CMTimeCompare(currentTime, duration) >= 0) {
+            Analytics.sendEvent(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoCompleted(animation.rawValue))
+        } else {
+            Analytics.sendEvent(event: TSRAnalytics.TSRDetailedAnalyticEvents.videoStopped(animation.rawValue))
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

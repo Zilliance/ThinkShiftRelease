@@ -15,7 +15,7 @@ class MusicTableViewController: UITableViewController {
     var images: [MPMediaItem: UIImage] = [:]
     fileprivate lazy var mediaPicker = MPMediaPickerController()
     fileprivate var audioPlayer: MPMusicPlayerController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -119,7 +119,8 @@ class MusicTableViewController: UITableViewController {
             
         } else {
             
-            self.audioPlayer = MPMusicPlayerController()
+            let player = MPMusicPlayerController()
+            self.audioPlayer = player
             
             MPMediaLibrary.requestAuthorization({ (status) in
                 
@@ -130,10 +131,36 @@ class MusicTableViewController: UITableViewController {
                 DispatchQueue.main.async {
                     self.audioPlayer?.setQueue(with: MPMediaItemCollection(items: [song]))
                     self.audioPlayer?.play()
+                    
+                    self.sendAnalytics(player: player)
                 }
             })
             
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+        self.audioPlayer?.stop()
+    }
+    
+    fileprivate func sendAnalytics(player: MPMusicPlayerController) {
+        
+        player.beginGeneratingPlaybackNotifications()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.MPMusicPlayerControllerPlaybackStateDidChange, object: player, queue: nil) { [weak self] (_) in
+            
+            guard let _ = self else {
+                return
+            }
+            
+            if (player.playbackState == .stopped) {
+                Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingMusic)
+            }
+        }
+        
+        Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingMusic)
+    
     }
 
     // MARK: - User Action
@@ -192,9 +219,6 @@ class MusicTableViewController: UITableViewController {
         }
     }
     
-    deinit {
-        self.audioPlayer?.stop()
-    }
 }
 
 extension MusicTableViewController: MPMediaPickerControllerDelegate {
@@ -212,6 +236,8 @@ extension MusicTableViewController: MPMediaPickerControllerDelegate {
                 self.images[item] = image
                 self.tableView.reloadData()
             }
+            
+            Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewMusic)
             
         }
         

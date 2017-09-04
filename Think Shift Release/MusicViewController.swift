@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicViewController: UIViewController {
+class MusicViewController: AnalyzedViewController {
     
     private var tableViewController: MusicTableViewController!
 

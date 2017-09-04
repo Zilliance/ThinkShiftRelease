@@ -113,6 +113,10 @@ final class NotificationsManager: NotificationStore {
                     self.realmDB.add(notification)
                     
                     completion?(notification, nil)
+                    
+                    let event = notification.type == .calendar ? ZillianceAnalytics.ZillianceBaseAnalytics.calendarEventAdded : (notification.recurrence != .none ? ZillianceAnalytics.ZillianceBaseAnalytics.repeatingReminderAdded : ZillianceAnalytics.ZillianceBaseAnalytics.reminderAdded)
+                    Analytics.sendEvent(event: event)
+                    
                 })
             }
             catch let error {

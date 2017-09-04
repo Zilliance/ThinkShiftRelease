@@ -44,6 +44,8 @@ class NewQuoteViewController: UIViewController {
         
         Database.shared.user.addQuote(quote: quote)
         
+        Analytics.sendEvent(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewQuote)
+        
         self.dismiss(animated: true, completion: nil)
     }
     

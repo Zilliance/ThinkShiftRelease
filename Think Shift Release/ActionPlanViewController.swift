@@ -11,7 +11,7 @@ import SVProgressHUD
 import AVFoundation
 import PDFGenerator
 
-class ActionPlanViewController: UIViewController {
+class ActionPlanViewController: AnalyzedViewController {
     
     @IBOutlet weak var tableView: UITableView!
     fileprivate var notifications: [NotificationTableItemViewModel] = []

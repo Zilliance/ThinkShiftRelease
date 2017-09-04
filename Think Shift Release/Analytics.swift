@@ -11,6 +11,49 @@ import Fabric
 import Answers
 import Amplitude_iOS
 
+//utilities to allow splitting a String when there's an uppercase
+extension Sequence {
+    func splitBefore(
+        separator isSeparator: (Iterator.Element) throws -> Bool
+        ) rethrows -> [AnySequence<Iterator.Element>] {
+        var result: [AnySequence<Iterator.Element>] = []
+        var subSequence: [Iterator.Element] = []
+        
+        var iterator = self.makeIterator()
+        while let element = iterator.next() {
+            if try isSeparator(element) {
+                if !subSequence.isEmpty {
+                    result.append(AnySequence(subSequence))
+                }
+                subSequence = [element]
+            }
+            else {
+                subSequence.append(element)
+            }
+        }
+        result.append(AnySequence(subSequence))
+        return result
+    }
+}
+
+extension Character {
+    var isUpperCase: Bool { return String(self) == String(self).uppercased() }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        let first = String(characters.prefix(1)).capitalized
+        let other = String(characters.dropFirst())
+        return first + other
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
+//
+
 protocol AnalyticEvent {
 
     var name: String {get}
@@ -20,15 +63,22 @@ protocol AnalyticEvent {
 
 class ZillianceAnalytics {
     
-    enum ZillianceBasePagedAnalytics: AnalyticEvent {
+    enum ZillianceDetailedAnalytics: AnalyticEvent {
         
         case tourPagedViewed(Int)
+        case tourClosed(Int)
+        case viewControllerShown(String)
         
         var name: String {
             switch self {
             case .tourPagedViewed(_):
                 return "Tour Paged Viewed"
+            case .viewControllerShown(let name):
+                return "View Shown - " + name.replacingOccurrences(of: "ViewController", with: "")
+            case .tourClosed(_):
+                return "Tour Closed"
             }
+            
         }
         
         var data: [String : Any]? {
@@ -36,7 +86,10 @@ class ZillianceAnalytics {
             switch self {
             case .tourPagedViewed(let page):
                 return ["Page": page]
-                
+            case .tourClosed(let page):
+                return ["Page": page]
+            case .viewControllerShown(_):
+                return nil
             }
         }
     }
@@ -45,19 +98,17 @@ class ZillianceAnalytics {
         
         //Plan?
         case planViewed
+        case calendarEventAdded
         case reminderAdded
         case repeatingReminderAdded
         
         // Sidebar
-        case tourVideoStarted
-        case tourVideoFinished
         case faqViewed
         case companyViewed
         case privacyPolycyViewed
-        case termsViewed
+        case termsOfServicesViewed
         
         //Summary/sharing
-        case emailSent
         case summaryViewed
         case summaryShared
         
@@ -68,7 +119,9 @@ class ZillianceAnalytics {
 extension RawRepresentable where RawValue == String, Self: AnalyticEvent {
     
     var name: String {
-        return self.rawValue
+        return self.rawValue.characters
+            .splitBefore(separator: { $0.isUpperCase })
+            .map{(String($0)).capitalizingFirstLetter()}.joined(separator: " ")
     }
     
     var data: [String: Any]? {
@@ -86,7 +139,7 @@ final class Analytics {
         Fabric.with([Answers.self])
         
         //Amplitude
-        Amplitude.instance().initializeApiKey("3bde86abbaec15613c028c0bcafe0261")
+        Amplitude.instance().initializeApiKey("18145b777826a76ff2fefbeaaa4e0e8b")
         
     }
     
