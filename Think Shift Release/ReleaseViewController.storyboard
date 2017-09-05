@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FhI-cT-o6y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FhI-cT-o6y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,11 +32,11 @@
                         <viewControllerLayoutGuide type="bottom" id="fAk-pM-pxI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oOW-8q-9Og">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmU-xT-s13" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zo4-rg-VYF" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
@@ -243,12 +243,12 @@
                                                             <constraint firstItem="IZd-bq-fi4" firstAttribute="leading" secondItem="j9e-U9-dp7" secondAttribute="leading" constant="15" id="4Gm-mh-cEA"/>
                                                             <constraint firstAttribute="trailing" secondItem="PDS-LK-fOO" secondAttribute="trailing" constant="8" id="5CH-22-N7a"/>
                                                             <constraint firstAttribute="bottom" secondItem="IZd-bq-fi4" secondAttribute="bottom" constant="15" id="7J5-dE-O7h"/>
+                                                            <constraint firstItem="IZd-bq-fi4" firstAttribute="top" secondItem="PDS-LK-fOO" secondAttribute="bottom" constant="10.5" id="FhQ-8a-l7K"/>
                                                             <constraint firstAttribute="trailing" secondItem="IZd-bq-fi4" secondAttribute="trailing" constant="15" id="H1w-D5-znK"/>
                                                             <constraint firstItem="oZ2-Rv-4km" firstAttribute="leading" secondItem="j9e-U9-dp7" secondAttribute="leading" constant="15" id="Inn-xx-Ame"/>
                                                             <constraint firstItem="oZ2-Rv-4km" firstAttribute="top" secondItem="j9e-U9-dp7" secondAttribute="top" constant="15" id="KVa-t1-2Ez"/>
                                                             <constraint firstItem="PDS-LK-fOO" firstAttribute="leading" secondItem="oZ2-Rv-4km" secondAttribute="trailing" constant="10" id="LgF-oh-JZT"/>
                                                             <constraint firstItem="8O9-sp-itJ" firstAttribute="leading" secondItem="oZ2-Rv-4km" secondAttribute="trailing" constant="10" id="QJE-7P-yJW"/>
-                                                            <constraint firstItem="IZd-bq-fi4" firstAttribute="top" secondItem="oZ2-Rv-4km" secondAttribute="bottom" constant="15" id="nJb-9z-9Hj"/>
                                                             <constraint firstItem="8O9-sp-itJ" firstAttribute="top" secondItem="j9e-U9-dp7" secondAttribute="top" constant="19" id="tfo-c2-mC4"/>
                                                             <constraint firstItem="PDS-LK-fOO" firstAttribute="top" secondItem="8O9-sp-itJ" secondAttribute="bottom" constant="2" id="xdw-gN-KdI"/>
                                                         </constraints>
@@ -267,7 +267,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udn-OG-Sw0" customClass="CardView" customModule="Think_Shift_Release" customModuleProvider="target">
-                                                                <rect key="frame" x="15" y="80" width="305" height="122"/>
+                                                                <rect key="frame" x="15" y="80" width="305" height="135"/>
                                                                 <connections>
                                                                     <segue destination="aOh-pM-Y7g" kind="embed" id="7A3-dg-1cQ"/>
                                                                 </connections>
@@ -295,11 +295,11 @@
                                                             <constraint firstAttribute="trailing" secondItem="mfK-BV-gfn" secondAttribute="trailing" constant="10" id="2l1-cu-GYv"/>
                                                             <constraint firstItem="udn-OG-Sw0" firstAttribute="leading" secondItem="Ocs-J4-2lk" secondAttribute="leading" constant="15" id="4WI-w9-IBF"/>
                                                             <constraint firstItem="mfK-BV-gfn" firstAttribute="leading" secondItem="fvO-Pz-tUC" secondAttribute="trailing" constant="10" id="4pN-aU-XPw"/>
-                                                            <constraint firstAttribute="bottom" secondItem="udn-OG-Sw0" secondAttribute="bottom" constant="23" id="Jf0-uI-U3S"/>
+                                                            <constraint firstAttribute="bottom" secondItem="udn-OG-Sw0" secondAttribute="bottom" constant="10" id="Jf0-uI-U3S"/>
                                                             <constraint firstItem="3K6-Kp-d7h" firstAttribute="leading" secondItem="fvO-Pz-tUC" secondAttribute="trailing" constant="10" id="MgD-3r-E9n"/>
                                                             <constraint firstAttribute="trailing" secondItem="udn-OG-Sw0" secondAttribute="trailing" constant="15" id="dze-sL-9Pp"/>
+                                                            <constraint firstItem="udn-OG-Sw0" firstAttribute="top" secondItem="mfK-BV-gfn" secondAttribute="bottom" constant="10" id="eFm-3l-IR5"/>
                                                             <constraint firstAttribute="height" constant="225" id="fhC-Mc-MUn"/>
-                                                            <constraint firstItem="udn-OG-Sw0" firstAttribute="top" secondItem="fvO-Pz-tUC" secondAttribute="bottom" constant="15" id="jFo-Nv-kF0"/>
                                                             <constraint firstItem="mfK-BV-gfn" firstAttribute="top" secondItem="3K6-Kp-d7h" secondAttribute="bottom" constant="2" id="jv8-ha-nYt"/>
                                                             <constraint firstItem="3K6-Kp-d7h" firstAttribute="top" secondItem="Ocs-J4-2lk" secondAttribute="top" constant="19" id="oLX-1q-0TZ"/>
                                                             <constraint firstItem="fvO-Pz-tUC" firstAttribute="leading" secondItem="Ocs-J4-2lk" secondAttribute="leading" constant="15" id="tz1-WQ-7fw"/>
@@ -358,6 +358,8 @@
                             <constraint firstItem="fAk-pM-pxI" firstAttribute="top" secondItem="NmU-xT-s13" secondAttribute="bottom" id="qts-eV-vkR"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="affirmationDescription" destination="PDS-LK-fOO" id="Vf7-h8-jza"/>
                         <outlet property="affirmationTextView" destination="IZd-bq-fi4" id="pae-Cg-Cjd"/>
@@ -394,7 +396,7 @@
             <objects>
                 <tableViewController id="aOh-pM-Y7g" customClass="BreatheTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Og-JB-OSd">
-                        <rect key="frame" x="0.0" y="0.0" width="305" height="122"/>
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="135"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
