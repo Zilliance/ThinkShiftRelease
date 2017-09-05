@@ -31,6 +31,9 @@ class VideosCollectionViewController: UICollectionViewController {
         self.videoPicker.delegate = self
                 
         self.reloadVideos()
+        
+        let viewName = self.theClassName
+        Analytics.send(event: ZillianceAnalytics.ZillianceDetailedAnalytics.viewControllerShown(viewName))
 
     }
 

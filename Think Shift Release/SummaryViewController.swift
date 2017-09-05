@@ -117,6 +117,8 @@ class SummaryViewController: AnalyzedViewController {
         
         if (!self.stressor.completed) {
             Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorResumed)
+        } else {
+            Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.summaryViewed)
         }
     }
     

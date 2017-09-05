@@ -74,7 +74,10 @@ class ZillianceAnalytics {
             case .tourPagedViewed(_):
                 return "Tour Paged Viewed"
             case .viewControllerShown(let name):
-                return "View Shown - " + name.replacingOccurrences(of: "ViewController", with: "")
+                var name = name.replacingOccurrences(of: "CollectionViewController", with: "")
+                name = name.replacingOccurrences(of: "ViewController", with: "")
+                name = name.replacingOccurrences(of: "Think_Shift_Release.", with: "")
+                return "View Shown - " + name
             case .tourClosed(_):
                 return "Tour Closed"
             }
