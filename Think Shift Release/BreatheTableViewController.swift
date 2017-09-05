@@ -93,6 +93,8 @@ class BreatheTableViewController: UITableViewController {
         
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: song.url)
+            audioPlayer?.delegate = self
+            
             audioPlayer?.prepareToPlay()
             
         } catch let error as NSError {
@@ -209,6 +211,10 @@ extension BreatheTableViewController: AVAudioPlayerDelegate {
         guard let currentSongTitle = self.currentSong?.title else {
             assertionFailure()
             return
+        }
+        
+        if let selectedIndex = self.tableView.indexPathForSelectedRow, let cell = self.tableView.cellForRow(at: selectedIndex) as? BreatheTableViewCell {
+            cell.setViewForPlay()
         }
         
         Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioFinished(currentSongTitle))

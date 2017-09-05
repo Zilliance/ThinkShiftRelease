@@ -127,6 +127,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
                     
                     for stressor in stressors {
                         Database.shared.delete(stressor)
+                        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorDeleted)
                     }
                     
                     self.collectionView?.deleteItems(at: indexes)
