@@ -8,6 +8,8 @@
 
 import UIKit
 import SVProgressHUD
+import ZilliancePod
+
 
 protocol NotificationEditor {
     func getNotification() -> Notification?

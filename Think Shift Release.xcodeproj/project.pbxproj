@@ -11,7 +11,6 @@
 		4F15A5191F277A5C004210B4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F15A5181F277A5C004210B4 /* Quote.swift */; };
 		4F2CDCEF1F5A09900048FA9C /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCEE1F5A09900048FA9C /* Analytics.swift */; };
 		4F2CDCF21F5D77080048FA9C /* TSRAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCF11F5D77080048FA9C /* TSRAnalytics.swift */; };
-		4F2CDCF41F5D7D5B0048FA9C /* AnalyzedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCF31F5D7D5B0048FA9C /* AnalyzedViewController.swift */; };
 		4F65CF011F31FCB000C4A5B9 /* MusicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */; };
 		4F65CF031F3205F500C4A5B9 /* QuotesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */; };
 		4F65CF051F32070600C4A5B9 /* ImagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */; };
@@ -182,7 +181,6 @@
 		4F15A5181F277A5C004210B4 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = Model/Quote.swift; sourceTree = "<group>"; };
 		4F2CDCEE1F5A09900048FA9C /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		4F2CDCF11F5D77080048FA9C /* TSRAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSRAnalytics.swift; sourceTree = "<group>"; };
-		4F2CDCF31F5D7D5B0048FA9C /* AnalyzedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzedViewController.swift; sourceTree = "<group>"; };
 		4F65CF001F31FCB000C4A5B9 /* MusicViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MusicViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF021F3205F500C4A5B9 /* QuotesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuotesViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagesViewController.storyboard; sourceTree = "<group>"; };
@@ -370,7 +368,6 @@
 			children = (
 				4F2CDCEE1F5A09900048FA9C /* Analytics.swift */,
 				4F2CDCF11F5D77080048FA9C /* TSRAnalytics.swift */,
-				4F2CDCF31F5D7D5B0048FA9C /* AnalyzedViewController.swift */,
 			);
 			name = Analytics;
 			sourceTree = "<group>";
@@ -1070,6 +1067,7 @@
 				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/ZilliancePod/ZilliancePod.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1086,6 +1084,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZilliancePod.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1250,7 +1249,6 @@
 				E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
 				E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */,
-				4F2CDCF41F5D7D5B0048FA9C /* AnalyzedViewController.swift in Sources */,
 				8C2B13D71F3E5796002C0353 /* ZillianceTextViewController.swift in Sources */,
 				E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */,
 				E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 import AVFoundation
 import PDFGenerator
+import ZilliancePod
 
 class ActionPlanViewController: AnalyzedViewController {
     

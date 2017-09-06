@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 import RealmSwift
+import ZilliancePod
 
 
 protocol NotificationStore {
@@ -114,8 +115,8 @@ final class NotificationsManager: NotificationStore {
                     
                     completion?(notification, nil)
                     
-                    let event = notification.type == .calendar ? ZillianceAnalytics.ZillianceBaseAnalytics.calendarEventAdded : (notification.recurrence != .none ? ZillianceAnalytics.ZillianceBaseAnalytics.repeatingReminderAdded : ZillianceAnalytics.ZillianceBaseAnalytics.reminderAdded)
-                    Analytics.send(event: event)
+                    let event = notification.type == .calendar ? ZillianceAnalytics.BaseEvents.calendarEventAdded : (notification.recurrence != .none ? ZillianceAnalytics.BaseEvents.repeatingReminderAdded : ZillianceAnalytics.BaseEvents.reminderAdded)
+                    Analytics.shared.send(event: event)
                     
                 })
             }

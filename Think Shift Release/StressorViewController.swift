@@ -31,7 +31,7 @@ class StressorViewController: UIViewController {
         super.viewDidLoad()
         self.setupView()
         
-        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.newStressor)
+        Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.newStressor)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -323,7 +323,7 @@ extension StressorViewController: StressorEditor {
         self.stressor.title = self.stressorTextView.text
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
 
     }

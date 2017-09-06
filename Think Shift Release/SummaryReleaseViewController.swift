@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZilliancePod
 
 class SummaryReleaseViewController: UIViewController, SummaryItemViewController {
 

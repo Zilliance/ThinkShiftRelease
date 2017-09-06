@@ -177,11 +177,11 @@ extension ShiftSetBoundariesViewController: StressorEditor {
         self.stressor.shiftBoundariesNotTalkWith = self.notTalkAboutTextView.text.characters.count > 0 ? self.notTalkAboutTextView.text : nil
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
         
         if (self.stressor.shiftCompleted && !shiftWasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStepCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStepCompleted)
         }
 
 

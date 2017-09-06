@@ -182,11 +182,11 @@ extension ThinkConstructivelyViewController: StressorEditor {
         self.stressor.thinkActionStep = self.actionStepTextView.text.characters.count > 0 ? self.actionStepTextView.text : nil
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
         
         if (self.stressor.thinkCompleted && !thinkWasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
         }
 
     }

@@ -102,7 +102,7 @@ class BreatheTableViewController: UITableViewController {
         }
         audioPlayer?.play()
         
-        Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioStarted(song.title))
+        Analytics.shared.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioStarted(song.title))
 
         self.currentSong = song
         
@@ -115,7 +115,7 @@ class BreatheTableViewController: UITableViewController {
                 if player.isPlaying {
                     player.stop()
                     
-                    Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioStopped(song.title))
+                    Analytics.shared.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioStopped(song.title))
                     
                 } else {
                     player.play()
@@ -217,7 +217,7 @@ extension BreatheTableViewController: AVAudioPlayerDelegate {
             cell.setViewForPlay()
         }
         
-        Analytics.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioFinished(currentSongTitle))
+        Analytics.shared.send(event: TSRAnalytics.TSRDetailedAnalyticEvents.meditationAudioFinished(currentSongTitle))
         
     }
     
