@@ -8,7 +8,7 @@
 
 import UIKit
 import PDFGenerator
-import ZilliancePod
+import ZillianceShared
 
 enum SummaryGoto {
     case thinkFirstSegment

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ZilliancePod
+import ZillianceShared
 
 class QuotesViewController: AnalyzedViewController {
     

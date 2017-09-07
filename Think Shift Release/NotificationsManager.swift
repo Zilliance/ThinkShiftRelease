@@ -9,7 +9,7 @@
 import Foundation
 import UserNotifications
 import RealmSwift
-import ZilliancePod
+import ZillianceShared
 
 
 protocol NotificationStore {

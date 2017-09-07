@@ -10,7 +10,7 @@ import UIKit
 import Photos
 import MobileCoreServices
 import AVKit
-import ZilliancePod
+import ZillianceShared
 
 class VideosCollectionViewController: UICollectionViewController {
 

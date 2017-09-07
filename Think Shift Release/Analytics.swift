@@ -10,7 +10,7 @@ import Foundation
 import Fabric
 import Answers
 import Amplitude_iOS
-import ZilliancePod
+import ZillianceShared
 
 final class Analytics: AnalyticsService {
     

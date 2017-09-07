@@ -8,7 +8,7 @@
 
 import UIKit
 import SVProgressHUD
-import ZilliancePod
+import ZillianceShared
 
 
 protocol NotificationEditor {

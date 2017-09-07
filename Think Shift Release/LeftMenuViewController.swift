@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SideMenuController
-import ZilliancePod
+import ZillianceShared
 
 final class LeftMenuViewController: UIViewController {
     enum Row: Int {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ZilliancePod
+import ZillianceShared
 
 final class TSRAnalytics: ZillianceAnalytics {
     
