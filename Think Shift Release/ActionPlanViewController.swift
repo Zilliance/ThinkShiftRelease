@@ -297,7 +297,7 @@ extension ActionPlanViewController: UITableViewDelegate {
 
     }
     
-    private func showNotificationView(notification: Notification) {
+    private func showNotificationView(notification: ZillianceShared.Notification) {
         
         guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
             assertionFailure()

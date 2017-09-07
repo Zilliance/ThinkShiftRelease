@@ -104,7 +104,6 @@ final class LeftMenuViewController: UIViewController {
         let vc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "AboutCompany")
         let nav = UINavigationController(rootViewController: vc)
         self.sideMenuController?.embed(centerViewController: nav)
-        
         Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.companyViewed)
 
     }

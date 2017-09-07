@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
