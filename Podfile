@@ -21,8 +21,8 @@ target 'Think Shift Release' do
   pod 'Fabric'
   pod 'Answers'
   pod 'Amplitude-iOS', '~> 3.14.1'
-#  pod 'ZillianceShared', :git => 'https://github.com/ScalablePath/ZillianceShared.git'
-  pod 'ZillianceShared', :path => '../ZillianceShared'
+  pod 'ZillianceShared', :git => 'https://github.com/ScalablePath/ZillianceShared.git'
+#  pod 'ZillianceShared', :path => '../ZillianceShared'
 
   target 'Think Shift ReleaseTests' do
     inherit! :search_paths
