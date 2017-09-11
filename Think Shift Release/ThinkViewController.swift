@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ThinkViewController: UIViewController, ShowsSummary {
     
@@ -29,7 +30,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     var newStressor: ((Stressor) -> ())? = nil
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.textView.text.isEmpty
+        return !self.textView.text.trimmed.isEmpty
     }
     
     override func viewDidLoad() {

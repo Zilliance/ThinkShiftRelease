@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ThinkConstructivelyViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class ThinkConstructivelyViewController: UIViewController {
     private var playbackObserver: NSObjectProtocol?
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.wisdomTextView.text.isEmpty && !self.actionStepTextView.text.isEmpty
+        return !self.wisdomTextView.text.trimmed.isEmpty && !self.actionStepTextView.text.isEmpty
     }
     
     override func viewDidLoad() {

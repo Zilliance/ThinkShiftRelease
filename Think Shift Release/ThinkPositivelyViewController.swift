@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ThinkPositivelyViewController: UIViewController {
 
@@ -20,7 +21,7 @@ class ThinkPositivelyViewController: UIViewController {
     private var playbackObserver: NSObjectProtocol?
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.textView.text.isEmpty
+        return !self.textView.text.trimmed.isEmpty
     }
     
     override func viewDidLoad() {

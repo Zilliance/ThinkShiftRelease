@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ShiftSetBoundariesViewController: UIViewController {
     
@@ -20,7 +21,7 @@ class ShiftSetBoundariesViewController: UIViewController {
     private var playbackObserver: NSObjectProtocol?
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.talkAboutTextView.text.isEmpty && !self.notTalkAboutTextView.text.isEmpty
+        return !self.talkAboutTextView.text.trimmed.isEmpty && !self.notTalkAboutTextView.text.isEmpty
     }
     
 

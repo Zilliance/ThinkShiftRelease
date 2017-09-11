@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ReleaseViewController: UIViewController, ShowsSummary {
 
@@ -32,7 +33,7 @@ class ReleaseViewController: UIViewController, ShowsSummary {
     private var playbackObserver: NSObjectProtocol?
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.affirmationTextView.text.isEmpty && !self.intentionTextView.text.isEmpty && !self.experienceTextView.text.isEmpty
+        return !self.affirmationTextView.text.trimmed.isEmpty && !self.intentionTextView.text.isEmpty && !self.experienceTextView.text.isEmpty
     }
     
     override func viewDidLoad() {

@@ -42,16 +42,11 @@ DEPENDENCIES:
   - SVProgressHUD
   - TPKeyboardAvoiding
   - YouTubePlayer
-  - ZillianceShared (from `https://github.com/ScalablePath/ZillianceShared.git`)
+  - ZillianceShared (from `../ZillianceShared`)
 
 EXTERNAL SOURCES:
   ZillianceShared:
-    :git: https://github.com/ScalablePath/ZillianceShared.git
-
-CHECKOUT OPTIONS:
-  ZillianceShared:
-    :commit: 96ff064917734d5ca981efa500e53286f26b3599
-    :git: https://github.com/ScalablePath/ZillianceShared.git
+    :path: ../ZillianceShared
 
 SPEC CHECKSUMS:
   Amplitude-iOS: 4a3c8807b2ea5369dc11e87e23825bff01e5a922
@@ -71,6 +66,6 @@ SPEC CHECKSUMS:
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
   ZillianceShared: cdecc5715e32177edc5d654d8ca7eb35d098488e
 
-PODFILE CHECKSUM: 5d8ed9097b237bb2ec30f869ccaaf0d00474270a
+PODFILE CHECKSUM: 5698b937038604dc22bb451922797080cc0898ae
 
 COCOAPODS: 1.3.1
