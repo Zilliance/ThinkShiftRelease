@@ -14,7 +14,7 @@ final class LeftMenuViewController: UIViewController {
     enum Row: Int {
         case howItWorks = 0
         case tour
-        case videos
+        // case videos // video row deleted in storyboard, copy cell and change label to "Video"
         case faq
         case spacer
         case about
@@ -165,8 +165,8 @@ extension LeftMenuViewController: UITableViewDelegate {
         switch Row(rawValue: indexPath.row) {
         case .tour?:
             self.showTour()
-        case .videos?:
-            self.showVideo()
+        //case .videos?:
+        //    self.showVideo()
         case .faq?:
             self.showFaq()
         case .company?:
