@@ -16,7 +16,6 @@
 		4F65CF051F32070600C4A5B9 /* ImagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */; };
 		4F65CF111F34A14F00C4A5B9 /* ImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65CF101F34A14F00C4A5B9 /* ImageViewController.storyboard */; };
 		4F65CF131F34A16400C4A5B9 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65CF121F34A16400C4A5B9 /* ImageViewController.swift */; };
-		4F65CF151F34A1FE00C4A5B9 /* PhotoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */; };
 		4FD1C7251F437373004F63A9 /* VideoViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1C7241F437373004F63A9 /* VideoViewControllerContainer.swift */; };
 		4FD1C7271F43946B004F63A9 /* ImagesViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1C7261F43946B004F63A9 /* ImagesViewControllerContainer.swift */; };
 		4FE59AF91F2A3D0800AAE778 /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */; };
@@ -40,10 +39,6 @@
 		8C2B13D61F3E5796002C0353 /* ScheduleNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13D21F3E5796002C0353 /* ScheduleNotificationTableViewController.swift */; };
 		8C2B13D71F3E5796002C0353 /* ZillianceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13D31F3E5796002C0353 /* ZillianceTextViewController.swift */; };
 		8C2B13DF1F3E5D9C002C0353 /* AddToCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13DE1F3E5D9C002C0353 /* AddToCalendarViewController.swift */; };
-		8C2B13EC1F3E60E9002C0353 /* ActionPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */; };
-		8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */; };
-		8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */; };
-		8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F11F3E690E002C0353 /* Plan.storyboard */; };
 		8C2B13F41F4387CD002C0353 /* LabeledPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */; };
 		8C2B13F61F438847002C0353 /* LabeledPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */; };
 		8C2B13F81F439FC0002C0353 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */; };
@@ -85,7 +80,6 @@
 		E312B35B1F421C7000F2F5F0 /* AnimationPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B35A1F421C7000F2F5F0 /* AnimationPresentationController.swift */; };
 		E312B35D1F421C8E00F2F5F0 /* AnimationModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B35C1F421C8E00F2F5F0 /* AnimationModalTransition.swift */; };
 		E312B3611F42459800F2F5F0 /* SectionAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */; };
-		E32A6D691F4B7D06008FEA06 /* OnboardingPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */; };
 		E32B80091F3E0ED80041AEE4 /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */; };
 		E347EA531F3CCAB5002920D0 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E347EA511F3CCAB5002920D0 /* Intro.storyboard */; };
 		E347EA541F3CCAB5002920D0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347EA521F3CCAB5002920D0 /* IntroViewController.swift */; };
@@ -112,7 +106,6 @@
 		E38608DC1F159DA800816DF4 /* UIMockConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608DB1F159DA800816DF4 /* UIMockConstants.swift */; };
 		E38608DE1F16908400816DF4 /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608DD1F16908400816DF4 /* StressorViewController.swift */; };
 		E38608E01F169AC600816DF4 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608DF1F169AC600816DF4 /* ReleaseViewController.swift */; };
-		E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */; };
 		E38608E41F16BB1500816DF4 /* ThinkConstructivelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E31F16BB1500816DF4 /* ThinkConstructivelyViewController.swift */; };
 		E38608E61F16BB2D00816DF4 /* ThinkPositivelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E51F16BB2D00816DF4 /* ThinkPositivelyViewController.swift */; };
 		E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38608E71F16BBBF00816DF4 /* ThinkViewController.swift */; };
@@ -130,11 +123,9 @@
 		E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B7A1F21BBBC0060FED4 /* User.swift */; };
 		E3A30B7D1F22591D0060FED4 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */; };
 		E3A30B7F1F22593A0060FED4 /* StressorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */; };
-		E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */; };
 		E3B83AE91F3A48F900F8C370 /* release-meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B83AE81F3A48F900F8C370 /* release-meditation.mp3 */; };
 		E3B83AEB1F3A490400F8C370 /* release-meditation-instrumental.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B83AEA1F3A490400F8C370 /* release-meditation-instrumental.mp3 */; };
 		E3BE78DA1F34F4D00063A6A4 /* ShowsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */; };
-		E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */; };
 		E3BE78E01F3534C30063A6A4 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE78DD1F3534C30063A6A4 /* faq.html */; };
 		E3BE78E11F3534C30063A6A4 /* zilliance privacy policy.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE78DE1F3534C30063A6A4 /* zilliance privacy policy.html */; };
 		E3BE78E21F3534C30063A6A4 /* zilliance terms of service.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE78DF1F3534C30063A6A4 /* zilliance terms of service.html */; };
@@ -171,7 +162,6 @@
 		4F65CF041F32070600C4A5B9 /* ImagesViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagesViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF101F34A14F00C4A5B9 /* ImageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageViewController.storyboard; sourceTree = "<group>"; };
 		4F65CF121F34A16400C4A5B9 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoUtils.swift; sourceTree = "<group>"; };
 		4FD1C7241F437373004F63A9 /* VideoViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewControllerContainer.swift; sourceTree = "<group>"; };
 		4FD1C7261F43946B004F63A9 /* ImagesViewControllerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewControllerContainer.swift; sourceTree = "<group>"; };
 		4FE59AF81F2A3D0800AAE778 /* VideoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
@@ -195,10 +185,6 @@
 		8C2B13D21F3E5796002C0353 /* ScheduleNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationTableViewController.swift; sourceTree = "<group>"; };
 		8C2B13D31F3E5796002C0353 /* ZillianceTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZillianceTextViewController.swift; sourceTree = "<group>"; };
 		8C2B13DE1F3E5D9C002C0353 /* AddToCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCalendarViewController.swift; sourceTree = "<group>"; };
-		8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanCell.swift; sourceTree = "<group>"; };
-		8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
-		8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationPlanCell.swift; sourceTree = "<group>"; };
-		8C2B13F11F3E690E002C0353 /* Plan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Plan.storyboard; sourceTree = "<group>"; };
 		8C2B13F31F4387CD002C0353 /* LabeledPopup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LabeledPopup.storyboard; sourceTree = "<group>"; };
 		8C2B13F51F438847002C0353 /* LabeledPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledPopupViewController.swift; sourceTree = "<group>"; };
 		8C2B13F71F439FC0002C0353 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
@@ -244,7 +230,6 @@
 		E312B35A1F421C7000F2F5F0 /* AnimationPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPresentationController.swift; sourceTree = "<group>"; };
 		E312B35C1F421C8E00F2F5F0 /* AnimationModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationModalTransition.swift; sourceTree = "<group>"; };
 		E312B3601F42459800F2F5F0 /* SectionAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionAnimationViewController.swift; sourceTree = "<group>"; };
-		E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPopover.swift; sourceTree = "<group>"; };
 		E32B80081F3E0ED80041AEE4 /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		E347EA511F3CCAB5002920D0 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		E347EA521F3CCAB5002920D0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -277,7 +262,6 @@
 		E38608DB1F159DA800816DF4 /* UIMockConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMockConstants.swift; sourceTree = "<group>"; };
 		E38608DD1F16908400816DF4 /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressorViewController.swift; sourceTree = "<group>"; };
 		E38608DF1F169AC600816DF4 /* ReleaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
-		E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HairlineLayoutConstraint.swift; sourceTree = "<group>"; };
 		E38608E31F16BB1500816DF4 /* ThinkConstructivelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinkConstructivelyViewController.swift; sourceTree = "<group>"; };
 		E38608E51F16BB2D00816DF4 /* ThinkPositivelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinkPositivelyViewController.swift; sourceTree = "<group>"; };
 		E38608E71F16BBBF00816DF4 /* ThinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinkViewController.swift; sourceTree = "<group>"; };
@@ -295,11 +279,9 @@
 		E3A30B7A1F21BBBC0060FED4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E3A30B7C1F22591D0060FED4 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E3A30B7E1F22593A0060FED4 /* StressorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StressorViewController.storyboard; sourceTree = "<group>"; };
-		E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientableNavigationController.swift; sourceTree = "<group>"; };
 		E3B83AE81F3A48F900F8C370 /* release-meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "release-meditation.mp3"; sourceTree = "<group>"; };
 		E3B83AEA1F3A490400F8C370 /* release-meditation-instrumental.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "release-meditation-instrumental.mp3"; sourceTree = "<group>"; };
 		E3BE78D91F34F4D00063A6A4 /* ShowsSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsSummary.swift; sourceTree = "<group>"; };
-		E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIClosureBarButtonItem.swift; sourceTree = "<group>"; };
 		E3BE78DD1F3534C30063A6A4 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
 		E3BE78DE1F3534C30063A6A4 /* zilliance privacy policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance privacy policy.html"; sourceTree = "<group>"; };
 		E3BE78DF1F3534C30063A6A4 /* zilliance terms of service.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance terms of service.html"; sourceTree = "<group>"; };
@@ -392,10 +374,6 @@
 		8C2B13E61F3E6050002C0353 /* ActionPlan */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B13F11F3E690E002C0353 /* Plan.storyboard */,
-				8C2B13E71F3E60E9002C0353 /* ActionPlanCell.swift */,
-				8C2B13E81F3E60E9002C0353 /* ActionPlanViewController.swift */,
-				8C2B13E91F3E60E9002C0353 /* MeditationPlanCell.swift */,
 			);
 			name = ActionPlan;
 			sourceTree = "<group>";
@@ -553,18 +531,6 @@
 			name = Stressor;
 			sourceTree = "<group>";
 		};
-		E37828491F1964F7005E91A8 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				E3A30B821F25CD950060FED4 /* OrientableNavigationController.swift */,
-				E38608E11F16A08500816DF4 /* HairlineLayoutConstraint.swift */,
-				4F65CF141F34A1FE00C4A5B9 /* PhotoUtils.swift */,
-				E3BE78DB1F34F7900063A6A4 /* UIClosureBarButtonItem.swift */,
-				E32A6D681F4B7D06008FEA06 /* OnboardingPopover.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
 		E378284A1F196506005E91A8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,7 +631,6 @@
 				E386089A1F158D2800816DF4 /* AppDelegate.swift */,
 				E378284B1F19650E005E91A8 /* Model */,
 				E378284A1F196506005E91A8 /* Scenes */,
-				E37828491F1964F7005E91A8 /* Utilities */,
 				E38608C81F158FDE00816DF4 /* UIMock */,
 				8C631F881F22990E00B2CA4C /* Fonts */,
 				E3BE78E31F3534C60063A6A4 /* Resources */,
@@ -896,7 +861,6 @@
 				E312B3561F4219AB00F2F5F0 /* Think Positively.mp4 in Resources */,
 				8C631F9D1F22991E00B2CA4C /* Muli-ExtraLight.ttf in Resources */,
 				E38CB6071F44DE22004AFEA4 /* LearnMore.storyboard in Resources */,
-				8C2B13F21F3E690E002C0353 /* Plan.storyboard in Resources */,
 				8C631FA41F22991E00B2CA4C /* Muli-SemiBoldItalic.ttf in Resources */,
 				8C631FA21F22991E00B2CA4C /* Muli-Regular.ttf in Resources */,
 				8C631F9A1F22991E00B2CA4C /* Muli-BoldItalic.ttf in Resources */,
@@ -1140,7 +1104,6 @@
 				4F2CDCEF1F5A09900048FA9C /* Analytics.swift in Sources */,
 				E38CB6051F44DE1C004AFEA4 /* LearnMoreViewController.swift in Sources */,
 				8C2B13D61F3E5796002C0353 /* ScheduleNotificationTableViewController.swift in Sources */,
-				E32A6D691F4B7D06008FEA06 /* OnboardingPopover.swift in Sources */,
 				E312B35D1F421C8E00F2F5F0 /* AnimationModalTransition.swift in Sources */,
 				E37828501F198177005E91A8 /* HomeViewController.swift in Sources */,
 				8C166DD51F3CE9B50071A98C /* SummaryShiftViewController.swift in Sources */,
@@ -1152,12 +1115,8 @@
 				8C631F781F228E5500B2CA4C /* LeftMenuViewController.swift in Sources */,
 				4FE59B041F2B820200AAE778 /* MediaCell.swift in Sources */,
 				8CD3290B1F30F02F00844C5F /* BreatheTableViewController.swift in Sources */,
-				8C2B13EC1F3E60E9002C0353 /* ActionPlanCell.swift in Sources */,
 				8C166DDC1F3E10080071A98C /* PopupViewController.swift in Sources */,
 				E38608E81F16BBBF00816DF4 /* ThinkViewController.swift in Sources */,
-				8C2B13EE1F3E60E9002C0353 /* MeditationPlanCell.swift in Sources */,
-				8C2B13ED1F3E60E9002C0353 /* ActionPlanViewController.swift in Sources */,
-				E3A30B831F25CD950060FED4 /* OrientableNavigationController.swift in Sources */,
 				E37828461F195FF1005E91A8 /* QuotesTableViewController.swift in Sources */,
 				E38608D81F1596AC00816DF4 /* UIMockLabel.swift in Sources */,
 				4FD1C7271F43946B004F63A9 /* ImagesViewControllerContainer.swift in Sources */,
@@ -1181,12 +1140,10 @@
 				E38608EA1F16C96400816DF4 /* ShiftSetBoundariesViewController.swift in Sources */,
 				4F15A5191F277A5C004210B4 /* Quote.swift in Sources */,
 				4F2CDCF21F5D77080048FA9C /* TSRAnalytics.swift in Sources */,
-				E3BE78DC1F34F7900063A6A4 /* UIClosureBarButtonItem.swift in Sources */,
 				E38608D61F15958400816DF4 /* UIMockImageView.swift in Sources */,
 				E37828421F195FE7005E91A8 /* VideosCollectionViewController.swift in Sources */,
 				8C2B13D71F3E5796002C0353 /* ZillianceTextViewController.swift in Sources */,
 				E3A30B7B1F21BBBC0060FED4 /* User.swift in Sources */,
-				E38608E21F16A08500816DF4 /* HairlineLayoutConstraint.swift in Sources */,
 				4F65CF131F34A16400C4A5B9 /* ImageViewController.swift in Sources */,
 				8C2B13DF1F3E5D9C002C0353 /* AddToCalendarViewController.swift in Sources */,
 				E347EA5B1F3CCAF7002920D0 /* VideoPlayerViewController.swift in Sources */,
@@ -1197,7 +1154,6 @@
 				E3A30B791F21BB9A0060FED4 /* Database.swift in Sources */,
 				8C2B13D41F3E5796002C0353 /* CustomDatePickerViewController.swift in Sources */,
 				E3A30B771F21BB670060FED4 /* Stressor.swift in Sources */,
-				4F65CF151F34A1FE00C4A5B9 /* PhotoUtils.swift in Sources */,
 				E37828441F195FED005E91A8 /* MusicTableViewController.swift in Sources */,
 				8C166DCF1F3CDAE50071A98C /* SummaryViewController.swift in Sources */,
 			);
