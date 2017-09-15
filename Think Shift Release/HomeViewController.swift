@@ -57,7 +57,10 @@ class HomeViewController: AnalyzedViewController {
     // MARK: - User Action
     
     @IBAction func showActionPlan(_ sender: Any) {
-        guard let planVC = UIStoryboard(name: "Plan", bundle: nil).instantiateViewController(withIdentifier: "ActionPlanViewController") as? ActionPlanViewController else{
+        
+        let bundle = ZillianceSharedBundle.resourcesBundle
+        
+        guard let planVC = UIStoryboard(name: "Plan", bundle: bundle).instantiateViewController(withIdentifier: "ActionPlanViewController") as? ActionPlanViewController else{
             assertionFailure()
             return
         }

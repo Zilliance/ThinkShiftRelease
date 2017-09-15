@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ZillianceShared
 
 protocol ShowsSummary {
     var stressor: Stressor! { get }

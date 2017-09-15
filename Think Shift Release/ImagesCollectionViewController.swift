@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import ZillianceShared
 
 final class ImageCell: UICollectionViewCell {
     
