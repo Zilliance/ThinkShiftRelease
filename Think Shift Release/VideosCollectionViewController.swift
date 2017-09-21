@@ -10,6 +10,7 @@ import UIKit
 import Photos
 import MobileCoreServices
 import AVKit
+import ZillianceShared
 
 class VideosCollectionViewController: UICollectionViewController {
 
@@ -33,7 +34,7 @@ class VideosCollectionViewController: UICollectionViewController {
         self.reloadVideos()
         
         let viewName = self.theClassName
-        Analytics.send(event: ZillianceAnalytics.ZillianceDetailedAnalytics.viewControllerShown(viewName))
+        Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.viewControllerShown(viewName))
 
     }
 
@@ -67,10 +68,10 @@ class VideosCollectionViewController: UICollectionViewController {
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak self] (notification) in
             
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingVideo)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.shiftFinishedPlayingVideo)
         }
 
-        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingVideo)
+        Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStartedPlayingVideo)
 
         present(playerViewController, animated: true) {
             player.play()
@@ -128,7 +129,7 @@ extension VideosCollectionViewController: UIImagePickerControllerDelegate, UINav
         
         picker.dismiss(animated: true, completion: nil)
         
-        Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewVideo)
+        Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.shiftAddedNewVideo)
         
         self.reloadVideos()
 

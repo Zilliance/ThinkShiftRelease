@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ShiftSetBoundariesViewController: UIViewController {
     
@@ -20,7 +21,7 @@ class ShiftSetBoundariesViewController: UIViewController {
     private var playbackObserver: NSObjectProtocol?
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.talkAboutTextView.text.isEmpty && !self.notTalkAboutTextView.text.isEmpty
+        return !self.talkAboutTextView.text.trimmed.isEmpty && !self.notTalkAboutTextView.text.isEmpty
     }
     
 
@@ -177,11 +178,11 @@ extension ShiftSetBoundariesViewController: StressorEditor {
         self.stressor.shiftBoundariesNotTalkWith = self.notTalkAboutTextView.text.characters.count > 0 ? self.notTalkAboutTextView.text : nil
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
         
         if (self.stressor.shiftCompleted && !shiftWasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStepCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.shiftStepCompleted)
         }
 
 

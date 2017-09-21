@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NotificationsManager.sharedInstance.realmDB = Database.shared.realm
         
-        Analytics.initialize()
+        Analytics.shared.initialize()
         
         return true
     }

@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ThinkViewController: UIViewController, ShowsSummary {
     
@@ -29,7 +30,7 @@ class ThinkViewController: UIViewController, ShowsSummary {
     var newStressor: ((Stressor) -> ())? = nil
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.textView.text.isEmpty
+        return !self.textView.text.trimmed.isEmpty
     }
     
     override func viewDidLoad() {
@@ -261,11 +262,11 @@ extension ThinkViewController: StressorEditor {
         self.stressor.thinkThoughts = self.textView.text.characters.count > 0 ? self.textView.text : nil
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
         
         if (self.stressor.thinkCompleted && !thinkWasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
         }
 
 

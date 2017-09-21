@@ -10,6 +10,7 @@ import UIKit
 import KMPlaceholderTextView
 import AVFoundation
 import AVKit
+import ZillianceShared
 
 class ThinkPositivelyViewController: UIViewController {
 
@@ -20,7 +21,7 @@ class ThinkPositivelyViewController: UIViewController {
     private var playbackObserver: NSObjectProtocol?
     
     fileprivate var isSectionCompleted: Bool {
-        return !self.textView.text.isEmpty
+        return !self.textView.text.trimmed.isEmpty
     }
     
     override func viewDidLoad() {
@@ -176,11 +177,11 @@ extension ThinkPositivelyViewController: StressorEditor {
         self.stressor.thinkBetterFeeling = self.textView.text.characters.count > 0 ? self.textView.text : nil
         
         if (self.stressor.completed && !wasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.stressorCompleted)
         }
         
         if (self.stressor.thinkCompleted && !thinkWasCompleted) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.thinkStepCompleted)
         }
 
     }

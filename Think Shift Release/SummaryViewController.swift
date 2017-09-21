@@ -8,6 +8,7 @@
 
 import UIKit
 import PDFGenerator
+import ZillianceShared
 
 enum SummaryGoto {
     case thinkFirstSegment
@@ -116,9 +117,9 @@ class SummaryViewController: AnalyzedViewController {
         self.showTapHint()
         
         if (!self.stressor.completed) {
-            Analytics.send(event: TSRAnalytics.TSRAnalyticEvents.stressorResumed)
+            Analytics.shared.send(event: TSRAnalytics.TSRAnalyticEvents.stressorResumed)
         } else {
-            Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.summaryViewed)
+            Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.summaryViewed)
         }
     }
     
@@ -333,7 +334,7 @@ extension SummaryViewController {
                 activityViewController.completionWithItemsHandler = { (activityType, completed:Bool, returnedItems:[Any]?, error: Error?) in
                         if completed {
                             
-                            Analytics.send(event: ZillianceAnalytics.ZillianceBaseAnalytics.summaryShared)
+                            Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.summaryShared)
                             
                         }
                 }
