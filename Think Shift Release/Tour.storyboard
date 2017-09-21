@@ -60,7 +60,7 @@
                                 <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-think" translatesAutoresizingMaskIntoConstraints="NO" id="bvy-Th-MLk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-think" translatesAutoresizingMaskIntoConstraints="NO" id="bvy-Th-MLk">
                                 <rect key="frame" x="0.0" y="40" width="375" height="304"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="304" id="j8B-r3-RAm"/>
@@ -190,7 +190,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-release" translatesAutoresizingMaskIntoConstraints="NO" id="fY8-JW-vhe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-release" translatesAutoresizingMaskIntoConstraints="NO" id="fY8-JW-vhe">
                                 <rect key="frame" x="40" y="40" width="295" height="304"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="304" id="wgT-zh-jOJ"/>
@@ -258,7 +258,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-summary" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-6i-jj8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-summary" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-6i-jj8">
                                 <rect key="frame" x="40" y="40" width="295" height="301"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="301" id="K3a-Rc-kuj"/>
@@ -326,7 +326,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="Rlt-Hv-Bj2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="Rlt-Hv-Bj2">
                                 <rect key="frame" x="0.0" y="40" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="ymm-3a-YMF"/>
