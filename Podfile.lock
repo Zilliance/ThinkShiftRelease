@@ -2,7 +2,18 @@ PODS:
   - Amplitude-iOS (3.14.1)
   - Answers (1.3.6):
     - Fabric (~> 1.6.3)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
   - Fabric (1.6.13)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FBSDKCoreKit (4.27.1):
+    - Bolts (~> 1.7)
   - KMPlaceholderTextView (1.3.0)
   - MultiSelectSegmentedControl (1.1.2)
   - MZAppearance (1.1.6)
@@ -33,6 +44,7 @@ DEPENDENCIES:
   - Amplitude-iOS (~> 3.14.1)
   - Answers
   - Fabric
+  - FacebookCore
   - KMPlaceholderTextView (~> 1.3.0)
   - MultiSelectSegmentedControl
   - MZFormSheetController
@@ -58,7 +70,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Amplitude-iOS: 4a3c8807b2ea5369dc11e87e23825bff01e5a922
   Answers: ef6af16bc75366334db6323a87f37ea54e2dab71
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Fabric: 2fb5676bc811af011a04513451f463dac6803206
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
   KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
   MultiSelectSegmentedControl: 24844861c16dd6e3c36a80043494daa7855494f1
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
@@ -73,6 +88,6 @@ SPEC CHECKSUMS:
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
   ZillianceShared: a448660bb6d06f4ea053e8705be8371eb507add1
 
-PODFILE CHECKSUM: 5d8ed9097b237bb2ec30f869ccaaf0d00474270a
+PODFILE CHECKSUM: f35aed45793e6ef10072cfec2255cc02e4ce066c
 
 COCOAPODS: 1.3.1

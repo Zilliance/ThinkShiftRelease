@@ -8,6 +8,7 @@
 
 import UIKit
 import ZillianceShared
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -50,6 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Analytics.shared.initialize()
         
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        AppEventsLogger.activate(application)
+        
     }
 
 }
